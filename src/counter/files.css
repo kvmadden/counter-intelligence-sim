@@ -1,0 +1,228 @@
+/* === The patient files (2026-09-15, menus pass) ============================
+   Every screen but the encounter, one idea each, with the classic N64 shooter's idioms mixed by
+   screen as Kevin ruled: closed folders on a dark backdrop for SELECT FILE; the
+   opened khaki file (on its olive cover) for the dossier, the briefing, mission
+   status and the debrief; an index card for the huddle. Every colour, texture and
+   face is a --ci-* token from theme.js. */
+
+.ci-screen { --safe-top: env(safe-area-inset-top, 0px); --safe-bottom: env(safe-area-inset-bottom, 0px); position: relative; min-height: 100dvh; color: var(--ci-ink); font-family: var(--ci-font-body); }
+.ci-screen :where(h1, h2, p, dl, dd, figure) { margin: 0; }
+.ci-screen :where(button) { color: inherit; -webkit-tap-highlight-color: transparent; }
+
+/* -- furniture, drawn in code (FileFurniture.jsx) ----------------------------- */
+/* The red Rx cursor, the approved swap for the classic N64 shooter's crosshair. */
+.ci-rx-cursor { display: block; overflow: visible; }
+.ci-rx-cursor path { fill: none; stroke-linecap: square; stroke-linejoin: miter; }
+.ci-rx-halo { stroke: color-mix(in srgb, var(--ci-shadow) 30%, transparent); stroke-width: 6.5; }
+.ci-rx-mark { stroke: var(--ci-cursor); stroke-width: 3.4; }
+
+/* The Bowl of Hygieia: engraved into the paper, gold-blocked onto a folder, or a watermark. */
+.ci-crest { display: block; overflow: visible; }
+.ci-crest :is(path, ellipse, line) { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.ci-crest--engraved { --crest-line: var(--ci-engrave); --crest-lift: var(--ci-engrave-light); --crest-core: var(--ci-paper); }
+.ci-crest--gilt { --crest-line: var(--ci-gold); --crest-lift: var(--ci-gold-deep); --crest-core: var(--ci-folder); }
+.ci-crest-under :is(path, ellipse, line) { stroke: var(--crest-lift); }
+.ci-crest-over :is(path, ellipse, line) { stroke: var(--crest-line); }
+.ci-crest-line { stroke-width: 1.5; }
+.ci-crest-branch { stroke-width: 1.3; }
+.ci-crest-leaf { stroke-width: 1.1; }
+.ci-crest-over .ci-crest-leaf { fill: color-mix(in srgb, var(--crest-line) 35%, transparent); }
+.ci-crest-hatch { stroke-width: 0.8; }
+.ci-crest-knot { stroke-width: 1.4; }
+.ci-crest-serpent { stroke-width: 4.2; }
+.ci-crest-over .ci-crest-serpent-core { stroke: var(--crest-core); stroke-width: 1.6; }
+.ci-crest-under .ci-crest-serpent-core { stroke: none; }
+.ci-crest-head { stroke-width: 1.4; }
+.ci-crest-over .ci-crest-head { fill: var(--crest-line); }
+
+.ci-clip { display: block; overflow: visible; }
+.ci-clip path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.ci-clip-shadow { stroke: color-mix(in srgb, var(--ci-shadow) 45%, transparent); stroke-width: 2.6; }
+.ci-clip-wire { stroke: var(--enc-steel); stroke-width: 2.4; }
+.ci-clip-shine { stroke: var(--enc-steel-light); stroke-width: 0.8; translate: -0.5px -0.5px; }
+
+.ci-photo { position: relative; padding: 5%; background: var(--ci-grain), var(--ci-mount); background-size: 256px 256px, auto; box-shadow: 0 1px 1px color-mix(in srgb, var(--ci-shadow) 40%, transparent), 2px 6px 12px color-mix(in srgb, var(--ci-shadow) 35%, transparent); }
+.ci-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+.ci-photo-clip { position: absolute; top: -9%; left: 10%; width: 11%; min-width: 14px; rotate: 4deg; }
+
+/* The rubber stamp (Kevin picked this look 2026-09-15): an inked plate inside a
+   double rule. The wear is an SVG filter in FileFurniture.jsx, so no font or
+   texture ships for it. Each placement below sets only its width and its tilt. */
+.ci-stamp { position: absolute; box-sizing: border-box; padding: 1px 8px; border: 3px double var(--ci-stamp); border-radius: 2px; opacity: 0.85; mix-blend-mode: multiply; }
+.ci-stamp-ink { display: block; width: 100%; height: auto; overflow: visible; }
+.ci-stamp text { font-family: var(--ci-font-menu); fill: var(--ci-stamp); }
+
+/* -- shared page parts ------------------------------------------------------------ */
+/* A 13px floor for every rule on these screens (Kevin, 2026-09-15). */
+.ci-kicker { font-family: var(--ci-font-menu); font-weight: 400; font-size: 0.8125rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ci-ink-soft); }
+
+/* the classic N64 shooter's mission-menu list, with the red Rx cursor beside the lit item. */
+.ci-menu { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.ci-menu-item { width: 100%; min-height: 52px; display: flex; align-items: center; gap: 4px; padding: 0; border: 0; background: transparent; cursor: pointer; text-align: left; font-family: var(--ci-font-menu); font-size: clamp(0.8125rem, 3.5vw, 1rem); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ci-ink); }
+.ci-menu-item:focus-visible { outline-offset: -2px; }
+.ci-menu-cursor { flex: none; width: 36px; height: 36px; }
+.ci-menu-text { display: flex; align-items: baseline; gap: 0.7em; padding: 10px 12px 10px 8px; border-radius: 2px; }
+.ci-menu-label { white-space: nowrap; }
+.ci-menu-item.is-active .ci-menu-text { background: color-mix(in srgb, var(--ci-ink) 13%, transparent); }
+
+/* The olive cover the file lies open on, and the file's own paper. */
+.ci-desk { display: flex; justify-content: center; padding: calc(16px + var(--safe-top)) 16px calc(16px + var(--safe-bottom)); background: var(--ci-grain), radial-gradient(130% 90% at 50% 18%, var(--ci-backdrop-light), var(--ci-backdrop) 58%, var(--ci-backdrop-deep)); background-size: 256px 256px, auto; }
+.ci-sheet { position: relative; width: min(100% - 44px, 480px); margin-right: 44px; min-height: calc(100dvh - 32px - var(--safe-top) - var(--safe-bottom)); display: flex; flex-direction: column; padding: 20px 20px 16px; border-radius: 2px 3px 3px 2px; background: var(--ci-paper-mottle), var(--ci-grain), linear-gradient(172deg, var(--ci-paper-light), var(--ci-paper) 42%, var(--ci-paper-deep)); background-size: 620px 620px, 256px 256px, auto; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ci-paper-edge) 65%, transparent), 0 16px 32px color-mix(in srgb, var(--ci-shadow) 55%, transparent); animation: ci-settle 220ms cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+.ci-sheet-head { display: grid; gap: 8px; padding-bottom: 12px; border-bottom: 3px double color-mix(in srgb, var(--ci-ink) 42%, transparent); }
+.ci-sheet-head h1 { font-family: var(--ci-font-menu); font-weight: 400; font-size: clamp(1.125rem, 5.2vw, 1.375rem); line-height: 1.2; letter-spacing: 0.1em; text-transform: uppercase; }
+.ci-file-line { font-family: var(--ci-font-typed); font-size: 0.875rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ci-ink-soft); }
+.ci-sheet > .ci-sheet-foot, .ci-card > .ci-sheet-foot { margin-top: auto; padding-top: 12px; }
+.ci-sheet-clip { position: absolute; inset: 0; overflow: hidden; pointer-events: none; border-radius: inherit; }
+
+/* Index tabs down the file's right edge. Each tab's share of the rail is its own
+   label length (a longer page name gets more room to stack its letters), and the
+   labels set in the typed face: the menu face runs about 13.6px a letter at 13px,
+   too wide for four labels in this column (Kevin, 2026-09-15). */
+.ci-side-tabs { position: absolute; top: 16px; bottom: 16px; left: 100%; width: 48px; display: flex; flex-direction: column; gap: 8px; }
+.ci-side-tab { position: relative; flex: 1 1 0; min-height: 44px; display: flex; align-items: center; justify-content: center; margin: 0 0 0 -1px; padding: 8px 3px; border: 0; border-radius: 0 14px 14px 0; color: var(--ci-ink-soft); background: var(--ci-grain), linear-gradient(90deg, color-mix(in srgb, var(--ci-paper-deep) 82%, var(--ci-shadow)), var(--ci-paper-deep) 34%); background-size: 256px 256px, auto; box-shadow: inset -1px 0 0 color-mix(in srgb, var(--ci-paper-edge) 70%, transparent), 3px 5px 10px color-mix(in srgb, var(--ci-shadow) 30%, transparent); }
+.ci-side-tab--action { flex-grow: 1.4; }
+.ci-side-tab-text { writing-mode: vertical-rl; white-space: normal; overflow-wrap: break-word; hyphens: auto; text-align: center; font-family: var(--ci-font-typed); font-size: 0.8125rem; line-height: 1; letter-spacing: 0.01em; text-transform: uppercase; }
+button.ci-side-tab { cursor: pointer; }
+button.ci-side-tab:hover { color: var(--ci-ink); }
+.ci-side-tab.is-current { z-index: 1; margin-left: -2px; color: var(--ci-ink); background: var(--ci-grain), linear-gradient(90deg, var(--ci-paper), var(--ci-paper-light)); background-size: 256px 256px, auto; }
+
+/* -- SELECT FILE: closed folders on a dark backdrop --------------------------- */
+.ci-select { display: flex; justify-content: center; padding: calc(20px + var(--safe-top)) 16px calc(16px + var(--safe-bottom)); color: var(--ci-menu); background: var(--ci-grain), radial-gradient(85% 60% at 50% 42%, var(--ci-night-lift), var(--ci-night) 74%); background-size: 256px 256px, auto; }
+.ci-select-frame { width: min(100%, 560px); min-height: calc(100dvh - 36px - var(--safe-top) - var(--safe-bottom)); display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto 1fr auto; grid-template-areas: "title title" "files files" "heading note"; gap: 16px; animation: ci-settle 220ms cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+.ci-select-title { grid-area: title; display: flex; align-items: center; gap: 12px; font-family: var(--ci-font-menu); font-size: clamp(0.8125rem, 3vw, 0.9375rem); letter-spacing: 0.24em; text-transform: uppercase; white-space: nowrap; color: var(--ci-menu); }
+.ci-select-title::before, .ci-select-title::after { content: ""; flex: 1; height: 1px; background: color-mix(in srgb, var(--ci-menu) 28%, transparent); }
+.ci-select-heading { grid-area: heading; align-self: end; font-family: var(--ci-font-menu); font-weight: 400; font-size: clamp(1.125rem, 5vw, 1.625rem); line-height: 1.2; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ci-menu); }
+.ci-select-note { grid-area: note; align-self: end; max-width: 9.5em; text-align: right; font-size: 0.8125rem; line-height: 1.35; color: var(--ci-menu-dim); }
+.ci-files { grid-area: files; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); align-content: center; justify-items: center; gap: 16px 12px; }
+.ci-files > li { width: 100%; display: flex; justify-content: center; }
+.ci-files > li:last-child:nth-child(odd):not(:first-child) { grid-column: 1 / -1; width: 50%; }
+/* A folder is as big as the rows allow; one file on its own sits large. */
+/* Sized from the room the files really get (SELECT FILE's frame leaves the list 100dvh less
+   128px, measured 2026-09-16 at all six sizes), less the safe-area insets and the row gaps, so five files fill a
+   short phone instead of shrinking until each photo covered its own patient's name. */
+.ci-folder { --fw: min(100%, calc((100dvh - 128px - var(--safe-top, 0px) - var(--safe-bottom, 0px) - (var(--rows) - 1) * 16px) / var(--rows) * 0.8)); position: relative; display: block; width: var(--fw); aspect-ratio: 0.8; padding: 0; border: 0; background: transparent; cursor: pointer; container-type: inline-size; rotate: var(--tilt, 0deg); filter: drop-shadow(0 12px 14px color-mix(in srgb, var(--ci-shadow) 80%, transparent)); transition: translate 140ms ease-out; }
+.ci-select[data-count="1"] .ci-folder { --fw: min(78vw, 330px, calc((100dvh - 250px) * 0.8)); }
+.ci-folder.is-active { translate: 0 -6px; }
+.ci-folder:focus-visible { outline-offset: 8px; }
+.ci-folder-back { position: absolute; inset: 0; clip-path: polygon(0 5%, 57% 5%, 61% 0, 94% 0, 98% 5%, 100% 5%, 100% 100%, 0 100%); background: var(--ci-grain), linear-gradient(180deg, var(--ci-folder), var(--ci-folder-deep) 60%, var(--ci-folder-edge)); background-size: 256px 256px, auto; }
+.ci-folder-cover { position: absolute; inset: 5% 2% 2% 0; border-radius: 2px 3px 5px 3px; background: var(--ci-board-mottle), var(--ci-grain), linear-gradient(160deg, var(--ci-folder-light), var(--ci-folder) 46%, var(--ci-folder-deep)); background-size: 460px 460px, 256px 256px, auto; box-shadow: inset 0 1px 0 color-mix(in srgb, var(--ci-gold-light) 22%, transparent), inset 0 0 0 1px color-mix(in srgb, var(--ci-folder-edge) 55%, transparent), inset -8px -10px 22px color-mix(in srgb, var(--ci-folder-edge) 40%, transparent); }
+.ci-folder-crest { position: absolute; left: 50%; top: 31%; width: 46%; translate: -50% 0; }
+.ci-folder-label { position: absolute; left: 9%; right: 9%; bottom: 5%; display: flex; flex-direction: column; align-items: center; gap: 2.4cqi; padding: 3cqi 3cqi 3.6cqi; color: var(--ci-ink); background: var(--ci-grain), linear-gradient(180deg, var(--ci-paper-light), var(--ci-paper)); background-size: 256px 256px, auto; box-shadow: 0 1px 2px color-mix(in srgb, var(--ci-shadow) 55%, transparent); }
+.ci-folder-name { font-family: var(--ci-font-menu); font-size: max(13px, 7cqi); letter-spacing: 0.14em; text-transform: uppercase; }
+.ci-folder-level { padding: 0.3em 0.8em; border: 1.5px solid currentColor; box-shadow: inset 0 0 0 1.5px var(--ci-paper), inset 0 0 0 2.5px currentColor; font-family: var(--ci-font-typed); font-size: max(13px, 4.8cqi); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ci-ink-soft); }
+.ci-folder-endings { font-family: var(--ci-font-typed); font-size: max(13px, 4.2cqi); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ci-ink-soft); }
+.ci-folder-photo { position: absolute; top: -1%; left: 7%; width: 32%; rotate: -3deg; }
+.ci-folder-cursor { position: absolute; right: 10%; top: 12%; width: 22%; pointer-events: none; filter: drop-shadow(0 0 6px color-mix(in srgb, var(--ci-cursor) 55%, transparent)); }
+
+/* -- the patient dossier ------------------------------------------------------ */
+.ci-dossier { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); grid-template-rows: auto auto auto 1fr; grid-template-areas: "photo crest" "photo auth" "id id" "menu menu"; column-gap: 16px; }
+.ci-dossier-photo { grid-area: photo; align-self: start; z-index: 1; width: 100%; max-width: 210px; margin-top: 8px; rotate: -1.5deg; }
+.ci-dossier-crest { grid-area: crest; justify-self: end; width: min(100%, 118px); margin: 4px 4px 0 0; }
+.ci-authorisation { grid-area: auth; align-self: end; justify-self: end; text-align: right; font-size: 1.0625rem; line-height: 1.5; }
+.ci-authorisation span { display: block; font-family: var(--ci-font-typed); font-size: 1rem; letter-spacing: 0.06em; color: var(--ci-ink-soft); }
+.ci-dossier-id { grid-area: id; display: grid; justify-items: start; gap: 8px; margin-top: 24px; }
+.ci-dossier-id h1 { font-family: var(--ci-font-menu); font-weight: 400; font-size: clamp(1.75rem, 8.6vw, 2.375rem); line-height: 1.1; letter-spacing: 0.08em; text-transform: uppercase; }
+.ci-level-print { display: flex; align-items: center; gap: 12px; font-family: var(--ci-font-typed); font-size: 0.8125rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ci-ink-soft); }
+.ci-level-print strong { padding: 4px 12px; border: 2px solid currentColor; box-shadow: inset 0 0 0 2px var(--ci-paper), inset 0 0 0 3px currentColor; font-weight: 400; font-size: 1rem; color: var(--ci-ink); }
+.ci-endings-print { font-family: var(--ci-font-typed); font-size: 0.8125rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ci-ink-soft); }
+.ci-dossier-menu { grid-area: menu; align-self: start; margin: clamp(24px, 9dvh, 96px) 0 0 -10px; }
+/* Sits in the empty space below the menu, bottom-anchored so it holds at every real
+   size, never high enough to reach the name, the level, the endings line or "To the
+   counter" (Kevin, 2026-09-15: the stamp may never overlap any of those). Measured
+   against the worst case, 390x664: only about 110px sits below the menu there. */
+.ci-dossier-stamp { top: auto; left: auto; right: 6%; bottom: 20px; rotate: -10deg; width: max(150px, min(42%, 190px)); }
+
+/* -- the briefing -------------------------------------------------------------- */
+/* Each page is one idea in big type, set in the middle of the sheet like a title card. */
+.ci-brief-page { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 16px 0; }
+.ci-brief-lead { font-weight: 600; font-size: clamp(1.5rem, 7vw, 2rem); line-height: 1.22; text-wrap: balance; }
+.ci-brief-text { font-size: 1.125rem; line-height: 1.5; text-wrap: pretty; }
+.ci-brief-line { display: block; text-wrap: balance; }
+.ci-brief-note { padding-left: 12px; border-left: 3px solid color-mix(in srgb, var(--ci-ink) 30%, transparent); font-size: 0.9375rem; line-height: 1.45; color: var(--ci-ink-soft); }
+.ci-objective-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.ci-objective-list li { display: grid; grid-template-columns: 1.6em 1fr; font-size: clamp(1.25rem, 5.6vw, 1.5rem); line-height: 1.3; }
+.ci-objective-letter { font-family: var(--ci-font-typed); color: var(--ci-ink-soft); }
+
+/* -- mission status: the classic N64 shooter's end-of-level objectives page ------------------ */
+.ci-ledger { display: grid; gap: 4px; margin: 8px 0 8px; font-family: var(--ci-font-typed); font-size: 0.9375rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.ci-ledger div { display: flex; align-items: baseline; gap: 8px; }
+.ci-ledger dt { flex: 1; display: flex; align-items: baseline; gap: 8px; color: var(--ci-ink-soft); }
+.ci-ledger dt::after { content: ""; flex: 1; border-bottom: 2px dotted color-mix(in srgb, var(--ci-ink) 35%, transparent); }
+.ci-ledger dd { color: var(--ci-ink); }
+/* The named ending and the ranked tier, label over value. A best-case ending gets a
+   small red mark; the rank gets its name and a row of pips. */
+.ci-outcome-lines { display: grid; gap: 6px; margin: 0 0 8px; }
+.ci-outcome-lines dt { display: flex; align-items: center; font-family: var(--ci-font-menu); font-size: 0.8125rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ci-ink-soft); }
+.ci-outcome-lines dd { margin-top: 2px; font-weight: 600; font-size: clamp(1.25rem, 5.6vw, 1.5rem); line-height: 1.2; color: var(--ci-ink); }
+.ci-outcome-lines.is-compact { gap: 6px; margin: 14px 0 0; }
+.ci-outcome-lines.is-compact dd { font-size: clamp(1.0625rem, 4.6vw, 1.25rem); }
+.ci-best { display: inline-block; margin-left: 8px; padding: 1px 6px; border: 1.5px solid var(--ci-stamp); font-family: var(--ci-font-typed); font-size: 0.8125rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ci-ink); }
+.ci-new { display: inline-block; margin-left: 8px; padding: 1px 6px; border: 1.5px solid var(--ci-ink); background: var(--ci-ink); font-family: var(--ci-font-typed); font-size: 0.8125rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ci-paper-light); }
+/* The verdict is the patient's own words, so it reads as a quote. */
+.ci-tier-name::before { content: "\201C"; }
+.ci-tier-name::after { content: "\201D"; }
+.ci-tier-means { display: block; margin-top: 4px; font-weight: 400; font-size: 0.9375rem; line-height: 1.35; color: var(--ci-ink-soft); }
+.ci-tier-pips { display: inline-flex; gap: 4px; margin-left: 10px; vertical-align: 0.06em; white-space: nowrap; }
+.ci-tier-pips i { width: 11px; height: 11px; border: 2px solid var(--ci-ink); }
+.ci-tier-pips i.is-lit { background: var(--ci-ink); }
+.ci-status-list { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 6px; }
+.ci-status-list li { display: grid; grid-template-columns: 1.6em 1fr; row-gap: 3px; font-size: 1.125rem; line-height: 1.3; }
+.ci-status-mark { grid-column: 2; display: flex; align-items: baseline; gap: 8px; }
+.ci-leader { flex: 1; border-bottom: 2px dotted color-mix(in srgb, var(--ci-ink) 35%, transparent); }
+.ci-status-word { white-space: nowrap; font-family: var(--ci-font-menu); font-weight: 400; font-size: 0.8125rem; letter-spacing: 0.14em; }
+.is-unmet .ci-status-word { color: var(--ci-ink-soft); }
+/* The tier, rubber-stamped in the foot's own flow rather than laid over it: it takes
+   real height between the objectives and Continue, so a page that loses or gains
+   Next page can never land under it (Kevin, 2026-09-15: never over the objectives
+   or Continue). A block sized to its content and centred, so it can never hang past
+   the sheet's own text column either. The inked look is Kevin's pick of
+   2026-09-15, drawn in FileFurniture.jsx. */
+/* Width capped too, and a gentler tilt, so a short two-line verdict never spans the
+   column: a full-width box tilted 1.5 degrees rose into the objective above it. */
+.ci-tier-stamp { position: static; width: fit-content; max-width: min(100%, 16rem); margin: 14px auto 0; rotate: -1.25deg; }
+/* Kevin, 2026-09-16: the stamp sat too close to the objective above it. Its air comes
+   out of the gap above Continue, so the page still fits the smallest phone. */
+.ci-status > .ci-sheet-foot { padding-top: 4px; }
+/* Capped by height, not width: the verdict runs to three lines at its longest, and the
+   slot between the objectives and Continue is what runs out. Measured at 375x667, the
+   tightest screen the suite covers, where the full-height stamp overflowed by 20px.
+   At 2.875rem a three-line verdict still draws its letters at 13px or more. */
+.ci-tier-stamp .ci-stamp-ink { height: 2.875rem; width: auto; max-width: 100%; }
+
+/* -- the debrief: transcript, what moved it, sources, one to a page ------------- */
+/* The transcript page is a column, so its box can take the height left and scroll. */
+.ci-debrief-page { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+.ci-nowrap { white-space: nowrap; }
+.ci-moved-list { margin: 0; padding-left: 1.1em; display: grid; gap: 8px; font-size: 1.0625rem; line-height: 1.4; }
+.ci-sources { margin: 0; padding-left: 1.3em; display: grid; gap: 8px; font-size: 1rem; line-height: 1.35; }
+.ci-source-org { font-family: var(--ci-font-typed); font-weight: 400; letter-spacing: 0.1em; }
+.ci-source-date { display: block; font-family: var(--ci-font-typed); font-size: 0.8125rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ci-ink-soft); }
+/* A very long take scrolls inside its own box, fading at the foot, never the page. */
+.ci-transcript-wrap { flex: 1 1 0; min-height: 7rem; margin: 16px 0 8px; padding-bottom: 24px; overflow-y: auto; overscroll-behavior: contain; -webkit-mask-image: linear-gradient(to bottom, var(--ci-ink) calc(100% - 24px), transparent); mask-image: linear-gradient(to bottom, var(--ci-ink) calc(100% - 24px), transparent); }
+.ci-transcript-wrap:focus-visible { outline: 3px solid var(--ci-cursor); outline-offset: 2px; }
+.ci-transcript { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; font-family: var(--ci-font-typed); font-size: 1rem; line-height: 1.35; }
+.ci-transcript li { display: grid; grid-template-columns: 5em 1fr; column-gap: 8px; }
+.ci-transcript-who { padding-top: 0.12em; font-size: 0.8125rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ci-ink-soft); }
+.ci-transcript-end { margin-top: 12px; font-family: var(--ci-font-typed); font-size: 0.8125rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ci-ink-soft); }
+
+/* -- talk about it: an index card, readable across a room --------------------- */
+.ci-card { position: relative; width: min(100%, 520px); min-height: calc(100dvh - 32px - var(--safe-top) - var(--safe-bottom)); display: flex; flex-direction: column; gap: 16px; padding: 44px 20px 16px 52px; border-radius: 3px; rotate: -0.6deg; color: var(--ci-ink); background: linear-gradient(90deg, transparent 36px, var(--ci-card-margin) 36px 37.5px, transparent 37.5px), repeating-linear-gradient(180deg, transparent 0 35px, var(--ci-card-rule) 35px 36px), var(--ci-grain), var(--ci-card); background-size: auto, 100% 36px, 256px 256px, auto; background-position: 0 0, 0 20px, 0 0, 0 0; box-shadow: 0 16px 32px color-mix(in srgb, var(--ci-shadow) 55%, transparent); animation: ci-settle 220ms cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+.ci-card-clip { position: absolute; top: -20px; right: 18%; width: 26px; rotate: 8deg; }
+.ci-card-kicker { font-family: var(--ci-font-menu); font-weight: 400; font-size: 0.875rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--ci-ink-soft); }
+.ci-card-prompt { margin-top: auto; font-weight: 600; font-size: clamp(1.875rem, 8.4vw, 2.75rem); line-height: 1.2; text-wrap: balance; }
+.ci-card-note { margin-bottom: auto; font-size: 1.0625rem; line-height: 1.45; color: var(--ci-ink-soft); }
+
+@keyframes ci-settle { from { opacity: 0; translate: 0 10px; } }
+@media (prefers-reduced-motion: reduce) {
+  .ci-sheet, .ci-card, .ci-select-frame { animation: none; }
+  .ci-folder { transition: none; }
+}
+
+/* -- a phone turned sideways --------------------------------------------------- */
+/* Kevin, 2026-09-16: the game plays in portrait only. One notice covers the screen,
+   padded clear of the island and the home bar on whichever side they sit. */
+.ci-app { display: contents; }
+.ci-portrait-only { position: fixed; inset: 0; z-index: 1000; display: grid; place-content: center; justify-items: center; gap: 12px; padding: max(16px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left)); text-align: center; color: var(--ci-menu); background: var(--ci-grain), radial-gradient(85% 60% at 50% 42%, var(--ci-night-lift), var(--ci-night) 74%); background-size: 256px 256px, auto; }
+.ci-portrait-mark { width: 44px; height: 44px; }
+.ci-portrait-title { margin: 0; font-family: var(--ci-font-menu); font-size: 1.25rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.ci-portrait-note { margin: 0; max-width: 28em; text-wrap: balance; font-size: 1rem; line-height: 1.45; color: var(--ci-menu-dim); }

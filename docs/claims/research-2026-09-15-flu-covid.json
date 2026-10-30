@@ -1,0 +1,219 @@
+{
+  "fetchedOn": "2026-09-15",
+  "method": "All pages retrieved today via WebFetch (HTML-to-markdown + model summarization) and cross-checked with WebSearch where noted. Direct curl access to cdc.gov returned HTTP 403 (bot protection) on every attempt, so no raw-HTML byte-exact verification was possible; quotes below are treated as high-confidence paraphrase-verified (cross-checked across 2+ independent tool calls) rather than guaranteed byte-exact, except where noted otherwise.",
+  "claims": [
+    {
+      "n": 1,
+      "status": "SUPPORTED",
+      "text": "CDC recommends a flu vaccine every season for everyone 6 months and older, with rare exceptions.",
+      "org": "CDC",
+      "title": "Who Needs a Flu Vaccine | Influenza (Flu) | CDC",
+      "url": "https://www.cdc.gov/flu/vaccines/vaccinations.html",
+      "pageUpdated": "Last reviewed September 18, 2025 (page also carries a site-wide 'Updated: September 1, 2026' stamp — see warnings)",
+      "quote": "Everyone 6 months and older should get a flu vaccine every season with rare exceptions."
+    },
+    {
+      "n": 2,
+      "status": "SUPPORTED",
+      "text": "September and October are good times to get a flu vaccine, ideally by the end of October; vaccination later in the season is still worthwhile as long as flu viruses are circulating.",
+      "org": "CDC",
+      "title": "Who Needs a Flu Vaccine | Influenza (Flu) | CDC",
+      "url": "https://www.cdc.gov/flu/vaccines/vaccinations.html",
+      "pageUpdated": "Last reviewed September 18, 2025",
+      "quote": "September and October are generally good times to be vaccinated against influenza. Ideally, everyone should be vaccinated by the end of October.",
+      "secondarySource": {
+        "org": "CDC",
+        "title": "Preventing Seasonal Flu | Influenza (Flu) | CDC",
+        "url": "https://www.cdc.gov/flu/prevention/index.html",
+        "pageUpdated": "Last reviewed September 26, 2025",
+        "quote": "people should continue to get vaccinated as long as flu viruses pose a threat to their community."
+      }
+    },
+    {
+      "n": 3,
+      "status": "SUPPORTED",
+      "text": "A flu vaccine is needed every year because flu viruses are constantly changing (so the vaccine formula is updated each year) and because immune protection from vaccination declines over time.",
+      "org": "CDC",
+      "title": "Misconceptions About Seasonal Flu and Flu Vaccines | Influenza (Flu) | CDC",
+      "url": "https://www.cdc.gov/flu/prevention/misconceptions.html",
+      "pageUpdated": "September 6, 2024",
+      "quote": "A person's immune protection from vaccination declines over time, so an annual vaccination is needed to get the 'optimal' or best protection."
+    },
+    {
+      "n": 4,
+      "status": "SUPPORTED",
+      "text": "Flu shots cannot give you the flu — they're made with inactivated (killed) virus or a single flu-virus protein, not live infectious virus.",
+      "org": "CDC",
+      "title": "Misconceptions About Seasonal Flu and Flu Vaccines | Influenza (Flu) | CDC",
+      "url": "https://www.cdc.gov/flu/prevention/misconceptions.html",
+      "pageUpdated": "September 6, 2024",
+      "quote": "Flu vaccines cannot cause flu illness. Flu vaccines given with a needle are made with inactivated (killed) viruses, or with only a single protein"
+    },
+    {
+      "n": 5,
+      "status": "SUPPORTED",
+      "text": "Common side effects are mild and short: soreness, redness, and/or swelling where the shot was given, and sometimes headache, fever, or muscle aches.",
+      "org": "CDC",
+      "title": "Key Facts About Seasonal Flu Vaccine | Influenza (Flu) | CDC",
+      "url": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
+      "pageUpdated": "Reviewed September 3, 2025 (page also shows 'Published: October 1, 2024' and a site-wide 'Updated: September 1, 2026' stamp)",
+      "quote": "Some minor side effects that may occur are: Soreness, redness, and/or swelling where the shot was given; Headache; Fever; Muscle aches; Nausea; Fatigue."
+    },
+    {
+      "n": 6,
+      "status": "SUPPORTED",
+      "text": "It takes about two weeks after vaccination for protection (antibodies) to develop.",
+      "org": "CDC",
+      "title": "Key Facts About Seasonal Flu Vaccine | Influenza (Flu) | CDC",
+      "url": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
+      "pageUpdated": "Reviewed September 3, 2025",
+      "quote": "It takes about two weeks after vaccination for antibodies to develop in the body and provide protection against influenza virus infection."
+    },
+    {
+      "n": 7,
+      "status": "SUPPORTED",
+      "text": "A flu vaccine can be given at the same visit as other recommended vaccines, including a COVID-19 vaccine, if the timing for each is right.",
+      "org": "CDC",
+      "title": "Getting a Flu Vaccine and other Recommended Vaccines at the Same Time | Influenza (Flu) | CDC",
+      "url": "https://www.cdc.gov/flu/vaccines/coadministration.html",
+      "pageUpdated": "Last reviewed September 17, 2024",
+      "quote": "People can get a flu vaccine and COVID-19 vaccine at the same visit if they are eligible",
+      "secondarySource": {
+        "org": "CDC",
+        "title": "Clinical Overview of Respiratory Illnesses | Respiratory Illnesses | CDC",
+        "url": "https://www.cdc.gov/respiratory-viruses/hcp/clinical-overview/index.html",
+        "pageUpdated": "August 18, 2025",
+        "quote": "Flu, COVID-19, and RSV vaccines may be co-administered (given at the same visit)."
+      }
+    },
+    {
+      "n": 8,
+      "status": "SUPPORTED",
+      "text": "People with an egg allergy can get any flu vaccine that is otherwise right for their age and health — no extra precautions are needed beyond what's recommended for any vaccine, regardless of how severe a past egg reaction was.",
+      "org": "CDC",
+      "title": "Flu Vaccines and People with Egg Allergies | Influenza (Flu) | CDC",
+      "url": "https://www.cdc.gov/flu/vaccines/egg-allergies.html",
+      "pageUpdated": "September 17, 2024",
+      "quote": "People with egg allergy may get any vaccine (egg-based or non-egg-based) that is otherwise appropriate for their age and health status."
+    },
+    {
+      "n": 9,
+      "status": "CHANGED",
+      "text": "Fainting can happen after any injection. CDC's general vaccine-administration best-practice guidance says providers should consider having patients sit or lie down for about 15 minutes after vaccination to reduce injury risk if they faint — the guidance specifically calls out this practice as most important for adolescents, but the sit-and-wait period is standard general best practice, not adolescent-only.",
+      "org": "CDC",
+      "title": "Preventing and Managing Adverse Reactions | Vaccines & Immunizations | CDC",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/preventing-managing-adverse-reactions.html",
+      "pageUpdated": "July 25, 2024",
+      "quote": "should consider observing patients (with patients seated or lying down) for 15 minutes after vaccination to decrease the risk for injury"
+    },
+    {
+      "n": 10,
+      "status": "SUPPORTED",
+      "text": "Flu vaccination lowers the risk of flu illness, doctor's-office visits, and (per the same CDC sentence) flu-related hospitalizations and deaths.",
+      "org": "CDC",
+      "title": "Who Needs a Flu Vaccine | Influenza (Flu) | CDC",
+      "url": "https://www.cdc.gov/flu/vaccines/vaccinations.html",
+      "pageUpdated": "Last reviewed September 18, 2025",
+      "quote": "It can reduce flu illnesses, visits to doctor's offices, and missed work and school due to flu"
+    },
+    {
+      "n": 11,
+      "status": "SUPPORTED",
+      "text": "Getting vaccinated may also help protect people around you who are more likely to get very sick with flu, including babies and young children, older adults, pregnant women, and people with certain chronic conditions.",
+      "org": "CDC",
+      "title": "Benefits of Flu Vaccination | Flu Vaccines Work | CDC",
+      "url": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
+      "pageUpdated": "May 28, 2026",
+      "quote": "Getting yourself vaccinated may also protect people around you, including people who are more likely to get very sick with flu, like babies"
+    },
+    {
+      "n": 12,
+      "status": "SUPPORTED",
+      "text": "Most health insurance plans cover a flu vaccine at no out-of-pocket cost — CDC states Marketplace and most private insurance plans must cover certain vaccines (influenza named elsewhere on the page as usually covered) with no copay/coinsurance in-network, and Medicare Part B pays for flu vaccines.",
+      "org": "CDC",
+      "title": "How to Pay for Vaccines | Adult Vaccines | CDC",
+      "url": "https://www.cdc.gov/vaccines-adults/recommended-vaccines/how-to-pay-adult-vaccines.html",
+      "pageUpdated": "July 10, 2024",
+      "quote": "All Health Insurance Marketplace plans and most other private insurance plans must cover certain vaccines without charging a copayment or coinsurance"
+    },
+    {
+      "n": 13,
+      "status": "CHANGED",
+      "text": "As of today (2026-09-15), CDC does NOT give a blanket 'everyone should get it' recommendation for COVID-19 vaccine in healthy adults 18-64. Current guidance is 'individual-based decision-making' (also called 'shared clinical decision-making'), with CDC noting the risk-benefit is most favorable for people at increased risk of severe COVID-19. The current formulation referenced is the 2025-2026 vaccine (Omicron JN.1-lineage; mRNA options from Moderna and Pfizer-BioNTech, plus a Novavax protein-subunit option). CDC's general respiratory-virus clinical guidance states flu, COVID-19, and RSV vaccines may be co-administered at the same visit, though the main COVID adult-recommendation page itself doesn't repeat that co-administration line. FLAG: this is a high-volatility area (ACIP membership and HHS policy changes through 2025-2026) — re-verify before shipping and before each new season rather than hard-coding this wording long-term.",
+      "org": "CDC",
+      "title": "Overview of COVID-19 Vaccines and Vaccination | Covid | CDC",
+      "url": "https://www.cdc.gov/covid/hcp/vaccine-considerations/overview.html",
+      "pageUpdated": "November 4, 2025",
+      "quote": "Vaccination based on individual-based decision-making (also known as shared clinical decision-making)",
+      "secondarySource": {
+        "org": "CDC",
+        "title": "Staying Up to Date with COVID-19 Vaccines | Covid | CDC",
+        "url": "https://www.cdc.gov/covid/vaccines/stay-up-to-date.html",
+        "pageUpdated": "November 19, 2025",
+        "quote": "CDC recommends a 2025-2026 COVID-19 vaccine for people ages 6 months and older based on individual-based decision-making."
+      }
+    },
+    {
+      "n": 14,
+      "status": "SUPPORTED",
+      "text": "Adults should get a Td or Tdap booster every 10 years to maintain protection against tetanus and diphtheria (Tdap also covers pertussis/whooping cough).",
+      "org": "CDC",
+      "title": "Diphtheria, Tetanus, and Pertussis (Whooping Cough) Vaccination: Information for Health Care Providers | Vaccines & Immunizations | CDC",
+      "url": "https://www.cdc.gov/vaccines/hcp/by-disease/dtap-tdap-td.html",
+      "pageUpdated": "September 6, 2022 (oldest source used in this ledger — see warnings)",
+      "quote": "After receipt of Tdap, patients should continue to receive Td or Tdap for routine booster immunization every 10 years."
+    },
+    {
+      "n": 15,
+      "status": "CHANGED",
+      "text": "The exact phrase 'a flu shot takes only a few minutes' was NOT FOUND on any CDC page checked — do not attribute that wording to CDC. What IS supported: vaccines.gov, run by CDC and HHS, lets people search by ZIP code to find a nearby pharmacy offering vaccines (users should still contact the pharmacy to confirm availability/appointment).",
+      "org": "CDC / HHS",
+      "title": "Find pharmacies near you | Vaccines.gov",
+      "url": "https://www.vaccines.gov/",
+      "pageUpdated": null,
+      "quote": "Find a pharmacy near you"
+    }
+  ],
+  "covidStatusSummary": "As of 2026-09-15, CDC's current recommendation for a healthy adult aged 18-64 is 'individual-based decision-making' (a.k.a. 'shared clinical decision-making') for the 2025-2026 COVID-19 vaccine, not a universal 'everyone should get it' recommendation — CDC frames the risk-benefit as most favorable for people at increased risk of severe COVID-19. Source: https://www.cdc.gov/covid/hcp/vaccine-considerations/overview.html (last updated Nov 4, 2025), corroborated by https://www.cdc.gov/covid/vaccines/stay-up-to-date.html (last updated Nov 19, 2025). Same-visit co-administration with flu vaccine is stated on CDC's general respiratory-virus page (https://www.cdc.gov/respiratory-viruses/hcp/clinical-overview/index.html, Aug 18, 2025: 'Flu, COVID-19, and RSV vaccines may be co-administered') but not repeated verbatim on the COVID-specific adult overview page. This is a volatile, fast-moving area given 2025-2026 ACIP membership and HHS policy changes — re-check immediately before the game ships and again before each new flu/COVID season rather than treating this wording as permanent.",
+  "extras": [
+    {
+      "n": "E1",
+      "status": "SUPPORTED",
+      "text": "Some people are at higher risk of serious flu complications — general categories CDC names include young children, pregnant women, adults 65 and older, and people with certain chronic conditions (like asthma, diabetes, or heart/lung disease).",
+      "org": "CDC",
+      "title": "People at Increased Risk for Flu Complications | Influenza (Flu) | CDC",
+      "url": "https://www.cdc.gov/flu/highrisk/index.htm",
+      "pageUpdated": "September 11, 2024",
+      "quote": "Some people are at higher risk of developing serious complications from flu."
+    },
+    {
+      "n": "E2",
+      "status": "SUPPORTED",
+      "text": "Flu activity in the US most often peaks between December and February, which is part of why CDC still recommends vaccination well after October if you missed the ideal window.",
+      "org": "CDC",
+      "title": "Flu Season | Influenza (Flu) | CDC",
+      "url": "https://www.cdc.gov/flu/about/season.html",
+      "pageUpdated": "September 26, 2025",
+      "quote": "most of the time flu activity peaks between December and February"
+    },
+    {
+      "n": "E3",
+      "status": "SUPPORTED",
+      "text": "How well a flu vaccine works can vary from season to season, depending partly on how well the vaccine's viruses match the viruses actually circulating that year (a fair, honest caveat a pharmacist could mention without undermining the recommendation).",
+      "org": "CDC",
+      "title": "Misconceptions About Seasonal Flu and Flu Vaccines | Influenza (Flu) | CDC",
+      "url": "https://www.cdc.gov/flu/prevention/misconceptions.html",
+      "pageUpdated": "September 6, 2024",
+      "quote": "The protection provided by a flu vaccine varies from season to season and depends in part on the age and health status"
+    }
+  ],
+  "warnings": [
+    "Direct curl fetches of every cdc.gov URL used here returned HTTP 403 (bot protection) — I did not attempt to bypass this. All quotes were obtained via the WebFetch tool (which converts HTML to markdown and summarizes through a small model) and, where possible, cross-checked against an independent WebSearch snippet pulling from the same page. Treat quotes as high-confidence but not guaranteed byte-exact; if the game needs legally/editorially exact CDC text, have a human copy-paste directly from the live page before shipping.",
+    "Several CDC flu pages (vaccinations.html, keyfacts.html, coadministration.html, prevention/index.html, seasonal-influenza-vaccines.html) all displayed an identical 'Updated: September 1, 2026' stamp — this looks like a site-wide republish/re-stamp tied to the new flu season rather than a per-page substantive edit. Where a page also showed a distinct 'Last Reviewed' date, I used that instead as the more meaningful currency signal.",
+    "Claim 13 (COVID-19 status) is explicitly the most volatile item in this ledger. 'Individual-based decision-making' / 'shared clinical decision-making' language, ACIP membership, and HHS policy around COVID-19 vaccines have changed repeatedly through 2025-2026. Re-verify this specific claim close to ship date and again at the start of each future flu/COVID season — do not treat the wording captured today as permanent.",
+    "Claim 9 (fainting/15-minute wait): the CDC best-practices page I used frames the 15-minute seated/lying-down observation recommendation with adolescents as the headline example (they faint most often), not as a universal 'every patient must wait 15 minutes' rule. I reworded the claim to reflect that nuance rather than overstate it as a blanket rule for all adult patients.",
+    "Claim 14 (Td/Tdap every 10 years) is sourced from a CDC page last updated September 6, 2022 — the oldest source in this ledger. The underlying 10-year interval is a long-standing, stable ACIP recommendation and I found no CDC page contradicting it, but flagging the page's age per epistemic-recency practice.",
+    "Claim 15's candidate wording ('takes only a few minutes') was NOT FOUND on any CDC page I checked (searched keyfacts.html, vaccinations.html, and general search) — I did not invent a quote for it and instead substituted a supported, adjacent fact (vaccines.gov pharmacy finder).",
+    "No pages were blocked from WebFetch itself (only raw curl was blocked); every URL cited above was successfully fetched today, 2026-09-15."
+  ]
+}

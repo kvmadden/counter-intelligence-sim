@@ -1,0 +1,176 @@
+:root { color: var(--ci-ink); background: var(--ci-night); font-family: var(--ci-font-body); }
+* { box-sizing: border-box; }
+html, body, #root { min-height: 100%; margin: 0; }
+body { background: var(--ci-night); -webkit-font-smoothing: antialiased; }
+button { font: inherit; }
+button:focus-visible { outline: 3px solid var(--ci-cursor); outline-offset: 3px; }
+h1[tabindex="-1"]:focus { outline: none; }
+
+/* The patient-file screens (SELECT FILE, dossier, briefing, mission status,
+   debrief, huddle) are styled in files.css. */
+
+/* === Encounter proof (2026-09-15) =========================================
+   The encounter and its Rx handheld (the pause). Every colour and face here is a
+   --enc-* token from theme.js. */
+
+/* The safe-area insets (iPhone home bar, and the status bar in home-screen mode), read
+   through custom properties so a test can force them: Playwright cannot emulate env(). */
+.enc-encounter { --enc-safe-top: env(safe-area-inset-top, 0px); --enc-safe-bottom: env(safe-area-inset-bottom, 0px); min-height: 100dvh; display: flex; justify-content: center; background: var(--enc-page); color: var(--enc-text); font-family: var(--enc-font-body); }
+.enc-column { width: min(100%, 520px); min-height: 100dvh; display: flex; flex-direction: column; }
+/* Reset the UA button look at class-level specificity, so each control's own rule wins. */
+.enc-encounter :where(button) { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent; }
+.enc-encounter button:focus-visible { outline: 3px solid var(--enc-focus); outline-offset: 2px; }
+
+/* -- the game screen: scene, HUD arcs, readout, watch control --------------- */
+.enc-viewport { position: relative; flex: 1 1 0; min-height: 13rem; overflow: hidden; background: var(--enc-fog); }
+.enc-scene { position: absolute; inset: 0; }
+.enc-scene-gl { position: absolute; inset: 0; }
+.enc-scene-canvas { display: block; width: 100%; height: 100%; image-rendering: auto; }
+/* Until the first clean frame (and whenever the scene is down) show the fog colour, never a black canvas. */
+.enc-scene:not([data-scene="webgl"]) .enc-scene-gl { visibility: hidden; }
+.enc-scene-fallback { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; filter: saturate(0.55) blur(1px); }
+.enc-hud-top { position: absolute; inset: 0 0 auto; display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; padding: calc(8px + var(--enc-safe-top)) 8px 0 16px; pointer-events: none; }
+.enc-hud-top > * { pointer-events: auto; }
+.enc-readout { margin: 16px 0 0; font-family: var(--enc-font-hud); font-size: 0.8125rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--enc-hud-text); text-shadow: 1px 1px 0 var(--enc-hud-shadow), 0 0 4px var(--enc-hud-shadow); }
+.enc-handheld-button { flex: none; width: 56px; height: 56px; padding: 0; border: 0; border-radius: 12px; background: transparent; cursor: pointer; filter: drop-shadow(0 2px 2px var(--enc-hud-shadow)); }
+.enc-handheld-button svg { display: block; width: 100%; height: 100%; }
+.enc-handheld-button:active svg { transform: scale(0.96); }
+.enc-glyph-body { fill: var(--enc-device-mid); stroke: var(--enc-device-edge); stroke-width: 1.5; }
+.enc-glyph-bumper { fill: var(--enc-device-bumper); }
+.enc-glyph-lens { fill: var(--enc-device-lens); }
+.enc-glyph-ear { fill: var(--enc-device-earpiece); }
+.enc-glyph-lcd { fill: var(--enc-lcd-face); stroke: var(--enc-lcd-line); }
+.enc-glyph-text { fill: var(--enc-lcd-text); font-family: var(--enc-font-hud); font-size: 10px; letter-spacing: 0.04em; }
+.enc-hud-arc { position: absolute; top: 47%; height: 42%; aspect-ratio: 60 / 240; transform: translateY(-50%); pointer-events: none; overflow: visible; filter: drop-shadow(0 0 3px color-mix(in srgb, var(--enc-hud-shadow) 70%, transparent)); }
+.enc-hud-arc--left { left: 2px; }
+.enc-hud-arc--right { right: 2px; }
+.enc-arc-segs path { fill: var(--seg); fill-opacity: 0.14; stroke: var(--seg); stroke-opacity: 0.55; stroke-width: 1; transition: fill-opacity 160ms linear, stroke-opacity 160ms linear; }
+.enc-arc-segs path.is-lit { fill-opacity: 0.95; stroke-opacity: 0; }
+
+/* -- the line --------------------------------------------------------------- */
+.enc-dialogue { flex: none; min-height: 6.5rem; padding: 12px 16px 16px; background: linear-gradient(180deg, var(--enc-panel), var(--enc-panel-low)); border-top: 2px solid var(--enc-border); }
+.enc-speaker { margin: 0; display: flex; align-items: center; gap: 8px; font-family: var(--enc-font-display); font-size: 0.8125rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--enc-lcd-text); }
+.enc-speaker::before { content: ""; flex: none; width: 8px; height: 8px; background: var(--enc-lcd-text); box-shadow: 0 0 6px var(--enc-lcd-text); }
+.enc-line { margin: 8px 0 0; font-size: 1.125rem; line-height: 1.4; color: var(--enc-text); }
+
+/* -- the moves -------------------------------------------------------------- */
+/* The deck grows by the home-bar inset rather than giving it up from its content box, so
+   the three-choice panel keeps its full height; the flexible scene yields the room. */
+.enc-deck { flex: none; height: calc(16.5rem + var(--enc-safe-bottom)); padding: 12px 12px calc(12px + var(--enc-safe-bottom)); background: var(--enc-page); }
+/* One move per row, as a watch-menu list (Kevin, 2026-09-15): big names, no hint lines. */
+.enc-keys { height: 100%; display: grid; grid-template-rows: repeat(4, minmax(0, 1fr)); gap: 8px; }
+/* The moves speak the Rx handheld's pause-menu language (Kevin, 2026-09-15): green on
+   black, mono type, scanlines and softkeys, with the glyph, name and gloss of each
+   move kept apart so its meaning reads at a glance. */
+.enc-key, .enc-choice { border: 1px solid var(--enc-lcd-line); border-radius: 6px; background: repeating-linear-gradient(180deg, color-mix(in srgb, var(--enc-lcd-face-deep) 50%, transparent) 0 1px, transparent 1px 4px), linear-gradient(180deg, var(--enc-lcd-face), var(--enc-lcd-face-deep)); box-shadow: inset 0 0 12px color-mix(in srgb, var(--enc-lcd-face-deep) 80%, transparent); color: var(--enc-lcd-text); font-family: var(--enc-font-hud); text-shadow: 0 0 5px color-mix(in srgb, var(--enc-lcd-text) 45%, transparent); cursor: pointer; text-align: left; }
+.enc-key { min-height: 44px; display: flex; align-items: center; gap: 16px; padding: 0 16px; }
+.enc-key:hover:not(:disabled), .enc-choice:hover { border-color: var(--enc-lcd-text); }
+.enc-key:active:not(:disabled), .enc-choice:active { transform: translateY(1px); background: color-mix(in srgb, var(--enc-lcd-text) 16%, var(--enc-lcd-face-deep)); }
+.enc-key:disabled { cursor: not-allowed; color: var(--enc-lcd-dim); border-color: color-mix(in srgb, var(--enc-lcd-line) 45%, transparent); text-shadow: none; opacity: 0.5; }
+.enc-key-glyph { flex: none; width: 36px; height: 36px; display: grid; place-items: center; border: 1px dashed var(--enc-lcd-text); border-radius: 3px; background: color-mix(in srgb, var(--enc-lcd-text) 12%, transparent); font-size: 1.375rem; }
+.enc-key:disabled .enc-key-glyph { border-color: var(--enc-lcd-dim); background: transparent; }
+.enc-key-label { min-width: 0; font-size: 1.375rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; }
+.enc-choices { height: 100%; display: flex; flex-direction: column; gap: 8px; overflow-y: auto; overscroll-behavior: contain; }
+.enc-choices:focus { outline: none; }
+.enc-choices-head { flex: none; min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.enc-choices-title { margin: 0; font-family: var(--enc-font-hud); font-size: 0.8125rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--enc-lcd-text); }
+.enc-back { min-height: 44px; padding: 0 12px; border: 1px dashed var(--enc-lcd-text); border-radius: 3px; background: color-mix(in srgb, var(--enc-lcd-text) 10%, transparent); color: var(--enc-lcd-text); font-family: var(--enc-font-hud); font-size: 0.8125rem; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; }
+.enc-choice { flex: 1 1 0; min-height: 48px; max-height: 5.5rem; display: flex; align-items: center; gap: 12px; padding: 4px 12px; font-size: 1rem; line-height: 1.25; }
+.enc-choice::before { content: ""; flex: none; width: 8px; height: 8px; background: currentColor; }
+/* Four choices share the deck the four moves use, so the scene and the line above
+   never move. Only then do rows drop to 44px and gaps to 4px: two lines of the same
+   16px type still fit, and nothing scrolls inside the panel (the brief's edge case 9). */
+.enc-choices[data-count="4"] { gap: 4px; }
+.enc-choices[data-count="4"] .enc-choice { box-sizing: border-box; min-height: 44px; padding-block: 1px; }
+
+/* -- the Rx handheld ---------------------------------------------------------
+   Replaces the Rx watch (Kevin, 2026-09-15): a rugged near-black body with
+   rubber corner bumpers, side scan-trigger buttons, a camera and earpiece slot,
+   the game's own small embossed Rx, and the same green terminal screen. */
+.enc-handheld-scrim { position: fixed; inset: 0; z-index: 400; display: flex; justify-content: center; align-items: center; background: color-mix(in srgb, var(--enc-page) 86%, transparent); }
+.enc-handheld { --case-w: min(calc(100vw - 16px), 404px, calc((100dvh - 48px - var(--handheld-bottom-pad, 0px) - var(--enc-safe-top, 0px)) * 388 / 600)); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.enc-handheld:focus { outline: none; }
+.enc-handheld-case { position: relative; flex: none; width: var(--case-w); aspect-ratio: 388 / 600; container-type: inline-size; }
+.enc-handheld-face { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 8px 16px color-mix(in srgb, var(--enc-hud-shadow) 80%, transparent)); }
+.enc-hh-stop-sheen { stop-color: var(--enc-device-sheen); }
+.enc-hh-stop-mid { stop-color: var(--enc-device-mid); }
+.enc-hh-stop-dark { stop-color: var(--enc-device-dark); }
+.enc-stop-lcd { stop-color: var(--enc-lcd-face); }
+.enc-stop-lcd-deep { stop-color: var(--enc-lcd-face-deep); }
+.enc-hh-bumper { fill: var(--enc-device-bumper); stroke: var(--enc-device-bumper-edge); stroke-width: 1.5; }
+.enc-hh-body { stroke: var(--enc-device-edge); stroke-width: 2; }
+.enc-hh-button { fill: var(--enc-device-button); stroke: var(--enc-device-button-edge); stroke-width: 1.5; }
+.enc-hh-lens { fill: var(--enc-device-lens); stroke: var(--enc-device-lens-ring); stroke-width: 2; }
+.enc-hh-earpiece { fill: var(--enc-device-earpiece); }
+.enc-hh-mark { fill: var(--enc-device-rx-mark); font-family: var(--enc-font-hud); font-size: 13px; letter-spacing: 0.06em; }
+/* The softkeys are the screen's wallpaper, not controls, so they sit dimmer than
+   RESUME's own green: on an Android layout, only RESUME may read as tappable. */
+.enc-hh-nav { fill: none; stroke: color-mix(in srgb, var(--enc-lcd-dim) 70%, var(--enc-lcd-face)); stroke-width: 2.4; stroke-linejoin: round; }
+.enc-hh-nav-home { fill: none; stroke: color-mix(in srgb, var(--enc-lcd-dim) 70%, var(--enc-lcd-face)); stroke-width: 2.4; }
+.enc-hh-speaker rect { fill: var(--enc-device-speaker); }
+.enc-hh-lcd-edge { stroke: color-mix(in srgb, var(--enc-lcd-line) 60%, var(--enc-device-bumper)); stroke-width: 3; }
+.enc-lcd-scanline { fill: color-mix(in srgb, var(--enc-lcd-face-deep) 55%, transparent); }
+/* Second pass, 2026-09-15: clamp(15.5px, 4.2cqi, 17px) held every line at
+   13px or more, but it only fit about four objective lines before the screen
+   scrolled, and a 00 file's seven objectives overflowed by about 125px. This
+   lower base still clears 13px with max(...) on the section heads and tray
+   labels below (0.86em of it can dip under 13px at the smaller real case
+   widths, where max() takes over), and leaves more of the screen for content. */
+.enc-lcd { position: absolute; padding: 14px 10px 24px; display: flex; flex-direction: column; gap: 6px; overflow-y: auto; -webkit-mask-image: linear-gradient(to bottom, var(--enc-lcd-text) calc(100% - 24px), transparent); mask-image: linear-gradient(to bottom, var(--enc-lcd-text) calc(100% - 24px), transparent); font-family: var(--enc-font-hud); font-size: clamp(13.5px, 3.6cqi, 15px); line-height: 1.26; color: var(--enc-lcd-text); text-shadow: 0 0 5px color-mix(in srgb, var(--enc-lcd-text) 50%, transparent); }
+.enc-lcd-statusbar { margin: 0; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.enc-hh-segments { flex: 1 1 auto; display: flex; gap: 3px; max-width: 60%; }
+.enc-hh-segments span { flex: 1 1 0; height: 8px; border-radius: 2px; background: color-mix(in srgb, var(--seg) 16%, transparent); border: 1px solid color-mix(in srgb, var(--seg) 45%, transparent); transition: background-color 160ms linear, border-color 160ms linear; }
+.enc-hh-segments span.is-lit { background: var(--seg); border-color: var(--seg); box-shadow: 0 0 4px var(--seg); }
+.enc-hh-status-icons { flex: none; display: flex; align-items: center; gap: 6px; color: var(--enc-lcd-dim); }
+.enc-hh-wifi { width: 12px; height: 9px; border: 2px solid currentColor; border-bottom: 0; border-radius: 12px 12px 0 0; }
+.enc-hh-battery { position: relative; width: 16px; height: 9px; border: 1.5px solid currentColor; border-radius: 2px; }
+.enc-hh-battery::after { content: ""; position: absolute; right: -4px; top: 2px; width: 2px; height: 5px; background: currentColor; border-radius: 0 1px 1px 0; }
+.enc-lcd-title, .enc-lcd-status { margin: 0; text-align: center; }
+.enc-lcd-title { font-size: 1.1em; letter-spacing: 0.04em; }
+.enc-lcd-key { flex: none; min-height: 44px; margin: 4px 0; border: 1px dashed var(--enc-lcd-text); border-radius: 3px; background: color-mix(in srgb, var(--enc-lcd-text) 12%, transparent); color: var(--enc-lcd-text); font-family: var(--enc-font-hud); font-size: 1em; letter-spacing: 0.24em; text-shadow: inherit; cursor: pointer; }
+.enc-lcd-key:focus-visible { outline: 2px solid var(--enc-lcd-text); outline-offset: 2px; }
+.enc-lcd-head { margin: 4px 0 0; padding-bottom: 4px; border-bottom: 1px solid var(--enc-lcd-line); font: inherit; font-size: max(13px, 0.86em); letter-spacing: 0.1em; color: var(--enc-lcd-dim); }
+.enc-lcd-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.enc-lcd-list li { display: flex; gap: 8px; }
+.enc-lcd-list li::before { content: ""; flex: none; width: 5px; height: 5px; margin-top: 0.45em; background: currentColor; }
+.enc-lcd-list li.is-quiet { color: var(--enc-lcd-dim); }
+.enc-lcd-gadget { margin: auto 0 0; padding-top: 8px; border-top: 1px solid var(--enc-lcd-line); display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: max(13px, 0.86em); line-height: 1.1; }
+.enc-lcd-gadget > span:first-child, .enc-lcd-gadget > span:last-child { max-width: 6em; }
+.enc-lcd-gadget > span:last-child { text-align: right; }
+.enc-tray { display: flex; gap: 3px; }
+.enc-tray i { width: 10px; height: 7px; background: var(--enc-lcd-text); box-shadow: 0 0 4px var(--enc-lcd-text); }
+
+@media (prefers-reduced-motion: reduce) { .enc-arc-segs path { transition: none; } }
+
+/* -- the pause: raised into view on the player's own sleeve (2026-09-15) -----
+   the classic N64 shooter's pause lifts the agent's wrist into shot. Here the whole handheld rises
+   from below on the player's own lab-coat sleeve and cuff, coming up from
+   the bottom of the screen, with no fingers drawn. Flat N64 facets, settling without overshoot. Reduced
+   motion: it is simply there. */
+/* At Kevin's real phone sizes the case nearly fills the short dimension, so
+   centring it dead-centre in the scrim leaves almost nothing below it for the
+   cuff to show in. A small bottom padding, in dvh so it scales with the
+   viewport instead of a fixed px, nudges the whole handheld up just enough
+   without crowding the encounter's own HUD above the scrim. --case-w's own
+   height term (above) subtracts this same --handheld-bottom-pad, so the pad
+   shrinks the case slightly on short phones instead of eating into the gap
+   the case already had above it (a real regression the first pass left: 24px
+   at 390x664, 6 to 15px in landscape). */
+/* From the home screen the page runs under the Dynamic Island and the home bar, so the
+   scrim pads by both insets (Kevin, 2026-09-16), and the case above sizes to what is left. */
+.enc-handheld-scrim { --handheld-bottom-pad: calc(5.5dvh + var(--enc-safe-bottom, 0px)); overflow: hidden; animation: enc-dim 180ms linear both; padding-top: var(--enc-safe-top, 0px); padding-bottom: var(--handheld-bottom-pad); }
+.enc-handheld { position: relative; transform-origin: 50% 100%; animation: enc-raise 380ms cubic-bezier(0.2, 0.7, 0.25, 1) both; }
+.enc-handheld-case { z-index: 1; }
+/* The sleeve comes up from the bottom of the screen behind the case, the wrist
+   vanishing behind the device's lower half. The case is 1.55 case-widths tall,
+   so the wrist shows just below it, then the cuff, then the coat. Three
+   vertical facets shade it, darker on the right, away from the scene's light. */
+.enc-forearm { pointer-events: none; --wrist: calc(var(--case-w) * 0.3); --cuff: calc(var(--case-w) * 0.06); position: absolute; z-index: 0; left: 50%; top: calc(var(--case-w) * 1.3); width: calc(var(--case-w) * 0.66); height: 100dvh; translate: -50% 0; clip-path: polygon(22% 0, 78% 0, 100% 100%, 0 100%); background: linear-gradient(90deg, color-mix(in srgb, var(--enc-hud-shadow) 28%, transparent) 0 30%, transparent 30% 70%, color-mix(in srgb, var(--enc-hud-shadow) 44%, transparent) 70%), linear-gradient(180deg, var(--enc-staff-skin) 0 var(--wrist), var(--enc-coat-cuff) var(--wrist) calc(var(--wrist) + var(--cuff)), var(--enc-coat) calc(var(--wrist) + var(--cuff))); filter: brightness(0.9); }
+/* The sleeve must stay pointer-events: none, or a tap where it overlaps the
+   dimmed scrim below the case is swallowed by the dialog instead of reaching
+   the scrim (the old forearm's real bug, 2026-09-15). No hand is drawn: after
+   two passes at fingers, Kevin chose the sleeve alone (2026-09-15). */
+/* The scene dims behind the rising handheld; the handheld itself stays solid. */
+@keyframes enc-dim { from { background-color: transparent; } }
+@keyframes enc-raise { from { transform: translateY(58%) rotate(-6deg) scale(0.9); } }
+@media (prefers-reduced-motion: reduce) { .enc-handheld, .enc-handheld-scrim { animation: none; } }
