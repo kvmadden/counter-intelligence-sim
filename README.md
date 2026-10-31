@@ -111,6 +111,10 @@ npm run gate         # the full gate: all of the above plus every browser viewpo
 
 `npm run build` also writes `dist/counter-intelligence.html`, a standalone offline edition with fonts and art embedded. No environment variables or API keys are needed; see `.env.example`. Stack: React 18, Vite 7, Three.js, Vitest, Playwright, locally bundled OFL fonts.
 
+## Development history
+
+Built September to October 2026 over 122 commits in a private repository. The full history includes personal notes and private configuration, so this repository is a cleaned public snapshot. This README and the claim-gate demonstration were written for this release in October 2026.
+
 ## License
 
 MIT, Kevin Madden, 2026. See `LICENSE`. All patients, dialogue and scenarios are fictional. The pharmacy is a generic retail counter, and patient faces and the counter scene are generated images of nobody real (prompts in `docs/assets/`).
