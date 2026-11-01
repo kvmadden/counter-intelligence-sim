@@ -1,6 +1,6 @@
 # Claim support review sheet
 
-All 24 rows are draft, pending Kevin review. Exact retrieved passages, source dates, retrieval dates, rights notes, full content hashes and every linked dialogue use are in each immutable report directory under `docs/proof`. The historical author checks are preserved separately. No new approval has been supplied.
+All 24 rows are draft, pending clinical review by Kevin Madden, PharmD. For the side-by-side claim, quote, link and approve or flag boxes, use the [claim support sheet](CLAIM-SUPPORT-SHEET.md). Exact retrieved passages, source dates, retrieval dates, rights notes, full content hashes and every linked dialogue use are in each immutable report directory under `docs/proof`. The historical author checks are preserved separately. No new approval has been supplied.
 
 | Claim | Historical check | New support decision | Current source |
 | --- | --- | --- | --- |

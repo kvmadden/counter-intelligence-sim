@@ -3670,8 +3670,8 @@
   {
     "file": "src/counter/FileScreens.jsx",
     "line": 435,
-    "text": "Draft, pending pharmacist passage review. Historical checks only. Rights review pending. Free on CDC's website. No CDC endorsement. Not medical advice.",
-    "hash": "6b3a8e61c4b8e00c18f4e20e71677a7ffb4770f5a347b377ef471e8b4d8defb5",
+    "text": "Draft. Clinical review by Kevin Madden, PharmD pending. Rights review pending. No CDC endorsement. Not medical advice.",
+    "hash": "5e05c7b2c72640e25e0c13e75fc6e6daa5d643304b5492a1cb4e628eff5d5661",
     "decision": "pending factual-surface classification by Kevin"
   },
   {

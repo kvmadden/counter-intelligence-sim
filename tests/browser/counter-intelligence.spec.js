@@ -306,7 +306,7 @@ test("reads the debrief as tabbed pages, by pointer and by keyboard, and lists i
   }
   // Historical stamps do not count as the new content-bound support review.
   const cited = ["flu-cannot-cause-flu", "flu-side-effects", "sit-after", "covid-personal-call", "same-visit"];
-  const reviewText = "Draft, pending pharmacist passage review";
+  const reviewText = "Clinical review by Kevin Madden, PharmD pending";
   await expect(debrief.getByText(reviewText, { exact: false })).toHaveCount(0); // only the last page carries it
   await debrief.getByRole("button", { name: "Next page" }).click();
   await expect(debrief.locator(".ci-kicker")).toHaveText("Sources · 2 of 2");

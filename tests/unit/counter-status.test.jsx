@@ -70,13 +70,13 @@ describe("the debrief, one idea to a page", () => {
     const pageOne = [...container.querySelectorAll(".ci-sources li")];
     expect(pageOne).toHaveLength(3);
     for (const [index, id] of run.claims.slice(0, 3).entries()) expect(pageOne[index].textContent).toContain(CLAIMS[id].source.title);
-    expect(container.textContent).not.toMatch(/Draft, pending pharmacist passage review/); // only the last page carries it
+    expect(container.textContent).not.toMatch(/Clinical review by Kevin Madden, PharmD pending/); // only the last page carries it
 
     fireEvent.click(getByRole("button", { name: "Next page" }));
     const pageTwo = [...container.querySelectorAll(".ci-sources li")];
     expect(pageTwo).toHaveLength(run.claims.length - 3);
     for (const [index, id] of run.claims.slice(3).entries()) expect(pageTwo[index].textContent).toContain(CLAIMS[id].source.title);
-    expect(container.textContent).toMatch(/Draft, pending pharmacist passage review/);
+    expect(container.textContent).toMatch(/Clinical review by Kevin Madden, PharmD pending/);
   });
 
   it("says kindly why a run that pushed past a no was capped", () => {
@@ -118,7 +118,7 @@ it('renders every debrief source anchor against its claim manifest with keyboard
     expect(anchor.getAttribute('referrerpolicy')).toBe('no-referrer')
     anchor.focus()
     expect(document.activeElement).toBe(anchor)
-    expect(view.container.textContent).toContain('Draft, pending pharmacist passage review')
+    expect(view.container.textContent).toContain('Clinical review by Kevin Madden, PharmD pending')
     seen.add(id)
     view.unmount()
   }

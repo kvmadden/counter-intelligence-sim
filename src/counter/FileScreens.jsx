@@ -432,7 +432,7 @@ export function Debrief({ patient, run, outcome, onContinue }) {
               </ol>
               {onLastSourcesPage && <p className="ci-brief-note">{reviewed
                 ? "Facts here stay at conversation level. Each one was checked against its public-health source and reviewed by a pharmacist. None of it is medical advice."
-                : "Draft, pending pharmacist passage review. Historical checks only. Rights review pending. Free on CDC's website. No CDC endorsement. Not medical advice."}</p>}
+                : "Draft. Clinical review by Kevin Madden, PharmD pending. Rights review pending. No CDC endorsement. Not medical advice."}</p>}
             </>
             : <p className="ci-brief-text">No health facts came up in this conversation, so there is nothing to cite.</p>}
         </>}
