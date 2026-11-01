@@ -1,8 +1,9 @@
 import fs from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
-import { expect, it } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { CLAIMS } from '../../src/counter/claims.js'
+import { CLAIM_STATUS } from '../../src/counter/claim-status.js'
 import { debriefFor } from '../../src/counter/engine.js'
 import { walk } from './helpers/tree-walk.js'
 
@@ -10,7 +11,8 @@ it('carries explicit claim source destinations into the debrief', () => {
   const run = walk('jordan').finished.find(run => run.claims.length)
   const source = debriefFor(run).sources[0]
   expect(source.url).toBe(CLAIMS[source.id].source.url)
-  expect(source.reviewed).toBe(false)
+  expect(source.reviewed).toBe(CLAIM_STATUS[source.id].status === 'approved')
+  expect(source.review).toBe(CLAIM_STATUS[source.id])
 })
 
 it('provides content-bound support review and separate evaluation contracts', async () => {
@@ -72,9 +74,15 @@ it('binds approval to passage and dialogue content and preserves offline report 
   const { generate } = await import('../../scripts/evaluate-proof.mjs')
   const { claimBinding, supportStatus, inventory, reviewSheet } = await import('../../scripts/claim-proof.mjs')
   const sheet = reviewSheet()
-  expect(sheet).toHaveLength(24)
-  expect(sheet.every(row => row.historicalReview.contentUnchanged)).toBe(true)
-  for (const row of sheet) expect(row.status).not.toBe('approved')
+  expect(sheet).toHaveLength(Object.keys(CLAIMS).length)
+  const { isPendingDraft } = await import('../../scripts/claim-proof.mjs')
+  for (const row of sheet) {
+    // Every claim is either approved by Kevin on its exact content, or a bound draft
+    // that ships marked pending. Nothing is silently changed.
+    expect(row.status === 'approved' || isPendingDraft(row.status), `${row.id}: ${row.status}`).toBe(true)
+    if (row.status === 'approved') expect(row.historicalReview.contentUnchanged, row.id).toBe(true)
+    if (row.status === 'approved') expect(row.review).toMatchObject({ decision: 'approved', reviewedBy: 'Kevin Madden, PharmD', reviewedOn: '2026-11-01', binding: row.binding })
+  }
   const row = sheet.find(row => row.evidence.url === row.claim.source.url)
   const review = { decision: 'approved', reviewedBy: 'fixture', reviewedOn: '2026-11-01', binding: claimBinding(row.claim, row.uses, row.evidence) }
   expect(supportStatus(row.claim, [...row.uses, { text: 'new line' }], row.evidence, review)).toBe('changed')
@@ -134,4 +142,71 @@ it('fails the build ledger check when a supporting passage is missing', async ()
   const passages = JSON.parse(fs.readFileSync('docs/claims/passages.json', 'utf8'))
   passages['flu-two-weeks'].passage = ''
   expect(checkLedger(CLAIMS, undefined, passages).some(row => row.rule === 'missing supporting passage')).toBe(true)
+})
+
+// Kevin Madden, PharmD reviewed every claim on 2026-11-01. These hold his record to
+// the content it covers, keep drafts pending, and keep the topic he ruled out away.
+describe('the 2026-11-01 pharmacist review', () => {
+  const read = name => JSON.parse(fs.readFileSync(`docs/claims/${name}`, 'utf8'))
+  const reviews = read('support-reviews.json')
+  const drafts = read('pending-drafts.json')
+
+  it('records all 24 decisions with reviewer, date and notes', () => {
+    expect(Object.keys(reviews)).toHaveLength(24)
+    for (const [id, review] of Object.entries(reviews)) {
+      expect(review, id).toMatchObject({ reviewedBy: 'Kevin Madden, PharmD', reviewedOn: '2026-11-01' })
+      expect(['approved', 'approved with edit', 'flagged', 'removed'], id).toContain(review.decision)
+      expect(review.notes?.trim(), id).toBeTruthy()
+      expect(review.binding, id).toMatch(/^[0-9a-f]{64}$/)
+    }
+    const by = decision => Object.keys(reviews).filter(id => reviews[id].decision === decision).sort()
+    expect(by('approved')).toHaveLength(16)
+    expect(by('approved with edit')).toEqual(['other-viruses'])
+    expect(by('flagged')).toEqual(['flu-65-preferred', 'flu-two-weeks', 'recommendation-predicts', 'shingles-same-visit', 'tdap-ten-years'])
+    for (const id of by('removed')) expect(CLAIMS[id], id).toBeUndefined()
+  })
+
+  it('keeps every flagged, edited or new claim pending, bound, freshly sourced and unstamped', async () => {
+    const { reviewSheet } = await import('../../scripts/claim-proof.mjs')
+    const sheet = new Map(reviewSheet().map(row => [row.id, row]))
+    const rewrites = Object.keys(reviews).filter(id => ['flagged', 'approved with edit'].includes(reviews[id].decision))
+    for (const id of rewrites) expect(drafts[id], `${id} needs a bound draft`).toBeTruthy()
+    for (const [id, draft] of Object.entries(drafts)) {
+      const row = sheet.get(id)
+      expect(row.status, id).not.toBe('approved')
+      expect(CLAIM_STATUS[id].label, id).toBe('Pharmacist review pending')
+      expect(draft.binding, id).toBe(row.binding)
+      if (['rewrite', 'new'].includes(draft.kind)) {
+        expect(CLAIMS[id].reviewedBy, `${id} must wait for Kevin's own stamp`).toBeUndefined()
+        expect(row.evidence.retrievedOn, id).toBe('2026-11-01')
+        expect(row.evidence.url, id).toBe(CLAIMS[id].source.url)
+      }
+    }
+  })
+
+  it('fails the gate when a bound draft or an approved claim is edited afterward', async () => {
+    const { checkLedger } = await import('../../scripts/check-claims.mjs')
+    for (const id of ['flu-two-weeks', 'flu-cannot-cause-flu']) {
+      const changed = structuredClone(CLAIMS)
+      changed[id].text = `${changed[id].text} Edited after review.`
+      expect(checkLedger(changed).some(row => row.rule === 'unreviewed claim' && row.where === `claim ${id}`), id).toBe(true)
+    }
+  })
+
+  it('keeps the generated debrief status module in sync with the review files', async () => {
+    const { statusModule } = await import('../../scripts/claim-sheet.mjs')
+    expect(fs.readFileSync('src/counter/claim-status.js', 'utf8')).toBe(statusModule())
+  })
+
+  it('ships no COVID-19 or SARS content in dialogue, claims, quotes, sources or benchmark lines', async () => {
+    const { inventory } = await import('../../scripts/claim-proof.mjs')
+    const banned = /covid|sars/i
+    for (const row of inventory()) expect(row.text, row.location).not.toMatch(banned)
+    for (const [id, claim] of Object.entries(CLAIMS)) expect(JSON.stringify(claim), id).not.toMatch(banned)
+    expect(fs.readFileSync('docs/claims/passages.json', 'utf8')).not.toMatch(banned)
+    for (const file of fs.readdirSync('docs/claims/sources')) expect(fs.readFileSync(`docs/claims/sources/${file}`, 'utf8'), file).not.toMatch(banned)
+    for (const set of ['dev', 'final']) expect(fs.readFileSync(`evaluation/${set}.json`, 'utf8'), set).not.toMatch(banned)
+    const runtime = fs.readdirSync('src', { recursive: true }).filter(name => /\.(js|jsx|css)$/.test(name))
+    for (const name of runtime) expect(fs.readFileSync(`src/${name}`, 'utf8'), name).not.toMatch(banned)
+  })
 })

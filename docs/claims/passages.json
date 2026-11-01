@@ -105,27 +105,39 @@
   "flu-two-weeks": {
     "url": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
     "originalUrl": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
-    "passage": "Flu vaccines cause antibodies to develop in the body about two weeks after vaccination. These antibodies provide protection against flu illness.",
+    "passage": "It takes about two weeks after vaccination for antibodies to develop in the body and provide protection against influenza virus infection. That's why it's best to get vaccinated before influenza viruses start to spread in your community.\nYou may be exposed to an influenza virus shortly before getting vaccinated or during the period that it takes the body to gain protection after getting vaccinated. This exposure may result in you becoming ill with flu before the vaccine begins to protect you. (Antibodies that provide protection develop in the body about 2 weeks after vaccination.)",
     "paragraphs": [
       {
-        "index": 8,
-        "text": "Flu vaccines cause antibodies to develop in the body about two weeks after vaccination. These antibodies provide protection against flu illness."
+        "index": 39,
+        "text": "It takes about two weeks after vaccination for antibodies to develop in the body and provide protection against influenza virus infection. That's why it's best to get vaccinated before influenza viruses start to spread in your community."
+      },
+      {
+        "index": 44,
+        "text": "You may be exposed to an influenza virus shortly before getting vaccinated or during the period that it takes the body to gain protection after getting vaccinated. This exposure may result in you becoming ill with flu before the vaccine begins to protect you. (Antibodies that provide protection develop in the body about 2 weeks after vaccination.)"
       }
     ],
     "verified": true,
     "retrievedOn": "2026-11-01",
     "sourceDates": [
       {
-        "name": "cdc:last_published",
-        "content": "2026-09-01T18:37:51Z"
+        "name": "cdc:first_published",
+        "content": "October 1, 2024"
+      },
+      {
+        "name": "cdc:last_updated",
+        "content": "September 1, 2026"
+      },
+      {
+        "name": "cdc:last_reviewed",
+        "content": "September 3, 2025"
       }
     ],
-    "snapshot": "docs/claims/sources/0f62994ff2d9.json",
+    "snapshot": "docs/claims/sources/0f62994ff2d9-r2.json",
     "htmlSha256": "47da5f32e6400111a13cccfdd61314fdf3e5779023ef51ea0d8c9e85f28af923",
     "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
     "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
     "rightsDecision": "draft, pending excerpt and third-party notice review",
-    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    "correctionNote": "Drafted after Kevin's 2026-11-01 review. Pending his second look."
   },
   "flu-peak": {
     "url": "https://www.cdc.gov/flu/about/season.html",
@@ -152,79 +164,25 @@
     "rightsDecision": "draft, pending excerpt and third-party notice review",
     "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
   },
-  "same-visit": {
-    "url": "https://www.cdc.gov/flu/vaccines/coadministration.html",
-    "originalUrl": "https://www.cdc.gov/flu/vaccines/coadministration.html",
-    "passage": "People can get a flu vaccine and COVID-19 vaccine at the same visit if they are eligible, and if the timing for each vaccine is right. IIV3s and RIV3 can be administered simultaneously or sequentially with other inactivated vaccines or live vaccines.",
-    "paragraphs": [
-      {
-        "index": 11,
-        "text": "People can get a flu vaccine and COVID-19 vaccine at the same visit if they are eligible, and if the timing for each vaccine is right. IIV3s and RIV3 can be administered simultaneously or sequentially with other inactivated vaccines or live vaccines."
-      }
-    ],
-    "verified": true,
-    "retrievedOn": "2026-11-01",
-    "sourceDates": [
-      {
-        "name": "cdc:last_published",
-        "content": "2026-09-01T18:39:08Z"
-      }
-    ],
-    "snapshot": "docs/claims/sources/f474246fafb6.json",
-    "htmlSha256": "c2df4d1815028464a222de284b4adcba5d6f28db2f38ff8484a43d9aec290536",
-    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
-    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
-    "rightsDecision": "draft, pending excerpt and third-party notice review",
-    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
-  },
-  "covid-personal-call": {
-    "url": "https://www.cdc.gov/covid/hcp/vaccine-considerations/index.html",
-    "originalUrl": "https://www.cdc.gov/covid/vaccines/stay-up-to-date.html",
-    "passage": "This page has been updated to reflect current FDA regulatory information for the 2026-2027 COVID-19 vaccines, including approved products and asterisks indicating where recommendations for use are off-label, formulation, age and risk indications, dosage, and contraindications.\nAs with all medical decision making between patients and their healthcare providers, all patients should discuss the benefits and risks of COVID-19 vaccination to make informed and personalized decisions about vaccination.\nLast updated September 23, 2025\nA 2026-2027 COVID-19 vaccine is recommended for all adults ages 18 years and older in the United States for the prevention of COVID-19.\nA 2026-2027 COVID-19 vaccine is also recommended for all children ages 6 months\u201317 years with moderate to severe immunocompromise; for all other children, a COVID-19 vaccine is recommended through shared clinical decision-making.",
-    "paragraphs": [
-      {
-        "index": 2,
-        "text": "This page has been updated to reflect current FDA regulatory information for the 2026-2027 COVID-19 vaccines, including approved products and asterisks indicating where recommendations for use are off-label, formulation, age and risk indications, dosage, and contraindications."
-      },
-      {
-        "index": 3,
-        "text": "As with all medical decision making between patients and their healthcare providers, all patients should discuss the benefits and risks of COVID-19 vaccination to make informed and personalized decisions about vaccination."
-      },
-      {
-        "index": 8,
-        "text": "Last updated September 23, 2025"
-      },
-      {
-        "index": 9,
-        "text": "A 2026-2027 COVID-19 vaccine is recommended for all adults ages 18 years and older in the United States for the prevention of COVID-19."
-      },
-      {
-        "index": 10,
-        "text": "A 2026-2027 COVID-19 vaccine is also recommended for all children ages 6 months\u201317 years with moderate to severe immunocompromise; for all other children, a COVID-19 vaccine is recommended through shared clinical decision-making."
-      }
-    ],
-    "verified": true,
-    "retrievedOn": "2026-11-01",
-    "sourceDates": [
-      {
-        "name": "cdc:last_published",
-        "content": "2026-09-23T19:38:23Z"
-      }
-    ],
-    "snapshot": "docs/claims/sources/covid-current.json",
-    "htmlSha256": "92208127c7979acc6999188fffe70fac7bfd2ff30881a438db9d029ed9250329",
-    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
-    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
-    "rightsDecision": "draft, pending excerpt and third-party notice review",
-    "correctionNote": "Current CDC destination differs and guidance needs Kevin review."
-  },
   "tdap-ten-years": {
     "url": "https://www.cdc.gov/vaccines/hcp/by-disease/dtap-tdap-td.html",
     "originalUrl": "https://www.cdc.gov/vaccines/hcp/by-disease/dtap-tdap-td.html",
-    "passage": "After receipt of Tdap, patients should continue to receive Td or Tdap for routine booster immunization every 10 years.",
+    "passage": "Diphtheria toxoid-, tetanus toxoid-, and acellular pertussis-containing vaccines help protect against diphtheria, tetanus, and pertussis, but they will not prevent all cases.\nTetanus and diphtheria (Td) only vaccines\nAdults who have never received Tdap should receive a single dose of Tdap.\nAfter receipt of Tdap, patients should continue to receive Td or Tdap for routine booster immunization every 10 years.",
     "paragraphs": [
       {
-        "index": 115,
+        "index": 2,
+        "text": "Diphtheria toxoid-, tetanus toxoid-, and acellular pertussis-containing vaccines help protect against diphtheria, tetanus, and pertussis, but they will not prevent all cases."
+      },
+      {
+        "index": 17,
+        "text": "Tetanus and diphtheria (Td) only vaccines"
+      },
+      {
+        "index": 119,
+        "text": "Adults who have never received Tdap should receive a single dose of Tdap."
+      },
+      {
+        "index": 122,
         "text": "After receipt of Tdap, patients should continue to receive Td or Tdap for routine booster immunization every 10 years."
       }
     ],
@@ -232,22 +190,34 @@
     "retrievedOn": "2026-11-01",
     "sourceDates": [
       {
-        "name": "cdc:last_published",
-        "content": "2026-06-24T14:01:36Z"
+        "name": "cdc:first_published",
+        "content": "January 30, 2026"
+      },
+      {
+        "name": "cdc:last_updated",
+        "content": "September 6, 2022"
+      },
+      {
+        "name": "cdc:last_reviewed",
+        "content": "September 6, 2022"
       }
     ],
-    "snapshot": "docs/claims/sources/1afc58cb2e7e.json",
+    "snapshot": "docs/claims/sources/1afc58cb2e7e-r2.json",
     "htmlSha256": "79846a76eb9fdb6240be1b31e39d1120da980f6fd9f83a3993f41efc76843991",
     "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
     "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
     "rightsDecision": "draft, pending excerpt and third-party notice review",
-    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    "correctionNote": "Drafted after Kevin's 2026-11-01 review. Pending his second look."
   },
   "recommendation-predicts": {
     "url": "https://www.cdc.gov/vaccines-adults/hcp/imz-standards/index.html",
     "originalUrl": "https://www.cdc.gov/vaccines-adults/hcp/imz-standards/index.html",
-    "passage": "A health care professional's recommendation is the strongest predictor of whether a patient gets vaccinated.",
+    "passage": "The National Vaccine Advisory Committee developed the Standards for Adult Immunization Practice to reflect the critical need for all health care professionals \u2013 whether they provide immunization services or not \u2013 to take steps to ensure that adult patients get the vaccines they need. These standards are important because:\nA health care professional's recommendation is the strongest predictor of whether a patient gets vaccinated.",
     "paragraphs": [
+      {
+        "index": 4,
+        "text": "The National Vaccine Advisory Committee developed the Standards for Adult Immunization Practice to reflect the critical need for all health care professionals \u2013 whether they provide immunization services or not \u2013 to take steps to ensure that adult patients get the vaccines they need. These standards are important because:"
+      },
       {
         "index": 7,
         "text": "A health care professional's recommendation is the strongest predictor of whether a patient gets vaccinated."
@@ -257,16 +227,24 @@
     "retrievedOn": "2026-11-01",
     "sourceDates": [
       {
-        "name": "cdc:last_published",
-        "content": "2026-09-29T08:43:28Z"
+        "name": "cdc:first_published",
+        "content": "August 13, 2024"
+      },
+      {
+        "name": "cdc:last_updated",
+        "content": "August 9, 2024"
+      },
+      {
+        "name": "cdc:last_reviewed",
+        "content": "August 9, 2024"
       }
     ],
-    "snapshot": "docs/claims/sources/93b1589f6fb4.json",
+    "snapshot": "docs/claims/sources/93b1589f6fb4-r2.json",
     "htmlSha256": "e6c2cc218ee8fa3cae772785978365cc32ff82893195bc02a63d953a9e3aea45",
     "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
     "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
     "rightsDecision": "draft, pending excerpt and third-party notice review",
-    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    "correctionNote": "Drafted after Kevin's 2026-11-01 review. Pending his second look."
   },
   "ve-good-match": {
     "url": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
@@ -327,33 +305,41 @@
     "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
   },
   "other-viruses": {
-    "url": "https://www.cdc.gov/flu/prevention/misconceptions.html",
-    "originalUrl": "https://www.cdc.gov/flu/prevention/misconceptions.html",
-    "passage": "Someone can get sick with another respiratory virus besides influenza virus, such as rhinoviruses or SARS-CoV-2 (the virus that causes COVID-19). Other respiratory viruses can cause symptoms similar to flu, and they can also spread and cause illness during flu season. Flu vaccines only protect against flu, not other illnesses.\nSomeone can be exposed to influenza viruses shortly before getting vaccinated or during the two-week period after vaccination that it takes the body to develop immune protection. This exposure may result in a person becoming sick with flu before protection from vaccination takes effect.",
+    "url": "https://www.cdc.gov/flu/about/coldflu.html",
+    "originalUrl": "https://www.cdc.gov/flu/about/coldflu.html",
+    "passage": "Influenza (flu) and the common cold are both contagious respiratory illnesses, but they are caused by different viruses.\nColds and flu share many symptoms, so it can be difficult to tell the difference between them based on symptoms alone.",
     "paragraphs": [
       {
-        "index": 16,
-        "text": "Someone can get sick with another respiratory virus besides influenza virus, such as rhinoviruses or SARS-CoV-2 (the virus that causes COVID-19). Other respiratory viruses can cause symptoms similar to flu, and they can also spread and cause illness during flu season. Flu vaccines only protect against flu, not other illnesses."
+        "index": 2,
+        "text": "Influenza (flu) and the common cold are both contagious respiratory illnesses, but they are caused by different viruses."
       },
       {
-        "index": 17,
-        "text": "Someone can be exposed to influenza viruses shortly before getting vaccinated or during the two-week period after vaccination that it takes the body to develop immune protection. This exposure may result in a person becoming sick with flu before protection from vaccination takes effect."
+        "index": 3,
+        "text": "Colds and flu share many symptoms, so it can be difficult to tell the difference between them based on symptoms alone."
       }
     ],
     "verified": true,
     "retrievedOn": "2026-11-01",
     "sourceDates": [
       {
-        "name": "cdc:last_published",
-        "content": "2026-05-18T10:40:03Z"
+        "name": "cdc:first_published",
+        "content": "October 1, 2024"
+      },
+      {
+        "name": "cdc:last_updated",
+        "content": "August 8, 2024"
+      },
+      {
+        "name": "cdc:last_reviewed",
+        "content": "August 8, 2024"
       }
     ],
-    "snapshot": "docs/claims/sources/0e9ee31d401f.json",
-    "htmlSha256": "43f39bff3ed5f002cfab0ed65568571cdc21d3fa3d6da39715d93a0ad159f1a3",
+    "snapshot": "docs/claims/sources/779015e236c7-r2.json",
+    "htmlSha256": "07c6e937ce254ffc61884d1bcf782dc1bb46158b9c7fe74e7de5461efdd567ee",
     "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
     "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
     "rightsDecision": "draft, pending excerpt and third-party notice review",
-    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    "correctionNote": "Drafted after Kevin's 2026-11-01 review. Pending his second look."
   },
   "flu-protects-others": {
     "url": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
@@ -539,29 +525,41 @@
     "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
   },
   "flu-65-preferred": {
-    "url": "https://www.cdc.gov/flu/vaccine-types/adjuvant.html",
-    "originalUrl": "https://www.cdc.gov/flu/vaccine-types/adjuvant.html",
-    "passage": "There are three flu vaccines that are preferentially recommended for people 65 years and older. These are Fluzone High-Dose Trivalent vaccine, Flublok Trivalent recombinant Influenza vaccine and Fluad adjuvanted flu vaccine. This recommendation was based on a review of available studies which suggested that in this age group these vaccines are potentially more effective than standard dose unadjuvanted flu vaccines. There is no preferential recommendation for people younger than 65 years. If none of the three flu vaccines preferentially recommended for people 65 years and older is available at the time of administration, people in this age group should get any other age-appropriate flu vaccine instead.",
+    "url": "https://www.cdc.gov/flu/highrisk/65over.htm",
+    "originalUrl": "https://www.cdc.gov/flu/highrisk/65over.htm",
+    "passage": "CDC and ACIP preferentially recommend the use of higher dose flu vaccines (high-dose inactivated and recombinant) or adjuvanted inactivated flu vaccine over standard-dose unadjuvanted flu vaccines for people 65 years and older. This recommendation is based on a review of available studies which suggests that, in this age group, these vaccines are potentially more effective than standard dose unadjuvanted flu vaccines. If one of these vaccines is not available at the time of administration, people in this age group should get a standard-dose unadjuvanted inactivated flu vaccine instead. There are other flu vaccines approved for use in people 65 years and older. People 65 years and older should not get a nasal spray vaccine.\nThe best way to protect against flu and its potentially serious complications is with an annual flu vaccine. Flu vaccination has many benefits. It has been shown to reduce the risk of getting sick with flu and also to reduce the risk of more serious flu outcomes that can result in hospitalization or even death. Although immune responses to vaccination may be lower in older people, studies have consistently found that flu vaccination has been effective in reducing the risk of medical visits and hospitalizations in older people. Higher dose and adjuvanted flu vaccines are potentially more effective than standard dose unadjuvanted flu vaccines for people in this age group and are therefore recommended preferentially over a regular dose flu vaccine.",
     "paragraphs": [
       {
-        "index": 23,
-        "text": "There are three flu vaccines that are preferentially recommended for people 65 years and older. These are Fluzone High-Dose Trivalent vaccine, Flublok Trivalent recombinant Influenza vaccine and Fluad adjuvanted flu vaccine. This recommendation was based on a review of available studies which suggested that in this age group these vaccines are potentially more effective than standard dose unadjuvanted flu vaccines. There is no preferential recommendation for people younger than 65 years. If none of the three flu vaccines preferentially recommended for people 65 years and older is available at the time of administration, people in this age group should get any other age-appropriate flu vaccine instead."
+        "index": 10,
+        "text": "CDC and ACIP preferentially recommend the use of higher dose flu vaccines (high-dose inactivated and recombinant) or adjuvanted inactivated flu vaccine over standard-dose unadjuvanted flu vaccines for people 65 years and older. This recommendation is based on a review of available studies which suggests that, in this age group, these vaccines are potentially more effective than standard dose unadjuvanted flu vaccines. If one of these vaccines is not available at the time of administration, people in this age group should get a standard-dose unadjuvanted inactivated flu vaccine instead. There are other flu vaccines approved for use in people 65 years and older. People 65 years and older should not get a nasal spray vaccine."
+      },
+      {
+        "index": 13,
+        "text": "The best way to protect against flu and its potentially serious complications is with an annual flu vaccine. Flu vaccination has many benefits. It has been shown to reduce the risk of getting sick with flu and also to reduce the risk of more serious flu outcomes that can result in hospitalization or even death. Although immune responses to vaccination may be lower in older people, studies have consistently found that flu vaccination has been effective in reducing the risk of medical visits and hospitalizations in older people. Higher dose and adjuvanted flu vaccines are potentially more effective than standard dose unadjuvanted flu vaccines for people in this age group and are therefore recommended preferentially over a regular dose flu vaccine."
       }
     ],
     "verified": true,
     "retrievedOn": "2026-11-01",
     "sourceDates": [
       {
-        "name": "cdc:last_published",
-        "content": "2026-09-01T18:38:53Z"
+        "name": "cdc:first_published",
+        "content": "October 1, 2024"
+      },
+      {
+        "name": "cdc:last_updated",
+        "content": "September 4, 2026"
+      },
+      {
+        "name": "cdc:last_reviewed",
+        "content": "September 5, 2024"
       }
     ],
-    "snapshot": "docs/claims/sources/fc430dad24f0.json",
-    "htmlSha256": "b8ad07865804ed96ea21a6761b88b9f99de85f6def6b96a7c17b33ab27d3c985",
+    "snapshot": "docs/claims/sources/0641ad88a135-r2.json",
+    "htmlSha256": "3d34219cd6df1cdbfec704c6d94cbaa6a3bcf6d7cbbf0b155376c30041383434",
     "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
     "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
     "rightsDecision": "draft, pending excerpt and third-party notice review",
-    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    "correctionNote": "Drafted after Kevin's 2026-11-01 review. Pending his second look."
   },
   "flu-65-burden": {
     "url": "https://www.cdc.gov/flu/vaccine-types/adjuvant.html",
@@ -659,28 +657,114 @@
     "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
   },
   "shingles-same-visit": {
-    "url": "https://www.cdc.gov/shingles/hcp/vaccine-considerations/index.html",
-    "originalUrl": "https://www.cdc.gov/shingles/hcp/vaccine-considerations/index.html",
-    "passage": "Recombinant and adjuvanted vaccines (like Shingrix) can be administered concomitantly at different anatomic sites with other adult vaccines. This includes COVID-19 vaccines. Coadministration of RZV with adjuvanted influenza vaccine (Fluad) and COVID-19 vaccines is being studied.",
+    "url": "https://www.cdc.gov/shingles/vaccines/index.html",
+    "originalUrl": "https://www.cdc.gov/shingles/vaccines/index.html",
+    "passage": "Recombinant zoster (shingles) vaccine, called Shingrix, can prevent shingles. Shingles vaccine may be given at the same time as other vaccines. If you have questions about Shingrix, talk with your healthcare provider.",
     "paragraphs": [
       {
-        "index": 13,
-        "text": "Recombinant and adjuvanted vaccines (like Shingrix) can be administered concomitantly at different anatomic sites with other adult vaccines. This includes COVID-19 vaccines. Coadministration of RZV with adjuvanted influenza vaccine (Fluad) and COVID-19 vaccines is being studied."
+        "index": 8,
+        "text": "Recombinant zoster (shingles) vaccine, called Shingrix, can prevent shingles. Shingles vaccine may be given at the same time as other vaccines. If you have questions about Shingrix, talk with your healthcare provider."
       }
     ],
     "verified": true,
     "retrievedOn": "2026-11-01",
     "sourceDates": [
       {
-        "name": "cdc:last_published",
-        "content": "2024-10-22T16:25:59Z"
+        "name": "cdc:first_published",
+        "content": "July 21, 2024"
+      },
+      {
+        "name": "cdc:last_updated",
+        "content": "July 19, 2024"
+      },
+      {
+        "name": "cdc:last_reviewed",
+        "content": "August 19, 2025"
       }
     ],
-    "snapshot": "docs/claims/sources/8d2c732f2fa4.json",
-    "htmlSha256": "675288ccfa9cf16a598343ec29eda54148a0a8bdece4fa410eab5857f3153816",
+    "snapshot": "docs/claims/sources/963499648633-r2.json",
+    "htmlSha256": "f1711a2134c9c31d07dd36156226d9f0ff7f934fad62e752e8bec2a305d4d815",
     "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
     "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
     "rightsDecision": "draft, pending excerpt and third-party notice review",
-    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    "correctionNote": "Drafted after Kevin's 2026-11-01 review. Pending his second look."
+  },
+  "same-arm-ok": {
+    "url": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/vaccine-administration.html",
+    "originalUrl": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/vaccine-administration.html",
+    "passage": "If multiple vaccines are administered at a single visit, administer each preparation at a different anatomic site28. The location of all injection sites with the corresponding vaccine injected should be documented in each patient\u2019s medical record. Health-care practices should consider using a vaccination site map so that all persons administering vaccines routinely use a particular anatomic site for each particular vaccine.\nFor infants and younger children, if more than 2 vaccines are injected in a single limb, the thigh is the preferred site because of the greater muscle mass; the injections should be sufficiently separated (separate anatomic sites [i.e. \u22651 inch] if possible) so that any local reactions can be differentiated1329. For older children and adults, the deltoid muscle can be used for more than one intramuscular injection.",
+    "paragraphs": [
+      {
+        "index": 44,
+        "text": "If multiple vaccines are administered at a single visit, administer each preparation at a different anatomic site28. The location of all injection sites with the corresponding vaccine injected should be documented in each patient\u2019s medical record. Health-care practices should consider using a vaccination site map so that all persons administering vaccines routinely use a particular anatomic site for each particular vaccine."
+      },
+      {
+        "index": 45,
+        "text": "For infants and younger children, if more than 2 vaccines are injected in a single limb, the thigh is the preferred site because of the greater muscle mass; the injections should be sufficiently separated (separate anatomic sites [i.e. \u22651 inch] if possible) so that any local reactions can be differentiated1329. For older children and adults, the deltoid muscle can be used for more than one intramuscular injection."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:first_published",
+        "content": ""
+      },
+      {
+        "name": "cdc:last_updated",
+        "content": "June 18, 2024"
+      },
+      {
+        "name": "cdc:last_reviewed",
+        "content": "June 20, 2023"
+      }
+    ],
+    "snapshot": "docs/claims/sources/0e87e1e82062-r2.json",
+    "htmlSha256": "dcbd34d4796e601eb8a89b0f4b6cd2fdaf1b6892b43f94e80501626109fcaa26",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Drafted after Kevin's 2026-11-01 review. Pending his second look."
+  },
+  "pneumo-50-plus": {
+    "url": "https://www.cdc.gov/pneumococcal/vaccines/index.html",
+    "originalUrl": "https://www.cdc.gov/pneumococcal/vaccines/index.html",
+    "passage": "Pneumococcal disease is common in young children, but older adults are at greatest risk of serious illness and death.\nCDC recommends pneumococcal vaccination for\nAll adults 50 years or older",
+    "paragraphs": [
+      {
+        "index": 12,
+        "text": "Pneumococcal disease is common in young children, but older adults are at greatest risk of serious illness and death."
+      },
+      {
+        "index": 15,
+        "text": "CDC recommends pneumococcal vaccination for"
+      },
+      {
+        "index": 20,
+        "text": "All adults 50 years or older"
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:first_published",
+        "content": "July 10, 2024"
+      },
+      {
+        "name": "cdc:last_updated",
+        "content": "February 25, 2026"
+      },
+      {
+        "name": "cdc:last_reviewed",
+        "content": "February 25, 2026"
+      }
+    ],
+    "snapshot": "docs/claims/sources/3efa95bd22bf-r2.json",
+    "htmlSha256": "6004ae98615170d9b3a3c052927b09699829fcd13e6ebc8e59314246c70873d6",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Drafted after Kevin's 2026-11-01 review. Pending his second look."
   }
 }

@@ -7,7 +7,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { CLAIMS } from "../src/counter/claims.js";
 import { TREES } from "../src/counter/trees/index.js";
-import { hash, inventory, supportStatus } from "./claim-proof.mjs"
+import { hash, inventory, isPendingDraft, supportStatus } from "./claim-proof.mjs"
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 // Public-health publishers: any US government host, plus a short list of others.
@@ -37,6 +37,7 @@ export function checkLedger(claims = CLAIMS, trees = TREES, passageOverride = nu
   }
   const historical = proofFile('historical-bindings.json')
   const reviews = proofFile('support-reviews.json')
+  const drafts = proofFile('pending-drafts.json')
   const passages = passageOverride ?? proofFile('passages.json')
   const surfaces = inventory(trees)
   const add = (rule, where, detail) => problems.push({ rule, where, detail });
@@ -50,17 +51,20 @@ export function checkLedger(claims = CLAIMS, trees = TREES, passageOverride = nu
     try { url = new URL(source.url); } catch { url = null; }
     if (!url || url.protocol !== "https:" || !trustedHost(url.hostname)) add("untrusted source", where, `the source must be an https page on a public-health host, got ${source.url}`);
     if (!ISO_DATE.test(source.accessed ?? "")) add("unsourced claim", where, "the source needs the date it was accessed (YYYY-MM-DD)");
-    if (!claim?.reviewedBy?.trim?.() || !ISO_DATE.test(claim?.reviewedOn ?? "")) add("unreviewed claim", where, "needs Kevin's review stamp (reviewedBy and reviewedOn)");
-    else if (claim.reviewedOn < source.accessed) add("unreviewed claim", where, "the stamp predates the source it reviewed");
-    if (!passages[id]?.passage?.trim()) add('missing supporting passage', where, 'needs a captured public source passage, human support decision remains separate')
     const uses = surfaces.filter(row => row.claims.includes(id))
     // Self-tests may replace reviewer metadata in memory. Content still has to
-    // match the historical public snapshot or an actual new bound approval.
+    // match the historical public snapshot, an actual new bound approval, or a
+    // content-bound draft that waits for Kevin's decision and ships marked pending.
     const authorStamp = CLAIMS[id]
     const historicalClaim = { ...claim, reviewedBy: authorStamp?.reviewedBy, reviewedOn: authorStamp?.reviewedOn }
+    const status = supportStatus(historicalClaim, uses, passages[id], reviews[id], drafts[id])
+    const pendingDraft = isPendingDraft(status)
+    if (!pendingDraft && (!claim?.reviewedBy?.trim?.() || !ISO_DATE.test(claim?.reviewedOn ?? ""))) add("unreviewed claim", where, "needs Kevin's review stamp (reviewedBy and reviewedOn), or a bound pending draft");
+    else if (claim?.reviewedOn && claim.reviewedOn < source.accessed) add("unreviewed claim", where, "the stamp predates the source it reviewed");
+    if (!passages[id]?.passage?.trim()) add('missing supporting passage', where, 'needs a captured public source passage, human support decision remains separate')
     const unchanged = historical[id] === hash({ claim: historicalClaim, uses })
-    const newlyApproved = supportStatus(claim, uses, passages[id], reviews[id]) === 'approved'
-    if (!unchanged && !newlyApproved) add('unreviewed claim', where, 'historical content binding is missing or changed, needs a new bound pharmacist decision')
+    if (!unchanged && status !== 'approved' && !pendingDraft) add('unreviewed claim', where, `historical content binding is missing or changed (${status}), needs a new bound pharmacist decision`)
+    if (status === 'rejected') add('rejected claim', where, 'Kevin rejected this claim, so it cannot ship')
   }
 
   for (const tree of Object.values(trees)) {

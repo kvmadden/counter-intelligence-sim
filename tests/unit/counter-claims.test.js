@@ -2,6 +2,7 @@ import fs from "node:fs";
 import { describe, expect, it } from "vitest";
 import { checkLedger, factShaped, selfTest, unusedClaims } from "../../scripts/check-claims.mjs";
 import { CLAIMS } from "../../src/counter/claims.js";
+import { CLAIM_STATUS } from "../../src/counter/claim-status.js";
 import { debriefFor } from "../../src/counter/engine.js";
 import { TREES } from "../../src/counter/trees/index.js";
 import { walk } from "./helpers/tree-walk.js";
@@ -64,7 +65,7 @@ describe("sources in the debrief", () => {
     const errors = []
     for (const id of Object.keys(TREES)) {
       for (const run of walk(id).finished) for (const source of debriefFor(run).sources) {
-        if (source.url !== CLAIMS[source.id].source.url || source.reviewed !== false) errors.push({ path: run.taken, source })
+        if (source.url !== CLAIMS[source.id].source.url || source.reviewed !== (CLAIM_STATUS[source.id].status === 'approved')) errors.push({ path: run.taken, source })
       }
     }
     expect(errors).toEqual([])

@@ -1,1 +1,194 @@
-{}
+{
+  "flu-cannot-cause-flu": {
+    "decision": "approved",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Approved as is.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "e45d23adf9c43fdf67438567385d0f5e45189053a615430d2167c0d08e7322ba"
+  },
+  "flu-side-effects": {
+    "decision": "approved",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Approved as is.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "c1a3569d82efecd447498f17881ff4c1e2ae4f406719367fc4752bd936c21f6a"
+  },
+  "sit-after": {
+    "decision": "approved",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Approved as is.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "8a57b42802d39926fa7ce620855c529b4d82bb820182d081b67817fe3f093f76"
+  },
+  "flu-two-weeks": {
+    "decision": "flagged",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "It takes about two weeks after vaccination for full protection to develop, not two weeks before it starts working.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "107b5f679bac5d96f0cb3c1b874fe96a8335b7ac60148cc24fc1e74ce51408e2"
+  },
+  "flu-peak": {
+    "decision": "approved",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Approved as is.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "615672325d16d360706393b161cae5ea42037e8cf85e6f0427da8d0ff606a95e"
+  },
+  "same-visit": {
+    "decision": "removed",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "No COVID-19 content in the games, it is too politicized. Remove the claim and every line, branch, source and test that mentions COVID-19 or SARS.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "aa72fb74223f9840c84ab3d8c1d8cc29897078ec4c55b345458a4205e71a1357"
+  },
+  "covid-personal-call": {
+    "decision": "removed",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "No COVID-19 content in the games, it is too politicized. Remove the claim and every line, branch, source and test that mentions COVID-19 or SARS.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "7fe10c05f43c246c041ae80ace17f21cdbcb524ac4478a7860af82da582d1ef0"
+  },
+  "tdap-ten-years": {
+    "decision": "flagged",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Be precise that Tdap protects against tetanus, diphtheria and pertussis, and that the every-10-years booster (Td or Tdap) is for tetanus and diphtheria. Say what applies to pertussis.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "1ab8d4e4ac7ed4e09643218b6b4bb431e99b8fcf5235bf0e57c30f8206dca4c5"
+  },
+  "recommendation-predicts": {
+    "decision": "flagged",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Verify it is true against CDC. If it cannot be supported exactly, rewrite it to what CDC actually says, or remove it.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "32f7202c32b26458d92d4a0940277eb2f6a552ea2a5a1fb67fbe39e462a39c07"
+  },
+  "ve-good-match": {
+    "decision": "approved",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Approved as is.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "d587ed9883e090101bf0c35113031c8f14c718d1e0e2daa0eeb03fc4dd8a321f"
+  },
+  "milder-illness": {
+    "decision": "approved",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Approved as is.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "0d76b94bb1612897d8448fcac46661db8239b73534112effec904ea8df9859c8"
+  },
+  "other-viruses": {
+    "decision": "approved with edit",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Simplify it, and do not mention COVID or SARS by name.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "ddadba0b8430647fc83c681fb277a9b4a3a2d0a6f0182c522563f3e252e81303"
+  },
+  "flu-protects-others": {
+    "decision": "approved",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Approved as is.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "f1d12ca290f8c39f6df3635d8e47415312bc0a39e28ee80c6a94d496a75411cf"
+  },
+  "flu-healthy-people": {
+    "decision": "approved",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Approved as is.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "654248fef86c7c50433d5a842b165d01b4697e3d10b96997ce8c2b6c095fe2bf"
+  },
+  "baby-two-weeks": {
+    "decision": "approved",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Approved as is.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "f23d5d5f660f7585f02be2834a560a8773cc6a2b95fd733cf642c9d9f804dabe"
+  },
+  "tdap-around-baby": {
+    "decision": "approved",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Approved as is.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "67d00341a7e645157b4f1e0ab5b30fb4ff1f5f9d3e542ee847cd94ebf510bf2b"
+  },
+  "flu-timing": {
+    "decision": "approved",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Approved as is.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "326a13cf1ca417ec92bf27f6c49e99826263cb39ccaad1c2290086500cb36cdb"
+  },
+  "most-same-visit": {
+    "decision": "approved",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Approved as is.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "b200e109582dc8a7174b5b58766245984f1bf81e101e70dbcedfe3410c60799a"
+  },
+  "rsv-75-plus": {
+    "decision": "approved",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Approved as is.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "a70fa429533e773cb2d2723421ef615cc683d6774c0b96af6b3e640330b1e08b"
+  },
+  "flu-65-preferred": {
+    "decision": "flagged",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Clarify that adults 65 and older are preferentially recommended to get any ONE of the three vaccines (high-dose, adjuvanted or recombinant), not all three.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "2432efe2c34367dc0720d2bf05aef701b928c6b67dfdd9fb12b4b5ff321fba3c"
+  },
+  "flu-65-burden": {
+    "decision": "approved",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Approved as is.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "6275c4e9acdd3ad6f238dea7d2c36a13a2ea8b052bfb5ccf71d00b239a53c587"
+  },
+  "shingles-50-plus": {
+    "decision": "approved",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Approved as is.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "bf26b0f0c0fba9df27b1e25b9c3986217af71421308ad89600607474a643a939"
+  },
+  "shingles-one-in-three": {
+    "decision": "approved",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Approved as is.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "ddee08b52603423f59935b330562a6e0f6b88ebce58a4108ec08d2c92729aab7"
+  },
+  "shingles-same-visit": {
+    "decision": "flagged",
+    "reviewedBy": "Kevin Madden, PharmD",
+    "reviewedOn": "2026-11-01",
+    "notes": "Add that both shots can go in the same arm if the patient prefers, at separate sites at least about an inch apart, per CDC general best practices.",
+    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
+    "binding": "98c77056524c2d2195c594fca2a860eb06c35eb9ca996f588074241a0ed21d78"
+  }
+}

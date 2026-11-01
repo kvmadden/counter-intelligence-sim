@@ -173,8 +173,8 @@ test("reads the briefing as tabbed pages, by pointer and by keyboard", async ({ 
   await expect(page.getByTestId("dossier-screen")).toBeVisible();
 });
 
-// The best case Kevin named in the brief: heard first, asked permission first, and
-// both vaccines fit in one visit. Six exchanges, so it also proves the top tier only
+// A best case: heard first, asked permission first, and the Tdap booster her record
+// showed she was due for. Six exchanges, so it also proves the top tier only
 // comes from the outcome AND how it was reached (tiers.js).
 test("reaches mission status through the best case, marked Best case and New at rank 6 of 6, then the debrief and the huddle", async ({ page }) => {
   await begin(page);
@@ -183,11 +183,11 @@ test("reaches mission status through the best case, marked Best case and New at 
   await move(page, "Ask", "Can I tell you what usually causes that?");
   await move(page, "Offer", "The shot can't give you flu. Feeling achy after is common, and minor.");
   await move(page, "Offer", "Catch the next 14? We'd have you sit about fifteen minutes after.");
-  await move(page, "Offer", "Want a COVID-19 vaccine too? It's your call, and both fit in one visit.");
+  await move(page, "Offer", "Your record says your last tetanus shot was 2014. You're due.");
 
   const status = page.getByTestId("status-screen");
   await expect(status.getByRole("heading", { name: "Mission status" })).toBeVisible();
-  await expect(status.locator(".ci-ending-name")).toHaveText("Two for one");
+  await expect(status.locator(".ci-ending-name")).toHaveText("Rake insurance");
   await expect(status.locator(".ci-best")).toHaveText("Best case");
   await expect(status.locator(".ci-new")).toHaveText("New");
   await expect(status.locator(".ci-tier-pips")).toHaveAttribute("aria-label", "Rank 6 of 6");
@@ -198,7 +198,7 @@ test("reaches mission status through the best case, marked Best case and New at 
   await status.getByRole("button", { name: "Continue" }).click();
 
   const debrief = page.getByTestId("debrief-screen");
-  await expect(debrief.locator(".ci-ending-name")).toHaveText("Two for one");
+  await expect(debrief.locator(".ci-ending-name")).toHaveText("Rake insurance");
   await expect(debrief.locator(".ci-transcript li")).toHaveCount(13); // the opener, then six exchanges
   await debrief.getByRole("button", { name: "Continue" }).click();
 
@@ -279,21 +279,21 @@ test("reads the debrief as tabbed pages, by pointer and by keyboard, and lists i
   await move(page, "Ask", "Can I tell you what usually causes that?");
   await move(page, "Offer", "The shot can't give you flu. Feeling achy after is common, and minor.");
   await move(page, "Offer", "Catch the next 14? We'd have you sit about fifteen minutes after.");
-  await move(page, "Offer", "Want a COVID-19 vaccine too? It's your call, and both fit in one visit.");
+  await move(page, "Offer", "Your record says your last tetanus shot was 2014. You're due.");
   await page.getByTestId("status-screen").getByRole("button", { name: "Continue" }).click();
 
   const debrief = page.getByTestId("debrief-screen");
   const tabs = debrief.getByRole("tablist", { name: "Debrief pages" }).getByRole("tab");
   await expect(tabs).toHaveText(["Transcript", "What happened", "What moved it", "Sources"]);
-  await expect(debrief.locator(".ci-ending-name")).toHaveText("Two for one");
+  await expect(debrief.locator(".ci-ending-name")).toHaveText("Rake insurance");
 
   await tabs.nth(1).click();
-  await expect(debrief.getByRole("tabpanel")).toContainText("Jordan caught the next 14 with a flu shot and a COVID-19 vaccine.");
+  await expect(debrief.getByRole("tabpanel")).toContainText("Jordan got her flu shot and a tetanus booster, twelve years after the rake.");
 
   await page.keyboard.press("End");
   await expect(tabs.last()).toHaveAttribute("aria-selected", "true");
   await expect(tabs.last()).toBeFocused();
-  // Sources page over 3 a page (Kevin's ruling): the first 3 of 5, then the rest.
+  // Sources page over 3 a page (Kevin's ruling): the first 3 of 4, then the rest.
   await expect(debrief.locator(".ci-kicker")).toHaveText("Sources · 1 of 2");
   await expect(debrief.locator(".ci-sources li")).toHaveCount(3);
   await expect(debrief.locator(".ci-source-org").first()).toHaveText("CDC");
@@ -304,19 +304,20 @@ test("reads the debrief as tabbed pages, by pointer and by keyboard, and lists i
     await anchor.focus()
     await expect(anchor).toBeFocused()
   }
-  // Historical stamps do not count as the new content-bound support review.
-  const cited = ["flu-cannot-cause-flu", "flu-side-effects", "sit-after", "covid-personal-call", "same-visit"];
-  const reviewText = "Clinical review by Kevin Madden, PharmD pending";
+  // Kevin approved the first three on 2026-11-01. The Tdap rewrite waits for him.
+  await expect(debrief.locator("[data-review-status]")).toHaveText(["Pharmacist approved 2026-11-01", "Pharmacist approved 2026-11-01", "Pharmacist approved 2026-11-01"]);
+  const reviewText = "pending clinical review by Kevin Madden, PharmD";
   await expect(debrief.getByText(reviewText, { exact: false })).toHaveCount(0); // only the last page carries it
   await debrief.getByRole("button", { name: "Next page" }).click();
   await expect(debrief.locator(".ci-kicker")).toHaveText("Sources · 2 of 2");
-  await expect(debrief.locator(".ci-sources li")).toHaveCount(2);
+  await expect(debrief.locator(".ci-sources li")).toHaveCount(1);
+  await expect(debrief.locator("[data-review-status]")).toHaveText(["Pharmacist review pending"]);
   await expect(debrief.getByText(reviewText, { exact: false })).toBeVisible();
 
   await tabs.last().focus();
   await page.keyboard.press("Home");
   await expect(tabs.first()).toHaveAttribute("aria-selected", "true");
-  await expect(debrief.locator(".ci-ending-name")).toHaveText("Two for one");
+  await expect(debrief.locator(".ci-ending-name")).toHaveText("Rake insurance");
 });
 
 test("shows nothing to cite on the debrief's Sources page after the quickest close", async ({ page }) => {

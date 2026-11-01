@@ -1,0 +1,29 @@
+{
+  "url": "https://www.cdc.gov/shingles/vaccines/index.html",
+  "resolvedUrl": "https://www.cdc.gov/shingles/vaccines/index.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "f1711a2134c9c31d07dd36156226d9f0ff7f934fad62e752e8bec2a305d4d815",
+  "extractor": "jsdom: main h1, main h2, main h3, main h4, main p, main li, text with whitespace collapsed, indexed in document order",
+  "paragraphs": [
+    {
+      "index": 8,
+      "text": "Recombinant zoster (shingles) vaccine, called Shingrix, can prevent shingles. Shingles vaccine may be given at the same time as other vaccines. If you have questions about Shingrix, talk with your healthcare provider."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:first_published",
+      "content": "July 21, 2024"
+    },
+    {
+      "name": "cdc:last_updated",
+      "content": "July 19, 2024"
+    },
+    {
+      "name": "cdc:last_reviewed",
+      "content": "August 19, 2025"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

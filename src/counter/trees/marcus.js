@@ -225,9 +225,9 @@ export const marcus = {
           reply: "Ms. Dana keeps saying she'll go. I'll bring her at five-thirty.", end: "toddler-room",
         },
         {
-          id: "today.offer-covid", family: "offer", label: "Want a COVID-19 vaccine too? It's your call, and both fit one visit.",
-          claims: ["covid-personal-call", "same-visit"], note: "Offering both in one visit saved him a second lunch break.",
-          reply: "Two arms, one sit, one sandwich. Sure.", end: "lunch-special",
+          id: "today.offer-tdap", family: "offer", label: "Your record shows no Tdap. That covers whooping cough. Want it too?",
+          claims: ["tdap-ten-years"], note: "Checking his record added the whooping cough shot, and it still fit one lunch break.",
+          reply: "Whooping cough in the toddler room? Hard pass. Two arms, one sandwich.", end: "lunch-special",
         },
         {
           id: "today.close-seat", family: "close", label: "Grab the chair by the blood pressure machine. Back in a minute.",
@@ -301,7 +301,7 @@ export const marcus = {
     },
     "lunch-special": {
       name: "Lunch special", rung: "today", best: true,
-      debrief: "Marcus got a flu shot and a COVID-19 vaccine in one lunch break, with time left for a sandwich.",
+      debrief: "Marcus got a flu shot and his Tdap in one lunch break, with time left for a sandwich.",
       huddle: "How do you offer a second vaccine to someone in a hurry without slowing them down?",
     },
     "shot-and-sandwich": {

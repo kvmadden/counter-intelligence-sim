@@ -1,0 +1,102 @@
+[
+  {
+    "id": "flu-65-preferred",
+    "rule": "unsupported fact",
+    "status": "rewrite pending pharmacist review"
+  },
+  {
+    "id": "flu-peak",
+    "rule": "unsupported fact",
+    "status": "approved claim, reworded line pending pharmacist review"
+  },
+  {
+    "id": "flu-two-weeks",
+    "rule": "unsupported fact",
+    "status": "rewrite pending pharmacist review"
+  },
+  {
+    "id": "other-viruses",
+    "rule": "unsupported fact",
+    "status": "rewrite pending pharmacist review"
+  },
+  {
+    "id": "pneumo-50-plus",
+    "rule": "unsupported fact",
+    "status": "new claim, pending pharmacist review"
+  },
+  {
+    "id": "recommendation-predicts",
+    "rule": "unsupported fact",
+    "status": "rechecked, pending pharmacist review"
+  },
+  {
+    "id": "same-arm-ok",
+    "rule": "unsupported fact",
+    "status": "new claim, pending pharmacist review"
+  },
+  {
+    "id": "shingles-same-visit",
+    "rule": "unsupported fact",
+    "status": "rewrite pending pharmacist review"
+  },
+  {
+    "id": "tdap-ten-years",
+    "rule": "unsupported fact",
+    "status": "rewrite pending pharmacist review"
+  },
+  {
+    "id": "final-01-fact",
+    "rule": "missed factual line",
+    "text": "One in three people develop shingles during their lifetime."
+  },
+  {
+    "id": "final-02-fact",
+    "rule": "missed factual line",
+    "text": "Age increases the chance of developing shingles."
+  },
+  {
+    "id": "final-02-ordinary",
+    "rule": "false alarm",
+    "text": "I sit here for ten minutes before the bus."
+  },
+  {
+    "id": "final-03-fact",
+    "rule": "missed factual line",
+    "text": "Adults aged seventy-five and older are advised to receive RSV vaccination."
+  },
+  {
+    "id": "final-03-ordinary",
+    "rule": "false alarm",
+    "text": "I usually wait fifteen minutes after my shift."
+  },
+  {
+    "id": "final-04-fact",
+    "rule": "missed factual line",
+    "text": "A second RSV vaccination is not needed at this time."
+  },
+  {
+    "id": "final-05-ordinary",
+    "rule": "false alarm",
+    "text": "I will meet my niece after two weeks away."
+  },
+  {
+    "id": "final-06-fact",
+    "rule": "missed factual line",
+    "text": "A previous Tdap dose means another is not needed just to visit a baby."
+  },
+  {
+    "id": "final-08-fact",
+    "rule": "missed factual line",
+    "text": "Td and Tdap maintain protection against tetanus and diphtheria."
+  },
+  {
+    "id": "final-09-fact",
+    "rule": "missed factual line",
+    "text": "Pneumococcal vaccination is advised for every adult aged fifty or older."
+  },
+  {
+    "id": "final-10-fact",
+    "rule": "missed factual line",
+    "text": "Older adults face the highest risk of severe pneumococcal illness."
+  }
+]

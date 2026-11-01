@@ -21,3 +21,5 @@ Source anchors are user-activated links in the debrief. They use a new tab with 
 Offline regeneration creates content-addressed report directories and refuses to replace differing historical files. The fixed-rule gallery selects unresolved support findings before pressure ranking, missing source and inaccessible choice findings, then other gate errors, with stable ID order. The full error list stays available alongside it.
 
 Automated browser runs verify layout and keyboard behavior. Screenshots and GIF frames are captured from this public candidate. They are not observations from human participants. The three-player pilot is prepared in [PILOT.md](PILOT.md) and remains pending.
+
+On 2026-11-01 Kevin reviewed every claim as the pharmacist on the project. AI coding tools drafted the rewrites and new claims he asked for, captured fresh CDC passages for them and recorded his decisions. Those drafts stay pending until he reviews them. The removed source mentioned above is no longer in the game.

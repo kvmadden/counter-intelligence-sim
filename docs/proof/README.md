@@ -1,8 +1,10 @@
 # Offline proof reports
 
-The current report is [efacfbfde97eb7e2/report.json](efacfbfde97eb7e2/report.json). Its [review sheet](efacfbfde97eb7e2/review-sheet.json), [tree surface inventory](efacfbfde97eb7e2/surface-inventory.json), [complete errors](efacfbfde97eb7e2/errors.json) and [fixed-rule gallery](efacfbfde97eb7e2/GALLERY.md) are separate files.
+The current report is [a03cd77cd9300322/report.json](a03cd77cd9300322/report.json). Its [review sheet](a03cd77cd9300322/review-sheet.json), [tree surface inventory](a03cd77cd9300322/surface-inventory.json), [complete errors](a03cd77cd9300322/errors.json) and [fixed-rule gallery](a03cd77cd9300322/GALLERY.md) are separate files.
 
-The report separates untouched-content support review, heuristic detection and false alarms, exhaustive ranking, metadata invariance and pending pilot evidence. No merged quality score is used. New support review is 0 of 24, with supported / reviewed N/A. No participant observation is recorded. Counts for computed draft labels do not turn them into reviewed labels.
+The report separates untouched-content support review, heuristic detection and false alarms, exhaustive ranking, metadata invariance and pending pilot evidence. No merged quality score is used. Support review is 15 approved of 24 decided by Kevin, with 9 pending his review. No participant observation is recorded. Counts for computed draft labels do not turn them into reviewed labels.
+
+The current report follows Kevin's 2026-11-01 review. Support is 15 approved of 24, with 9 pending his review of a rewrite, new claim or reworded line. Two claims and four dialogue branches were removed or replaced at his request, so there are 37,452 paths instead of 37,646. The final benchmark swapped one source family for pneumococcal lines. Gate counts did not change. These are regression checks, not a fresh blind test. Reports from before this review, including [efacfbfde97eb7e2](efacfbfde97eb7e2/report.json), are kept unchanged as history and still contain the removed content.
 
 The first export [bfdde48f84112c7a](bfdde48f84112c7a/report.json) is preserved as history. Its bootstrap implementation selected a family per row rather than per cluster. Do not use its intervals. The current export corrects cluster resampling and adds explicit frozen gate/runtime hashes and metadata invariance. The heuristic itself was unchanged. These reporting corrections are regression checks, not a fresh blind final test.
 

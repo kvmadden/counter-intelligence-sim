@@ -2,7 +2,7 @@
 
 **Hard question: does every factual claim in the dialogue have public evidence behind it, and does every branch reward a respectful conversation over pressure?**
 
-**Short answer:** the respect half holds. All 37,646 possible playthroughs rank pressure below a respectful "not today". The evidence half is not proven yet. Each of the 24 health claims links to a CDC page and has the exact supporting passage captured, but clinical review by Kevin Madden, PharmD is pending for all 24, and one claim (COVID-19) points to guidance that has since changed.
+**Short answer:** the respect half holds. All 37,452 possible playthroughs rank pressure below a respectful "not today". The evidence half is partly proven. Kevin Madden, PharmD reviewed every claim on 2026-11-01. 15 of the 24 health claims are approved on their exact CDC passage and every line that uses them. The other 9 are rewrites, two new claims and one reworded line, each quoting a CDC page fetched that day, and they stay marked pending until he reviews them.
 
 Counter Intelligence is a short, offline game for practicing vaccine conversations at a pharmacy counter. You play the pharmacist with five fictional patients. Each turn you pick Ask, Offer, Sit with it or Close. At the end, a debrief explains what happened, how pressure affected your result, and links to the CDC page behind every fact you used. There is no free text and no generated dialogue. Every line was written in advance.
 
@@ -12,8 +12,8 @@ Counter Intelligence is a short, offline game for practicing vaccine conversatio
 
 | Question | How we test it | Result | Limit |
 | --- | --- | --- | --- |
-| Does the source actually support each claim? | A [claim support sheet](docs/claims/CLAIM-SUPPORT-SHEET.md) puts each claim next to the exact CDC passage, the game lines that use it and the link. Kevin approves or flags each one. | 0 of 24 reviewed. Supported out of reviewed is N/A. | Draft, pending clinical review by Kevin Madden, PharmD. No second independent reviewer. |
-| Does the game reward respect over pressure? | Walk every possible path through all five conversations and check the ranking rule on each. Two broken versions of the rule must fail. | 37,646 paths, 0 violations. Both broken controls fail (6,190 and 4,710 rule errors). | Proves the authored rules hold. Says nothing about how real people talk. |
+| Does the source actually support each claim? | A [claim support sheet](docs/claims/CLAIM-SUPPORT-SHEET.md) puts each claim next to the exact CDC passage, the game lines that use it and the link. Kevin approves or flags each one, and his decisions are recorded in [support-reviews.json](docs/claims/support-reviews.json). | 15 of 24 approved. 9 pending his second look. Supported out of decided is 15 of 15. | Approval is bound to the exact claim, quote and lines, so any edit returns a claim to pending. No second independent reviewer. |
+| Does the game reward respect over pressure? | Walk every possible path through all five conversations and check the ranking rule on each. Two broken versions of the rule must fail. | 37,452 paths, 0 violations. Both broken controls fail (6,190 and 4,710 rule errors). | Proves the authored rules hold. Says nothing about how real people talk. |
 | Would the build notice a new fact with no citation? | A simple pattern check run on 20 held-out lines, half factual and half ordinary talk. | Caught 2 of 10 factual lines. 3 false alarms out of 10 ordinary lines. | Weak. Line labels are AI drafts awaiting Kevin's review. The test set is public, so it is a fixed benchmark, not a blind test. |
 | Can a player understand the ranking and find a source? | A [three-player pilot](docs/PILOT.md) with paired runs. | Not run yet. | No usability claim is made. |
 
@@ -22,13 +22,13 @@ Each result is reported on its own. There is no combined score. Full reports, in
 ## What the player sees
 
 - Every fact the player used appears on the debrief's Sources tab as a link to the CDC page it came from. Links open only when the player selects them.
-- The Sources tab says the facts are a draft pending review and are not medical advice.
+- Each source on the Sources tab shows whether Kevin approved it or its review is pending. The tab says the facts are not medical advice.
 - Keyboard play works throughout, controls are at least 44 pixels, and motion respects the reduced-motion setting. Layout is checked at 390x844, 430x932 and 1440x900 in light and dark. Screenshots and a short GIF are in [docs/media](docs/media/README.md).
 - The game makes no network requests on its own. No analytics, tracking or remote fonts.
 
 ## What this does not prove
 
-This is a fictional prototype. It is not medical advice, and it has not been shown to improve counseling, vaccination rates or patient outcomes. The code records author source checks dated September 2026. The line-by-line passage review is still pending, so no claim should be read as clinically approved until the support sheet is signed off. The COVID-19 claim needs correction review because CDC's current page now says something different. CDC guidance changes, and four claims are marked as likely to change each season. No second clinician has reviewed the content, and no real players have been observed.
+This is a fictional prototype. It is not medical advice, and it has not been shown to improve counseling, vaccination rates or patient outcomes. 15 claims are approved by Kevin Madden, PharmD. The other 9 are drafts pending his review, and the game marks them that way. CDC guidance changes, and three claims are marked as likely to change each season. No second clinician has reviewed the content, and no real players have been observed.
 
 ## Try it
 

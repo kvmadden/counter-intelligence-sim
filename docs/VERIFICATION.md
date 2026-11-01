@@ -35,3 +35,15 @@ The [current report](proof/README.md) preserves earlier exports and discloses th
 All 24 claims retain their exact public-main wording, sources and historical stamps. Dialogue is unchanged. The new passage-support and excerpt-rights decisions, full factual-surface classification and human-authored benchmark lines remain pending Kevin. The current line drafts are explicitly AI proposed. The COVID destination and guidance change needs his attention. No second independent reviewer or actual player observation is recorded. The three-player pilot is prepared and remains pending. No counseling, clinical, vaccination or training effectiveness is claimed.
 
 Registry evidence home: `/Volumes/HubData/evidence/counter-intelligence-sim-showcase-standard`. The PR includes portable copies of relevant logs and evidence. Portable text logs remove trailing whitespace and blank final lines for a clean diff. Exact raw bytes are retained in [raw-text-logs.tar.gz](evidence/proof/raw-text-logs.tar.gz) and the registry evidence home, with hashes in [log-normalization.json](evidence/proof/log-normalization.json). The final staged diff check passed before push. No merge is performed.
+
+## Pharmacist review update, 2026-11-01
+
+Kevin Madden, PharmD reviewed all 24 claims on the support sheet. His decisions, notes and content bindings are in [support-reviews.json](claims/support-reviews.json). The sections above describe the earlier candidate and are kept as history.
+
+- 16 claims were approved as is. 15 still read approved. The 16th, flu-peak, shares its only line with the flagged flu-two-weeks fact, so that line was reworded and returns to Kevin.
+- other-viruses was approved with an edit, and five claims were flagged. All six were rewritten from CDC pages fetched on 2026-11-01 by `scripts/capture-cdc.mjs`, which hashes each page and quotes whole text blocks.
+- Two claims were added: same-arm-ok and pneumo-50-plus. Every rewrite and new claim carries no review stamp and is bound in [pending-drafts.json](claims/pending-drafts.json). The debrief shows it as pending.
+- Two claims and their dialogue were removed at Kevin's request. Jordan lost one branch and one ending. Marcus, Sam and Walt kept their branches with a Tdap or pneumococcal offer in place of the removed one. A test checks that no dialogue, claim, quote, source snapshot, benchmark line or runtime file mentions the removed topic.
+- The final benchmark's fifth source family is now pneumococcal. Gate counts are unchanged at TP 2, FN 8, FP 3 and TN 7. This is a regression check.
+- Exhaustive ranking now covers 37,452 paths with zero violations. Outcome-only still has 6,190 rule errors and always-bottom 4,710. Metadata invariance has zero errors.
+- The media in `docs/media` were captured before this update. Their flow does not touch the changed lines, but the sources screenshots show the old review note.

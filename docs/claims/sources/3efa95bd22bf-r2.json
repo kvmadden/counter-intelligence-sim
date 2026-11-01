@@ -1,0 +1,37 @@
+{
+  "url": "https://www.cdc.gov/pneumococcal/vaccines/index.html",
+  "resolvedUrl": "https://www.cdc.gov/pneumococcal/vaccines/index.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "6004ae98615170d9b3a3c052927b09699829fcd13e6ebc8e59314246c70873d6",
+  "extractor": "jsdom: main h1, main h2, main h3, main h4, main p, main li, text with whitespace collapsed, indexed in document order",
+  "paragraphs": [
+    {
+      "index": 12,
+      "text": "Pneumococcal disease is common in young children, but older adults are at greatest risk of serious illness and death."
+    },
+    {
+      "index": 15,
+      "text": "CDC recommends pneumococcal vaccination for"
+    },
+    {
+      "index": 20,
+      "text": "All adults 50 years or older"
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:first_published",
+      "content": "July 10, 2024"
+    },
+    {
+      "name": "cdc:last_updated",
+      "content": "February 25, 2026"
+    },
+    {
+      "name": "cdc:last_reviewed",
+      "content": "February 25, 2026"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

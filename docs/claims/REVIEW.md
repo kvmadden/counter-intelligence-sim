@@ -1,36 +1,44 @@
-# Claim support review sheet
+# Claim support review
 
-All 24 rows are draft, pending clinical review by Kevin Madden, PharmD. For the side-by-side claim, quote, link and approve or flag boxes, use the [claim support sheet](CLAIM-SUPPORT-SHEET.md). Exact retrieved passages, source dates, retrieval dates, rights notes, full content hashes and every linked dialogue use are in each immutable report directory under `docs/proof`. The historical author checks are preserved separately. No new approval has been supplied.
+Kevin Madden, PharmD reviewed all 24 claims on the [claim support sheet](CLAIM-SUPPORT-SHEET.md) on 2026-11-01. This page explains how his decisions are recorded and what is still waiting for him.
 
-| Claim | Historical check | New support decision | Current source |
-| --- | --- | --- | --- |
-| flu-cannot-cause-flu | 2026-09-15 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/flu/prevention/misconceptions.html) |
-| flu-side-effects | 2026-09-15 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/flu/vaccines/keyfacts.html) |
-| sit-after | 2026-09-15 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/vaccines/hcp/imz-best-practices/preventing-managing-adverse-reactions.html) |
-| flu-two-weeks | 2026-09-15 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/flu/vaccines/keyfacts.html) |
-| flu-peak | 2026-09-15 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/flu/about/season.html) |
-| same-visit | 2026-09-15 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/flu/vaccines/coadministration.html) |
-| covid-personal-call | 2026-09-15 | unverified passage | [CDC](https://www.cdc.gov/covid/hcp/vaccine-considerations/index.html) |
-| tdap-ten-years | 2026-09-15 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/vaccines/hcp/by-disease/dtap-tdap-td.html) |
-| recommendation-predicts | 2026-09-15 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/vaccines-adults/hcp/imz-standards/index.html) |
-| ve-good-match | 2026-09-15 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/flu-vaccines-work/benefits/index.html) |
-| milder-illness | 2026-09-15 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/flu-vaccines-work/benefits/index.html) |
-| other-viruses | 2026-09-15 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/flu/prevention/misconceptions.html) |
-| flu-protects-others | 2026-09-16 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/flu-vaccines-work/benefits/index.html) |
-| flu-healthy-people | 2026-09-16 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/flu/about/index.html) |
-| baby-two-weeks | 2026-09-16 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/vaccines-pregnancy/about/vaccines-family-caregivers.html) |
-| tdap-around-baby | 2026-09-16 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/vaccines-pregnancy/about/vaccines-family-caregivers.html) |
-| flu-timing | 2026-09-16 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/flu/vaccines/vaccinations.html) |
-| most-same-visit | 2026-09-16 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/flu/vaccines/coadministration.html) |
-| rsv-75-plus | 2026-09-16 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/rsv/adults/index.html) |
-| flu-65-preferred | 2026-09-16 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/flu/vaccine-types/adjuvant.html) |
-| flu-65-burden | 2026-09-16 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/flu/vaccine-types/adjuvant.html) |
-| shingles-50-plus | 2026-09-16 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/shingles/vaccines/index.html) |
-| shingles-one-in-three | 2026-09-16 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/shingles/about/index.html) |
-| shingles-same-visit | 2026-09-16 | draft, pending pharmacist review | [CDC](https://www.cdc.gov/shingles/hcp/vaccine-considerations/index.html) |
+## Where decisions live
 
-The original COVID link redirects to changed guidance. Kevin must decide whether its authored wording needs correction. Matching a CDC host or finding a passage is not an entailment decision. A valid approval must bind the full claim, exact passage, source metadata and all dialogue uses. Any change invalidates that binding.
+- [support-reviews.json](support-reviews.json) holds Kevin's own decisions, keyed by claim ID: `decision`, `reviewedBy`, `reviewedOn`, his `notes`, the sheet he reviewed and a `binding`. The binding is a hash of the claim, its exact CDC passage and every dialogue line that uses it, as they stood on that sheet.
+- [pending-drafts.json](pending-drafts.json) holds claims written or reworded after his review. Each entry says what he asked for, what changed and who drafted it, and is bound to the exact draft. A draft is never an approval.
+- [passages.json](passages.json) and [sources](sources) hold the exact CDC passages and the page snapshots they came from. Rewrites quote pages fetched on 2026-11-01 by `node scripts/capture-cdc.mjs`.
 
-CDC excerpts are available free from the source website. CDC does not endorse this game. Rights decisions for each excerpt remain pending human review. Historical research summaries are preserved as historical summaries, never promoted to exact source captures.
+## Decisions on 2026-11-01
 
-Kevin can record actual decisions in `support-reviews.json`, keyed by claim ID, using `decision`, `reviewedBy`, `reviewedOn` and the full `binding` from the current sheet. Valid decisions are `approved` or `rejected`. Only Kevin supplies his own review identity and date. Regenerate after a decision. A mismatched binding becomes `changed`, and no longer contributes an approved or reviewed count. UI review status remains pending in this candidate because no new decisions have been supplied.
+| Decision | Claims |
+| --- | --- |
+| Approved as is | flu-cannot-cause-flu, flu-side-effects, sit-after, flu-peak, ve-good-match, milder-illness, flu-protects-others, flu-healthy-people, baby-two-weeks, tdap-around-baby, flu-timing, most-same-visit, rsv-75-plus, flu-65-burden, shingles-50-plus, shingles-one-in-three |
+| Approved with an edit | other-viruses |
+| Flagged for rewrite | flu-two-weeks, tdap-ten-years, recommendation-predicts, flu-65-preferred, shingles-same-visit |
+| Removed | same-visit, covid-personal-call, with every line, branch, source and test that used them |
+
+## What is pending his second look
+
+The sheet's pending section lists nine claims. Six are the rewrites he asked for. Two are new: `same-arm-ok`, split out of shingles-same-visit because each claim quotes one CDC page, and `pneumo-50-plus`, which replaces a removed branch in Walt's conversation. The ninth is `flu-peak`. Kevin approved it, but its only line also states the flu-two-weeks fact he flagged, so that line was reworded and his approval no longer covers it.
+
+## Statuses
+
+| Status | Meaning |
+| --- | --- |
+| approved | Kevin approved this exact claim, passage and set of lines. |
+| rewrite pending pharmacist review | Rewritten as Kevin asked, waiting for him. |
+| new claim, pending pharmacist review | Added after his review, waiting for him. |
+| rechecked, pending pharmacist review | Claim text unchanged and checked against the current CDC page, waiting for him. |
+| approved claim, reworded line pending pharmacist review | Claim approved, but a line that uses it changed. |
+| changed | Something bound changed after a decision or a draft. The build fails. |
+
+The build fails closed. A claim ships only if Kevin approved its exact content, its September author stamp still matches unchanged content, or it is a bound draft. The debrief shows each source as "Pharmacist approved" with the date, or "Pharmacist review pending".
+
+## Recording the second look
+
+1. Open the pending section of the sheet and tick Approve or Flag for each claim.
+2. In `support-reviews.json`, set that claim's `decision` to `approved`, `flagged` or `rejected`, with `reviewedBy`, `reviewedOn`, `notes` and the `binding` printed for it in the current proof report's review sheet. Only Kevin supplies his own identity and date.
+3. For an approved rewrite or new claim, add his `reviewedBy` and `reviewedOn` stamp in `src/counter/claims.js` and delete its entry from `pending-drafts.json`.
+4. Run `node scripts/claim-sheet.mjs` and `npm run build`.
+
+CDC excerpts are available free from the source website. CDC does not endorse this game. Rights decisions for each excerpt remain pending human review. Reports in `docs/proof` from before 2026-11-01 are kept unchanged as history and still contain the removed claims.

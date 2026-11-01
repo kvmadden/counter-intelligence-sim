@@ -20,10 +20,12 @@
 // after it. Two derived flags join the author's: "pushed" once any push move has been
 // taken, and "pushed-after-no" once a push followed the patient's "declined".
 import { CLAIMS } from "./claims.js";
+import { CLAIM_STATUS } from "./claim-status.js";
 import { CAP_NOTES, tierFor } from "./tiers.js";
 import { TREES } from "./trees/index.js";
 
 export const FAMILIES = Object.freeze(["ask", "offer", "sit", "close"]);
+const PENDING_REVIEW = Object.freeze({ status: "draft, pending pharmacist review", label: "Pharmacist review pending", reviewedOn: null });
 
 export const holds = (flags, when = []) => when.every((term) => (term.startsWith("!") ? !flags.includes(term.slice(1)) : flags.includes(term)));
 
@@ -45,7 +47,7 @@ const withDerived = (state) => [
 
 // An engine bound to a set of trees. The game uses the one below, bound to ./trees/.
 // Tests bind small fixture trees, so the reducer is proven apart from any script.
-export function makeEngine(trees, claims = CLAIMS) {
+export function makeEngine(trees, claims = CLAIMS, statuses = CLAIM_STATUS) {
   const treeFor = (state) => trees[state?.patientId];
 
   function createRun(patientId) {
@@ -159,7 +161,7 @@ export function makeEngine(trees, claims = CLAIMS) {
       happened: ending?.debrief ?? "",
       moved: [...state.notes],
       method: outcome?.tier.capped ? CAP_NOTES[outcome.tier.capped] : null,
-      sources: state.claims.map((id) => ({ id, org: claims[id].source.org, title: claims[id].source.title, accessed: claims[id].source.accessed, url: claims[id].source.url, license: "CDC federal text, US public domain", historicalReview: claims[id].reviewedOn, reviewed: false })),
+      sources: state.claims.map((id) => ({ id, org: claims[id].source.org, title: claims[id].source.title, accessed: claims[id].source.accessed, url: claims[id].source.url, license: "CDC federal text, US public domain", historicalReview: claims[id].reviewedOn ?? null, review: statuses[id] ?? PENDING_REVIEW, reviewed: statuses[id]?.status === "approved" })),
       discussion: ending?.huddle ?? "",
     };
   }

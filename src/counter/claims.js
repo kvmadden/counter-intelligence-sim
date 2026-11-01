@@ -12,6 +12,11 @@
 // `volatile` marks guidance that has changed often. Re-check it before each season.
 // `protects` marks a claim about how a vaccine protects. The Secret Agent objective
 // "Share a fact that protects" counts only these (./objectives.js).
+// Kevin reviewed every claim on 2026-11-01 (docs/claims/support-reviews.json). Claims he
+// flagged were rewritten, and two were added, each from a CDC page fetched that day.
+// Those carry no reviewedBy or reviewedOn until he approves the new text. They ship
+// marked pending, and docs/claims/pending-drafts.json binds each draft so any further
+// edit fails the build. Two claims were removed at his request (see docs/claims/REVIEW.md).
 // Sources fetched 2026-09-15. Research notes: CDC's pages carried a site-wide
 // "Updated: September 1, 2026" stamp, so each page's own last-reviewed date is noted.
 export const CLAIMS = Object.freeze({
@@ -34,11 +39,10 @@ export const CLAIMS = Object.freeze({
     reviewedOn: "2026-09-15",
   }),
   "flu-two-weeks": Object.freeze({
-    text: "It takes about two weeks after a flu vaccine for protection to develop.",
+    text: "Protection from a flu vaccine builds over about two weeks after the shot, while the body makes antibodies. Someone exposed to flu just before or during that time can get sick before the vaccine protects them.",
     protects: true,
-    source: Object.freeze({ org: "CDC", title: "Key Facts About Seasonal Flu Vaccine", url: "https://www.cdc.gov/flu/vaccines/keyfacts.html", accessed: "2026-09-15" }),
-    reviewedBy: "Kevin Madden, PharmD",
-    reviewedOn: "2026-09-15",
+    source: Object.freeze({ org: "CDC", title: "Key Facts About Seasonal Flu Vaccine", url: "https://www.cdc.gov/flu/vaccines/keyfacts.html", accessed: "2026-11-01" }),
+    // Drafted after Kevin's 2026-11-01 review. No stamp until he approves this text.
   }),
   "flu-peak": Object.freeze({
     text: "In the United States, flu activity most often peaks between December and February.",
@@ -46,26 +50,12 @@ export const CLAIMS = Object.freeze({
     reviewedBy: "Kevin Madden, PharmD",
     reviewedOn: "2026-09-15",
   }),
-  "same-visit": Object.freeze({
-    text: "People can get a flu vaccine and a COVID-19 vaccine at the same visit if they are eligible.",
-    source: Object.freeze({ org: "CDC", title: "Getting a Flu Vaccine and Other Recommended Vaccines at the Same Time", url: "https://www.cdc.gov/flu/vaccines/coadministration.html", accessed: "2026-09-15" }),
-    reviewedBy: "Kevin Madden, PharmD",
-    reviewedOn: "2026-09-15",
-  }),
-  "covid-personal-call": Object.freeze({
-    text: "CDC recommends the current COVID-19 vaccine for people 6 months and older based on individual-based decision-making: a personal decision, made with a health care provider.",
-    source: Object.freeze({ org: "CDC", title: "Staying Up to Date with COVID-19 Vaccines", url: "https://www.cdc.gov/covid/vaccines/stay-up-to-date.html", accessed: "2026-09-15" }),
-    volatile: true,
-    reviewedBy: "Kevin Madden, PharmD",
-    reviewedOn: "2026-09-15",
-  }),
   // Jordan's second pass (research: docs/claims/research-2026-09-15-objections.json).
   "tdap-ten-years": Object.freeze({
-    text: "Adults need a Td or Tdap booster every 10 years to stay protected against tetanus and diphtheria.",
+    text: "Tdap helps protect against tetanus, diphtheria and whooping cough (pertussis). For whooping cough, adults who have never had Tdap should get a single dose. After that, adults get a Td or Tdap booster every 10 years, and Td covers only tetanus and diphtheria.",
     protects: true,
-    source: Object.freeze({ org: "CDC", title: "Diphtheria, Tetanus, and Pertussis Vaccination: Information for Health Care Providers", url: "https://www.cdc.gov/vaccines/hcp/by-disease/dtap-tdap-td.html", accessed: "2026-09-15" }),
-    reviewedBy: "Kevin Madden, PharmD",
-    reviewedOn: "2026-09-15",
+    source: Object.freeze({ org: "CDC", title: "Diphtheria, Tetanus, and Pertussis Vaccination: Information for Health Care Providers", url: "https://www.cdc.gov/vaccines/hcp/by-disease/dtap-tdap-td.html", accessed: "2026-11-01" }),
+    // Drafted after Kevin's 2026-11-01 review. No stamp until he approves this text.
   }),
   "recommendation-predicts": Object.freeze({
     text: "A health care professional's recommendation is the strongest predictor of whether a patient gets vaccinated.",
@@ -89,10 +79,9 @@ export const CLAIMS = Object.freeze({
     reviewedOn: "2026-09-15",
   }),
   "other-viruses": Object.freeze({
-    text: "Getting sick soon after a flu shot can mean exposure before protection had its two weeks to build, or another respiratory virus, such as a cold virus or SARS-CoV-2.",
-    source: Object.freeze({ org: "CDC", title: "Misconceptions About Seasonal Flu and Flu Vaccines", url: "https://www.cdc.gov/flu/prevention/misconceptions.html", accessed: "2026-09-15" }),
-    reviewedBy: "Kevin Madden, PharmD",
-    reviewedOn: "2026-09-15",
+    text: "Flu and the common cold are caused by different viruses but share many symptoms, so a cold can be hard to tell apart from flu.",
+    source: Object.freeze({ org: "CDC", title: "Cold Versus Flu", url: "https://www.cdc.gov/flu/about/coldflu.html", accessed: "2026-11-01" }),
+    // Drafted after Kevin's 2026-11-01 review. No stamp until he approves this text.
   }),
   // The other four patients (Kevin's storyline picks, 2026-09-16). Each was checked word
   // for word against its live page on 2026-09-16, and Kevin stamped all eleven that day
@@ -143,11 +132,10 @@ export const CLAIMS = Object.freeze({
     reviewedOn: "2026-09-16",
   }),
   "flu-65-preferred": Object.freeze({
-    text: "Three flu vaccines are preferred for people 65 and older: a high-dose, a recombinant and an adjuvanted vaccine. Studies suggest they are potentially more effective in that age group. If none is available, any other flu vaccine right for their age should be given instead.",
+    text: "For people 65 and older, CDC preferentially recommends one flu vaccine each season from three kinds: high-dose, recombinant or adjuvanted. Any one of them meets the recommendation. Studies suggest they are potentially more effective in that age group. If one is not available, a standard-dose flu vaccine should be given instead.",
     protects: true,
-    source: Object.freeze({ org: "CDC", title: "Adjuvanted Flu Vaccine", url: "https://www.cdc.gov/flu/vaccine-types/adjuvant.html", accessed: "2026-09-16" }),
-    reviewedBy: "Kevin Madden, PharmD",
-    reviewedOn: "2026-09-16",
+    source: Object.freeze({ org: "CDC", title: "Flu and People 65 Years and Older", url: "https://www.cdc.gov/flu/highrisk/65over.htm", accessed: "2026-11-01" }),
+    // Drafted after Kevin's 2026-11-01 review. No stamp until he approves this text.
   }),
   "flu-65-burden": Object.freeze({
     text: "People 65 and older account for 70 to 85 percent of flu-related deaths and 50 to 70 percent of flu-related hospitalizations each flu season.",
@@ -172,9 +160,22 @@ export const CLAIMS = Object.freeze({
   // which is the high-dose one throughout, so no adjuvanted pairing comes up. Stamped by
   // Kevin the same day.
   "shingles-same-visit": Object.freeze({
-    text: "The recombinant shingles vaccine can be given at the same visit as other adult vaccines, at a different injection site.",
-    source: Object.freeze({ org: "CDC", title: "Shingles Vaccine Recommendations", url: "https://www.cdc.gov/shingles/hcp/vaccine-considerations/index.html", accessed: "2026-09-16" }),
-    reviewedBy: "Kevin Madden, PharmD",
-    reviewedOn: "2026-09-16",
+    text: "The shingles vaccine may be given at the same time as other vaccines.",
+    source: Object.freeze({ org: "CDC", title: "Shingles Vaccination", url: "https://www.cdc.gov/shingles/vaccines/index.html", accessed: "2026-11-01" }),
+    // Drafted after Kevin's 2026-11-01 review. No stamp until he approves this text.
+  }),
+  // Kevin, 2026-11-01: both shots can go in the same arm if the patient prefers, at
+  // separate sites about an inch apart, per CDC general best practices.
+  "same-arm-ok": Object.freeze({
+    text: "When two shots are given at one visit, each goes at a different site. For adults, one deltoid muscle can take more than one shot, so both can go in the same arm if the patient prefers, at separate sites about an inch or more apart.",
+    source: Object.freeze({ org: "CDC", title: "Vaccine Administration (General Best Practice Guidelines for Immunization)", url: "https://www.cdc.gov/vaccines/hcp/imz-best-practices/vaccine-administration.html", accessed: "2026-11-01" }),
+    // Drafted after Kevin's 2026-11-01 review. No stamp until he approves this text.
+  }),
+  // Kevin, 2026-11-01: Walt's second-vaccine offer is now pneumococcal.
+  "pneumo-50-plus": Object.freeze({
+    text: "CDC recommends pneumococcal vaccination for all adults 50 and older. Older adults are at greatest risk of serious pneumococcal illness.",
+    protects: true,
+    source: Object.freeze({ org: "CDC", title: "Pneumococcal Vaccination", url: "https://www.cdc.gov/pneumococcal/vaccines/index.html", accessed: "2026-11-01" }),
+    // Drafted after Kevin's 2026-11-01 review. No stamp until he approves this text.
   }),
 });

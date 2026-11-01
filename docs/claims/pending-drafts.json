@@ -1,0 +1,92 @@
+{
+  "flu-two-weeks": {
+    "kind": "rewrite",
+    "requestedBy": "Kevin Madden, PharmD",
+    "requestedOn": "2026-11-01",
+    "request": "Protection builds over about two weeks, it does not start after two weeks.",
+    "change": "Claim and five dialogue lines now say protection takes about two weeks to build. CDC's text says antibodies develop and provide protection about two weeks after vaccination. CDC does not use the word full, so the claim does not either.",
+    "draftedBy": "Claude (AI coding assistant), for Kevin Madden, PharmD",
+    "draftedOn": "2026-11-01",
+    "binding": "546f2471891b4ea73555186f6cce9feec0193fe2beec0f73126a41e162444a88"
+  },
+  "other-viruses": {
+    "kind": "rewrite",
+    "requestedBy": "Kevin Madden, PharmD",
+    "requestedOn": "2026-11-01",
+    "request": "Simplify, and do not name COVID or SARS.",
+    "change": "Now only says a cold can look like flu, sourced from CDC Cold Versus Flu. The exposure-timing half moved into flu-two-weeks.",
+    "draftedBy": "Claude (AI coding assistant), for Kevin Madden, PharmD",
+    "draftedOn": "2026-11-01",
+    "binding": "aa17ccd478816bbdcda5133936f86e602210146dca8ac1b58125040b9764672e"
+  },
+  "tdap-ten-years": {
+    "kind": "rewrite",
+    "requestedBy": "Kevin Madden, PharmD",
+    "requestedOn": "2026-11-01",
+    "request": "Tdap covers tetanus, diphtheria and pertussis. The 10-year Td or Tdap booster is for tetanus and diphtheria. Say what applies to pertussis.",
+    "change": "Says Tdap covers all three, a single adult Tdap dose for anyone who never had one, then Td or Tdap every 10 years, with Td covering only tetanus and diphtheria.",
+    "draftedBy": "Claude (AI coding assistant), for Kevin Madden, PharmD",
+    "draftedOn": "2026-11-01",
+    "binding": "de232b6c66903ca16f1c9072848e9915d305605261c18c2a4bd8ec32e3c988f4"
+  },
+  "recommendation-predicts": {
+    "kind": "rechecked",
+    "requestedBy": "Kevin Madden, PharmD",
+    "requestedOn": "2026-11-01",
+    "request": "Verify against CDC, rewrite or remove if not supported exactly.",
+    "change": "Claim text unchanged. The sentence appears word for word on the current CDC Adult Immunization Standards page, as one of the reasons CDC gives for the National Vaccine Advisory Committee standards. The quote now includes that framing. Its lines changed only through the flu-two-weeks rewrite.",
+    "draftedBy": "Claude (AI coding assistant), for Kevin Madden, PharmD",
+    "draftedOn": "2026-11-01",
+    "binding": "11abdbd3989537184a085116e32a0266d88323280610f5868bf0e8c09bc82d6d"
+  },
+  "flu-65-preferred": {
+    "kind": "rewrite",
+    "requestedBy": "Kevin Madden, PharmD",
+    "requestedOn": "2026-11-01",
+    "request": "Any ONE of the three vaccines, not all three.",
+    "change": "Says one flu vaccine each season from the three kinds, any one of which meets the recommendation. Source moved to CDC Flu and People 65 Years and Older, which uses or between the vaccine kinds.",
+    "draftedBy": "Claude (AI coding assistant), for Kevin Madden, PharmD",
+    "draftedOn": "2026-11-01",
+    "binding": "9b964b91f2cabed96b857a0888d0763a9ca560a32b7ea695f7b96a7d681126ce"
+  },
+  "shingles-same-visit": {
+    "kind": "rewrite",
+    "requestedBy": "Kevin Madden, PharmD",
+    "requestedOn": "2026-11-01",
+    "request": "Add that both shots can go in the same arm if preferred, about an inch apart.",
+    "change": "The same-arm part is its own claim, same-arm-ok, because each claim quotes one page. This claim now quotes the CDC Shingles Vaccination page, whose quote does not mention COVID-19.",
+    "draftedBy": "Claude (AI coding assistant), for Kevin Madden, PharmD",
+    "draftedOn": "2026-11-01",
+    "binding": "aae99cde1e2f23fed06f75b3cb406918317540cdfe65554798e8fe32b0cba19a"
+  },
+  "same-arm-ok": {
+    "kind": "new",
+    "requestedBy": "Kevin Madden, PharmD",
+    "requestedOn": "2026-11-01",
+    "request": "Both shots in the same arm if the patient prefers, separate sites about an inch apart, per CDC general best practices.",
+    "change": "New claim from CDC Vaccine Administration best practices. CDC states the 1 inch spacing in its sentence about infants and younger children. The adult sentence says the deltoid can take more than one injection. Kevin should confirm the inch applies as worded.",
+    "draftedBy": "Claude (AI coding assistant), for Kevin Madden, PharmD",
+    "draftedOn": "2026-11-01",
+    "binding": "81230814e0f8220fac6eace1136efb04898ede2e3c8baaa77abf726b8f4ab569"
+  },
+  "pneumo-50-plus": {
+    "kind": "new",
+    "requestedBy": "Kevin Madden, PharmD",
+    "requestedOn": "2026-11-01",
+    "request": "Replace COVID-19 content with flu, RSV, shingles, Tdap or pneumococcal content.",
+    "change": "New claim from CDC Pneumococcal Vaccination. Walt's second-vaccine offer is now pneumococcal.",
+    "draftedBy": "Claude (AI coding assistant), for Kevin Madden, PharmD",
+    "draftedOn": "2026-11-01",
+    "binding": "e58a57e1feff9f1b69a0732e6c4305d5285256434842d136f46c8425c81110d0"
+  },
+  "flu-peak": {
+    "kind": "line",
+    "requestedBy": "Kevin Madden, PharmD",
+    "requestedOn": "2026-11-01",
+    "request": "Approved as is. Its only line also states flu-two-weeks, which Kevin flagged.",
+    "change": "Claim text and CDC quote unchanged. The one line that uses it was reworded for the flu-two-weeks fix, so Kevin's approval no longer covers that line. It needs his look at the new line only.",
+    "draftedBy": "Claude (AI coding assistant), for Kevin Madden, PharmD",
+    "draftedOn": "2026-11-01",
+    "binding": "891723bcd1b2c8e31b18faed6ee8c52080a5450b15766d56cbb750fd5202cdbc"
+  }
+}

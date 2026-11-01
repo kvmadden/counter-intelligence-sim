@@ -1,0 +1,33 @@
+{
+  "url": "https://www.cdc.gov/flu/about/coldflu.html",
+  "resolvedUrl": "https://www.cdc.gov/flu/about/coldflu.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "07c6e937ce254ffc61884d1bcf782dc1bb46158b9c7fe74e7de5461efdd567ee",
+  "extractor": "jsdom: main h1, main h2, main h3, main h4, main p, main li, text with whitespace collapsed, indexed in document order",
+  "paragraphs": [
+    {
+      "index": 2,
+      "text": "Influenza (flu) and the common cold are both contagious respiratory illnesses, but they are caused by different viruses."
+    },
+    {
+      "index": 3,
+      "text": "Colds and flu share many symptoms, so it can be difficult to tell the difference between them based on symptoms alone."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:first_published",
+      "content": "October 1, 2024"
+    },
+    {
+      "name": "cdc:last_updated",
+      "content": "August 8, 2024"
+    },
+    {
+      "name": "cdc:last_reviewed",
+      "content": "August 8, 2024"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}
