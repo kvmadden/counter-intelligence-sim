@@ -1,0 +1,27 @@
+
+> counter-intelligence@0.1.0 build
+> node scripts/check-claims.mjs && vite build && node scripts/singlefile.mjs && node scripts/scan.mjs
+
+claims: 24 claims, 5 trees, 193 staff lines checked
+  NOTE covid-personal-call is marked volatile. Re-check its source before each season.
+  NOTE ve-good-match is marked volatile. Re-check its source before each season.
+  NOTE rsv-75-plus is marked volatile. Re-check its source before each season.
+  NOTE flu-65-burden is marked volatile. Re-check its source before each season.
+claims: GREEN, historical source and stamp metadata checked. New passage-support review pending.
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 79 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     0.82 kB │ gzip:     0.43 kB
+dist/assets/style-Cla_rKrN.css    163.91 kB │ gzip:   103.97 kB
+dist/assets/index-C_GWuUSS.js   3,644.97 kB │ gzip: 2,277.02 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 5.03s
+singlefile: dist/counter-intelligence.html 3720 KB (1 script, 1 stylesheet inlined)
+scan: 4 files inspected
+scan: GREEN, source literals allowed, no automatic network call, remote resource or banned name

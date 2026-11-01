@@ -1,0 +1,28 @@
+{
+  "url": "https://www.cdc.gov/flu/prevention/misconceptions.html",
+  "resolvedUrl": "https://www.cdc.gov/flu/prevention/misconceptions.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "43f39bff3ed5f002cfab0ed65568571cdc21d3fa3d6da39715d93a0ad159f1a3",
+  "paragraphs": [
+    {
+      "index": 6,
+      "text": "Flu vaccines cannot cause flu illness. Flu vaccines given with a needle (i.e., flu shots) are made with either inactivated (killed) viruses, or with only a single protein from an influenza virus. The nasal spray vaccine contains live viruses that are attenuated (weakened) so that they will not cause illness."
+    },
+    {
+      "index": 16,
+      "text": "Someone can get sick with another respiratory virus besides influenza virus, such as rhinoviruses or SARS-CoV-2 (the virus that causes COVID-19). Other respiratory viruses can cause symptoms similar to flu, and they can also spread and cause illness during flu season. Flu vaccines only protect against flu, not other illnesses."
+    },
+    {
+      "index": 17,
+      "text": "Someone can be exposed to influenza viruses shortly before getting vaccinated or during the two-week period after vaccination that it takes the body to develop immune protection. This exposure may result in a person becoming sick with flu before protection from vaccination takes effect."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:last_published",
+      "content": "2026-05-18T10:40:03Z"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

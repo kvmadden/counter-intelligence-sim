@@ -1,0 +1,24 @@
+{
+  "url": "https://www.cdc.gov/flu/vaccine-types/adjuvant.html",
+  "resolvedUrl": "https://www.cdc.gov/flu/vaccine-types/adjuvant.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "b8ad07865804ed96ea21a6761b88b9f99de85f6def6b96a7c17b33ab27d3c985",
+  "paragraphs": [
+    {
+      "index": 23,
+      "text": "There are three flu vaccines that are preferentially recommended for people 65 years and older. These are Fluzone High-Dose Trivalent vaccine, Flublok Trivalent recombinant Influenza vaccine and Fluad adjuvanted flu vaccine. This recommendation was based on a review of available studies which suggested that in this age group these vaccines are potentially more effective than standard dose unadjuvanted flu vaccines. There is no preferential recommendation for people younger than 65 years. If none of the three flu vaccines preferentially recommended for people 65 years and older is available at the time of administration, people in this age group should get any other age-appropriate flu vaccine instead."
+    },
+    {
+      "index": 31,
+      "text": "People 65 years and older are at higher risk for flu-related severe illness and death. CDC research indicates that people 65 years and older account for 70 to 85 percent of flu-related deaths and 50 to 70 percent of flu-related hospitalizations each flu season. Older adults can have lower protective immune responses after flu vaccination compared to healthy young people. Lower immune responses may lead to lower vaccine effectiveness (i.e., a measure of how well the flu vaccine protects). Given the higher risk of severe flu illness and lower protective immune response after vaccination among older adults, substantial research and development have produced new flu vaccines intended to provide better protection for people in this age group."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:last_published",
+      "content": "2026-09-01T18:38:53Z"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

@@ -1,0 +1,32 @@
+
+ RUN  v4.1.11 /Volumes/HubData/work/worktrees/counter-intelligence-sim-showcase-standard
+
+ ❯ tests/unit/counter-proof.test.js (10 tests | 1 failed | 9 skipped) 28ms
+   × fails the build ledger check when a supporting passage is missing 27ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/counter-proof.test.js > fails the build ledger check when a supporting passage is missing
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/unit/counter-proof.test.js:134:107
+    132|   const passages = JSON.parse(fs.readFileSync('docs/claims/passages.js…
+    133|   passages['flu-two-weeks'].passage = ''
+    134|   expect(checkLedger(CLAIMS, undefined, passages).some(row => row.rule…
+       |                                                                                                           ^
+    135| })
+    136|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 9 skipped (10)
+   Start at  05:09:38
+   Duration  188ms (transform 56ms, setup 0ms, import 70ms, tests 28ms, environment 0ms)

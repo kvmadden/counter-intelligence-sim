@@ -297,10 +297,16 @@ test("reads the debrief as tabbed pages, by pointer and by keyboard, and lists i
   await expect(debrief.locator(".ci-kicker")).toHaveText("Sources · 1 of 2");
   await expect(debrief.locator(".ci-sources li")).toHaveCount(3);
   await expect(debrief.locator(".ci-source-org").first()).toHaveText("CDC");
-  // The note follows the claims this path cited: a draft until Kevin stamps them, reviewed after.
+  for (const anchor of await debrief.locator('a[data-claim-id]').all()) {
+    const id = await anchor.getAttribute('data-claim-id')
+    await expect(anchor).toHaveAttribute('href', CLAIMS[id].source.url)
+    await expect(anchor).toHaveAttribute('rel', 'noopener noreferrer')
+    await anchor.focus()
+    await expect(anchor).toBeFocused()
+  }
+  // Historical stamps do not count as the new content-bound support review.
   const cited = ["flu-cannot-cause-flu", "flu-side-effects", "sit-after", "covid-personal-call", "same-visit"];
-  const stamped = cited.every((id) => CLAIMS[id].reviewedBy);
-  const reviewText = stamped ? "reviewed by a pharmacist" : "Draft. These facts are still awaiting pharmacist review";
+  const reviewText = "Draft, pending pharmacist passage review";
   await expect(debrief.getByText(reviewText, { exact: false })).toHaveCount(0); // only the last page carries it
   await debrief.getByRole("button", { name: "Next page" }).click();
   await expect(debrief.locator(".ci-kicker")).toHaveText("Sources · 2 of 2");
@@ -823,6 +829,7 @@ test("skips the opening pan under reduced motion", async ({ page }) => {
 });
 
 test("lists the four moves one per row in the Rx handheld's LCD language: big names, no hint lines", async ({ page }) => {
+  await page.emulateMedia({ colorScheme: "dark" })
   await begin(page);
   // Sit with it wakes up once she hesitates. Check the LCD styling once all four are live,
   // so a deliberately dimmed disabled key is never mistaken for an inconsistent enabled one.
@@ -956,3 +963,26 @@ test("keeps every file's name, level and endings readable on SELECT FILE", async
   expect(clashes.count, "files checked").toBe(5);
   expect(clashes.found).toEqual([]);
 });
+
+test("uses readable paper surfaces when the browser requests a light theme", async ({ page }) => {
+  await page.emulateMedia({ colorScheme: "light" })
+  await begin(page)
+  const surfaces = await page.evaluate(() => {
+    const color = (selector, property) => getComputedStyle(document.querySelector(selector))[property]
+    return {
+      deck: color(".enc-deck", "backgroundColor"),
+      control: color(".enc-key", "color"),
+      ink: getComputedStyle(document.documentElement).getPropertyValue("--ci-ink").trim(),
+    }
+  })
+  const channels = surfaces.deck.match(/[\d.]+/g).slice(0, 3).map(Number)
+  expect(Math.min(...channels), "light deck rather than a dark surround").toBeGreaterThan(180)
+  expect(surfaces.control).toBe(await page.evaluate((ink) => {
+    const probe = document.createElement("span")
+    probe.style.color = ink
+    document.body.append(probe)
+    const value = getComputedStyle(probe).color
+    probe.remove()
+    return value
+  }, surfaces.ink))
+})

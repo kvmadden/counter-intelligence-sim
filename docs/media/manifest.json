@@ -1,0 +1,86 @@
+{
+  "revision": "candidate on public origin/main ef6e5ef",
+  "contentHash": "8df3f8c5a2e1cb58256f35489429ebb803fb9958df07fbc231cf85a066a92f0d",
+  "reducedMotion": true,
+  "keyboard": true,
+  "automatedCapture": true,
+  "humanPilot": false,
+  "files": [
+    {
+      "file": "conversation-and-source.gif",
+      "sha256": "f5b7366afca0a39a2fc2d74565b2a71147cfc1a268b2c76dfd20d98fdf208326"
+    },
+    {
+      "file": "conversation-dark-1440x900.png",
+      "sha256": "0d60cdbbb1992b2ed81f8b1f288c16e6b140e79e421fd38ba9b1da844d760725"
+    },
+    {
+      "file": "conversation-dark-390x844.png",
+      "sha256": "ccdc422263394fea9b6f2f7156b3383990a37687f22f1845beb1d1a7ca7c5bd4"
+    },
+    {
+      "file": "conversation-dark-430x932.png",
+      "sha256": "79fee5e6f082f471de2cb35a0c2ae079d8260ea065f457a3a1e107f429374ff8"
+    },
+    {
+      "file": "conversation-light-1440x900.png",
+      "sha256": "40ddc598db1979f6a4c2406ca8c9daf9ba4773f49e33e3f519fea727e59abb4e"
+    },
+    {
+      "file": "conversation-light-390x844.png",
+      "sha256": "186f117019cfb4ccf681a750cf2e0e570e4fc2a50b691f1332c3da8ecac29527"
+    },
+    {
+      "file": "conversation-light-430x932.png",
+      "sha256": "ffef6bb6694985e4b1298c8ab82a2faee72b4cd08fdfb4ef3b21acde3ab29cc0"
+    },
+    {
+      "file": "dossier-dark-1440x900.png",
+      "sha256": "0d9ff88f7a755da26b1a9c325746bc4f1fca7d70f9658972d112d5b94c14fd60"
+    },
+    {
+      "file": "dossier-dark-390x844.png",
+      "sha256": "669036cd9b0eee4abe751f0edb68f5991d725cff3e6c2b4ed3627a530181822c"
+    },
+    {
+      "file": "dossier-dark-430x932.png",
+      "sha256": "1e9c98a8cd460504a03b147bee1e24a5a18981ba0f9b23db661764082f15916e"
+    },
+    {
+      "file": "dossier-light-1440x900.png",
+      "sha256": "6ce7251ca10d7af75d82bc59f4ac89e2de3daae979b88bc47019256e52981a4b"
+    },
+    {
+      "file": "dossier-light-390x844.png",
+      "sha256": "209b1523f32787b2e14f201ea0cd531d5c9074377e7f86578c313adab3cf70c5"
+    },
+    {
+      "file": "dossier-light-430x932.png",
+      "sha256": "57b3ecdcc7ca95aea662112eff355f07857684962dc8e21ce0a12e7e94a5de7d"
+    },
+    {
+      "file": "sources-dark-1440x900.png",
+      "sha256": "7f75ee2acb0178012b591135ef7755454383880e5e956e23cc926fbf2b2da638"
+    },
+    {
+      "file": "sources-dark-390x844.png",
+      "sha256": "2ec2a14f9280778e774e4b498197b96bd76845dc7e25748ca369851ba27e27bb"
+    },
+    {
+      "file": "sources-dark-430x932.png",
+      "sha256": "17a90447169109ddd19d1028aa6d797299eacfe53ac70f876b94525588351633"
+    },
+    {
+      "file": "sources-light-1440x900.png",
+      "sha256": "48d814559db3997960e49dd73f00e240f8373c28b7711d12f7a1918a8565daf1"
+    },
+    {
+      "file": "sources-light-390x844.png",
+      "sha256": "393cf1ad0addadbc812910d49f2f5a99d05f57c698d0aacd18f5deb807e89b10"
+    },
+    {
+      "file": "sources-light-430x932.png",
+      "sha256": "b59e275f987d8378bc59662b69f53b836c9b4ccc286de073eccf4e2e6fd80691"
+    }
+  ]
+}

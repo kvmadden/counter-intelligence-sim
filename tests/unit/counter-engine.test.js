@@ -123,7 +123,7 @@ describe("the conversation reducer", () => {
     expect(debrief.happened).toBe("Best case.");
     expect(debrief.moved).toEqual(["Asked first.", "Offered."]);
     expect(debrief.method).toBeNull();
-    expect(debrief.sources).toEqual([{ id: "flu-two-weeks", org: "CDC", title: "Key Facts About Seasonal Flu Vaccine", accessed: "2026-09-15", reviewed: Boolean(CLAIMS["flu-two-weeks"].reviewedBy) }]);
+    expect(debrief.sources).toEqual([{ id: "flu-two-weeks", org: "CDC", title: "Key Facts About Seasonal Flu Vaccine", accessed: "2026-09-15", url: CLAIMS["flu-two-weeks"].source.url, license: "CDC federal text, US public domain", historicalReview: "2026-09-15", reviewed: false }]);
     expect(debrief.discussion).toBe("Why best?");
     expect(debriefFor(play("close.any")).sources).toEqual([]);
   });

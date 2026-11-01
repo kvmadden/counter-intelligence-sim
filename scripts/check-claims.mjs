@@ -7,6 +7,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { CLAIMS } from "../src/counter/claims.js";
 import { TREES } from "../src/counter/trees/index.js";
+import { hash, inventory, supportStatus } from "./claim-proof.mjs"
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 // Public-health publishers: any US government host, plus a short list of others.
@@ -28,8 +29,16 @@ export const factShaped = (text) => (HEALTH.test(text) && (FACT.test(text) || DU
 const textsOf = (value) => (Array.isArray(value) ? value.map((variant) => variant.text) : value == null ? [] : [value]);
 const choicesOf = (tree) => [...Object.values(tree.nodes).flatMap((node) => node.choices ?? []), ...(tree.closes ?? [])];
 
-export function checkLedger(claims = CLAIMS, trees = TREES) {
+export function checkLedger(claims = CLAIMS, trees = TREES, passageOverride = null) {
   const problems = [];
+  const proofFile = name => {
+    try { return JSON.parse(fs.readFileSync(new URL(`../docs/claims/${name}`, import.meta.url), 'utf8')) }
+    catch { return {} }
+  }
+  const historical = proofFile('historical-bindings.json')
+  const reviews = proofFile('support-reviews.json')
+  const passages = passageOverride ?? proofFile('passages.json')
+  const surfaces = inventory(trees)
   const add = (rule, where, detail) => problems.push({ rule, where, detail });
 
   for (const [id, claim] of Object.entries(claims)) {
@@ -43,6 +52,15 @@ export function checkLedger(claims = CLAIMS, trees = TREES) {
     if (!ISO_DATE.test(source.accessed ?? "")) add("unsourced claim", where, "the source needs the date it was accessed (YYYY-MM-DD)");
     if (!claim?.reviewedBy?.trim?.() || !ISO_DATE.test(claim?.reviewedOn ?? "")) add("unreviewed claim", where, "needs Kevin's review stamp (reviewedBy and reviewedOn)");
     else if (claim.reviewedOn < source.accessed) add("unreviewed claim", where, "the stamp predates the source it reviewed");
+    if (!passages[id]?.passage?.trim()) add('missing supporting passage', where, 'needs a captured public source passage, human support decision remains separate')
+    const uses = surfaces.filter(row => row.claims.includes(id))
+    // Self-tests may replace reviewer metadata in memory. Content still has to
+    // match the historical public snapshot or an actual new bound approval.
+    const authorStamp = CLAIMS[id]
+    const historicalClaim = { ...claim, reviewedBy: authorStamp?.reviewedBy, reviewedOn: authorStamp?.reviewedOn }
+    const unchanged = historical[id] === hash({ claim: historicalClaim, uses })
+    const newlyApproved = supportStatus(claim, uses, passages[id], reviews[id]) === 'approved'
+    if (!unchanged && !newlyApproved) add('unreviewed claim', where, 'historical content binding is missing or changed, needs a new bound pharmacist decision')
   }
 
   for (const tree of Object.values(trees)) {
@@ -124,5 +142,5 @@ if (invokedDirectly) {
   for (const id of volatileClaims()) console.warn(`  NOTE ${id} is marked volatile. Re-check its source before each season.`);
   for (const id of unusedClaims()) console.warn(`  NOTE ${id} is not cited by any tree.`);
   if (problems.length) { for (const p of problems) console.error(`  RED ${p.where} :: ${p.rule} :: ${p.detail}`); process.exit(1); }
-  console.log("claims: GREEN, every claim sourced and reviewed, every fact cited");
+  console.log("claims: GREEN, historical source and stamp metadata checked. New passage-support review pending.");
 }

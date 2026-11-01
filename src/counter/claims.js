@@ -7,8 +7,8 @@
 // unreviewed claim. ONLY Kevin stamps `reviewedBy` and `reviewedOn`, after reading the
 // claim against its source. Never stamp one on his behalf.
 //
-// `url` stays in the repo for review. The stripClaimUrls build plugin removes it from
-// the bundle, so the scanner's no-URL rule still holds for the shipped file.
+// Source URLs ship only for explicit debrief anchors. Automatic networking stays banned.
+// These dates are historical author stamps, not new passage-support approvals.
 // `volatile` marks guidance that has changed often. Re-check it before each season.
 // `protects` marks a claim about how a vaccine protects. The Secret Agent objective
 // "Share a fact that protects" counts only these (./objectives.js).

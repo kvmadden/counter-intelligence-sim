@@ -1,0 +1,40 @@
+{
+  "url": "https://www.cdc.gov/shingles/vaccines/index.html",
+  "resolvedUrl": "https://www.cdc.gov/shingles/vaccines/index.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "f1711a2134c9c31d07dd36156226d9f0ff7f934fad62e752e8bec2a305d4d815",
+  "paragraphs": [
+    {
+      "index": 11,
+      "text": "Adults 50 years and older"
+    },
+    {
+      "index": 12,
+      "text": "2 doses"
+    },
+    {
+      "index": 13,
+      "text": "(separated by 2 to 6 months)"
+    },
+    {
+      "index": 22,
+      "text": "Adults 50 years and older should get vaccinated. There is no maximum age for getting Shingrix. You should also get Shingrix even if you have previously:"
+    },
+    {
+      "index": 23,
+      "text": "Had shingles"
+    },
+    {
+      "index": 26,
+      "text": "If you had shingles in the past, Shingrix can help prevent future occurrences of the disease. There is no specific length of time that you need to wait after having shingles before you can receive Shingrix. Generally, make sure the shingles rash has gone away before getting vaccinated."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:last_published",
+      "content": "2025-08-21T11:03:22Z"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

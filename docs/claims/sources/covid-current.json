@@ -1,0 +1,36 @@
+{
+  "url": "https://www.cdc.gov/covid/hcp/vaccine-considerations/index.html",
+  "resolvedUrl": "https://www.cdc.gov/covid/hcp/vaccine-considerations/index.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "92208127c7979acc6999188fffe70fac7bfd2ff30881a438db9d029ed9250329",
+  "paragraphs": [
+    {
+      "index": 2,
+      "text": "This page has been updated to reflect current FDA regulatory information for the 2026-2027 COVID-19 vaccines, including approved products and asterisks indicating where recommendations for use are off-label, formulation, age and risk indications, dosage, and contraindications."
+    },
+    {
+      "index": 3,
+      "text": "As with all medical decision making between patients and their healthcare providers, all patients should discuss the benefits and risks of COVID-19 vaccination to make informed and personalized decisions about vaccination."
+    },
+    {
+      "index": 8,
+      "text": "Last updated September 23, 2025"
+    },
+    {
+      "index": 9,
+      "text": "A 2026-2027 COVID-19 vaccine is recommended for all adults ages 18 years and older in the United States for the prevention of COVID-19."
+    },
+    {
+      "index": 10,
+      "text": "A 2026-2027 COVID-19 vaccine is also recommended for all children ages 6 months\u201317 years with moderate to severe immunocompromise; for all other children, a COVID-19 vaccine is recommended through shared clinical decision-making."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:last_published",
+      "content": "2026-09-23T19:38:23Z"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

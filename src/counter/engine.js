@@ -159,7 +159,7 @@ export function makeEngine(trees, claims = CLAIMS) {
       happened: ending?.debrief ?? "",
       moved: [...state.notes],
       method: outcome?.tier.capped ? CAP_NOTES[outcome.tier.capped] : null,
-      sources: state.claims.map((id) => ({ id, org: claims[id].source.org, title: claims[id].source.title, accessed: claims[id].source.accessed, reviewed: Boolean(claims[id].reviewedBy) })),
+      sources: state.claims.map((id) => ({ id, org: claims[id].source.org, title: claims[id].source.title, accessed: claims[id].source.accessed, url: claims[id].source.url, license: "CDC federal text, US public domain", historicalReview: claims[id].reviewedOn, reviewed: false })),
       discussion: ending?.huddle ?? "",
     };
   }

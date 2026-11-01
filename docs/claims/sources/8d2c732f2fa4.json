@@ -1,0 +1,20 @@
+{
+  "url": "https://www.cdc.gov/shingles/hcp/vaccine-considerations/index.html",
+  "resolvedUrl": "https://www.cdc.gov/shingles/hcp/vaccine-considerations/index.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "675288ccfa9cf16a598343ec29eda54148a0a8bdece4fa410eab5857f3153816",
+  "paragraphs": [
+    {
+      "index": 13,
+      "text": "Recombinant and adjuvanted vaccines (like Shingrix) can be administered concomitantly at different anatomic sites with other adult vaccines. This includes COVID-19 vaccines. Coadministration of RZV with adjuvanted influenza vaccine (Fluad) and COVID-19 vaccines is being studied."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:last_published",
+      "content": "2024-10-22T16:25:59Z"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

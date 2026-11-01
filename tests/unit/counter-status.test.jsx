@@ -70,14 +70,13 @@ describe("the debrief, one idea to a page", () => {
     const pageOne = [...container.querySelectorAll(".ci-sources li")];
     expect(pageOne).toHaveLength(3);
     for (const [index, id] of run.claims.slice(0, 3).entries()) expect(pageOne[index].textContent).toContain(CLAIMS[id].source.title);
-    const reviewed = run.claims.every((id) => CLAIMS[id].reviewedBy);
-    expect(container.textContent).not.toMatch(reviewed ? /reviewed by a pharmacist/ : /awaiting pharmacist review/); // only the last page carries it
+    expect(container.textContent).not.toMatch(/Draft, pending pharmacist passage review/); // only the last page carries it
 
     fireEvent.click(getByRole("button", { name: "Next page" }));
     const pageTwo = [...container.querySelectorAll(".ci-sources li")];
     expect(pageTwo).toHaveLength(run.claims.length - 3);
     for (const [index, id] of run.claims.slice(3).entries()) expect(pageTwo[index].textContent).toContain(CLAIMS[id].source.title);
-    expect(container.textContent).toMatch(reviewed ? /reviewed by a pharmacist/ : /awaiting pharmacist review/);
+    expect(container.textContent).toMatch(/Draft, pending pharmacist passage review/);
   });
 
   it("says kindly why a run that pushed past a no was capped", () => {
@@ -102,3 +101,26 @@ describe("the debrief, one idea to a page", () => {
     expect(container.textContent).toContain("Nothing moved this one either way.");
   });
 });
+
+it('renders every debrief source anchor against its claim manifest with keyboard focus', () => {
+  const run = play('jordan', ...TWO_FOR_ONE)
+  const seen = new Set()
+  // Exercise the same rendered component for every manifest entry over real pages.
+  for (const id of Object.keys(CLAIMS)) {
+    const fixture = { ...run, claims: [id] }
+    const view = render(<Debrief patient={jordan} run={fixture} outcome={outcomeFor(fixture, jordan)} onContinue={noop} />)
+    fireEvent.click(view.getByRole('tab', { name: 'Sources' }))
+    const anchor = view.container.querySelector('a[data-claim-id]')
+    expect(anchor.getAttribute('data-claim-id')).toBe(id)
+    expect(anchor.getAttribute('href')).toBe(CLAIMS[id].source.url)
+    expect(anchor.getAttribute('target')).toBe('_blank')
+    expect(anchor.getAttribute('aria-label')).toContain('opens in a new tab')
+    expect(anchor.getAttribute('referrerpolicy')).toBe('no-referrer')
+    anchor.focus()
+    expect(document.activeElement).toBe(anchor)
+    expect(view.container.textContent).toContain('Draft, pending pharmacist passage review')
+    seen.add(id)
+    view.unmount()
+  }
+  expect(seen.size).toBe(24)
+})

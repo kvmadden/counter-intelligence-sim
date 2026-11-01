@@ -1,0 +1,8 @@
+
+ RUN  v4.1.11 /Volumes/HubData/work/worktrees/counter-intelligence-sim-showcase-standard
+
+
+ Test Files  3 passed (3)
+      Tests  27 passed (27)
+   Start at  05:37:41
+   Duration  2.50s (transform 334ms, setup 0ms, import 516ms, tests 2.40s, environment 1.47s)

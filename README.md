@@ -1,132 +1,57 @@
 # Counter Intelligence
 
-An offline, authored branching-dialogue game where pharmacy staff practice vaccine conversations with five fictional patients, with every clinical fact tied to a cited CDC claim that the build refuses to ship unreviewed.
+**Does every factual dialogue claim have supporting public evidence, and does every branch reward respectful conversation rather than pressure?**
 
-**Play it:** https://counter-intelligence.vercel.app (phone in portrait works best)
+The authored ranking rules hold across all 37,646 finished paths. Factual support is not yet proven: all 24 new claim-to-passage reviews remain draft, pending Kevin's pharmacist review. A small draft gate benchmark exposes substantial misses. No human pilot has been performed.
 
-## Clinical claim gate
+Counter Intelligence is a fictional pharmacy conversation game with five authored patients. Choose Ask, Offer, Sit with it or Close. The debrief explains what happened, how pressure affected the tier and which CDC sources belong to the facts actually used. It has no free-text entry or generated dialogue.
 
-There is no LLM in this project, no free-text input and no network access. Every line the player can say is written in advance. This is a training prototype, not medical advice.
+| Question | Evidence | Result and limit |
+| --- | --- | --- |
+| Does the actual source passage support the claim? | [24-row review sheet](docs/claims/REVIEW.md), exact retrieved passages, source hashes and dialogue bindings | 0 of 24 newly reviewed. Supported / reviewed is N/A. September author stamps are historical, with no second independent reviewer |
+| Does the citation heuristic notice uncited facts without flagging ordinary talk? | 12 development and 20 final lines, split by source family | Final draft: 2 of 10 factual lines detected, 8 missed, 3 false alarms among 10 ordinary lines. AI-proposed labels await Kevin review |
+| Do authored paths reward respect over pressure? | Exhaustive path walk, separate from the gate benchmark | 37,646 paths with no actual ranking violations. Outcome-only and always-bottom controls fail |
+| Can people understand the ranking and find a source? | [Three-player paired-branch pilot protocol](docs/PILOT.md) | Pending. No participant observations, effectiveness claim or usability success rate |
 
-**How a claim enters the ledger.** Each fact a player can state is an entry in `src/counter/claims.js`. A staff line that states a fact cites the claim by id. To add one, an author writes the claim text, names the public-health page it comes from (organization, page title, https URL, access date), reads the claim against that page, and adds a review stamp (`reviewedBy`, `reviewedOn`). Claims that track guidance that changes often are marked `volatile` so they get re-checked each season.
+The final set is public and fixed, not blind. Neither its exact lines nor its labels enter the runtime. The heuristic was left unchanged. Source-family bootstrap intervals, all controls and complete errors appear in the [offline reports](docs/proof/README.md), with each result kept separately. Small counts do not establish general medical-claim detection.
 
-One real entry:
+## Try the game
 
-```js
-"flu-two-weeks": {
-  text: "It takes about two weeks after a flu vaccine for protection to develop.",
-  protects: true,
-  source: { org: "CDC", title: "Key Facts About Seasonal Flu Vaccine",
-            url: "https://www.cdc.gov/flu/vaccines/keyfacts.html", accessed: "2026-09-15" },
-  reviewedBy: "Kevin Madden, PharmD",
-  reviewedOn: "2026-09-15",
-}
+```sh
+npm ci
+npm run dev
 ```
 
-**Disclosure about the review stamps.** The stamps are the author's own. I am a pharmacist, I read each claim against its cited page and stamped it myself. No second reviewer, clinical committee or outside body has validated this content, and it should not be described as clinician-validated.
+Open the local address printed by Vite. `npm run build` creates `dist/counter-intelligence.html`, a single-file edition with fonts and art included. It remains playable without connectivity. No keys or paid services are needed.
 
-**The gate.** `scripts/check-claims.mjs` runs first in `npm run build` and fails the build when:
+The source tab contains explicit CDC anchors. Selecting one opens the original in a new tab. Source links do not imply CDC endorsement. CDC material is available free on its website. The UI shows the historical author-check date and the public-domain rights category, with the new passage review visibly pending. Excerpt-level rights and third-party notices still require human confirmation. See [CDC's use policy](https://www.cdc.gov/other/agencymaterials.html).
 
-- a claim has no organization, title or access date (unsourced), or its URL is not an https page on a US government or listed public-health host (untrusted source);
-- a claim has no review stamp, or the stamp is dated before the source was accessed (unreviewed);
-- a staff line cites a claim id the ledger does not hold;
-- a staff line reads as a health fact (a heuristic over health words plus fact or duration markers) but cites nothing;
-- an agency name (CDC, FDA and so on) appears anywhere except a staff line that cites one of that agency's pages.
+No background requests, beacons, remote images, remote fonts, analytics or storage are allowed. A content security policy and bundle scanner enforce those restrictions. The source-link contract permits exact manifest destinations as inert link data. It does not permit automatic network calls or remote embedded resources. No external source is fetched to calculate a score or finish a run.
 
-`node scripts/check-claims.mjs --self-test` plants each of these problems and confirms the gate catches it.
+## What the proof establishes
 
-I ran it on 2026-10-30 by adding two temporary claims to the ledger, one with a source but no review stamp and one with a stamp but an empty organization and a non-public-health URL. This is the output of `node scripts/check-claims.mjs` (exit code 1):
+The build gate requires a trusted source URL, access date, historical author stamp and captured passage. Changed claim or cited dialogue content invalidates the historical binding and requires a new bound pharmacist decision. It checks references and a bounded fact-shaped heuristic. It does not decide whether an unrelated but valid CDC citation supports a sentence. The new support review binds the claim, passage, source metadata and every cited dialogue use to a hash. A changed claim or passage cannot keep its approval. Missing or unreviewed passages are never called reviewed.
 
-```
-claims: 26 claims, 5 trees, 193 staff lines checked
-  RED claim temp-unreviewed :: unreviewed claim :: needs Kevin's review stamp (reviewedBy and reviewedOn)
-  RED claim temp-unsourced :: unsourced claim :: the source needs an organisation and a page title
-  RED claim temp-unsourced :: untrusted source :: the source must be an https page on a public-health host, got https://example.com/flu-facts
-```
+The [inclusive source-surface inventory](docs/claims/all-source-surfaces.json) covers string literals, template fragments and JSX text throughout the counter application. It includes code strings so that an imperfect detector cannot hide a factual UI or patient line from review. Tree data has a separate location-based inventory in each report. Human classification of these surfaces remains pending. The COVID source's current destination and wording need particular review. Four claims are marked volatile. Their current clinical freshness has not been approved.
 
-`npm run build` stopped at the same step with exit code 1, so no bundle was produced. The temporary claims were then removed. With the real ledger the gate reports `claims: 24 claims, 5 trees, 193 staff lines checked` and `GREEN`.
+The ranking is an authored rule. Every pressured outcome ranks below every respectful not-today, and pressure after a no gets the bottom tier. The outcome-only control violates respect ordering. The always-bottom control fails differentiation. Evaluation labels, IDs, provenance display fields and ordering cannot change actual tier outputs. This is evidence about this script, not about behavior outside it.
 
-The gate checks that a claim is sourced, from a permitted host and stamped. It does not check that the claim text matches the page. That comparison is the human review.
+## Verification and regeneration
 
-## Problem
-
-Retail pharmacy staff have many short, high-stakes conversations: a vaccine recommendation to someone in a rush, a worry about side effects, a person who has skipped a shot for twelve years. Most training for these is a slide deck or a script. Staff rarely get a safe place to try three approaches on the same hesitant patient and see what happens, and a training tool that gets a clinical fact wrong does harm. This project tests whether the facts can be made checkable by construction.
-
-## How it works
-
-```mermaid
-flowchart LR
-  T[Patient trees<br/>src/counter/trees] --> E[Engine reducer<br/>engine.js]
-  C[Claims ledger<br/>claims.js] --> G{Claim gate<br/>check-claims.mjs}
-  T --> G
-  G -->|pass| B[Vite build]
-  B --> S[Single-file edition]
-  S --> X{Bundle scan<br/>scan.mjs}
-  E --> R[Tiers and objectives<br/>tiers.js, objectives.js]
-  R --> D[Debrief with sources]
-  C --> D
+```sh
+npm test
+npm run build
+npm run gate
+node scripts/evaluate-proof.mjs
+node scripts/inventory-surfaces.mjs
 ```
 
-- **Conversation engine.** Each patient is a data-only tree. A node holds the patient's line and the player's choices (ASK, OFFER, SIT WITH IT, CLOSE). A choice can set flags, carry earlier choices into later replies and branch on them. `src/counter/engine.js` is a small reducer that runs any tree and never names a patient or a line. Tests bind it to fixture trees to prove the reducer apart from any script.
-- **Scoring.** A run ends in a named ending and a ranked tier (`src/counter/tiers.js`). The tier weighs the outcome and how the player got there, using two method signals every tree sets the same way: *heard* (the player asked about or made room for the patient's concern) and *permission* (the player asked before sharing information).
-- **Objectives.** Higher levels (Agent, Secret Agent, 00 Agent) add objectives to the same conversation. They read OBSERVED or NOT OBSERVED about what the staff member did, never about what was extracted from the patient.
-- **Debrief.** Shows what the player said, what moved the patient, which signals were hit, and the cited source behind every fact used, plus a discussion question for team play.
-- **Bundle scan.** `scripts/scan.mjs` inspects the built bundle and fails on any network reference, storage use, vaccine brand name or banned name, and proves itself red on planted violations before running for real. The standalone file makes no network, analytics, storage or API request.
+The exporter runs offline on committed inputs and writes a new content-addressed directory when inputs change. It refuses to replace a differing historical report or gallery. The [failure gallery](docs/proof/README.md) uses a fixed rule and links every error. Earlier reports stay available, including reports superseded by corrections to the reporting calculation.
 
-## Evidence
+Browser tests cover keyboard choices and debrief tabs, source-anchor mapping, focus, screen fit, 44-pixel controls, reduced motion and the standalone file's lack of automatic requests. The main flow is silent, with dialogue and outcome cues presented as text. Automated captures are [in docs/media](docs/media/README.md). They do not count as human usability evidence. Exact command logs, failures and baseline comparison are in [VERIFICATION.md](docs/VERIFICATION.md).
 
-- **231 unit tests** (Vitest, run 2026-10-30; see Run locally) over the engine, trees, tiers, objectives, claims gate and scanner.
-- **Whole-tree property tests.** Two ranking rules are checked over every path of every tree: a pushed yes never outranks a respectful not-today, and pushing after a no caps the run at the bottom rung.
-- **Gate self-tests.** The claim gate and the scanner each plant violations and must go red before a green result counts.
-- **Browser tests.** Playwright specs cover six phone and desktop viewports. They are part of `npm run gate` and need browsers installed; they were not part of the 231 count.
-- No user studies, no measurements of learning outcomes.
+## Limits and authorship
 
-## Design decisions and tradeoffs
+This is a fictional prototype for exploring conversations. It is not medical advice and has no demonstrated training, counseling, vaccination or patient-outcome effectiveness. Historical review is the author's own pharmacist review. The new passage mappings, factual-surface classification, rights decisions and evaluation labels are pending. No second independent clinical review or human pilot has been completed.
 
-- **Respectful refusal outranks pressured agreement.** In `src/counter/tiers.js`, any run that pushed the patient lands below a clean "not today", and pushing after a no is the bottom rung whatever the outcome. A booked or completed vaccination reached under pressure scores worse than a patient who declined and was treated well. The tradeoff is that the game can rank a vaccination below a refusal, and it says why in the debrief. Tests enforce this over every path.
-- **Authored, not generated.** No model means no invented clinical facts and a fully inspectable script. The cost is five patients and a finite number of branches. A generative version would need the same ledger, the same scoring rules and automated evals of its own.
-- **A heuristic backstop on the gate.** Requiring a citation only where an author remembers to add one would fail open, so the gate also flags fact-shaped staff lines with no citation. It is a pattern match and will miss some phrasings and flag some harmless lines.
-- **No free-text entry.** Four moves per turn means nobody can type patient information into it and every state is reachable by tests.
-- **Fail-closed build.** The claim gate runs before the bundler, so an unreviewed claim cannot ship.
-
-## Limits
-
-- Not medical advice. Facts stay at conversation level, and guidance changes; claims marked `volatile` need a re-check each season, and every claim was last read against its source in September 2026.
-- Review is a single pharmacist's, the author's. There is no independent clinical review.
-- The gate verifies provenance and stamps, not the correctness of the claim text.
-- Five patients, one pharmacy setting, English only.
-- Not validated as staff training. No evidence yet that it changes behavior.
-- No persistence, accounts or analytics.
-
-## Run locally
-
-```
-npm install
-npm run dev          # dev server
-npm run build        # claims gate, build, single-file edition, bundle scan
-npm test             # unit tests
-npm run test:browser # Playwright (run `npx playwright install` first)
-npm run gate         # the full gate: all of the above plus every browser viewport
-```
-
-`npm run build` also writes `dist/counter-intelligence.html`, a standalone offline edition with fonts and art embedded. No environment variables or API keys are needed; see `.env.example`. Stack: React 18, Vite 7, Three.js, Vitest, Playwright, locally bundled OFL fonts.
-
-## Development history
-
-Built September to October 2026 over 122 commits in a private repository. The full history includes personal notes and private configuration, so this repository is a cleaned public snapshot. This README and the claim-gate demonstration were written for this release in October 2026.
-
-## License
-
-MIT, Kevin Madden, 2026. See `LICENSE`. All patients, dialogue and scenarios are fictional. The pharmacy is a generic retail counter, and patient faces and the counter scene are generated images of nobody real (prompts in `docs/assets/`).
-
----
-
-## Below the fold: the briefing
-
-*Your cover is a name tag and a steady smile. The mission: a stranger at the counter, one vaccine on the shelf, and no pressure allowed.*
-
-You play pharmacy staff. A patient files in, guarded and a little late for something. You have four moves: **ASK** what is on their mind, **OFFER** what you know, **SIT WITH IT** while they think, or **CLOSE** the file. Push, and the file goes cold. Listen first, accept a "not today" with a straight face, and the patient might tell everyone about you on the way out.
-
-Each patient is a case file with a codename difficulty: **Agent** for the warm-up, **Secret Agent** for a patient with a reason, **00 Agent** for the one who has been saying no since before you got your license. Every ending has a name. Some are hard to find. Rank at the debrief, and take the discussion question back to the team.
-
-The counter is low-poly, the fonts are a little too dramatic, and the whole thing runs offline in a single file. Good luck, agent.
+Kevin designed the game and reviewed the historical content. AI coding tools assisted the implementation and proposed the new proof materials. See [HOW-BUILT](docs/HOW-BUILT.md). The code is MIT licensed. CDC excerpts retain their own source and rights notes. No employer content, real patient information or patient-data entry is included.

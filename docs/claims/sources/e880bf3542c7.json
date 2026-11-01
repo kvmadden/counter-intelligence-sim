@@ -1,0 +1,20 @@
+{
+  "url": "https://www.cdc.gov/flu/about/index.html",
+  "resolvedUrl": "https://www.cdc.gov/flu/about/index.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "986283678f7789b3889cfb38dbc7c50dedf6bd22c81cd41c6d5c9d88d4011e03",
+  "paragraphs": [
+    {
+      "index": 31,
+      "text": "Anyone can get flu (including healthy people), and serious problems related to flu can happen to anyone, but some people are at higher risk of developing serious flu-related complications if they get sick. This includes people 65 years and older, people of any age with certain chronic medical conditions (such as asthma, diabetes, or heart disease), people with a body mass index (BMI) of 40 kg/m2 or higher, pregnant women, and children younger than 5 years, especially those younger than 2 years."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:last_published",
+      "content": "2026-06-11T08:56:36Z"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}
