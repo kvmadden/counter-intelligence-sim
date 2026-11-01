@@ -85,7 +85,7 @@ async function playToTimeout(page) {
   await move(page, "Sit with it", "(Nod, and let her finish.)");
   await move(page, "Ask", "Can I tell you what usually causes that?");
   await move(page, "Offer", "The shot can't give you flu. Feeling achy after is common, and minor.");
-  await move(page, "Offer", "It takes about two weeks to kick in, and flu usually peaks in winter.");
+  await move(page, "Offer", "Protection takes two weeks to build, and flu usually peaks in winter.");
 }
 
 test("keeps controls operable without horizontal overflow", async ({ page }) => {
