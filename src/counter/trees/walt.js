@@ -210,8 +210,8 @@ export const walt = {
           next: "ed",
         },
         {
-          id: "ed.offer-pair", family: "offer", label: "Same visit works. Flu in one arm, shingles in the other.",
-          requires: ["shingles-offered", "today"], claims: ["shingles-same-visit"],
+          id: "ed.offer-pair", family: "offer", label: "Same visit works. One in each arm, or both in one if you'd rather.",
+          requires: ["shingles-offered", "today"], claims: ["shingles-same-visit", "same-arm-ok"],
           note: "Explaining how the two shots share a visit made both of them easy.",
           reply: "Flu in the left, shingles in the right. The crossword will have to wait.", end: "both-arms",
         },
@@ -255,8 +255,8 @@ export const walt = {
           reply: "Ed. Ed had shingles in the spring and told the whole counter. Twice.", next: "ed",
         },
         {
-          id: "today.offer-covid", family: "offer", label: "Want a COVID-19 vaccine too? It's your call, and both fit one visit.",
-          claims: ["covid-personal-call", "same-visit"], note: "Offering both in one visit saved him a second Tuesday.",
+          id: "today.offer-pneumo", family: "offer", label: "Your record shows no pneumococcal shot. It's advised at 50 and up.",
+          claims: ["pneumo-50-plus"], note: "Checking his record added the pneumococcal shot, and saved him a second Tuesday.",
           reply: "Both. One trip. The system approves.", end: "double-tuesday",
         },
         {
@@ -341,7 +341,7 @@ export const walt = {
     },
     "double-tuesday": {
       name: "Double Tuesday", rung: "today",
-      debrief: "Walt got the high-dose flu shot and a COVID-19 vaccine in one trip. The system approves.",
+      debrief: "Walt got the high-dose flu shot and a pneumococcal vaccine in one trip. The system approves.",
       huddle: "What made the second vaccine feel like it fit the routine?",
     },
     "left-arm": {

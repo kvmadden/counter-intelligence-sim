@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { CLAIMS } from "../../src/counter/claims.js";
+import { CLAIM_STATUS } from "../../src/counter/claim-status.js";
 import { CAP_NOTES } from "../../src/counter/tiers.js";
 import { conversations, makeEngine } from "../../src/counter/engine.js";
 
@@ -123,7 +124,7 @@ describe("the conversation reducer", () => {
     expect(debrief.happened).toBe("Best case.");
     expect(debrief.moved).toEqual(["Asked first.", "Offered."]);
     expect(debrief.method).toBeNull();
-    expect(debrief.sources).toEqual([{ id: "flu-two-weeks", org: "CDC", title: "Key Facts About Seasonal Flu Vaccine", accessed: "2026-09-15", reviewed: Boolean(CLAIMS["flu-two-weeks"].reviewedBy) }]);
+    expect(debrief.sources).toEqual([{ id: "flu-two-weeks", org: "CDC", title: "Key Facts About Seasonal Flu Vaccine", accessed: "2026-11-01", url: CLAIMS["flu-two-weeks"].source.url, license: "CDC federal text, US public domain", historicalReview: null, review: CLAIM_STATUS["flu-two-weeks"], reviewed: false }]);
     expect(debrief.discussion).toBe("Why best?");
     expect(debriefFor(play("close.any")).sources).toEqual([]);
   });

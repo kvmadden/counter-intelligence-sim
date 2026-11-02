@@ -48,8 +48,6 @@ export function objectivePages(objectives) {
   return pages;
 }
 
-// Keeps a hyphenated name on one line, so a big headline never breaks "COVID-19".
-const keepTogether = (text) => text.split(/(COVID-19)/).map((part, index) => part === "COVID-19" ? <span key={index} className="ci-nowrap">{part}</span> : part);
 
 // Each screen opens with focus on its heading, so keyboard and screen-reader
 // users start at the top of the one idea it carries.
@@ -410,7 +408,7 @@ export function Debrief({ patient, run, outcome, onContinue }) {
         </>}
         {tabs.page === "happened" && <>
           <h2 className="ci-kicker">What happened</h2>
-          <p className="ci-brief-lead">{keepTogether(debrief.happened)}</p>
+          <p className="ci-brief-lead">{debrief.happened}</p>
           {debrief.method && <p className="ci-brief-note">{debrief.method}</p>}
         </>}
         {tabs.page === "moved" && <>
@@ -423,15 +421,16 @@ export function Debrief({ patient, run, outcome, onContinue }) {
           <h2 ref={kickerRef} tabIndex={-1} className="ci-kicker" aria-live="polite">{kickerFor("Sources", sourcesPaging.page, sourcesPaging.pages)}</h2>
           {debrief.sources.length
             ? <>
+              <p className="ci-source-license">Source: <strong className="ci-source-org">CDC</strong> · US public domain</p>
               <ol className="ci-sources" start={sourcesPaging.start + 1}>
                 {shownSources.map((source) => <li key={source.id}>
-                  <strong className="ci-source-org">{source.org}</strong> <span className="ci-source-title">{source.title}</span>
-                  <span className="ci-source-date">Checked {source.accessed}</span>
+                  <a className="ci-source-title" aria-label={`${source.title} (CDC source, opens in a new tab)`} data-claim-id={source.id} href={source.url} target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer">{source.title} (opens CDC)</a>
+                  <span className="ci-source-date" data-review-status={source.review.status}>{source.review.label}{source.review.reviewedOn ? ` ${source.review.reviewedOn}` : ""}</span>
                 </li>)}
               </ol>
               {onLastSourcesPage && <p className="ci-brief-note">{reviewed
-                ? "Facts here stay at conversation level. Each one was checked against its public-health source and reviewed by a pharmacist. None of it is medical advice."
-                : "Draft. These facts are still awaiting pharmacist review, and none of this is medical advice."}</p>}
+                ? "Facts here stay at conversation level. Each one was checked against its CDC source and approved by Kevin Madden, PharmD. Rights review pending. No CDC endorsement. Not medical advice."
+                : "Some facts here are drafts, pending clinical review by Kevin Madden, PharmD. Rights review pending. No CDC endorsement. Not medical advice."}</p>}
             </>
             : <p className="ci-brief-text">No health facts came up in this conversation, so there is nothing to cite.</p>}
         </>}

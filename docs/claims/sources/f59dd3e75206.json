@@ -1,0 +1,24 @@
+{
+  "url": "https://www.cdc.gov/rsv/adults/index.html",
+  "resolvedUrl": "https://www.cdc.gov/rsv/adults/index.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "fdf65efd19e5db530f0e68a6299a8be438dbcebaf989dfae9a084a3cd44d5448",
+  "paragraphs": [
+    {
+      "index": 3,
+      "text": "CDC recommends everyone ages 75 and older get an RSV vaccine."
+    },
+    {
+      "index": 5,
+      "text": "If you have already gotten an RSV vaccine, you do not need to get another one at this time."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:last_published",
+      "content": "2026-02-20T12:45:19Z"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

@@ -1,0 +1,20 @@
+{
+  "url": "https://www.cdc.gov/shingles/about/index.html",
+  "resolvedUrl": "https://www.cdc.gov/shingles/about/index.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "4213027d826129e9c69fe56b842f2a938b8754b5d2e97e61f17471226883bb31",
+  "paragraphs": [
+    {
+      "index": 2,
+      "text": "About 1 in every 3 people in the United States will have shingles (or herpes zoster) in their lifetime."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:last_published",
+      "content": "2026-09-10T13:19:24Z"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

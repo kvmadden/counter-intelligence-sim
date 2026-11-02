@@ -1,0 +1,89 @@
+
+> counter-intelligence@0.1.0 gate
+> node scripts/gate.mjs
+
+claims: 24 claims, 5 trees, 193 staff lines checked
+  NOTE covid-personal-call is marked volatile. Re-check its source before each season.
+  NOTE ve-good-match is marked volatile. Re-check its source before each season.
+  NOTE rsv-75-plus is marked volatile. Re-check its source before each season.
+  NOTE flu-65-burden is marked volatile. Re-check its source before each season.
+claims: GREEN, historical source and stamp metadata checked. New passage-support review pending.
+
+[gate] claims ledger: PASS in 0.9s
+
+claims self-test: RED as expected (6 planted problems caught, and the stamped baseline is clean)
+
+[gate] claims RED proof: PASS in 1.0s
+
+
+ RUN  v4.1.11 <repo>
+
+ ❯ tests/unit/counter-proof.test.js (6 tests | 1 failed) 16220ms
+   × binds approval to passage and dialogue content and preserves offline report history 8968ms
+ ❯ tests/unit/counter-claims.test.js (12 tests | 3 failed) 29998ms
+     × lists, on every jordan path, exactly the claims its staff lines cited 6506ms
+     × lists, on every sam path, exactly the claims its staff lines cited 8970ms
+     × lists, on every walt path, exactly the claims its staff lines cited 7424ms
+ ❯ tests/unit/counter-trees.test.js (55 tests | 4 failed) 57328ms
+     × gives every exchange a line from each side 12946ms
+     × gives every exchange a line from each side 8316ms
+     × gives every exchange a line from each side 14531ms
+     × gives every exchange a line from each side 5836ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 8 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/counter-claims.test.js > sources in the debrief > lists, on every jordan path, exactly the claims its staff lines cited
+ FAIL  tests/unit/counter-claims.test.js > sources in the debrief > lists, on every sam path, exactly the claims its staff lines cited
+ FAIL  tests/unit/counter-claims.test.js > sources in the debrief > lists, on every walt path, exactly the claims its staff lines cited
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/unit/counter-claims.test.js:45:30
+     43|
+     44| describe("sources in the debrief", () => {
+     45|   it.each(Object.keys(TREES))("lists, on every %s path, exactly the cl…
+       |                              ^
+     46|     const tree = TREES[id];
+     47|     const byId = new Map([...Object.values(tree.nodes).flatMap((node) …
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/8]⎯
+
+ FAIL  tests/unit/counter-proof.test.js > binds approval to passage and dialogue content and preserves offline report history
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/unit/counter-proof.test.js:67:3
+     65| })
+     66|
+     67| it('binds approval to passage and dialogue content and preserves offli…
+       |   ^
+     68|   const { generate } = await import('../../scripts/evaluate-proof.mjs')
+     69|   const { claimBinding, supportStatus, inventory, reviewSheet } = awai…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/8]⎯
+
+ FAIL  tests/unit/counter-trees.test.js > the jordan conversation tree > gives every exchange a line from each side
+ FAIL  tests/unit/counter-trees.test.js > the priya conversation tree > gives every exchange a line from each side
+ FAIL  tests/unit/counter-trees.test.js > the sam conversation tree > gives every exchange a line from each side
+ FAIL  tests/unit/counter-trees.test.js > the walt conversation tree > gives every exchange a line from each side
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/unit/counter-trees.test.js:84:5
+     82|   });
+     83|
+     84|   it("gives every exchange a line from each side", () => {
+       |     ^
+     85|     for (const run of finished) {
+     86|       for (const beat of run.transcript) expect(typeof beat.text === "…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/8]⎯
+
+
+ Test Files  3 failed | 19 passed (22)
+      Tests  8 failed | 231 passed (239)
+   Start at  04:54:03
+   Duration  64.33s (transform 12.27s, setup 0ms, import 32.68s, tests 180.84s, environment 40.18s)
+
+
+[gate] unit tests: FAIL (exit 1) in 71.9s
+
+[gate] claims ledger=PASS · claims RED proof=PASS · unit tests=FAIL
+[gate] VERDICT: FAIL (unit tests)

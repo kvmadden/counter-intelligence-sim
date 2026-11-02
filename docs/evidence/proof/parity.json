@@ -1,0 +1,26 @@
+{
+  "base": "ef6e5efaf71f0b50338cc52dfdec7226e96867df",
+  "node": "v24.14.1",
+  "npm": "11.11.0",
+  "identicalResolvedPackages": true,
+  "control": {
+    "command": "CI_PORT=4197 npm run gate",
+    "exitCode": 0,
+    "unitTests": 231,
+    "browserChecks": 178,
+    "browserSkips": 14
+  },
+  "candidate": {
+    "command": "CI_PORT=4198 npm run gate",
+    "exitCode": 0,
+    "unitTests": 243,
+    "browserChecks": 184,
+    "browserSkips": 14
+  },
+  "baselineFailures": [],
+  "finalCandidateOnlyFailures": [],
+  "historicalFailuresPreserved": true,
+  "humanSupportReview": "pending",
+  "humanBenchmarkWork": "pending",
+  "humanPilot": "pending"
+}

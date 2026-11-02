@@ -1,0 +1,33 @@
+{
+  "url": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
+  "resolvedUrl": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "47da5f32e6400111a13cccfdd61314fdf3e5779023ef51ea0d8c9e85f28af923",
+  "extractor": "jsdom: main h1, main h2, main h3, main h4, main p, main li, text with whitespace collapsed, indexed in document order",
+  "paragraphs": [
+    {
+      "index": 39,
+      "text": "It takes about two weeks after vaccination for antibodies to develop in the body and provide protection against influenza virus infection. That's why it's best to get vaccinated before influenza viruses start to spread in your community."
+    },
+    {
+      "index": 44,
+      "text": "You may be exposed to an influenza virus shortly before getting vaccinated or during the period that it takes the body to gain protection after getting vaccinated. This exposure may result in you becoming ill with flu before the vaccine begins to protect you. (Antibodies that provide protection develop in the body about 2 weeks after vaccination.)"
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:first_published",
+      "content": "October 1, 2024"
+    },
+    {
+      "name": "cdc:last_updated",
+      "content": "September 1, 2026"
+    },
+    {
+      "name": "cdc:last_reviewed",
+      "content": "September 3, 2025"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

@@ -1,0 +1,140 @@
+
+> counter-intelligence@0.1.0 gate
+> node scripts/gate.mjs
+
+claims: 24 claims, 5 trees, 193 staff lines checked
+  NOTE covid-personal-call is marked volatile. Re-check its source before each season.
+  NOTE ve-good-match is marked volatile. Re-check its source before each season.
+  NOTE rsv-75-plus is marked volatile. Re-check its source before each season.
+  NOTE flu-65-burden is marked volatile. Re-check its source before each season.
+claims: GREEN, historical source and stamp metadata checked. New passage-support review pending.
+
+[gate] claims ledger: PASS in 0.4s
+
+claims self-test: RED as expected (6 planted problems caught, and the stamped baseline is clean)
+
+[gate] claims RED proof: PASS in 0.9s
+
+
+ RUN  v4.1.11 <repo>
+
+ ❯ tests/unit/counter-engine.test.js (11 tests | 1 failed) 22ms
+     × debriefs only what happened: the exchanges, what moved things, the cited sources and the huddle 15ms
+ ❯ tests/unit/counter-claim-build.test.js (1 test | 1 failed) 14273ms
+   × stops the production build before Vite for an unsourced or unreviewed claim 14272ms
+ ❯ tests/unit/counter-claims.test.js (12 tests | 1 failed) 20616ms
+     × carries only exact manifest source URLs into the debrief 10719ms
+ ❯ tests/unit/counter-trees.test.js (55 tests | 1 failed) 30880ms
+     × gives every exchange a line from each side 15420ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/counter-claim-build.test.js > stops the production build before Vite for an unsourced or unreviewed claim
+AssertionError:
+> counter-intelligence@0.1.0 build
+> node scripts/check-claims.mjs && vite build && node scripts/singlefile.mjs && node scripts/scan.mjs
+
+claims: 24 claims, 5 trees, 193 staff lines checked
+claims: GREEN, historical source and stamp metadata checked. New passage-support review pending.
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 79 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     0.82 kB │ gzip:     0.43 kB
+dist/assets/style-PODVRSL3.css    163.82 kB │ gzip:   103.96 kB
+dist/assets/index-BuiiHkvp.js   3,644.96 kB │ gzip: 2,277.03 kB
+✓ built in 9.19s
+singlefile: dist/counter-intelligence.html 3720 KB (1 script, 1 stylesheet inlined)
+scan: 4 files inspected
+  NOTE covid-personal-call is marked volatile. Re-check its source before each season.
+  NOTE ve-good-match is marked volatile. Re-check its source before each season.
+  NOTE rsv-75-plus is marked volatile. Re-check its source before each season.
+  NOTE flu-65-burden is marked volatile. Re-check its source before each season.
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+  RED dist/assets/index-BuiiHkvp.js :: automatic navigation :: rying in",t.glslVersion===yY?"":"layout(location = 0) out highp vec4 pc_fragColor;",t.glslVersion===
+  RED dist/counter-intelligence.html :: automatic navigation :: rying in",t.glslVersion===yY?"":"layout(location = 0) out highp vec4 pc_fragColor;",t.glslVersion===
+: expected 1 to be +0 // Object.is equality
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ tests/unit/counter-claim-build.test.js:21:55
+     19|     const build = () => spawnSync("npm", ["run", "build"], { cwd: fixt…
+     20|     const clean = build()
+     21|     expect(clean.status, clean.stdout + clean.stderr).toBe(0)
+       |                                                       ^
+     22|     for (const [field, rule] of [["source", "unsourced claim"], ["revi…
+     23|       fs.rmSync(path.join(fixture, "dist"), { recursive: true, force: …
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  tests/unit/counter-claims.test.js > sources in the debrief > carries only exact manifest source URLs into the debrief
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/unit/counter-claims.test.js:65:5
+     63|   })
+     64|
+     65|   it("carries only exact manifest source URLs into the debrief", () =>…
+       |     ^
+     66|     for (const id of Object.keys(TREES)) {
+     67|       for (const run of walk(id).finished) for (const source of debrie…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+ FAIL  tests/unit/counter-engine.test.js > the conversation reducer > debriefs only what happened: the exchanges, what moved things, the cited sources and the huddle
+AssertionError: expected [ { id: 'flu-two-weeks', …(7) } ] to deeply equal [ { id: 'flu-two-weeks', …(4) } ]
+
+- Expected
++ Received
+
+  [
+    {
+      "accessed": "2026-09-15",
++     "historicalReview": "2026-09-15",
+      "id": "flu-two-weeks",
++     "license": "CDC federal text, US public domain",
+      "org": "CDC",
+-     "reviewed": true,
++     "reviewed": false,
+      "title": "Key Facts About Seasonal Flu Vaccine",
++     "url": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
+    },
+  ]
+
+ ❯ tests/unit/counter-engine.test.js:126:29
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯
+
+ FAIL  tests/unit/counter-trees.test.js > the sam conversation tree > gives every exchange a line from each side
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/unit/counter-trees.test.js:84:5
+     82|   });
+     83|
+     84|   it("gives every exchange a line from each side", () => {
+       |     ^
+     85|     for (const run of finished) {
+     86|       for (const beat of run.transcript) expect(typeof beat.text === "…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+
+
+ Test Files  4 failed | 18 passed (22)
+      Tests  4 failed | 235 passed (239)
+   Start at  04:52:05
+   Duration  34.10s (transform 3.58s, setup 0ms, import 15.10s, tests 83.62s, environment 17.82s)
+
+
+[gate] unit tests: FAIL (exit 1) in 42.6s
+
+[gate] claims ledger=PASS · claims RED proof=PASS · unit tests=FAIL
+[gate] VERDICT: FAIL (unit tests)

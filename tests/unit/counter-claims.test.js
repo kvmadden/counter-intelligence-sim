@@ -1,10 +1,8 @@
 import fs from "node:fs";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import { checkLedger, factShaped, selfTest, unusedClaims } from "../../scripts/check-claims.mjs";
-import { dropUrlFields } from "../../scripts/vite-plugins.mjs";
 import { CLAIMS } from "../../src/counter/claims.js";
+import { CLAIM_STATUS } from "../../src/counter/claim-status.js";
 import { debriefFor } from "../../src/counter/engine.js";
 import { TREES } from "../../src/counter/trees/index.js";
 import { walk } from "./helpers/tree-walk.js";
@@ -57,23 +55,19 @@ describe("sources in the debrief", () => {
     expect(citing, "paths that cited a fact").toBeGreaterThan(0);
   });
 
-  it("strips every source URL from the ledger at build time and leaves each claim whole", () => {
-    const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
-    const source = fs.readFileSync(path.join(root, "src/counter/claims.js"), "utf8");
-    expect((source.match(/\burl:\s*"https:\/\//g) ?? []).length, "URLs kept in the repo for review").toBe(Object.keys(CLAIMS).length);
-    const stripped = dropUrlFields(source);
-    expect(stripped).not.toMatch(/https?:\/\//);
-    const shipped = new Function(stripped.replace("export const CLAIMS =", "return"))();
-    expect(Object.keys(shipped)).toEqual(Object.keys(CLAIMS));
-    for (const [id, claim] of Object.entries(shipped)) {
-      expect(claim.source, id).toEqual({ org: CLAIMS[id].source.org, title: CLAIMS[id].source.title, accessed: CLAIMS[id].source.accessed });
-      expect(claim.text, id).toBe(CLAIMS[id].text);
-    }
-  });
+  it("keeps source URLs in the built ledger for explicit anchors", () => {
+    const config = fs.readFileSync(new URL('../../vite.config.js', import.meta.url), 'utf8')
+    expect(config).not.toContain('stripClaimUrls')
+    for (const claim of Object.values(CLAIMS)) expect(claim.source.url).toMatch(/^https:\/\/www\.cdc\.gov\//)
+  })
 
-  it("never carries a source URL into the debrief (the bundle ships offline)", () => {
+  it("carries only exact manifest source URLs into the debrief", () => {
+    const errors = []
     for (const id of Object.keys(TREES)) {
-      for (const run of walk(id).finished) expect(JSON.stringify(debriefFor(run))).not.toMatch(/https?:/);
+      for (const run of walk(id).finished) for (const source of debriefFor(run).sources) {
+        if (source.url !== CLAIMS[source.id].source.url || source.reviewed !== (CLAIM_STATUS[source.id].status === 'approved')) errors.push({ path: run.taken, source })
+      }
     }
-  });
-});
+    expect(errors).toEqual([])
+  })
+})

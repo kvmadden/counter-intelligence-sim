@@ -5,7 +5,7 @@ import path from "node:path";
 
 // three.js keeps reference links in the comments of its GLSL chunks and a few JS
 // comments. They are never fetched, but the bundle scanner fails closed on any URL
-// and stays unmodified, so the links are removed from three's source text instead,
+// so the links are removed from three's source text instead,
 // and only inside comment bodies: the link pattern cannot contain `*`, so it can
 // never swallow a `*/` and silently comment out the code after it. The XHTML
 // namespace three passes to createElementNS (www.w3.org) is left alone.
@@ -28,27 +28,6 @@ export function stripThreeLinks() {
 // Module ids can be virtual (a "\0" prefix) or carry a query ("?commonjs-module");
 // reduce one to the file it stands for.
 const fileOf = (id) => id.replace(/^\0/, "").split("?")[0];
-
-// The claims ledger (src/counter/claims.js) keeps each source's URL for Kevin's
-// review, but the standalone edition is offline and the bundle scanner fails closed on
-// any URL. This removes every `url: "https://..."` property from that one module before
-// it is bundled. If the pattern ever misses one, the scanner still fails the build.
-const URL_FIELD = /\burl:\s*"https?:\/\/[^"]*",?\s*/g;
-export const dropUrlFields = (code) => code.replace(URL_FIELD, "");
-
-// Build only: the unit suite and the claims gate must see the URLs they check.
-export function stripClaimUrls() {
-  return {
-    name: "counter:strip-claim-urls",
-    apply: "build",
-    enforce: "pre",
-    transform(code, id) {
-      if (!fileOf(id).endsWith("/src/counter/claims.js")) return null;
-      const next = dropUrlFields(code);
-      return next === code ? null : { code: next, map: null };
-    },
-  };
-}
 
 // The npm package a module id belongs to, or null for our own source.
 export function packageOf(id) {

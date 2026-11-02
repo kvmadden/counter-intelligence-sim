@@ -1,0 +1,20 @@
+{
+  "url": "https://www.cdc.gov/flu/vaccines/coadministration.html",
+  "resolvedUrl": "https://www.cdc.gov/flu/vaccines/coadministration.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "c2df4d1815028464a222de284b4adcba5d6f28db2f38ff8484a43d9aec290536",
+  "paragraphs": [
+    {
+      "index": 4,
+      "text": "Coadministration or simultaneous administration of vaccines refers to giving or getting more than one vaccine during a visit. This is common clinical practice. While there are some exceptions, most vaccines can be given at the same visit."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:last_published",
+      "content": "2026-09-01T18:39:08Z"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

@@ -1,0 +1,147 @@
+
+> counter-intelligence@0.1.0 gate
+> node scripts/gate.mjs
+
+claims: 24 claims, 5 trees, 193 staff lines checked
+  NOTE covid-personal-call is marked volatile. Re-check its source before each season.
+  NOTE ve-good-match is marked volatile. Re-check its source before each season.
+  NOTE rsv-75-plus is marked volatile. Re-check its source before each season.
+  NOTE flu-65-burden is marked volatile. Re-check its source before each season.
+claims: GREEN, historical source and stamp metadata checked. New passage-support review pending.
+
+[gate] claims ledger: PASS in 0.1s
+
+claims self-test: RED as expected (6 planted problems caught, and the stamped baseline is clean)
+
+[gate] claims RED proof: PASS in 0.1s
+
+
+ RUN  v4.1.11 <repo>
+
+
+ Test Files  22 passed (22)
+      Tests  243 passed (243)
+   Start at  05:09:57
+   Duration  7.19s (transform 1.35s, setup 0ms, import 3.85s, tests 20.79s, environment 4.80s)
+
+
+[gate] unit tests: PASS in 7.7s
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 79 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     0.82 kB │ gzip:     0.43 kB
+dist/assets/style-PODVRSL3.css    163.82 kB │ gzip:   103.96 kB
+dist/assets/index-BuiiHkvp.js   3,644.96 kB │ gzip: 2,277.03 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.31s
+
+[gate] vite build: PASS in 1.7s
+
+singlefile: dist/counter-intelligence.html 3720 KB (1 script, 1 stylesheet inlined)
+
+[gate] single file: PASS in 0.1s
+
+scan self-test: RED as expected (2 planted hits caught, plus 4 vaccine brands and makers, 9 homage names and house-style marks, and 5 device brand names)
+
+[gate] scanner RED proof: PASS in 0.0s
+
+scan: 4 files inspected
+scan: GREEN, source literals allowed, no automatic network call, remote resource or banned name
+
+[gate] scanner: PASS in 0.1s
+
+
+ RUN  v4.1.11 <repo>
+
+
+ Test Files  4 passed (4)
+      Tests  102 passed (102)
+   Start at  05:10:07
+   Duration  6.33s (transform 409ms, setup 0ms, import 1.38s, tests 8.24s, environment 1ms)
+
+
+[gate] conversation engine: PASS in 6.8s
+
+
+Running 33 tests using 1 worker
+
+(node:7573) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:91:1 › keeps controls operable without horizontal overflow (1.8s)
+  ✓   2 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:108:1 › replaces the move tray with choices so the scene and dialogue stay in place (2.2s)
+  ✓   3 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:120:1 › prints each file's fixed level and endings found, offers no difficulty choice, and the Rx handheld carries that level's objectives (2.7s)
+  ✓   4 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:158:1 › reads the briefing as tabbed pages, by pointer and by keyboard (1.5s)
+  ✓   5 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:179:1 › reaches mission status through the best case, marked Best case and New at rank 6 of 6, then the debrief and the huddle (4.6s)
+  ✓   6 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:218:1 › ranks a graceful no above pushing past it, with the kind cap note only on the pushed run's debrief (6.2s)
+  ✓   7 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:246:1 › counts endings found this session, skips the New mark on a repeat, and forgets everything on reload (6.3s)
+  ✓   8 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:275:1 › reads the debrief as tabbed pages, by pointer and by keyboard, and lists its CDC sources with their review status (5.8s)
+  ✓   9 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:322:1 › shows nothing to cite on the debrief's Sources page after the quickest close (2.8s)
+  ✓  10 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:361:1 › fits the worst page of every tree: no page scroll on mission status or any debrief page, Continue always in view, no stamp over a control or over the dossier's name, level or endings line, no text under 13px (1.5m)
+  ✓  11 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:470:1 › walks every screen with no page scroll, nothing wider than the screen, and every control at least 44px (6.4s)
+  ✓  12 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:507:1 › ends the run on its own after exchange 8 and lands on mission status naming The 14 wins (5.0s)
+  ✓  13 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:519:1 › raises the Rx handheld into view held in the player's hand, and simply shows it under reduced motion (3.6s)
+  ✘  14 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:548:1 › taps the scrim where the raised sleeve overlaps it, and returns to the encounter (23.1s)
+(node:24444) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  15 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:580:1 › keeps one turn after rapid tapping and survives a background-like visibility event at enlarged text (2.3s)
+  ✓  16 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:596:1 › fits the encounter to the screen: the scene gets real space, no page scroll, no empty band (2.1s)
+  ✓  17 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:618:1 › opens the Rx handheld: status, what she's shared, and the counting tray on its screen, one control back to the encounter (2.4s)
+  ✓  18 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:649:1 › plays the standalone file over file:// with zero network requests and its licence notices aboard (2.3s)
+  ✓  19 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:683:1 › brings the scene back when the WebGL context returns, as after an iPhone background and resume (2.7s)
+  ✓  20 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:711:1 › keeps the four-choice Offer panel whole above an iPhone home bar (a forced 34px inset) (4.4s)
+  ✓  21 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:735:1 › marks the dialogue region as live and returns focus to the same move when its choices close without a pick (4.6s)
+  ✓  22 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:746:1 › moves keyboard focus to another live move once the one just used runs out of lines (5.1s)
+  ✓  23 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:756:1 › keeps the Rx handheld to goals: an objective already met is never ticked off mid-mission (4.9s)
+  ✓  24 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:768:1 › holds keyboard focus inside the Rx handheld and makes the encounter behind it inert (4.1s)
+  ✓  25 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:786:1 › fills the orange arc one segment per exchange and holds the blue arc steady, so nothing counts down (4.4s)
+  ✓  26 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:806:1 › keeps the N64 render soft: a low internal resolution, upscaled smoothly, never crisp (3.8s)
+  ✓  27 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:815:1 › opens on the pharmacist's own shelving and pans to the patient (4.8s)
+  ✓  28 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:823:1 › skips the opening pan under reduced motion (2.1s)
+  ✓  29 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:831:1 › lists the four moves one per row in the Rx handheld's LCD language: big names, no hint lines (2.5s)
+  -  30 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:866:1 › asks a phone turned sideways to turn back upright, and keeps the file where it was
+  ✓  31 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:893:1 › keeps every screen's text and controls clear of the Dynamic Island and the home bar (7.2s)
+  ✓  32 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:945:1 › keeps every file's name, level and endings readable on SELECT FILE (2.2s)
+  ✓  33 [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:967:1 › uses readable paper surfaces when the browser requests a light theme (2.9s)
+
+
+  1) [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:548:1 › taps the scrim where the raised sleeve overlaps it, and returns to the encounter
+
+    Error: settles flat, in place
+
+    settles flat, in place
+
+    expect(received).toMatch(expected)
+
+    Expected pattern: /^(?:none|matrix\(1, 0, 0, 1, 0, 0\))$/
+    Received string:  "matrix(0.89507, -0.0940756, 0.0940756, 0.89507, 0, 362.346)"
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+      553 |   // Wait for the raise to settle: mid-animation the case is rotated and scaled,
+      554 |   // so its bounding box does not yet reflect where it finally sits.
+    > 555 |   await expect.poll(() => handheld.evaluate((element) => getComputedStyle(element).transform), { message: "settles flat, in place" }).toMatch(/^(?:none|matrix\(1, 0, 0, 1, 0, 0\))$/);
+          |                                                                                                                                       ^
+      556 |   const spot = await page.evaluate(() => {
+      557 |     const kase = document.querySelector(".enc-handheld-case").getBoundingClientRect();
+      558 |     const sleeve = document.querySelector(".enc-forearm").getBoundingClientRect();
+        at <repo>/tests/browser/counter-intelligence.spec.js:555:135
+
+    Error Context: test-results/counter-intelligence-taps--a3422-nd-returns-to-the-encounter-phone-portrait-430x932/error-context.md
+
+  1 failed
+    [phone-portrait-430x932] › tests/browser/counter-intelligence.spec.js:548:1 › taps the scrim where the raised sleeve overlaps it, and returns to the encounter
+  1 skipped
+  31 passed (4.3m)
+
+[gate] browser phone-portrait-430x932: FAIL (exit 1) in 256.3s
+
+[gate] claims ledger=PASS · claims RED proof=PASS · unit tests=PASS · vite build=PASS · single file=PASS · scanner RED proof=PASS · scanner=PASS · conversation engine=PASS · browser phone-portrait-430x932=FAIL
+[gate] VERDICT: FAIL (browser phone-portrait-430x932)

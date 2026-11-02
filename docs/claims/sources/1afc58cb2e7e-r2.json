@@ -1,0 +1,41 @@
+{
+  "url": "https://www.cdc.gov/vaccines/hcp/by-disease/dtap-tdap-td.html",
+  "resolvedUrl": "https://www.cdc.gov/vaccines/hcp/by-disease/dtap-tdap-td.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "79846a76eb9fdb6240be1b31e39d1120da980f6fd9f83a3993f41efc76843991",
+  "extractor": "jsdom: main h1, main h2, main h3, main h4, main p, main li, text with whitespace collapsed, indexed in document order",
+  "paragraphs": [
+    {
+      "index": 2,
+      "text": "Diphtheria toxoid-, tetanus toxoid-, and acellular pertussis-containing vaccines help protect against diphtheria, tetanus, and pertussis, but they will not prevent all cases."
+    },
+    {
+      "index": 17,
+      "text": "Tetanus and diphtheria (Td) only vaccines"
+    },
+    {
+      "index": 119,
+      "text": "Adults who have never received Tdap should receive a single dose of Tdap."
+    },
+    {
+      "index": 122,
+      "text": "After receipt of Tdap, patients should continue to receive Td or Tdap for routine booster immunization every 10 years."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:first_published",
+      "content": "January 30, 2026"
+    },
+    {
+      "name": "cdc:last_updated",
+      "content": "September 6, 2022"
+    },
+    {
+      "name": "cdc:last_reviewed",
+      "content": "September 6, 2022"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

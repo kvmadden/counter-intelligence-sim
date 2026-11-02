@@ -16,8 +16,10 @@ const linesOf = (o) => [o.text, o.resultMet, ...(typeof o.resultUnmet === "funct
 const resultOf = (run, tier, id, scenario) => evaluateObjectives(run, tier, scenario).find((o) => o.id === id);
 
 // Jordan's paths, walked straight off her tree.
-// Two for one: she asks first, then hears safety facts, and never a fact about protection.
-const TWO_FOR_ONE = ["counter.offer-shot", "hesitant.ask-pause", "concern.ask-permission", "concern.offer-facts", "open.next-bus", "today.offer-covid"];
+// Rake insurance: she asks first, hears safety facts, then the Tdap booster from her record.
+const RAKE = ["counter.offer-shot", "hesitant.ask-pause", "concern.ask-permission", "concern.offer-facts", "open.next-bus", "today.offer-tdap"];
+// The same respectful yes, closed with a seat: no fact about how a vaccine protects.
+const NEXT_BUS = [...RAKE.slice(0, -1), "today.close-seat"];
 // Eight exchanges with no ending, so Jordan's bus arrives (her cap is 8). The sit-after
 // fact comes before any ask, and the timing facts about protection come last.
 const TIMEOUT = ["counter.ask-time", "rush.offer-shot", "hesitant.offer-next-bus", "hesitant.ask-pause", "concern.sit", "concern.ask-permission", "concern.offer-facts", "open.why-now"];
@@ -95,7 +97,7 @@ describe("evaluateObjectives (mission status only)", () => {
   });
 
   it("observes asking first only when permission comes before the first fact", () => {
-    expect(resultOf(play("jordan", ...TWO_FOR_ONE), "secret-agent", "ask-first")).toEqual({ id: "ask-first", met: true, result: "You asked before you shared a fact." });
+    expect(resultOf(play("jordan", ...RAKE), "secret-agent", "ask-first")).toEqual({ id: "ask-first", met: true, result: "You asked before you shared a fact." });
     const factFirst = play("jordan", ...TIMEOUT);
     expect(factFirst.flags).toContain("permission");
     expect(resultOf(factFirst, "secret-agent", "ask-first")).toEqual({ id: "ask-first", met: false, result: "A fact came before the ask this time." });
@@ -103,8 +105,8 @@ describe("evaluateObjectives (mission status only)", () => {
   });
 
   it("counts only facts about how a vaccine protects as a fact that protects", () => {
-    expect(Object.keys(CLAIMS).filter((id) => CLAIMS[id].protects)).toEqual(["flu-two-weeks", "tdap-ten-years", "ve-good-match", "milder-illness", "flu-protects-others", "baby-two-weeks", "flu-65-preferred"]);
-    expect(resultOf(play("jordan", ...TWO_FOR_ONE), "secret-agent", "fact-that-protects")).toEqual({ id: "fact-that-protects", met: false, result: "No fact about how it protects came up this time." });
+    expect(Object.keys(CLAIMS).filter((id) => CLAIMS[id].protects)).toEqual(["flu-two-weeks", "tdap-ten-years", "ve-good-match", "milder-illness", "flu-protects-others", "baby-two-weeks", "flu-65-preferred", "pneumo-50-plus"]);
+    expect(resultOf(play("jordan", ...NEXT_BUS), "secret-agent", "fact-that-protects")).toEqual({ id: "fact-that-protects", met: false, result: "No fact about how it protects came up this time." });
     expect(resultOf(play("jordan", ...TIMEOUT), "secret-agent", "fact-that-protects").met).toBe(true);
   });
 

@@ -52,7 +52,7 @@ describe("bundle scanner", () => {
     expect(scanText('data:image/svg+xml,<svg><script>fetch("/ping")</script></svg>').map((hit) => hit.rule)).toContain("fetch call");
   });
   it("lets generic vaccine talk and cited agencies through, since vaccines are the point (Kevin, 2026-09-15)", () => {
-    for (const ok of ["Want a flu shot while you're here?", "the updated COVID-19 vaccine", "Source: CDC, Key Facts About Seasonal Flu Vaccine", "a Td or Tdap booster", "immunization record", "a sore arm is a common side effect", "influenza", "RSV", "shingles"]) {
+    for (const ok of ["Want a flu shot while you're here?", "the high-dose flu vaccine", "a pneumococcal vaccine", "Source: CDC, Key Facts About Seasonal Flu Vaccine", "a Td or Tdap booster", "immunization record", "a sore arm is a common side effect", "influenza", "RSV", "shingles"]) {
       expect(scanText(ok), ok).toEqual([]);
     }
   });

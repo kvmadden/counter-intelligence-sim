@@ -1,0 +1,5156 @@
+[
+  {
+    "id": "flu-cannot-cause-flu",
+    "claim": {
+      "text": "Flu shots cannot cause flu illness. They are made with inactivated virus or a single virus protein.",
+      "source": {
+        "org": "CDC",
+        "title": "Misconceptions About Seasonal Flu and Flu Vaccines",
+        "url": "https://www.cdc.gov/flu/prevention/misconceptions.html",
+        "accessed": "2026-09-15"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15"
+    },
+    "uses": [
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].id",
+        "text": "concern.offer-facts",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].label",
+        "text": "The shot can't give you flu. Feeling achy after is common, and minor.",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].next",
+        "text": "open",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].note",
+        "text": "Plain facts, with permission, answered what she was actually worried about.",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].reply[0].text",
+        "text": "Fine. Fair. I reserve the right to stay a little grumpy about it.",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].reply[0].when[0]",
+        "text": "lectured",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].reply[1].text",
+        "text": "So one rough day beats a real flu week. Okay. I can work with that.",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].reply[1].when[0]",
+        "text": "why",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].reply[2].text",
+        "text": "So my immune system was just doing its homework. Loudly. Okay.",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].requires[0]",
+        "text": "permission",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].set[0]",
+        "text": "eased",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[2].family",
+        "text": "offer",
+        "claims": [
+          "flu-cannot-cause-flu"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[2].id",
+        "text": "concern.well-actually",
+        "claims": [
+          "flu-cannot-cause-flu"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[2].label",
+        "text": "Well, actually, the flu shot can't give you the flu.",
+        "claims": [
+          "flu-cannot-cause-flu"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[2].next",
+        "text": "concern",
+        "claims": [
+          "flu-cannot-cause-flu"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[2].note",
+        "text": "An unasked correction put her on the defensive.",
+        "claims": [
+          "flu-cannot-cause-flu"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[2].reply",
+        "text": "Okay, Professor. I didn't say it gave me the flu. I said I felt terrible.",
+        "claims": [
+          "flu-cannot-cause-flu"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[2].requires[0]",
+        "text": "!permission",
+        "claims": [
+          "flu-cannot-cause-flu"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[2].requires[1]",
+        "text": "!lectured",
+        "claims": [
+          "flu-cannot-cause-flu"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[2].set[0]",
+        "text": "lectured",
+        "claims": [
+          "flu-cannot-cause-flu"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.worry.choices[0].family",
+        "text": "offer",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.worry.choices[0].id",
+        "text": "worry.offer-side-effects",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.worry.choices[0].label",
+        "text": "It can't give you flu. A sore arm or feeling tired is common, and minor.",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.worry.choices[0].next",
+        "text": "open",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.worry.choices[0].note",
+        "text": "Plain facts answered the naptime worry.",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.worry.choices[0].reply",
+        "text": "A sore arm I can do. The toddlers mostly hug legs anyway.",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/flu/prevention/misconceptions.html",
+      "originalUrl": "https://www.cdc.gov/flu/prevention/misconceptions.html",
+      "passage": "Flu vaccines cannot cause flu illness. Flu vaccines given with a needle (i.e., flu shots) are made with either inactivated (killed) viruses, or with only a single protein from an influenza virus. The nasal spray vaccine contains live viruses that are attenuated (weakened) so that they will not cause illness.",
+      "paragraphs": [
+        {
+          "index": 6,
+          "text": "Flu vaccines cannot cause flu illness. Flu vaccines given with a needle (i.e., flu shots) are made with either inactivated (killed) viruses, or with only a single protein from an influenza virus. The nasal spray vaccine contains live viruses that are attenuated (weakened) so that they will not cause illness."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2026-05-18T10:40:03Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/0e9ee31d401f.json",
+      "htmlSha256": "43f39bff3ed5f002cfab0ed65568571cdc21d3fa3d6da39715d93a0ad159f1a3",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "e45d23adf9c43fdf67438567385d0f5e45189053a615430d2167c0d08e7322ba",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15",
+      "binding": "0e6964ef8415796079c75f92b80538ebe6c8f21d7d730833dc276fbc8df518a1",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "flu-side-effects",
+    "claim": {
+      "text": "Common flu shot side effects are minor: soreness, redness or swelling where the shot was given, and sometimes headache, fever, muscle aches, nausea or tiredness.",
+      "source": {
+        "org": "CDC",
+        "title": "Key Facts About Seasonal Flu Vaccine",
+        "url": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
+        "accessed": "2026-09-15"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15"
+    },
+    "uses": [
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].id",
+        "text": "concern.offer-facts",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].label",
+        "text": "The shot can't give you flu. Feeling achy after is common, and minor.",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].next",
+        "text": "open",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].note",
+        "text": "Plain facts, with permission, answered what she was actually worried about.",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].reply[0].text",
+        "text": "Fine. Fair. I reserve the right to stay a little grumpy about it.",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].reply[0].when[0]",
+        "text": "lectured",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].reply[1].text",
+        "text": "So one rough day beats a real flu week. Okay. I can work with that.",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].reply[1].when[0]",
+        "text": "why",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].reply[2].text",
+        "text": "So my immune system was just doing its homework. Loudly. Okay.",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].requires[0]",
+        "text": "permission",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.concern.choices[1].set[0]",
+        "text": "eased",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.worry.choices[0].family",
+        "text": "offer",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.worry.choices[0].id",
+        "text": "worry.offer-side-effects",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.worry.choices[0].label",
+        "text": "It can't give you flu. A sore arm or feeling tired is common, and minor.",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.worry.choices[0].next",
+        "text": "open",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.worry.choices[0].note",
+        "text": "Plain facts answered the naptime worry.",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.worry.choices[0].reply",
+        "text": "A sore arm I can do. The toddlers mostly hug legs anyway.",
+        "claims": [
+          "flu-cannot-cause-flu",
+          "flu-side-effects"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
+      "originalUrl": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
+      "passage": "While a flu vaccine cannot give you flu illness, there are different side effects that may be associated with getting a flu shot or a nasal spray flu vaccine. These side effects are usually mild and short-lasting, especially when compared to symptoms of flu.\nA flu shot: The viruses in a flu shot are killed (inactivated), so you cannot get flu from a flu shot. Some minor side effects that may occur are:\nSoreness, redness, and/or swelling where the shot was given\nHeadache\nFever\nMuscle aches\nNausea\nFatigue",
+      "paragraphs": [
+        {
+          "index": 64,
+          "text": "While a flu vaccine cannot give you flu illness, there are different side effects that may be associated with getting a flu shot or a nasal spray flu vaccine. These side effects are usually mild and short-lasting, especially when compared to symptoms of flu."
+        },
+        {
+          "index": 65,
+          "text": "A flu shot: The viruses in a flu shot are killed (inactivated), so you cannot get flu from a flu shot. Some minor side effects that may occur are:"
+        },
+        {
+          "index": 66,
+          "text": "Soreness, redness, and/or swelling where the shot was given"
+        },
+        {
+          "index": 67,
+          "text": "Headache"
+        },
+        {
+          "index": 68,
+          "text": "Fever"
+        },
+        {
+          "index": 69,
+          "text": "Muscle aches"
+        },
+        {
+          "index": 70,
+          "text": "Nausea"
+        },
+        {
+          "index": 71,
+          "text": "Fatigue"
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2026-09-01T18:37:51Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/0f62994ff2d9.json",
+      "htmlSha256": "47da5f32e6400111a13cccfdd61314fdf3e5779023ef51ea0d8c9e85f28af923",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "c1a3569d82efecd447498f17881ff4c1e2ae4f406719367fc4752bd936c21f6a",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15",
+      "binding": "4c379b5e8ec319a41b7538a73b8fef5cddabe2823bb093ae005856b0fef49b69",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "sit-after",
+    "claim": {
+      "text": "Fainting can happen after any shot, so providers may have people sit for about 15 minutes afterward to prevent an injury.",
+      "source": {
+        "org": "CDC",
+        "title": "Preventing and Managing Adverse Reactions (General Best Practice Guidelines for Immunization)",
+        "url": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/preventing-managing-adverse-reactions.html",
+        "accessed": "2026-09-15"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15"
+    },
+    "uses": [
+      {
+        "location": "trees.jordan.nodes.hesitant.choices[3].family",
+        "text": "offer",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.hesitant.choices[3].id",
+        "text": "hesitant.offer-next-bus",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.hesitant.choices[3].label",
+        "text": "We'd have you sit about fifteen minutes after. Next 14 instead?",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.hesitant.choices[3].next",
+        "text": "hesitant",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.hesitant.choices[3].reply",
+        "text": "The next one's twenty minutes later, so technically yes. But it's not really the bus.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.hesitant.choices[3].set[0]",
+        "text": "hinted",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[2].family",
+        "text": "offer",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[2].id",
+        "text": "open.next-bus",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[2].label[0].text",
+        "text": "Next 14 it is. We'd have you sit about fifteen minutes after.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[2].label[0].when[0]",
+        "text": "her-plan",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[2].label[1].text",
+        "text": "Catch the next 14? We'd have you sit about fifteen minutes after.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[2].next",
+        "text": "today",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[2].note",
+        "text": "Solving the bus made today possible.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[2].reply",
+        "text": "My manager owes me one anyway. Let's do it.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[2].set[0]",
+        "text": "today",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.hesitant.choices[3].family",
+        "text": "offer",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.hesitant.choices[3].id",
+        "text": "hesitant.offer-fits",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.hesitant.choices[3].label",
+        "text": "We'd have you sit about fifteen minutes after. Same as your order.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.hesitant.choices[3].next",
+        "text": "hesitant",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.hesitant.choices[3].note",
+        "text": "Showing the shot fit inside the wait took the clock out of it.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.hesitant.choices[3].reply",
+        "text": "Huh. So the waiting counts twice. That's efficient. Still not sure I need it.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.hesitant.choices[3].set[0]",
+        "text": "fits",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.open.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.open.choices[1].id",
+        "text": "open.offer-now",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.open.choices[1].label",
+        "text": "Do it now. We'd have you sit fifteen minutes, same as your order.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.open.choices[1].next",
+        "text": "today",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.open.choices[1].note",
+        "text": "Fitting the shot inside the wait made today possible.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.open.choices[1].reply",
+        "text": "Shot, sit, sandwich. I can do that.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.open.choices[1].set[0]",
+        "text": "today",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.open.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.open.choices[1].id",
+        "text": "open.offer-today",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.open.choices[1].label[0].text",
+        "text": "Today it is. We'd have you sit about fifteen minutes after.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.open.choices[1].label[0].when[0]",
+        "text": "her-plan",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.open.choices[1].label[1].text",
+        "text": "Let's do it today. We'd have you sit about fifteen minutes after.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.open.choices[1].next",
+        "text": "today",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.open.choices[1].note",
+        "text": "Making today easy made today happen.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.open.choices[1].reply",
+        "text": "Fifteen minutes of sitting down. That's the most relaxing thing I've done all week.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.open.choices[1].set[0]",
+        "text": "today",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.open.choices[2].family",
+        "text": "offer",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.open.choices[2].id",
+        "text": "open.offer-today",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.open.choices[2].label",
+        "text": "Let's do yours now. We'd have you sit about fifteen minutes after.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.open.choices[2].next",
+        "text": "today",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.open.choices[2].note",
+        "text": "Making today easy made today happen.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.open.choices[2].reply",
+        "text": "Fifteen minutes of sitting down. Don't tell my kids that's allowed.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.open.choices[2].set[0]",
+        "text": "today",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.open.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.open.choices[1].id",
+        "text": "open.offer-today",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.open.choices[1].label",
+        "text": "Let's do it now. We'd have you sit about fifteen minutes after.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.open.choices[1].next",
+        "text": "today",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.open.choices[1].note",
+        "text": "Making today easy made today happen.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.open.choices[1].reply",
+        "text": "Fifteen minutes. I brought the crossword. I always bring the crossword.",
+        "claims": [
+          "sit-after"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.open.choices[1].set[0]",
+        "text": "today",
+        "claims": [
+          "sit-after"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/preventing-managing-adverse-reactions.html",
+      "originalUrl": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/preventing-managing-adverse-reactions.html",
+      "passage": "Some of the systemic reactions may be complicated by the onset of syncope. Syncope (vasovagal or vasodepressor reaction) can occur after vaccination and is most common among adolescents and young adults. In 2005, the Vaccine Adverse Event Reporting System (VAERS) began detecting a trend of increasing syncope reports that coincided with the licensure of 3 vaccines for adolescents: human papillomavirus (HPV), MenACWY, and Tdap4. Of particular concern among adolescents has been the risk for serious secondary injuries, including skull fracture and cerebral hemorrhage. Of 463 VAERS reports of syncope during January 1, 2005, to July 31, 2007, a total of 41 listed syncope with secondary injury with information on the timing after vaccination, and the majority of these syncope reports (76%) occurred among adolescents. Among all age groups, 80% of reported syncope episodes occur within 15 minutes of vaccine administration (additional information). Providers should take appropriate measures to prevent injuries if a patient becomes weak or dizzy or loses consciousness. Adolescents and adults should be seated or lying down during vaccination. Vaccine providers, particularly when vaccinating adolescents, should consider observing patients (with patients seated or lying down) for 15 minutes after vaccination to decrease the risk for injury should they faint4. If syncope develops, patients should be observed until the symptoms resolve.",
+      "paragraphs": [
+        {
+          "index": 18,
+          "text": "Some of the systemic reactions may be complicated by the onset of syncope. Syncope (vasovagal or vasodepressor reaction) can occur after vaccination and is most common among adolescents and young adults. In 2005, the Vaccine Adverse Event Reporting System (VAERS) began detecting a trend of increasing syncope reports that coincided with the licensure of 3 vaccines for adolescents: human papillomavirus (HPV), MenACWY, and Tdap4. Of particular concern among adolescents has been the risk for serious secondary injuries, including skull fracture and cerebral hemorrhage. Of 463 VAERS reports of syncope during January 1, 2005, to July 31, 2007, a total of 41 listed syncope with secondary injury with information on the timing after vaccination, and the majority of these syncope reports (76%) occurred among adolescents. Among all age groups, 80% of reported syncope episodes occur within 15 minutes of vaccine administration (additional information). Providers should take appropriate measures to prevent injuries if a patient becomes weak or dizzy or loses consciousness. Adolescents and adults should be seated or lying down during vaccination. Vaccine providers, particularly when vaccinating adolescents, should consider observing patients (with patients seated or lying down) for 15 minutes after vaccination to decrease the risk for injury should they faint4. If syncope develops, patients should be observed until the symptoms resolve."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2026-07-23T17:22:36Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/3aa1314bcf42.json",
+      "htmlSha256": "2a9fe3a842c09febcaae2ff6c4894045aab3bd3decd8439c4b85d1a3ada2b216",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "8a57b42802d39926fa7ce620855c529b4d82bb820182d081b67817fe3f093f76",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15",
+      "binding": "165d1bd54276a9c67735bae8e14b8398d7ddf7641f31571373da8d212fb048d4",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "flu-two-weeks",
+    "claim": {
+      "text": "It takes about two weeks after a flu vaccine for protection to develop.",
+      "protects": true,
+      "source": {
+        "org": "CDC",
+        "title": "Key Facts About Seasonal Flu Vaccine",
+        "url": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
+        "accessed": "2026-09-15"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15"
+    },
+    "uses": [
+      {
+        "location": "trees.jordan.nodes.doubt.choices[2].family",
+        "text": "offer",
+        "claims": [
+          "flu-two-weeks",
+          "other-viruses"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[2].id",
+        "text": "doubt.offer-window",
+        "claims": [
+          "flu-two-weeks",
+          "other-viruses"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[2].label",
+        "text": "Two weeks to kick in, so he may have caught it first. Or it was a cold.",
+        "claims": [
+          "flu-two-weeks",
+          "other-viruses"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[2].next",
+        "text": "open",
+        "claims": [
+          "flu-two-weeks",
+          "other-viruses"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[2].note",
+        "text": "Matching the facts to her cousin's story answered the doubt head on.",
+        "claims": [
+          "flu-two-weeks",
+          "other-viruses"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[2].reply",
+        "text": "So the plague was a cold. That tracks, honestly.",
+        "claims": [
+          "flu-two-weeks",
+          "other-viruses"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[2].requires[0]",
+        "text": "cousin-when",
+        "claims": [
+          "flu-two-weeks",
+          "other-viruses"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[2].set[0]",
+        "text": "convinced",
+        "claims": [
+          "flu-two-weeks",
+          "other-viruses"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[4].family",
+        "text": "offer",
+        "claims": [
+          "flu-two-weeks",
+          "flu-peak"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[4].id",
+        "text": "open.why-now",
+        "claims": [
+          "flu-two-weeks",
+          "flu-peak"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[4].label",
+        "text": "It takes about two weeks to kick in, and flu usually peaks in winter.",
+        "claims": [
+          "flu-two-weeks",
+          "flu-peak"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[4].next",
+        "text": "open",
+        "claims": [
+          "flu-two-weeks",
+          "flu-peak"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[4].note",
+        "text": "Explaining the timing answered why now.",
+        "claims": [
+          "flu-two-weeks",
+          "flu-peak"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[4].reply",
+        "text": "So the shot needs a head start. Relatable.",
+        "claims": [
+          "flu-two-weeks",
+          "flu-peak"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[4].set[0]",
+        "text": "why-now",
+        "claims": [
+          "flu-two-weeks",
+          "flu-peak"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].family",
+        "text": "offer",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].id",
+        "text": "permission.offer-recommend",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].label",
+        "text": "I'd recommend it today. It takes two weeks to kick in.",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].next",
+        "text": "hesitant",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].note",
+        "text": "A clear recommendation is the strongest predictor of a yes, and you made one.",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].reply[0].text",
+        "text": "Two weeks, so today counts. But the 14 is in nine minutes.",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].reply[0].when[0]",
+        "text": "bus",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].reply[1].text",
+        "text": "Two weeks, so today counts. But my bus is in ten minutes.",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].set[0]",
+        "text": "raised",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].set[1]",
+        "text": "bus",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.hesitant.choices[3].family",
+        "text": "offer",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.hesitant.choices[3].id",
+        "text": "hesitant.offer-recommend",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.hesitant.choices[3].label",
+        "text": "I'd still recommend it. It takes two weeks to kick in.",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.hesitant.choices[3].next",
+        "text": "hesitant",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.hesitant.choices[3].note",
+        "text": "A clear recommendation is the strongest predictor of a yes, and you made one.",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.hesitant.choices[3].reply",
+        "text": "Two weeks. Fourteen days of rides. You're making a case.",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.hesitant.choices[3].requires[0]",
+        "text": "!recommended",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.hesitant.choices[3].set[0]",
+        "text": "recommended",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.permission.choices[2].family",
+        "text": "offer",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.permission.choices[2].id",
+        "text": "permission.offer-recommend",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.permission.choices[2].label",
+        "text": "I'd recommend your flu shot today. It takes two weeks to kick in.",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.permission.choices[2].next",
+        "text": "hesitant",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.permission.choices[2].note",
+        "text": "A clear recommendation is the strongest predictor of a yes, and you made one.",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.permission.choices[2].reply",
+        "text": "Two weeks. That's a lot of rides. I don't really get sick, though.",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.permission.choices[2].set[0]",
+        "text": "raised",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.permission.choices[2].set[1]",
+        "text": "recommended",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
+      "originalUrl": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
+      "passage": "Flu vaccines cause antibodies to develop in the body about two weeks after vaccination. These antibodies provide protection against flu illness.",
+      "paragraphs": [
+        {
+          "index": 8,
+          "text": "Flu vaccines cause antibodies to develop in the body about two weeks after vaccination. These antibodies provide protection against flu illness."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2026-09-01T18:37:51Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/0f62994ff2d9.json",
+      "htmlSha256": "47da5f32e6400111a13cccfdd61314fdf3e5779023ef51ea0d8c9e85f28af923",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "107b5f679bac5d96f0cb3c1b874fe96a8335b7ac60148cc24fc1e74ce51408e2",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15",
+      "binding": "d168d5172b381a9cdecf04ac0b74f9ce8917b9cfe6b8ac56b25b044d05ee65b0",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "flu-peak",
+    "claim": {
+      "text": "In the United States, flu activity most often peaks between December and February.",
+      "source": {
+        "org": "CDC",
+        "title": "Flu Season",
+        "url": "https://www.cdc.gov/flu/about/season.html",
+        "accessed": "2026-09-15"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15"
+    },
+    "uses": [
+      {
+        "location": "trees.jordan.nodes.open.choices[4].family",
+        "text": "offer",
+        "claims": [
+          "flu-two-weeks",
+          "flu-peak"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[4].id",
+        "text": "open.why-now",
+        "claims": [
+          "flu-two-weeks",
+          "flu-peak"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[4].label",
+        "text": "It takes about two weeks to kick in, and flu usually peaks in winter.",
+        "claims": [
+          "flu-two-weeks",
+          "flu-peak"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[4].next",
+        "text": "open",
+        "claims": [
+          "flu-two-weeks",
+          "flu-peak"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[4].note",
+        "text": "Explaining the timing answered why now.",
+        "claims": [
+          "flu-two-weeks",
+          "flu-peak"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[4].reply",
+        "text": "So the shot needs a head start. Relatable.",
+        "claims": [
+          "flu-two-weeks",
+          "flu-peak"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.open.choices[4].set[0]",
+        "text": "why-now",
+        "claims": [
+          "flu-two-weeks",
+          "flu-peak"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/flu/about/season.html",
+      "originalUrl": "https://www.cdc.gov/flu/about/season.html",
+      "passage": "In the United States, flu season usually occurs in the fall and winter. While influenza viruses spread year-round, most of the time flu activity peaks between December and February. The overall health impact (e.g., infections, hospitalizations, and deaths) of flu varies from season to season. CDC collects, compiles, and analyzes information on influenza activity year-round in the United States and produces FluView, a weekly surveillance report, and FluView Interactive, which allows for more in-depth exploration of influenza surveillance data. The Weekly U.S. Influenza Summary Update is updated weekly year-round.",
+      "paragraphs": [
+        {
+          "index": 4,
+          "text": "In the United States, flu season usually occurs in the fall and winter. While influenza viruses spread year-round, most of the time flu activity peaks between December and February. The overall health impact (e.g., infections, hospitalizations, and deaths) of flu varies from season to season. CDC collects, compiles, and analyzes information on influenza activity year-round in the United States and produces FluView, a weekly surveillance report, and FluView Interactive, which allows for more in-depth exploration of influenza surveillance data. The Weekly U.S. Influenza Summary Update is updated weekly year-round."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2025-09-26T11:24:44Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/3ed85bf3fe75.json",
+      "htmlSha256": "6d0771d77f4578b74d0a18df4a7b117eb07e0b7eb8edae4eb439fa7e6a9b2bb9",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "615672325d16d360706393b161cae5ea42037e8cf85e6f0427da8d0ff606a95e",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15",
+      "binding": "5a19f5061d139706d0e70ea0094c62e55cb69db60c6a273aa7e1193ae3089286",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "same-visit",
+    "claim": {
+      "text": "People can get a flu vaccine and a COVID-19 vaccine at the same visit if they are eligible.",
+      "source": {
+        "org": "CDC",
+        "title": "Getting a Flu Vaccine and Other Recommended Vaccines at the Same Time",
+        "url": "https://www.cdc.gov/flu/vaccines/coadministration.html",
+        "accessed": "2026-09-15"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15"
+    },
+    "uses": [
+      {
+        "location": "trees.jordan.nodes.today.choices[0].end",
+        "text": "two-for-one",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.today.choices[0].family",
+        "text": "offer",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.today.choices[0].id",
+        "text": "today.offer-covid",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.today.choices[0].label",
+        "text": "Want a COVID-19 vaccine too? It's your call, and both fit in one visit.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.today.choices[0].note",
+        "text": "Offering both in one visit saved her a second trip.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.today.choices[0].reply",
+        "text": "One visit, two arms, zero extra bus trips. Sure.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.today.choices[1].end",
+        "text": "lunch-special",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.today.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.today.choices[1].id",
+        "text": "today.offer-covid",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.today.choices[1].label",
+        "text": "Want a COVID-19 vaccine too? It's your call, and both fit one visit.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.today.choices[1].note",
+        "text": "Offering both in one visit saved him a second lunch break.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.today.choices[1].reply",
+        "text": "Two arms, one sit, one sandwich. Sure.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.today.choices[1].end",
+        "text": "full-service",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.today.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.today.choices[1].id",
+        "text": "today.offer-covid",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.today.choices[1].label",
+        "text": "Want a COVID-19 vaccine too? It's your call, and both fit one visit.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.today.choices[1].note",
+        "text": "Offering both in one visit saved him a second trip he'd never make.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.today.choices[1].reply",
+        "text": "One visit. I'll take it. There is no second trip in my calendar.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.today.choices[1].end",
+        "text": "double-tuesday",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.today.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.today.choices[1].id",
+        "text": "today.offer-covid",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.today.choices[1].label",
+        "text": "Want a COVID-19 vaccine too? It's your call, and both fit one visit.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.today.choices[1].note",
+        "text": "Offering both in one visit saved him a second Tuesday.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.today.choices[1].reply",
+        "text": "Both. One trip. The system approves.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/flu/vaccines/coadministration.html",
+      "originalUrl": "https://www.cdc.gov/flu/vaccines/coadministration.html",
+      "passage": "People can get a flu vaccine and COVID-19 vaccine at the same visit if they are eligible, and if the timing for each vaccine is right. IIV3s and RIV3 can be administered simultaneously or sequentially with other inactivated vaccines or live vaccines.",
+      "paragraphs": [
+        {
+          "index": 11,
+          "text": "People can get a flu vaccine and COVID-19 vaccine at the same visit if they are eligible, and if the timing for each vaccine is right. IIV3s and RIV3 can be administered simultaneously or sequentially with other inactivated vaccines or live vaccines."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2026-09-01T18:39:08Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/f474246fafb6.json",
+      "htmlSha256": "c2df4d1815028464a222de284b4adcba5d6f28db2f38ff8484a43d9aec290536",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "aa72fb74223f9840c84ab3d8c1d8cc29897078ec4c55b345458a4205e71a1357",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15",
+      "binding": "521b0ba8d2a5b3b6d0c39fad8c1903c08c7d814bec983b94c1123c100eeb54d4",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "covid-personal-call",
+    "claim": {
+      "text": "CDC recommends the current COVID-19 vaccine for people 6 months and older based on individual-based decision-making: a personal decision, made with a health care provider.",
+      "source": {
+        "org": "CDC",
+        "title": "Staying Up to Date with COVID-19 Vaccines",
+        "url": "https://www.cdc.gov/covid/vaccines/stay-up-to-date.html",
+        "accessed": "2026-09-15"
+      },
+      "volatile": true,
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15"
+    },
+    "uses": [
+      {
+        "location": "trees.jordan.nodes.today.choices[0].end",
+        "text": "two-for-one",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.today.choices[0].family",
+        "text": "offer",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.today.choices[0].id",
+        "text": "today.offer-covid",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.today.choices[0].label",
+        "text": "Want a COVID-19 vaccine too? It's your call, and both fit in one visit.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.today.choices[0].note",
+        "text": "Offering both in one visit saved her a second trip.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.today.choices[0].reply",
+        "text": "One visit, two arms, zero extra bus trips. Sure.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.today.choices[1].end",
+        "text": "lunch-special",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.today.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.today.choices[1].id",
+        "text": "today.offer-covid",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.today.choices[1].label",
+        "text": "Want a COVID-19 vaccine too? It's your call, and both fit one visit.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.today.choices[1].note",
+        "text": "Offering both in one visit saved him a second lunch break.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.today.choices[1].reply",
+        "text": "Two arms, one sit, one sandwich. Sure.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.today.choices[1].end",
+        "text": "full-service",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.today.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.today.choices[1].id",
+        "text": "today.offer-covid",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.today.choices[1].label",
+        "text": "Want a COVID-19 vaccine too? It's your call, and both fit one visit.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.today.choices[1].note",
+        "text": "Offering both in one visit saved him a second trip he'd never make.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.today.choices[1].reply",
+        "text": "One visit. I'll take it. There is no second trip in my calendar.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.today.choices[1].end",
+        "text": "double-tuesday",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.today.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.today.choices[1].id",
+        "text": "today.offer-covid",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.today.choices[1].label",
+        "text": "Want a COVID-19 vaccine too? It's your call, and both fit one visit.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.today.choices[1].note",
+        "text": "Offering both in one visit saved him a second Tuesday.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.today.choices[1].reply",
+        "text": "Both. One trip. The system approves.",
+        "claims": [
+          "covid-personal-call",
+          "same-visit"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/covid/hcp/vaccine-considerations/index.html",
+      "originalUrl": "https://www.cdc.gov/covid/vaccines/stay-up-to-date.html",
+      "passage": "This page has been updated to reflect current FDA regulatory information for the 2026-2027 COVID-19 vaccines, including approved products and asterisks indicating where recommendations for use are off-label, formulation, age and risk indications, dosage, and contraindications.\nAs with all medical decision making between patients and their healthcare providers, all patients should discuss the benefits and risks of COVID-19 vaccination to make informed and personalized decisions about vaccination.\nLast updated September 23, 2025\nA 2026-2027 COVID-19 vaccine is recommended for all adults ages 18 years and older in the United States for the prevention of COVID-19.\nA 2026-2027 COVID-19 vaccine is also recommended for all children ages 6 months–17 years with moderate to severe immunocompromise; for all other children, a COVID-19 vaccine is recommended through shared clinical decision-making.",
+      "paragraphs": [
+        {
+          "index": 2,
+          "text": "This page has been updated to reflect current FDA regulatory information for the 2026-2027 COVID-19 vaccines, including approved products and asterisks indicating where recommendations for use are off-label, formulation, age and risk indications, dosage, and contraindications."
+        },
+        {
+          "index": 3,
+          "text": "As with all medical decision making between patients and their healthcare providers, all patients should discuss the benefits and risks of COVID-19 vaccination to make informed and personalized decisions about vaccination."
+        },
+        {
+          "index": 8,
+          "text": "Last updated September 23, 2025"
+        },
+        {
+          "index": 9,
+          "text": "A 2026-2027 COVID-19 vaccine is recommended for all adults ages 18 years and older in the United States for the prevention of COVID-19."
+        },
+        {
+          "index": 10,
+          "text": "A 2026-2027 COVID-19 vaccine is also recommended for all children ages 6 months–17 years with moderate to severe immunocompromise; for all other children, a COVID-19 vaccine is recommended through shared clinical decision-making."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2026-09-23T19:38:23Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/covid-current.json",
+      "htmlSha256": "92208127c7979acc6999188fffe70fac7bfd2ff30881a438db9d029ed9250329",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Current CDC destination differs and guidance needs Kevin review."
+    },
+    "binding": "7fe10c05f43c246c041ae80ace17f21cdbcb524ac4478a7860af82da582d1ef0",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15",
+      "binding": "8f09cdb1dfc0aa6d223594d5cfba4c695b835ea01070a1f8f2f1bf6c292c0634",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "unverified passage",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "tdap-ten-years",
+    "claim": {
+      "text": "Adults need a Td or Tdap booster every 10 years to stay protected against tetanus and diphtheria.",
+      "protects": true,
+      "source": {
+        "org": "CDC",
+        "title": "Diphtheria, Tetanus, and Pertussis Vaccination: Information for Health Care Providers",
+        "url": "https://www.cdc.gov/vaccines/hcp/by-disease/dtap-tdap-td.html",
+        "accessed": "2026-09-15"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15"
+    },
+    "uses": [
+      {
+        "location": "trees.jordan.nodes.today.choices[1].end",
+        "text": "rake-insurance",
+        "claims": [
+          "tdap-ten-years"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.today.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "tdap-ten-years"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.today.choices[1].id",
+        "text": "today.offer-tdap",
+        "claims": [
+          "tdap-ten-years"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.today.choices[1].label",
+        "text": "Your record says your last tetanus shot was 2014. You're due.",
+        "claims": [
+          "tdap-ten-years"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.today.choices[1].note",
+        "text": "Checking her record turned one shot into the one she didn't know she needed.",
+        "claims": [
+          "tdap-ten-years"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.today.choices[1].reply",
+        "text": "2014. The rake. I stepped on a rake like a cartoon. Yes, do that one too.",
+        "claims": [
+          "tdap-ten-years"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[4].family",
+        "text": "offer",
+        "claims": [
+          "tdap-ten-years"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[4].id",
+        "text": "concern.offer-tdap",
+        "claims": [
+          "tdap-ten-years"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[4].label",
+        "text": "Twelve years? Adults need a tetanus booster every ten, so you're due.",
+        "claims": [
+          "tdap-ten-years"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[4].next",
+        "text": "concern",
+        "claims": [
+          "tdap-ten-years"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[4].note",
+        "text": "Checking her last tetanus shot found the booster she was due for.",
+        "claims": [
+          "tdap-ten-years"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[4].reply",
+        "text": "The rusty fence strikes again. Okay. Put it on the list.",
+        "claims": [
+          "tdap-ten-years"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[4].requires[0]",
+        "text": "records",
+        "claims": [
+          "tdap-ten-years"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[4].set[0]",
+        "text": "raised",
+        "claims": [
+          "tdap-ten-years"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[4].set[1]",
+        "text": "tdap",
+        "claims": [
+          "tdap-ten-years"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/vaccines/hcp/by-disease/dtap-tdap-td.html",
+      "originalUrl": "https://www.cdc.gov/vaccines/hcp/by-disease/dtap-tdap-td.html",
+      "passage": "After receipt of Tdap, patients should continue to receive Td or Tdap for routine booster immunization every 10 years.",
+      "paragraphs": [
+        {
+          "index": 115,
+          "text": "After receipt of Tdap, patients should continue to receive Td or Tdap for routine booster immunization every 10 years."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2026-06-24T14:01:36Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/1afc58cb2e7e.json",
+      "htmlSha256": "79846a76eb9fdb6240be1b31e39d1120da980f6fd9f83a3993f41efc76843991",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "1ab8d4e4ac7ed4e09643218b6b4bb431e99b8fcf5235bf0e57c30f8206dca4c5",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15",
+      "binding": "874541760a590ec73ca935afa352eecf83baadf288686d7e3f9417b8f29ef47a",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "recommendation-predicts",
+    "claim": {
+      "text": "A health care professional's recommendation is the strongest predictor of whether a patient gets vaccinated.",
+      "source": {
+        "org": "CDC",
+        "title": "Adult Immunization Standards",
+        "url": "https://www.cdc.gov/vaccines-adults/hcp/imz-standards/index.html",
+        "accessed": "2026-09-15"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15"
+    },
+    "uses": [
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].family",
+        "text": "offer",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].id",
+        "text": "permission.offer-recommend",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].label",
+        "text": "I'd recommend it today. It takes two weeks to kick in.",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].next",
+        "text": "hesitant",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].note",
+        "text": "A clear recommendation is the strongest predictor of a yes, and you made one.",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].reply[0].text",
+        "text": "Two weeks, so today counts. But the 14 is in nine minutes.",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].reply[0].when[0]",
+        "text": "bus",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].reply[1].text",
+        "text": "Two weeks, so today counts. But my bus is in ten minutes.",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].set[0]",
+        "text": "raised",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.permission.choices[2].set[1]",
+        "text": "bus",
+        "claims": [
+          "flu-two-weeks",
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.permission.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.permission.choices[1].id",
+        "text": "permission.offer-recommend",
+        "claims": [
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.permission.choices[1].label",
+        "text": "Your flu shot. I'd recommend it, and it fits the wait.",
+        "claims": [
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.permission.choices[1].next",
+        "text": "healthy",
+        "claims": [
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.permission.choices[1].note",
+        "text": "A clear recommendation is the strongest predictor of a yes, and you made one.",
+        "claims": [
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.permission.choices[1].reply",
+        "text": "I appreciate the hustle. But I'm twenty-eight. I never get sick.",
+        "claims": [
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.permission.choices[1].set[0]",
+        "text": "raised",
+        "claims": [
+          "recommendation-predicts"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.hesitant.choices[3].family",
+        "text": "offer",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.hesitant.choices[3].id",
+        "text": "hesitant.offer-recommend",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.hesitant.choices[3].label",
+        "text": "I'd still recommend it. It takes two weeks to kick in.",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.hesitant.choices[3].next",
+        "text": "hesitant",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.hesitant.choices[3].note",
+        "text": "A clear recommendation is the strongest predictor of a yes, and you made one.",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.hesitant.choices[3].reply",
+        "text": "Two weeks. Fourteen days of rides. You're making a case.",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.hesitant.choices[3].requires[0]",
+        "text": "!recommended",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.hesitant.choices[3].set[0]",
+        "text": "recommended",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.permission.choices[2].family",
+        "text": "offer",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.permission.choices[2].id",
+        "text": "permission.offer-recommend",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.permission.choices[2].label",
+        "text": "I'd recommend your flu shot today. It takes two weeks to kick in.",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.permission.choices[2].next",
+        "text": "hesitant",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.permission.choices[2].note",
+        "text": "A clear recommendation is the strongest predictor of a yes, and you made one.",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.permission.choices[2].reply",
+        "text": "Two weeks. That's a lot of rides. I don't really get sick, though.",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.permission.choices[2].set[0]",
+        "text": "raised",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.permission.choices[2].set[1]",
+        "text": "recommended",
+        "claims": [
+          "recommendation-predicts",
+          "flu-two-weeks"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/vaccines-adults/hcp/imz-standards/index.html",
+      "originalUrl": "https://www.cdc.gov/vaccines-adults/hcp/imz-standards/index.html",
+      "passage": "A health care professional's recommendation is the strongest predictor of whether a patient gets vaccinated.",
+      "paragraphs": [
+        {
+          "index": 7,
+          "text": "A health care professional's recommendation is the strongest predictor of whether a patient gets vaccinated."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2026-09-29T08:43:28Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/93b1589f6fb4.json",
+      "htmlSha256": "e6c2cc218ee8fa3cae772785978365cc32ff82893195bc02a63d953a9e3aea45",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "32f7202c32b26458d92d4a0940277eb2f6a552ea2a5a1fb67fbe39e462a39c07",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15",
+      "binding": "819a3aa01728c36779342b269e50d888fb0062864a73cb7d501c343985a6d1d2",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "ve-good-match",
+    "claim": {
+      "text": "In seasons when the vaccine matches the circulating flu viruses well, flu vaccination reduces the risk of a flu-related doctor's visit by 40 to 60 percent. How well it works varies from season to season.",
+      "protects": true,
+      "source": {
+        "org": "CDC",
+        "title": "Benefits of Flu Vaccination",
+        "url": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
+        "accessed": "2026-09-15"
+      },
+      "volatile": true,
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15"
+    },
+    "uses": [
+      {
+        "location": "trees.jordan.nodes.doubt.choices[3].family",
+        "text": "offer",
+        "claims": [
+          "ve-good-match"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[3].id",
+        "text": "doubt.offer-numbers",
+        "claims": [
+          "ve-good-match"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[3].label",
+        "text": "In a good-match year it cuts flu doctor visits by 40 to 60 percent.",
+        "claims": [
+          "ve-good-match"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[3].next",
+        "text": "open",
+        "claims": [
+          "ve-good-match"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[3].note",
+        "text": "A real number answered \"does it work\" better than reassurance would.",
+        "claims": [
+          "ve-good-match"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[3].reply",
+        "text": "Forty to sixty. That's better odds than the 14 showing up.",
+        "claims": [
+          "ve-good-match"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[3].set[0]",
+        "text": "convinced",
+        "claims": [
+          "ve-good-match"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
+      "originalUrl": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
+      "passage": "Flu vaccines vary in how well they work each season. During seasons when the influenza viruses used in flu vaccine production are similar to those that are spreading, studies show flu vaccination reduced the risk of a flu-related doctor's visit by 40-60%.",
+      "paragraphs": [
+        {
+          "index": 9,
+          "text": "Flu vaccines vary in how well they work each season. During seasons when the influenza viruses used in flu vaccine production are similar to those that are spreading, studies show flu vaccination reduced the risk of a flu-related doctor's visit by 40-60%."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2026-07-15T09:11:48Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/c355342d0e0e.json",
+      "htmlSha256": "6af091d263dd2f2114c47b8c11f2f681f3656c98c52fb0bd9859b180a00b0291",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "d587ed9883e090101bf0c35113031c8f14c718d1e0e2daa0eeb03fc4dd8a321f",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15",
+      "binding": "1540040f6ac93da7b6e2f529ce704c5b81aec38f239c64a32c20df84bf0b0646",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "milder-illness",
+    "claim": {
+      "text": "Among people hospitalized with flu, those who got a flu vaccine were less likely to need ICU admission, a ventilator or organ support.",
+      "protects": true,
+      "source": {
+        "org": "CDC",
+        "title": "Benefits of Flu Vaccination",
+        "url": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
+        "accessed": "2026-09-15"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15"
+    },
+    "uses": [
+      {
+        "location": "trees.jordan.nodes.doubt.choices[4].family",
+        "text": "offer",
+        "claims": [
+          "milder-illness"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[4].id",
+        "text": "doubt.offer-icu",
+        "claims": [
+          "milder-illness"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[4].label",
+        "text": "If they still end up hospitalized, they're less likely to need the ICU.",
+        "claims": [
+          "milder-illness"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[4].next",
+        "text": "open",
+        "claims": [
+          "milder-illness"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[4].note",
+        "text": "Showing it helps even when it doesn't fully work took the doubt apart.",
+        "claims": [
+          "milder-illness"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[4].reply",
+        "text": "Okay. Less ICU is a strong selling point.",
+        "claims": [
+          "milder-illness"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[4].set[0]",
+        "text": "convinced",
+        "claims": [
+          "milder-illness"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
+      "originalUrl": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
+      "passage": "Studies of people hospitalized with flu show people who had been vaccinated against flu had less severe illness.\nA 2024 study of adults hospitalized with acute respiratory illness showed that for people who do get hospitalized with flu despite being vaccinated against flu, flu vaccination reduced severe in-hospital outcomes.\nAmong people who were hospitalized with flu, people who got a flu vaccine were less likely to need ICU admission, invasive mechanical ventilation, vasopressor use, and organ support.",
+      "paragraphs": [
+        {
+          "index": 19,
+          "text": "Studies of people hospitalized with flu show people who had been vaccinated against flu had less severe illness."
+        },
+        {
+          "index": 20,
+          "text": "A 2024 study of adults hospitalized with acute respiratory illness showed that for people who do get hospitalized with flu despite being vaccinated against flu, flu vaccination reduced severe in-hospital outcomes."
+        },
+        {
+          "index": 21,
+          "text": "Among people who were hospitalized with flu, people who got a flu vaccine were less likely to need ICU admission, invasive mechanical ventilation, vasopressor use, and organ support."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2026-07-15T09:11:48Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/c355342d0e0e.json",
+      "htmlSha256": "6af091d263dd2f2114c47b8c11f2f681f3656c98c52fb0bd9859b180a00b0291",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "0d76b94bb1612897d8448fcac46661db8239b73534112effec904ea8df9859c8",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15",
+      "binding": "6ec715679f2c69ebe52cb7556678af608bf5ec28c5cf9e617011e823801f82f6",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "other-viruses",
+    "claim": {
+      "text": "Getting sick soon after a flu shot can mean exposure before protection had its two weeks to build, or another respiratory virus, such as a cold virus or SARS-CoV-2.",
+      "source": {
+        "org": "CDC",
+        "title": "Misconceptions About Seasonal Flu and Flu Vaccines",
+        "url": "https://www.cdc.gov/flu/prevention/misconceptions.html",
+        "accessed": "2026-09-15"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15"
+    },
+    "uses": [
+      {
+        "location": "trees.jordan.nodes.doubt.choices[2].family",
+        "text": "offer",
+        "claims": [
+          "flu-two-weeks",
+          "other-viruses"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[2].id",
+        "text": "doubt.offer-window",
+        "claims": [
+          "flu-two-weeks",
+          "other-viruses"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[2].label",
+        "text": "Two weeks to kick in, so he may have caught it first. Or it was a cold.",
+        "claims": [
+          "flu-two-weeks",
+          "other-viruses"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[2].next",
+        "text": "open",
+        "claims": [
+          "flu-two-weeks",
+          "other-viruses"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[2].note",
+        "text": "Matching the facts to her cousin's story answered the doubt head on.",
+        "claims": [
+          "flu-two-weeks",
+          "other-viruses"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[2].reply",
+        "text": "So the plague was a cold. That tracks, honestly.",
+        "claims": [
+          "flu-two-weeks",
+          "other-viruses"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[2].requires[0]",
+        "text": "cousin-when",
+        "claims": [
+          "flu-two-weeks",
+          "other-viruses"
+        ]
+      },
+      {
+        "location": "trees.jordan.nodes.doubt.choices[2].set[0]",
+        "text": "convinced",
+        "claims": [
+          "flu-two-weeks",
+          "other-viruses"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/flu/prevention/misconceptions.html",
+      "originalUrl": "https://www.cdc.gov/flu/prevention/misconceptions.html",
+      "passage": "Someone can get sick with another respiratory virus besides influenza virus, such as rhinoviruses or SARS-CoV-2 (the virus that causes COVID-19). Other respiratory viruses can cause symptoms similar to flu, and they can also spread and cause illness during flu season. Flu vaccines only protect against flu, not other illnesses.\nSomeone can be exposed to influenza viruses shortly before getting vaccinated or during the two-week period after vaccination that it takes the body to develop immune protection. This exposure may result in a person becoming sick with flu before protection from vaccination takes effect.",
+      "paragraphs": [
+        {
+          "index": 16,
+          "text": "Someone can get sick with another respiratory virus besides influenza virus, such as rhinoviruses or SARS-CoV-2 (the virus that causes COVID-19). Other respiratory viruses can cause symptoms similar to flu, and they can also spread and cause illness during flu season. Flu vaccines only protect against flu, not other illnesses."
+        },
+        {
+          "index": 17,
+          "text": "Someone can be exposed to influenza viruses shortly before getting vaccinated or during the two-week period after vaccination that it takes the body to develop immune protection. This exposure may result in a person becoming sick with flu before protection from vaccination takes effect."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2026-05-18T10:40:03Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/0e9ee31d401f.json",
+      "htmlSha256": "43f39bff3ed5f002cfab0ed65568571cdc21d3fa3d6da39715d93a0ad159f1a3",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "ddadba0b8430647fc83c681fb277a9b4a3a2d0a6f0182c522563f3e252e81303",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-15",
+      "binding": "13d47b6bffe1adb9b66c1d78c3ae631e16717d66d7c226219444bd6802fac92d",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "flu-protects-others",
+    "claim": {
+      "text": "Getting a flu vaccine may also help protect the people around you who are more likely to get very sick with flu, like babies and young children, older adults and pregnant women.",
+      "protects": true,
+      "source": {
+        "org": "CDC",
+        "title": "Benefits of Flu Vaccination",
+        "url": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
+        "accessed": "2026-09-16"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16"
+    },
+    "uses": [
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].id",
+        "text": "healthy.offer-facts",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].label",
+        "text": "Anyone can get very sick from flu. Your shot may help protect the kids.",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].next",
+        "text": "open",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].note",
+        "text": "Plain facts, with permission, answered the thing he actually believed.",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].reply[0].text",
+        "text": "Fine. Fair. I'm still a little annoyed about it.",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].reply[0].when[0]",
+        "text": "lectured",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].reply[1].text",
+        "text": "So the shot keeps me in the toddler room and the glitter contained. Okay.",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].reply[1].when[0]",
+        "text": "why",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].reply[2].text",
+        "text": "The kids. Okay. I hadn't thought about it that way.",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].requires[0]",
+        "text": "permission",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].set[0]",
+        "text": "eased",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[2].family",
+        "text": "offer",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[2].id",
+        "text": "healthy.offer-now",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[2].label",
+        "text": "Your shot may help protect the kids, and it fits in the wait. Now?",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[2].next",
+        "text": "today",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[2].note",
+        "text": "Turning the shot toward the kids answered the thing he actually believed.",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[2].reply",
+        "text": "Huh. So it's not really about me. It's about the toddler room. Okay. Now.",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[2].requires[0]",
+        "text": "permission",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[2].set[0]",
+        "text": "eased",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[2].set[1]",
+        "text": "today",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[3].family",
+        "text": "offer",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[3].id",
+        "text": "concern.offer-protect",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[3].label",
+        "text": "Your flu shot may help protect the people around you, like your mom.",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[3].next",
+        "text": "open",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[3].note",
+        "text": "The fact that protects her, shared with permission, changed who the shot was for.",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[3].reply[0].text",
+        "text": "Fine. Fair. I didn't love hearing it the first time.",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[3].reply[0].when[0]",
+        "text": "lectured",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[3].reply[1].text",
+        "text": "So it's not about me. It's about keeping her out of the butterscotch cab. Okay.",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[3].reply[1].when[0]",
+        "text": "why",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[3].reply[2].text",
+        "text": "So I'm not the patient here. I'm the seatbelt. Okay.",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[3].requires[0]",
+        "text": "permission",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[3].set[0]",
+        "text": "raised",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[3].set[1]",
+        "text": "eased",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[4].family",
+        "text": "offer",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[4].id",
+        "text": "concern.well-actually",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[4].label",
+        "text": "Well, actually, your shot may help protect her too.",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[4].next",
+        "text": "concern",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[4].note",
+        "text": "An unasked correction put him on the defensive.",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[4].reply",
+        "text": "Okay. I didn't ask for the guilt, but I'll take the fact.",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[4].requires[0]",
+        "text": "!permission",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[4].requires[1]",
+        "text": "!lectured",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[4].set[0]",
+        "text": "raised",
+        "claims": [
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.concern.choices[4].set[1]",
+        "text": "lectured",
+        "claims": [
+          "flu-protects-others"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
+      "originalUrl": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
+      "passage": "Getting yourself vaccinated may also protect people around you, including people who are more likely to get very sick with flu, like babies and young children, older adults, pregnant women, and people with certain chronic health conditions. However, it is difficult to prove that vaccination protects people around you (sometimes referred to as \"herd protection,\" \"community protection,\" or \"indirect effects\"). While it seems logical to assume that a person who is less likely to get flu will also be less likely to spread flu, study results have varied by study design, setting, population, and vaccine type.",
+      "paragraphs": [
+        {
+          "index": 50,
+          "text": "Getting yourself vaccinated may also protect people around you, including people who are more likely to get very sick with flu, like babies and young children, older adults, pregnant women, and people with certain chronic health conditions. However, it is difficult to prove that vaccination protects people around you (sometimes referred to as \"herd protection,\" \"community protection,\" or \"indirect effects\"). While it seems logical to assume that a person who is less likely to get flu will also be less likely to spread flu, study results have varied by study design, setting, population, and vaccine type."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2026-07-15T09:11:48Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/c355342d0e0e.json",
+      "htmlSha256": "6af091d263dd2f2114c47b8c11f2f681f3656c98c52fb0bd9859b180a00b0291",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "f1d12ca290f8c39f6df3635d8e47415312bc0a39e28ee80c6a94d496a75411cf",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16",
+      "binding": "7ebe923e33cb3b3debfbee83c8a781b19f297a587c4c04fc3af7f966db542a96",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "flu-healthy-people",
+    "claim": {
+      "text": "Anyone can get flu, including healthy people, and serious problems from flu can happen to anyone.",
+      "source": {
+        "org": "CDC",
+        "title": "About Influenza",
+        "url": "https://www.cdc.gov/flu/about/index.html",
+        "accessed": "2026-09-16"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16"
+    },
+    "uses": [
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].id",
+        "text": "healthy.offer-facts",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].label",
+        "text": "Anyone can get very sick from flu. Your shot may help protect the kids.",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].next",
+        "text": "open",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].note",
+        "text": "Plain facts, with permission, answered the thing he actually believed.",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].reply[0].text",
+        "text": "Fine. Fair. I'm still a little annoyed about it.",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].reply[0].when[0]",
+        "text": "lectured",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].reply[1].text",
+        "text": "So the shot keeps me in the toddler room and the glitter contained. Okay.",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].reply[1].when[0]",
+        "text": "why",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].reply[2].text",
+        "text": "The kids. Okay. I hadn't thought about it that way.",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].requires[0]",
+        "text": "permission",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[1].set[0]",
+        "text": "eased",
+        "claims": [
+          "flu-healthy-people",
+          "flu-protects-others"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[3].family",
+        "text": "offer",
+        "claims": [
+          "flu-healthy-people"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[3].id",
+        "text": "healthy.well-actually",
+        "claims": [
+          "flu-healthy-people"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[3].label",
+        "text": "Well, actually, anyone can get very sick from flu. Even healthy people.",
+        "claims": [
+          "flu-healthy-people"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[3].next",
+        "text": "healthy",
+        "claims": [
+          "flu-healthy-people"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[3].note",
+        "text": "An unasked correction put him on the defensive.",
+        "claims": [
+          "flu-healthy-people"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[3].reply",
+        "text": "Cool. Love being corrected before lunch.",
+        "claims": [
+          "flu-healthy-people"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[3].requires[0]",
+        "text": "!permission",
+        "claims": [
+          "flu-healthy-people"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[3].requires[1]",
+        "text": "!lectured",
+        "claims": [
+          "flu-healthy-people"
+        ]
+      },
+      {
+        "location": "trees.marcus.nodes.healthy.choices[3].set[0]",
+        "text": "lectured",
+        "claims": [
+          "flu-healthy-people"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/flu/about/index.html",
+      "originalUrl": "https://www.cdc.gov/flu/about/index.html",
+      "passage": "Anyone can get flu (including healthy people), and serious problems related to flu can happen to anyone, but some people are at higher risk of developing serious flu-related complications if they get sick. This includes people 65 years and older, people of any age with certain chronic medical conditions (such as asthma, diabetes, or heart disease), people with a body mass index (BMI) of 40 kg/m2 or higher, pregnant women, and children younger than 5 years, especially those younger than 2 years.",
+      "paragraphs": [
+        {
+          "index": 31,
+          "text": "Anyone can get flu (including healthy people), and serious problems related to flu can happen to anyone, but some people are at higher risk of developing serious flu-related complications if they get sick. This includes people 65 years and older, people of any age with certain chronic medical conditions (such as asthma, diabetes, or heart disease), people with a body mass index (BMI) of 40 kg/m2 or higher, pregnant women, and children younger than 5 years, especially those younger than 2 years."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2026-06-11T08:56:36Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/e880bf3542c7.json",
+      "htmlSha256": "986283678f7789b3889cfb38dbc7c50dedf6bd22c81cd41c6d5c9d88d4011e03",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "654248fef86c7c50433d5a842b165d01b4697e3d10b96997ce8c2b6c095fe2bf",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16",
+      "binding": "cb56354cd4de4643c274d63d7f79412dd577d19c7aa6d3e0dcce9f2c05f3ca85",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "baby-two-weeks",
+    "claim": {
+      "text": "Anyone who needs a whooping cough or flu vaccine should get it at least two weeks before meeting a new baby.",
+      "protects": true,
+      "source": {
+        "org": "CDC",
+        "title": "Vaccines for Family and Caregivers",
+        "url": "https://www.cdc.gov/vaccines-pregnancy/about/vaccines-family-caregivers.html",
+        "accessed": "2026-09-16"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16"
+    },
+    "uses": [
+      {
+        "location": "trees.priya.nodes.aunt.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.aunt.choices[1].id",
+        "text": "aunt.offer-two-weeks",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.aunt.choices[1].label",
+        "text": "At least two weeks before the baby: flu, and Tdap if you haven't had it.",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.aunt.choices[1].next",
+        "text": "hesitant",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.aunt.choices[1].note",
+        "text": "The two-week rule gave her a reason and a deadline.",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.aunt.choices[1].reply",
+        "text": "Two weeks. November minus two weeks is soon. But wait, aren't shots my sister's thing?",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.aunt.choices[1].set[0]",
+        "text": "raised",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].family",
+        "text": "offer",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].id",
+        "text": "concern.offer-facts",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].label",
+        "text": "At least two weeks before the baby: flu, and Tdap if you haven't had it.",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].next",
+        "text": "open",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].note",
+        "text": "Plain facts, with permission, answered what she was actually unsure about.",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].reply[0].text",
+        "text": "Okay. Fair. I'm still a little embarrassed.",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].reply[0].when[0]",
+        "text": "lectured",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].reply[1].text",
+        "text": "So the shots keep me off the list. Okay. I'm in.",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].reply[1].when[0]",
+        "text": "why",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].reply[2].text",
+        "text": "So it's not just her job. It's the whole family's. Okay, I'm in.",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].requires[0]",
+        "text": "permission",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].set[0]",
+        "text": "raised",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].set[1]",
+        "text": "eased",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.sister.choices[2].family",
+        "text": "offer",
+        "claims": [
+          "baby-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.sister.choices[2].id",
+        "text": "sister.offer-aunt",
+        "claims": [
+          "baby-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.sister.choices[2].label",
+        "text": "Fun aunts get flu shots at least two weeks before the baby. Want yours?",
+        "claims": [
+          "baby-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.sister.choices[2].next",
+        "text": "hesitant",
+        "claims": [
+          "baby-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.sister.choices[2].reply",
+        "text": "Wait, me? I'm not the one having the baby.",
+        "claims": [
+          "baby-two-weeks"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.sister.choices[2].set[0]",
+        "text": "raised",
+        "claims": [
+          "baby-two-weeks"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/vaccines-pregnancy/about/vaccines-family-caregivers.html",
+      "originalUrl": "https://www.cdc.gov/vaccines-pregnancy/about/vaccines-family-caregivers.html",
+      "passage": "Anyone who needs the whooping cough or flu vaccines should get them at least two weeks before meeting the baby because it takes about two weeks to develop antibodies after vaccination.",
+      "paragraphs": [
+        {
+          "index": 23,
+          "text": "Anyone who needs the whooping cough or flu vaccines should get them at least two weeks before meeting the baby because it takes about two weeks to develop antibodies after vaccination."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2024-11-27T12:17:28Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/afed3ce72ec9.json",
+      "htmlSha256": "1c30e5d1a5704e0ef91c0bcfc6e8773a395074b0b808529fe3aa250c1a6abcf0",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "f23d5d5f660f7585f02be2834a560a8773cc6a2b95fd733cf642c9d9f804dabe",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16",
+      "binding": "f65ea7731ab4ee7ef56cda28cc2fb2bf69b1a786db6282aa6bf94a60775a752c",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "tdap-around-baby",
+    "claim": {
+      "text": "Preteens, teens and adults who will be around a new baby and have not already had a whooping cough booster, called Tdap, should get one.",
+      "source": {
+        "org": "CDC",
+        "title": "Vaccines for Family and Caregivers",
+        "url": "https://www.cdc.gov/vaccines-pregnancy/about/vaccines-family-caregivers.html",
+        "accessed": "2026-09-16"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16"
+    },
+    "uses": [
+      {
+        "location": "trees.priya.nodes.aunt.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.aunt.choices[1].id",
+        "text": "aunt.offer-two-weeks",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.aunt.choices[1].label",
+        "text": "At least two weeks before the baby: flu, and Tdap if you haven't had it.",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.aunt.choices[1].next",
+        "text": "hesitant",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.aunt.choices[1].note",
+        "text": "The two-week rule gave her a reason and a deadline.",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.aunt.choices[1].reply",
+        "text": "Two weeks. November minus two weeks is soon. But wait, aren't shots my sister's thing?",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.aunt.choices[1].set[0]",
+        "text": "raised",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].family",
+        "text": "offer",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].id",
+        "text": "concern.offer-facts",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].label",
+        "text": "At least two weeks before the baby: flu, and Tdap if you haven't had it.",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].next",
+        "text": "open",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].note",
+        "text": "Plain facts, with permission, answered what she was actually unsure about.",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].reply[0].text",
+        "text": "Okay. Fair. I'm still a little embarrassed.",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].reply[0].when[0]",
+        "text": "lectured",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].reply[1].text",
+        "text": "So the shots keep me off the list. Okay. I'm in.",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].reply[1].when[0]",
+        "text": "why",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].reply[2].text",
+        "text": "So it's not just her job. It's the whole family's. Okay, I'm in.",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].requires[0]",
+        "text": "permission",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].set[0]",
+        "text": "raised",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[3].set[1]",
+        "text": "eased",
+        "claims": [
+          "baby-two-weeks",
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[5].family",
+        "text": "offer",
+        "claims": [
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[5].id",
+        "text": "concern.well-actually",
+        "claims": [
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[5].label",
+        "text": "Well, actually, adults near a new baby should get Tdap if they haven't.",
+        "claims": [
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[5].next",
+        "text": "concern",
+        "claims": [
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[5].note",
+        "text": "An unasked correction put her on the defensive.",
+        "claims": [
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[5].reply",
+        "text": "Okay. I've been in town four days and I'm already in trouble.",
+        "claims": [
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[5].requires[0]",
+        "text": "!permission",
+        "claims": [
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[5].requires[1]",
+        "text": "!lectured",
+        "claims": [
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[5].set[0]",
+        "text": "raised",
+        "claims": [
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.concern.choices[5].set[1]",
+        "text": "lectured",
+        "claims": [
+          "tdap-around-baby"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[1].end",
+        "text": "fully-loaded",
+        "claims": [
+          "tdap-around-baby",
+          "most-same-visit"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "tdap-around-baby",
+          "most-same-visit"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[1].id",
+        "text": "today.offer-tdap",
+        "claims": [
+          "tdap-around-baby",
+          "most-same-visit"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[1].label",
+        "text": "Want Tdap too, if you haven't had one? Most shots can share a visit.",
+        "claims": [
+          "tdap-around-baby",
+          "most-same-visit"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[1].note",
+        "text": "Offering the booster too covered everything the baby needs from her.",
+        "claims": [
+          "tdap-around-baby",
+          "most-same-visit"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[1].reply",
+        "text": "Both arms. The fun aunt is fully loaded.",
+        "claims": [
+          "tdap-around-baby",
+          "most-same-visit"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[1].requires[0]",
+        "text": "!tdap",
+        "claims": [
+          "tdap-around-baby",
+          "most-same-visit"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/vaccines-pregnancy/about/vaccines-family-caregivers.html",
+      "originalUrl": "https://www.cdc.gov/vaccines-pregnancy/about/vaccines-family-caregivers.html",
+      "passage": "Preteens, teens, and adults who will be around the baby and have not already had a whooping cough booster shot (called Tdap vaccine) should get vaccinated.\nIf a teen or adult will be around the baby and has already had a Tdap vaccine, they do not need to get vaccinated again.",
+      "paragraphs": [
+        {
+          "index": 16,
+          "text": "Preteens, teens, and adults who will be around the baby and have not already had a whooping cough booster shot (called Tdap vaccine) should get vaccinated."
+        },
+        {
+          "index": 17,
+          "text": "If a teen or adult will be around the baby and has already had a Tdap vaccine, they do not need to get vaccinated again."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2024-11-27T12:17:28Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/afed3ce72ec9.json",
+      "htmlSha256": "1c30e5d1a5704e0ef91c0bcfc6e8773a395074b0b808529fe3aa250c1a6abcf0",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "67d00341a7e645157b4f1e0ab5b30fb4ff1f5f9d3e542ee847cd94ebf510bf2b",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16",
+      "binding": "53eb30e6bbae69d6dd1ebb6eb5d85513e21ad1984fe544533617464f4f590b91",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "flu-timing",
+    "claim": {
+      "text": "For most people, September and October are good times to get a flu vaccine, and ideally everyone is vaccinated by the end of October.",
+      "source": {
+        "org": "CDC",
+        "title": "Who Needs a Flu Vaccine",
+        "url": "https://www.cdc.gov/flu/vaccines/vaccinations.html",
+        "accessed": "2026-09-16"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16"
+    },
+    "uses": [
+      {
+        "location": "trees.walt.nodes.open.choices[3].family",
+        "text": "offer",
+        "claims": [
+          "flu-timing"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.open.choices[3].id",
+        "text": "open.offer-timing",
+        "claims": [
+          "flu-timing"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.open.choices[3].label",
+        "text": "And October is a good time for a flu shot, by the way.",
+        "claims": [
+          "flu-timing"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.open.choices[3].next",
+        "text": "open",
+        "claims": [
+          "flu-timing"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.open.choices[3].note",
+        "text": "Telling him his timing was right met him where he was proud.",
+        "claims": [
+          "flu-timing"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.open.choices[3].reply",
+        "text": "Of course it is. I've been right for twelve years.",
+        "claims": [
+          "flu-timing"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.open.choices[3].requires[0]",
+        "text": "!timing",
+        "claims": [
+          "flu-timing"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.open.choices[3].set[0]",
+        "text": "timing",
+        "claims": [
+          "flu-timing"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.routine.choices[2].family",
+        "text": "offer",
+        "claims": [
+          "flu-timing"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.routine.choices[2].id",
+        "text": "routine.offer-timing",
+        "claims": [
+          "flu-timing"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.routine.choices[2].label",
+        "text": "First Tuesday in October is a good time for a flu shot, by the way.",
+        "claims": [
+          "flu-timing"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.routine.choices[2].next",
+        "text": "routine",
+        "claims": [
+          "flu-timing"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.routine.choices[2].note",
+        "text": "Telling him his timing was right met him where he was proud.",
+        "claims": [
+          "flu-timing"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.routine.choices[2].reply",
+        "text": "Of course it is. I've been right for twelve years. Tell the sign.",
+        "claims": [
+          "flu-timing"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.routine.choices[2].requires[0]",
+        "text": "!timing",
+        "claims": [
+          "flu-timing"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.routine.choices[2].set[0]",
+        "text": "raised",
+        "claims": [
+          "flu-timing"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.routine.choices[2].set[1]",
+        "text": "timing",
+        "claims": [
+          "flu-timing"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/flu/vaccines/vaccinations.html",
+      "originalUrl": "https://www.cdc.gov/flu/vaccines/vaccinations.html",
+      "passage": "For most people who need only one dose of influenza vaccine for the season, September and October are generally good times to be vaccinated against influenza. Ideally, everyone should be vaccinated by the end of October. Additional considerations concerning the timing of vaccination for certain groups of people include:",
+      "paragraphs": [
+        {
+          "index": 26,
+          "text": "For most people who need only one dose of influenza vaccine for the season, September and October are generally good times to be vaccinated against influenza. Ideally, everyone should be vaccinated by the end of October. Additional considerations concerning the timing of vaccination for certain groups of people include:"
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2025-11-20T10:23:17Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/316b735189f4.json",
+      "htmlSha256": "9948a265f24ba9f086dc8a6094713b759ea5cad71fa766072c0a6f34b1fed17b",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "326a13cf1ca417ec92bf27f6c49e99826263cb39ccaad1c2290086500cb36cdb",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16",
+      "binding": "d952f6d96f620358c0c7edabfe25dc653e07ef7ab1b0e4e8f14528a78533fb63",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "most-same-visit",
+    "claim": {
+      "text": "While there are some exceptions, most vaccines can be given at the same visit.",
+      "source": {
+        "org": "CDC",
+        "title": "Getting a Flu Vaccine and Other Recommended Vaccines at the Same Time",
+        "url": "https://www.cdc.gov/flu/vaccines/coadministration.html",
+        "accessed": "2026-09-16"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16"
+    },
+    "uses": [
+      {
+        "location": "trees.priya.nodes.today.choices[0].end",
+        "text": "fully-loaded",
+        "claims": [
+          "most-same-visit"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[0].family",
+        "text": "close",
+        "claims": [
+          "most-same-visit"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[0].id",
+        "text": "today.close-both",
+        "claims": [
+          "most-same-visit"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[0].label",
+        "text": "Flu and Tdap, then. Grab the chair by the window.",
+        "claims": [
+          "most-same-visit"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[0].reply",
+        "text": "Both arms. The fun aunt is fully loaded.",
+        "claims": [
+          "most-same-visit"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[0].requires[0]",
+        "text": "tdap",
+        "claims": [
+          "most-same-visit"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[1].end",
+        "text": "fully-loaded",
+        "claims": [
+          "tdap-around-baby",
+          "most-same-visit"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "tdap-around-baby",
+          "most-same-visit"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[1].id",
+        "text": "today.offer-tdap",
+        "claims": [
+          "tdap-around-baby",
+          "most-same-visit"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[1].label",
+        "text": "Want Tdap too, if you haven't had one? Most shots can share a visit.",
+        "claims": [
+          "tdap-around-baby",
+          "most-same-visit"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[1].note",
+        "text": "Offering the booster too covered everything the baby needs from her.",
+        "claims": [
+          "tdap-around-baby",
+          "most-same-visit"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[1].reply",
+        "text": "Both arms. The fun aunt is fully loaded.",
+        "claims": [
+          "tdap-around-baby",
+          "most-same-visit"
+        ]
+      },
+      {
+        "location": "trees.priya.nodes.today.choices[1].requires[0]",
+        "text": "!tdap",
+        "claims": [
+          "tdap-around-baby",
+          "most-same-visit"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/flu/vaccines/coadministration.html",
+      "originalUrl": "https://www.cdc.gov/flu/vaccines/coadministration.html",
+      "passage": "Coadministration or simultaneous administration of vaccines refers to giving or getting more than one vaccine during a visit. This is common clinical practice. While there are some exceptions, most vaccines can be given at the same visit.",
+      "paragraphs": [
+        {
+          "index": 4,
+          "text": "Coadministration or simultaneous administration of vaccines refers to giving or getting more than one vaccine during a visit. This is common clinical practice. While there are some exceptions, most vaccines can be given at the same visit."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2026-09-01T18:39:08Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/f474246fafb6.json",
+      "htmlSha256": "c2df4d1815028464a222de284b4adcba5d6f28db2f38ff8484a43d9aec290536",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "b200e109582dc8a7174b5b58766245984f1bf81e101e70dbcedfe3410c60799a",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16",
+      "binding": "8f730292394e372e3d19700f0a5170ded2b48b601b011a99082e11af16f65984",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "rsv-75-plus",
+    "claim": {
+      "text": "CDC recommends an RSV vaccine for everyone 75 and older. Someone who has already had one does not need another at this time.",
+      "source": {
+        "org": "CDC",
+        "title": "RSV in Adults",
+        "url": "https://www.cdc.gov/rsv/adults/index.html",
+        "accessed": "2026-09-16"
+      },
+      "volatile": true,
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16"
+    },
+    "uses": [
+      {
+        "location": "trees.sam.nodes.rsv.choices[0].family",
+        "text": "offer",
+        "claims": [
+          "rsv-75-plus"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.rsv.choices[0].id",
+        "text": "rsv.offer-fact",
+        "claims": [
+          "rsv-75-plus"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.rsv.choices[0].label",
+        "text": "An RSV vaccine is recommended for everyone seventy-five and older.",
+        "claims": [
+          "rsv-75-plus"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.rsv.choices[0].next",
+        "text": "rsv",
+        "claims": [
+          "rsv-75-plus"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.rsv.choices[0].note",
+        "text": "The rule for her age answered a question he didn't know to ask.",
+        "claims": [
+          "rsv-75-plus"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.rsv.choices[0].reply",
+        "text": "Seventy-eight counts. She loves being recommended things. The hairdresser will hear about this.",
+        "claims": [
+          "rsv-75-plus"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.rsv.choices[0].requires[0]",
+        "text": "!rsv-fact",
+        "claims": [
+          "rsv-75-plus"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.rsv.choices[0].set[0]",
+        "text": "rsv-fact",
+        "claims": [
+          "rsv-75-plus"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.rsv.choices[1].end",
+        "text": "the-usual-plus-two",
+        "claims": [
+          "rsv-75-plus"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.rsv.choices[1].family",
+        "text": "offer",
+        "claims": [
+          "rsv-75-plus"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.rsv.choices[1].id",
+        "text": "rsv.offer-text-her",
+        "claims": [
+          "rsv-75-plus"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.rsv.choices[1].label",
+        "text": "Text her to come in? If she hasn't had one, she can get it today.",
+        "claims": [
+          "rsv-75-plus"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.rsv.choices[1].note",
+        "text": "Inviting his mom in from the car carried the protection past the counter.",
+        "claims": [
+          "rsv-75-plus"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.rsv.choices[1].reply",
+        "text": "Texting her. She'll say she was about to come in anyway. If she offers you butterscotch, act surprised.",
+        "claims": [
+          "rsv-75-plus"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.rsv.choices[1].requires[0]",
+        "text": "rsv-fact",
+        "claims": [
+          "rsv-75-plus"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.rsv.choices[1].requires[1]",
+        "text": "today",
+        "claims": [
+          "rsv-75-plus"
+        ]
+      },
+      {
+        "location": "trees.sam.nodes.rsv.choices[1].set[0]",
+        "text": "community",
+        "claims": [
+          "rsv-75-plus"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/rsv/adults/index.html",
+      "originalUrl": "https://www.cdc.gov/rsv/adults/index.html",
+      "passage": "CDC recommends everyone ages 75 and older get an RSV vaccine.\nIf you have already gotten an RSV vaccine, you do not need to get another one at this time.",
+      "paragraphs": [
+        {
+          "index": 3,
+          "text": "CDC recommends everyone ages 75 and older get an RSV vaccine."
+        },
+        {
+          "index": 5,
+          "text": "If you have already gotten an RSV vaccine, you do not need to get another one at this time."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2026-02-20T12:45:19Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/f59dd3e75206.json",
+      "htmlSha256": "fdf65efd19e5db530f0e68a6299a8be438dbcebaf989dfae9a084a3cd44d5448",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "a70fa429533e773cb2d2723421ef615cc683d6774c0b96af6b3e640330b1e08b",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16",
+      "binding": "5cf107b10fd7757e1faa1275a7e16523dc0ec92adf1b5ecff8337fb65097907f",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "flu-65-preferred",
+    "claim": {
+      "text": "Three flu vaccines are preferred for people 65 and older: a high-dose, a recombinant and an adjuvanted vaccine. Studies suggest they are potentially more effective in that age group. If none is available, any other flu vaccine right for their age should be given instead.",
+      "protects": true,
+      "source": {
+        "org": "CDC",
+        "title": "Adjuvanted Flu Vaccine",
+        "url": "https://www.cdc.gov/flu/vaccine-types/adjuvant.html",
+        "accessed": "2026-09-16"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16"
+    },
+    "uses": [
+      {
+        "location": "trees.walt.nodes.concern.choices[3].family",
+        "text": "offer",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[3].id",
+        "text": "concern.offer-explain",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[3].label",
+        "text": "At 65 and up, high-dose flu shots may work better. Yours wasn't wrong.",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[3].next",
+        "text": "open",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[3].note",
+        "text": "The reason for the change, shared with permission, answered what was really bothering him.",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[3].reply[0].text",
+        "text": "Fine. That's fair. I still don't like the sign.",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[3].reply[0].when[0]",
+        "text": "lectured",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[3].reply[1].text",
+        "text": "So it's an upgrade. She'll be jealous. She's sixty-four.",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[3].reply[1].when[0]",
+        "text": "why",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[3].reply[2].text",
+        "text": "So it's an upgrade, not a demotion. Fine. I can live with an upgrade.",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[3].requires[0]",
+        "text": "permission",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[3].requires[1]",
+        "text": "heard",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[3].set[0]",
+        "text": "raised",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[3].set[1]",
+        "text": "explained",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[3].set[2]",
+        "text": "eased",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[5].family",
+        "text": "offer",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[5].id",
+        "text": "concern.well-actually",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[5].label",
+        "text": "Well, actually, it's preferred for 65 and up. The sign's accurate.",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[5].next",
+        "text": "concern",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[5].note",
+        "text": "An unasked correction put him on the defensive.",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[5].reply",
+        "text": "The sign's accurate. Then the sign can buy my coffee.",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[5].requires[0]",
+        "text": "!permission",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[5].requires[1]",
+        "text": "!lectured",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[5].set[0]",
+        "text": "lectured",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.counter.choices[3].family",
+        "text": "offer",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.counter.choices[3].id",
+        "text": "counter.offer-stronger",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.counter.choices[3].label",
+        "text": "At 65 and up, a high-dose flu shot is preferred. It may work better.",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.counter.choices[3].next",
+        "text": "hesitant",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.counter.choices[3].reply",
+        "text": "May. So the old one was worse, and nobody told me?",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.counter.choices[3].set[0]",
+        "text": "raised",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.counter.choices[3].set[1]",
+        "text": "explained",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.routine.choices[3].family",
+        "text": "offer",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.routine.choices[3].id",
+        "text": "routine.offer-stronger",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.routine.choices[3].label",
+        "text": "The high-dose one's preferred at 65 and up, and may work better. Today?",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.routine.choices[3].next",
+        "text": "hesitant",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.routine.choices[3].reply",
+        "text": "May. So the old one was worse, and nobody told me?",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.routine.choices[3].set[0]",
+        "text": "raised",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.routine.choices[3].set[1]",
+        "text": "explained",
+        "claims": [
+          "flu-65-preferred"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/flu/vaccine-types/adjuvant.html",
+      "originalUrl": "https://www.cdc.gov/flu/vaccine-types/adjuvant.html",
+      "passage": "There are three flu vaccines that are preferentially recommended for people 65 years and older. These are Fluzone High-Dose Trivalent vaccine, Flublok Trivalent recombinant Influenza vaccine and Fluad adjuvanted flu vaccine. This recommendation was based on a review of available studies which suggested that in this age group these vaccines are potentially more effective than standard dose unadjuvanted flu vaccines. There is no preferential recommendation for people younger than 65 years. If none of the three flu vaccines preferentially recommended for people 65 years and older is available at the time of administration, people in this age group should get any other age-appropriate flu vaccine instead.",
+      "paragraphs": [
+        {
+          "index": 23,
+          "text": "There are three flu vaccines that are preferentially recommended for people 65 years and older. These are Fluzone High-Dose Trivalent vaccine, Flublok Trivalent recombinant Influenza vaccine and Fluad adjuvanted flu vaccine. This recommendation was based on a review of available studies which suggested that in this age group these vaccines are potentially more effective than standard dose unadjuvanted flu vaccines. There is no preferential recommendation for people younger than 65 years. If none of the three flu vaccines preferentially recommended for people 65 years and older is available at the time of administration, people in this age group should get any other age-appropriate flu vaccine instead."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2026-09-01T18:38:53Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/fc430dad24f0.json",
+      "htmlSha256": "b8ad07865804ed96ea21a6761b88b9f99de85f6def6b96a7c17b33ab27d3c985",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "2432efe2c34367dc0720d2bf05aef701b928c6b67dfdd9fb12b4b5ff321fba3c",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16",
+      "binding": "6b6c2b2e70e966c41bdf5f31d9bc3d060e31a2c41d19479d12fb645b2311fce8",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "flu-65-burden",
+    "claim": {
+      "text": "People 65 and older account for 70 to 85 percent of flu-related deaths and 50 to 70 percent of flu-related hospitalizations each flu season.",
+      "source": {
+        "org": "CDC",
+        "title": "Adjuvanted Flu Vaccine",
+        "url": "https://www.cdc.gov/flu/vaccine-types/adjuvant.html",
+        "accessed": "2026-09-16"
+      },
+      "volatile": true,
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16"
+    },
+    "uses": [
+      {
+        "location": "trees.walt.nodes.concern.choices[4].family",
+        "text": "offer",
+        "claims": [
+          "flu-65-burden"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[4].id",
+        "text": "concern.offer-burden",
+        "claims": [
+          "flu-65-burden"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[4].label",
+        "text": "People 65 and up are 50 to 70 percent of flu hospital stays.",
+        "claims": [
+          "flu-65-burden"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[4].next",
+        "text": "concern",
+        "claims": [
+          "flu-65-burden"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[4].note",
+        "text": "A real number showed why the change was made.",
+        "claims": [
+          "flu-65-burden"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[4].reply",
+        "text": "Half or more. Well. I've had hospital food. I'm listening.",
+        "claims": [
+          "flu-65-burden"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[4].requires[0]",
+        "text": "permission",
+        "claims": [
+          "flu-65-burden"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[4].requires[1]",
+        "text": "heard",
+        "claims": [
+          "flu-65-burden"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[4].requires[2]",
+        "text": "!burden",
+        "claims": [
+          "flu-65-burden"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.concern.choices[4].set[0]",
+        "text": "burden",
+        "claims": [
+          "flu-65-burden"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/flu/vaccine-types/adjuvant.html",
+      "originalUrl": "https://www.cdc.gov/flu/vaccine-types/adjuvant.html",
+      "passage": "People 65 years and older are at higher risk for flu-related severe illness and death. CDC research indicates that people 65 years and older account for 70 to 85 percent of flu-related deaths and 50 to 70 percent of flu-related hospitalizations each flu season. Older adults can have lower protective immune responses after flu vaccination compared to healthy young people. Lower immune responses may lead to lower vaccine effectiveness (i.e., a measure of how well the flu vaccine protects). Given the higher risk of severe flu illness and lower protective immune response after vaccination among older adults, substantial research and development have produced new flu vaccines intended to provide better protection for people in this age group.",
+      "paragraphs": [
+        {
+          "index": 31,
+          "text": "People 65 years and older are at higher risk for flu-related severe illness and death. CDC research indicates that people 65 years and older account for 70 to 85 percent of flu-related deaths and 50 to 70 percent of flu-related hospitalizations each flu season. Older adults can have lower protective immune responses after flu vaccination compared to healthy young people. Lower immune responses may lead to lower vaccine effectiveness (i.e., a measure of how well the flu vaccine protects). Given the higher risk of severe flu illness and lower protective immune response after vaccination among older adults, substantial research and development have produced new flu vaccines intended to provide better protection for people in this age group."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2026-09-01T18:38:53Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/fc430dad24f0.json",
+      "htmlSha256": "b8ad07865804ed96ea21a6761b88b9f99de85f6def6b96a7c17b33ab27d3c985",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "6275c4e9acdd3ad6f238dea7d2c36a13a2ea8b052bfb5ccf71d00b239a53c587",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16",
+      "binding": "85322bf74ae664f9624e202278d60dac9dcda10d3202b5ffe093cef65a1f764c",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "shingles-50-plus",
+    "claim": {
+      "text": "Adults 50 and older should get the recombinant shingles vaccine, 2 doses given 2 to 6 months apart. For someone who has had shingles before, it can help prevent it coming back.",
+      "source": {
+        "org": "CDC",
+        "title": "Shingles Vaccination",
+        "url": "https://www.cdc.gov/shingles/vaccines/index.html",
+        "accessed": "2026-09-16"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16"
+    },
+    "uses": [
+      {
+        "location": "trees.walt.nodes.ed.choices[2].family",
+        "text": "offer",
+        "claims": [
+          "shingles-50-plus"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[2].id",
+        "text": "ed.offer-vaccine",
+        "claims": [
+          "shingles-50-plus"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[2].label",
+        "text": "It's two doses for 50 and up. Want to start your first one?",
+        "claims": [
+          "shingles-50-plus"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[2].next",
+        "text": "ed",
+        "claims": [
+          "shingles-50-plus"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[2].note",
+        "text": "The rule for his age turned Ed's story into a plan.",
+        "claims": [
+          "shingles-50-plus"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[2].reply[0].text",
+        "text": "Today? With the flu shot? Both at once? Is that allowed?",
+        "claims": [
+          "shingles-50-plus"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[2].reply[0].when[0]",
+        "text": "today",
+        "claims": [
+          "shingles-50-plus"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[2].reply[1].text",
+        "text": "Start it when? I haven't even settled the flu one.",
+        "claims": [
+          "shingles-50-plus"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[2].requires[0]",
+        "text": "had-it",
+        "claims": [
+          "shingles-50-plus"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[2].requires[1]",
+        "text": "!shingles-offered",
+        "claims": [
+          "shingles-50-plus"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[2].set[0]",
+        "text": "shingles-offered",
+        "claims": [
+          "shingles-50-plus"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/shingles/vaccines/index.html",
+      "originalUrl": "https://www.cdc.gov/shingles/vaccines/index.html",
+      "passage": "Adults 50 years and older\n2 doses\n(separated by 2 to 6 months)\nAdults 50 years and older should get vaccinated. There is no maximum age for getting Shingrix. You should also get Shingrix even if you have previously:\nHad shingles\nIf you had shingles in the past, Shingrix can help prevent future occurrences of the disease. There is no specific length of time that you need to wait after having shingles before you can receive Shingrix. Generally, make sure the shingles rash has gone away before getting vaccinated.",
+      "paragraphs": [
+        {
+          "index": 11,
+          "text": "Adults 50 years and older"
+        },
+        {
+          "index": 12,
+          "text": "2 doses"
+        },
+        {
+          "index": 13,
+          "text": "(separated by 2 to 6 months)"
+        },
+        {
+          "index": 22,
+          "text": "Adults 50 years and older should get vaccinated. There is no maximum age for getting Shingrix. You should also get Shingrix even if you have previously:"
+        },
+        {
+          "index": 23,
+          "text": "Had shingles"
+        },
+        {
+          "index": 26,
+          "text": "If you had shingles in the past, Shingrix can help prevent future occurrences of the disease. There is no specific length of time that you need to wait after having shingles before you can receive Shingrix. Generally, make sure the shingles rash has gone away before getting vaccinated."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2025-08-21T11:03:22Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/963499648633.json",
+      "htmlSha256": "f1711a2134c9c31d07dd36156226d9f0ff7f934fad62e752e8bec2a305d4d815",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "bf26b0f0c0fba9df27b1e25b9c3986217af71421308ad89600607474a643a939",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16",
+      "binding": "81585d75324c574afd020f785affb4ddfecb5a4e4166efc3bf9e05b1f565493a",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "shingles-one-in-three",
+    "claim": {
+      "text": "About 1 in 3 people in the United States will get shingles in their lifetime, and the risk goes up with age.",
+      "source": {
+        "org": "CDC",
+        "title": "About Shingles (Herpes Zoster)",
+        "url": "https://www.cdc.gov/shingles/about/index.html",
+        "accessed": "2026-09-16"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16"
+    },
+    "uses": [
+      {
+        "location": "trees.walt.nodes.ed.choices[0].family",
+        "text": "offer",
+        "claims": [
+          "shingles-one-in-three"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[0].id",
+        "text": "ed.offer-odds",
+        "claims": [
+          "shingles-one-in-three"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[0].label",
+        "text": "About 1 in 3 people get shingles in their lifetime.",
+        "claims": [
+          "shingles-one-in-three"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[0].next",
+        "text": "ed",
+        "claims": [
+          "shingles-one-in-three"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[0].note",
+        "text": "A real number made Ed's story everybody's story.",
+        "claims": [
+          "shingles-one-in-three"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[0].reply",
+        "text": "One in three. There are three of us in that booth. I don't like those odds.",
+        "claims": [
+          "shingles-one-in-three"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[0].requires[0]",
+        "text": "!shingles",
+        "claims": [
+          "shingles-one-in-three"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[0].set[0]",
+        "text": "shingles",
+        "claims": [
+          "shingles-one-in-three"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/shingles/about/index.html",
+      "originalUrl": "https://www.cdc.gov/shingles/about/index.html",
+      "passage": "About 1 in every 3 people in the United States will have shingles (or herpes zoster) in their lifetime.",
+      "paragraphs": [
+        {
+          "index": 2,
+          "text": "About 1 in every 3 people in the United States will have shingles (or herpes zoster) in their lifetime."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2026-09-10T13:19:24Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/10ae0e45fa48.json",
+      "htmlSha256": "4213027d826129e9c69fe56b842f2a938b8754b5d2e97e61f17471226883bb31",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "ddee08b52603423f59935b330562a6e0f6b88ebce58a4108ec08d2c92729aab7",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16",
+      "binding": "55ba9fcc83b0321a5c55f354496a5602d8513fa323a0021371eee01426173801",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  },
+  {
+    "id": "shingles-same-visit",
+    "claim": {
+      "text": "The recombinant shingles vaccine can be given at the same visit as other adult vaccines, at a different injection site.",
+      "source": {
+        "org": "CDC",
+        "title": "Shingles Vaccine Recommendations",
+        "url": "https://www.cdc.gov/shingles/hcp/vaccine-considerations/index.html",
+        "accessed": "2026-09-16"
+      },
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16"
+    },
+    "uses": [
+      {
+        "location": "trees.walt.nodes.ed.choices[3].end",
+        "text": "both-arms",
+        "claims": [
+          "shingles-same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[3].family",
+        "text": "offer",
+        "claims": [
+          "shingles-same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[3].id",
+        "text": "ed.offer-pair",
+        "claims": [
+          "shingles-same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[3].label",
+        "text": "Same visit works. Flu in one arm, shingles in the other.",
+        "claims": [
+          "shingles-same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[3].note",
+        "text": "Explaining how the two shots share a visit made both of them easy.",
+        "claims": [
+          "shingles-same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[3].reply",
+        "text": "Flu in the left, shingles in the right. The crossword will have to wait.",
+        "claims": [
+          "shingles-same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[3].requires[0]",
+        "text": "shingles-offered",
+        "claims": [
+          "shingles-same-visit"
+        ]
+      },
+      {
+        "location": "trees.walt.nodes.ed.choices[3].requires[1]",
+        "text": "today",
+        "claims": [
+          "shingles-same-visit"
+        ]
+      }
+    ],
+    "evidence": {
+      "url": "https://www.cdc.gov/shingles/hcp/vaccine-considerations/index.html",
+      "originalUrl": "https://www.cdc.gov/shingles/hcp/vaccine-considerations/index.html",
+      "passage": "Recombinant and adjuvanted vaccines (like Shingrix) can be administered concomitantly at different anatomic sites with other adult vaccines. This includes COVID-19 vaccines. Coadministration of RZV with adjuvanted influenza vaccine (Fluad) and COVID-19 vaccines is being studied.",
+      "paragraphs": [
+        {
+          "index": 13,
+          "text": "Recombinant and adjuvanted vaccines (like Shingrix) can be administered concomitantly at different anatomic sites with other adult vaccines. This includes COVID-19 vaccines. Coadministration of RZV with adjuvanted influenza vaccine (Fluad) and COVID-19 vaccines is being studied."
+        }
+      ],
+      "verified": true,
+      "retrievedOn": "2026-11-01",
+      "sourceDates": [
+        {
+          "name": "cdc:last_published",
+          "content": "2024-10-22T16:25:59Z"
+        }
+      ],
+      "snapshot": "docs/claims/sources/8d2c732f2fa4.json",
+      "htmlSha256": "675288ccfa9cf16a598343ec29eda54148a0a8bdece4fa410eab5857f3153816",
+      "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+      "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+      "rightsDecision": "draft, pending excerpt and third-party notice review",
+      "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+    },
+    "binding": "98c77056524c2d2195c594fca2a860eb06c35eb9ca996f588074241a0ed21d78",
+    "historicalReview": {
+      "reviewedBy": "Kevin Madden, PharmD",
+      "reviewedOn": "2026-09-16",
+      "binding": "80a846ddf0af7e99f7f3b7ed604c5dd57597281e5151ea95166a61086d70c777",
+      "contentUnchanged": true
+    },
+    "review": null,
+    "status": "draft, pending pharmacist review",
+    "correctionNote": "New passage-support review pending Kevin. Historical author stamp is preserved separately."
+  }
+]

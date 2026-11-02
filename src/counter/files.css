@@ -192,7 +192,6 @@ button.ci-side-tab:hover { color: var(--ci-ink); }
 /* -- the debrief: transcript, what moved it, sources, one to a page ------------- */
 /* The transcript page is a column, so its box can take the height left and scroll. */
 .ci-debrief-page { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
-.ci-nowrap { white-space: nowrap; }
 .ci-moved-list { margin: 0; padding-left: 1.1em; display: grid; gap: 8px; font-size: 1.0625rem; line-height: 1.4; }
 .ci-sources { margin: 0; padding-left: 1.3em; display: grid; gap: 8px; font-size: 1rem; line-height: 1.35; }
 .ci-source-org { font-family: var(--ci-font-typed); font-weight: 400; letter-spacing: 0.1em; }
@@ -226,3 +225,22 @@ button.ci-side-tab:hover { color: var(--ci-ink); }
 .ci-portrait-mark { width: 44px; height: 44px; }
 .ci-portrait-title { margin: 0; font-family: var(--ci-font-menu); font-size: 1.25rem; letter-spacing: 0.12em; text-transform: uppercase; }
 .ci-portrait-note { margin: 0; max-width: 28em; text-wrap: balance; font-size: 1rem; line-height: 1.45; color: var(--ci-menu-dim); }
+
+/* A light desk and quieter paper texture keep the typed file legible in daylight. */
+@media (prefers-color-scheme: light) {
+  .ci-desk { background: var(--ci-card); }
+  .ci-sheet { background: linear-gradient(172deg, var(--ci-paper-light), var(--ci-card)); }
+  .ci-select { background: var(--ci-card); color: var(--ci-ink); }
+  .ci-select-title, .ci-select-heading { color: var(--ci-ink); }
+  .ci-select-note { color: var(--ci-ink-soft); }
+}
+
+.ci-source-title { display: block; min-height: 44px; padding-block: 0; color: var(--ci-ink); overflow-wrap: anywhere; }
+.ci-source-title:focus-visible { outline: 3px solid var(--ci-cursor); outline-offset: 2px; }
+
+.ci-source-license { margin: 0; font-size: 0.8125rem; line-height: 1.35; color: var(--ci-ink); }
+
+/* Full ink on the 13px source metadata: the muted ink fell near 3:1 over the dark paper texture. */
+.ci-sources .ci-source-date, .ci-sources + .ci-brief-note { color: var(--ci-ink); }
+.ci-sources + .ci-brief-note { font-size: 0.8125rem; line-height: 1.35; }
+.ci-debrief .ci-brief-page:has(.ci-sources) { gap: 8px; padding-block: 8px; }

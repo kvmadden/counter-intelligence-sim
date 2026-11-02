@@ -1,0 +1,55 @@
+
+> counter-intelligence@0.1.0 gate
+> node scripts/gate.mjs
+
+claims: 24 claims, 5 trees, 193 staff lines checked
+  NOTE covid-personal-call is marked volatile. Re-check its source before each season.
+  NOTE ve-good-match is marked volatile. Re-check its source before each season.
+  NOTE rsv-75-plus is marked volatile. Re-check its source before each season.
+  NOTE flu-65-burden is marked volatile. Re-check its source before each season.
+claims: GREEN, historical source and stamp metadata checked. New passage-support review pending.
+
+[gate] claims ledger: PASS in 0.0s
+
+claims self-test: RED as expected (6 planted problems caught, and the stamped baseline is clean)
+
+[gate] claims RED proof: PASS in 0.0s
+
+
+ RUN  v4.1.11 <repo>
+
+ ❯ tests/unit/counter-proof.test.js (9 tests | 1 failed) 2856ms
+   × rejects a historical stamp after claim or cited dialogue content changes 6ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/counter-proof.test.js > rejects a historical stamp after claim or cited dialogue content changes
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/unit/counter-proof.test.js:123:116
+    121|   const changed = structuredClone(CLAIMS)
+    122|   changed['flu-two-weeks'].text = 'Protection develops instantly.'
+    123|   expect(checkLedger(changed).some(row => row.rule === 'unreviewed cla…
+       |                                                                                                                    ^
+    124|   const trees = structuredClone(TREES)
+    125|   const choice = Object.values(trees.jordan.nodes).flatMap(node => nod…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 21 passed (22)
+      Tests  1 failed | 241 passed (242)
+   Start at  05:08:38
+   Duration  6.41s (transform 1.50s, setup 0ms, import 4.19s, tests 17.74s, environment 4.86s)
+
+
+[gate] unit tests: FAIL (exit 1) in 6.9s
+
+[gate] claims ledger=PASS · claims RED proof=PASS · unit tests=FAIL
+[gate] VERDICT: FAIL (unit tests)

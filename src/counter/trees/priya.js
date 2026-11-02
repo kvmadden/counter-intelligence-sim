@@ -160,7 +160,7 @@ export const priya = {
           next: "open",
         },
         {
-          id: "concern.offer-tdap", family: "offer", label: "Twelve years? Adults need a tetanus booster every ten, so you're due.",
+          id: "concern.offer-tdap", family: "offer", label: "Twelve years? Adults get a Td or Tdap booster every ten, so you're due.",
           requires: ["records"], claims: ["tdap-ten-years"], set: ["raised", "tdap"],
           note: "Checking her last tetanus shot found the booster she was due for.",
           reply: "The rusty fence strikes again. Okay. Put it on the list.", next: "concern",

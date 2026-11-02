@@ -1,0 +1,770 @@
+{
+  "flu-cannot-cause-flu": {
+    "url": "https://www.cdc.gov/flu/prevention/misconceptions.html",
+    "originalUrl": "https://www.cdc.gov/flu/prevention/misconceptions.html",
+    "passage": "Flu vaccines cannot cause flu illness. Flu vaccines given with a needle (i.e., flu shots) are made with either inactivated (killed) viruses, or with only a single protein from an influenza virus. The nasal spray vaccine contains live viruses that are attenuated (weakened) so that they will not cause illness.",
+    "paragraphs": [
+      {
+        "index": 6,
+        "text": "Flu vaccines cannot cause flu illness. Flu vaccines given with a needle (i.e., flu shots) are made with either inactivated (killed) viruses, or with only a single protein from an influenza virus. The nasal spray vaccine contains live viruses that are attenuated (weakened) so that they will not cause illness."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:last_published",
+        "content": "2026-05-18T10:40:03Z"
+      }
+    ],
+    "snapshot": "docs/claims/sources/0e9ee31d401f.json",
+    "htmlSha256": "43f39bff3ed5f002cfab0ed65568571cdc21d3fa3d6da39715d93a0ad159f1a3",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+  },
+  "flu-side-effects": {
+    "url": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
+    "originalUrl": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
+    "passage": "While a flu vaccine cannot give you flu illness, there are different side effects that may be associated with getting a flu shot or a nasal spray flu vaccine. These side effects are usually mild and short-lasting, especially when compared to symptoms of flu.\nA flu shot: The viruses in a flu shot are killed (inactivated), so you cannot get flu from a flu shot. Some minor side effects that may occur are:\nSoreness, redness, and/or swelling where the shot was given\nHeadache\nFever\nMuscle aches\nNausea\nFatigue",
+    "paragraphs": [
+      {
+        "index": 64,
+        "text": "While a flu vaccine cannot give you flu illness, there are different side effects that may be associated with getting a flu shot or a nasal spray flu vaccine. These side effects are usually mild and short-lasting, especially when compared to symptoms of flu."
+      },
+      {
+        "index": 65,
+        "text": "A flu shot: The viruses in a flu shot are killed (inactivated), so you cannot get flu from a flu shot. Some minor side effects that may occur are:"
+      },
+      {
+        "index": 66,
+        "text": "Soreness, redness, and/or swelling where the shot was given"
+      },
+      {
+        "index": 67,
+        "text": "Headache"
+      },
+      {
+        "index": 68,
+        "text": "Fever"
+      },
+      {
+        "index": 69,
+        "text": "Muscle aches"
+      },
+      {
+        "index": 70,
+        "text": "Nausea"
+      },
+      {
+        "index": 71,
+        "text": "Fatigue"
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:last_published",
+        "content": "2026-09-01T18:37:51Z"
+      }
+    ],
+    "snapshot": "docs/claims/sources/0f62994ff2d9.json",
+    "htmlSha256": "47da5f32e6400111a13cccfdd61314fdf3e5779023ef51ea0d8c9e85f28af923",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+  },
+  "sit-after": {
+    "url": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/preventing-managing-adverse-reactions.html",
+    "originalUrl": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/preventing-managing-adverse-reactions.html",
+    "passage": "Some of the systemic reactions may be complicated by the onset of syncope. Syncope (vasovagal or vasodepressor reaction) can occur after vaccination and is most common among adolescents and young adults. In 2005, the Vaccine Adverse Event Reporting System (VAERS) began detecting a trend of increasing syncope reports that coincided with the licensure of 3 vaccines for adolescents: human papillomavirus (HPV), MenACWY, and Tdap4. Of particular concern among adolescents has been the risk for serious secondary injuries, including skull fracture and cerebral hemorrhage. Of 463 VAERS reports of syncope during January 1, 2005, to July 31, 2007, a total of 41 listed syncope with secondary injury with information on the timing after vaccination, and the majority of these syncope reports (76%) occurred among adolescents. Among all age groups, 80% of reported syncope episodes occur within 15 minutes of vaccine administration (additional information). Providers should take appropriate measures to prevent injuries if a patient becomes weak or dizzy or loses consciousness. Adolescents and adults should be seated or lying down during vaccination. Vaccine providers, particularly when vaccinating adolescents, should consider observing patients (with patients seated or lying down) for 15 minutes after vaccination to decrease the risk for injury should they faint4. If syncope develops, patients should be observed until the symptoms resolve.",
+    "paragraphs": [
+      {
+        "index": 18,
+        "text": "Some of the systemic reactions may be complicated by the onset of syncope. Syncope (vasovagal or vasodepressor reaction) can occur after vaccination and is most common among adolescents and young adults. In 2005, the Vaccine Adverse Event Reporting System (VAERS) began detecting a trend of increasing syncope reports that coincided with the licensure of 3 vaccines for adolescents: human papillomavirus (HPV), MenACWY, and Tdap4. Of particular concern among adolescents has been the risk for serious secondary injuries, including skull fracture and cerebral hemorrhage. Of 463 VAERS reports of syncope during January 1, 2005, to July 31, 2007, a total of 41 listed syncope with secondary injury with information on the timing after vaccination, and the majority of these syncope reports (76%) occurred among adolescents. Among all age groups, 80% of reported syncope episodes occur within 15 minutes of vaccine administration (additional information). Providers should take appropriate measures to prevent injuries if a patient becomes weak or dizzy or loses consciousness. Adolescents and adults should be seated or lying down during vaccination. Vaccine providers, particularly when vaccinating adolescents, should consider observing patients (with patients seated or lying down) for 15 minutes after vaccination to decrease the risk for injury should they faint4. If syncope develops, patients should be observed until the symptoms resolve."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:last_published",
+        "content": "2026-07-23T17:22:36Z"
+      }
+    ],
+    "snapshot": "docs/claims/sources/3aa1314bcf42.json",
+    "htmlSha256": "2a9fe3a842c09febcaae2ff6c4894045aab3bd3decd8439c4b85d1a3ada2b216",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+  },
+  "flu-two-weeks": {
+    "url": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
+    "originalUrl": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
+    "passage": "It takes about two weeks after vaccination for antibodies to develop in the body and provide protection against influenza virus infection. That's why it's best to get vaccinated before influenza viruses start to spread in your community.\nYou may be exposed to an influenza virus shortly before getting vaccinated or during the period that it takes the body to gain protection after getting vaccinated. This exposure may result in you becoming ill with flu before the vaccine begins to protect you. (Antibodies that provide protection develop in the body about 2 weeks after vaccination.)",
+    "paragraphs": [
+      {
+        "index": 39,
+        "text": "It takes about two weeks after vaccination for antibodies to develop in the body and provide protection against influenza virus infection. That's why it's best to get vaccinated before influenza viruses start to spread in your community."
+      },
+      {
+        "index": 44,
+        "text": "You may be exposed to an influenza virus shortly before getting vaccinated or during the period that it takes the body to gain protection after getting vaccinated. This exposure may result in you becoming ill with flu before the vaccine begins to protect you. (Antibodies that provide protection develop in the body about 2 weeks after vaccination.)"
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:first_published",
+        "content": "October 1, 2024"
+      },
+      {
+        "name": "cdc:last_updated",
+        "content": "September 1, 2026"
+      },
+      {
+        "name": "cdc:last_reviewed",
+        "content": "September 3, 2025"
+      }
+    ],
+    "snapshot": "docs/claims/sources/0f62994ff2d9-r2.json",
+    "htmlSha256": "47da5f32e6400111a13cccfdd61314fdf3e5779023ef51ea0d8c9e85f28af923",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Drafted after Kevin's 2026-11-01 review. Pending his second look."
+  },
+  "flu-peak": {
+    "url": "https://www.cdc.gov/flu/about/season.html",
+    "originalUrl": "https://www.cdc.gov/flu/about/season.html",
+    "passage": "In the United States, flu season usually occurs in the fall and winter. While influenza viruses spread year-round, most of the time flu activity peaks between December and February. The overall health impact (e.g., infections, hospitalizations, and deaths) of flu varies from season to season. CDC collects, compiles, and analyzes information on influenza activity year-round in the United States and produces FluView, a weekly surveillance report, and FluView Interactive, which allows for more in-depth exploration of influenza surveillance data. The Weekly U.S. Influenza Summary Update is updated weekly year-round.",
+    "paragraphs": [
+      {
+        "index": 4,
+        "text": "In the United States, flu season usually occurs in the fall and winter. While influenza viruses spread year-round, most of the time flu activity peaks between December and February. The overall health impact (e.g., infections, hospitalizations, and deaths) of flu varies from season to season. CDC collects, compiles, and analyzes information on influenza activity year-round in the United States and produces FluView, a weekly surveillance report, and FluView Interactive, which allows for more in-depth exploration of influenza surveillance data. The Weekly U.S. Influenza Summary Update is updated weekly year-round."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:last_published",
+        "content": "2025-09-26T11:24:44Z"
+      }
+    ],
+    "snapshot": "docs/claims/sources/3ed85bf3fe75.json",
+    "htmlSha256": "6d0771d77f4578b74d0a18df4a7b117eb07e0b7eb8edae4eb439fa7e6a9b2bb9",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+  },
+  "tdap-ten-years": {
+    "url": "https://www.cdc.gov/vaccines/hcp/by-disease/dtap-tdap-td.html",
+    "originalUrl": "https://www.cdc.gov/vaccines/hcp/by-disease/dtap-tdap-td.html",
+    "passage": "Diphtheria toxoid-, tetanus toxoid-, and acellular pertussis-containing vaccines help protect against diphtheria, tetanus, and pertussis, but they will not prevent all cases.\nTetanus and diphtheria (Td) only vaccines\nAdults who have never received Tdap should receive a single dose of Tdap.\nAfter receipt of Tdap, patients should continue to receive Td or Tdap for routine booster immunization every 10 years.",
+    "paragraphs": [
+      {
+        "index": 2,
+        "text": "Diphtheria toxoid-, tetanus toxoid-, and acellular pertussis-containing vaccines help protect against diphtheria, tetanus, and pertussis, but they will not prevent all cases."
+      },
+      {
+        "index": 17,
+        "text": "Tetanus and diphtheria (Td) only vaccines"
+      },
+      {
+        "index": 119,
+        "text": "Adults who have never received Tdap should receive a single dose of Tdap."
+      },
+      {
+        "index": 122,
+        "text": "After receipt of Tdap, patients should continue to receive Td or Tdap for routine booster immunization every 10 years."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:first_published",
+        "content": "January 30, 2026"
+      },
+      {
+        "name": "cdc:last_updated",
+        "content": "September 6, 2022"
+      },
+      {
+        "name": "cdc:last_reviewed",
+        "content": "September 6, 2022"
+      }
+    ],
+    "snapshot": "docs/claims/sources/1afc58cb2e7e-r2.json",
+    "htmlSha256": "79846a76eb9fdb6240be1b31e39d1120da980f6fd9f83a3993f41efc76843991",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Drafted after Kevin's 2026-11-01 review. Pending his second look."
+  },
+  "recommendation-predicts": {
+    "url": "https://www.cdc.gov/vaccines-adults/hcp/imz-standards/index.html",
+    "originalUrl": "https://www.cdc.gov/vaccines-adults/hcp/imz-standards/index.html",
+    "passage": "The National Vaccine Advisory Committee developed the Standards for Adult Immunization Practice to reflect the critical need for all health care professionals \u2013 whether they provide immunization services or not \u2013 to take steps to ensure that adult patients get the vaccines they need. These standards are important because:\nA health care professional's recommendation is the strongest predictor of whether a patient gets vaccinated.",
+    "paragraphs": [
+      {
+        "index": 4,
+        "text": "The National Vaccine Advisory Committee developed the Standards for Adult Immunization Practice to reflect the critical need for all health care professionals \u2013 whether they provide immunization services or not \u2013 to take steps to ensure that adult patients get the vaccines they need. These standards are important because:"
+      },
+      {
+        "index": 7,
+        "text": "A health care professional's recommendation is the strongest predictor of whether a patient gets vaccinated."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:first_published",
+        "content": "August 13, 2024"
+      },
+      {
+        "name": "cdc:last_updated",
+        "content": "August 9, 2024"
+      },
+      {
+        "name": "cdc:last_reviewed",
+        "content": "August 9, 2024"
+      }
+    ],
+    "snapshot": "docs/claims/sources/93b1589f6fb4-r2.json",
+    "htmlSha256": "e6c2cc218ee8fa3cae772785978365cc32ff82893195bc02a63d953a9e3aea45",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Drafted after Kevin's 2026-11-01 review. Pending his second look."
+  },
+  "ve-good-match": {
+    "url": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
+    "originalUrl": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
+    "passage": "Flu vaccines vary in how well they work each season. During seasons when the influenza viruses used in flu vaccine production are similar to those that are spreading, studies show flu vaccination reduced the risk of a flu-related doctor's visit by 40-60%.",
+    "paragraphs": [
+      {
+        "index": 9,
+        "text": "Flu vaccines vary in how well they work each season. During seasons when the influenza viruses used in flu vaccine production are similar to those that are spreading, studies show flu vaccination reduced the risk of a flu-related doctor's visit by 40-60%."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:last_published",
+        "content": "2026-07-15T09:11:48Z"
+      }
+    ],
+    "snapshot": "docs/claims/sources/c355342d0e0e.json",
+    "htmlSha256": "6af091d263dd2f2114c47b8c11f2f681f3656c98c52fb0bd9859b180a00b0291",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+  },
+  "milder-illness": {
+    "url": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
+    "originalUrl": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
+    "passage": "Studies of people hospitalized with flu show people who had been vaccinated against flu had less severe illness.\nA 2024 study of adults hospitalized with acute respiratory illness showed that for people who do get hospitalized with flu despite being vaccinated against flu, flu vaccination reduced severe in-hospital outcomes.\nAmong people who were hospitalized with flu, people who got a flu vaccine were less likely to need ICU admission, invasive mechanical ventilation, vasopressor use, and organ support.",
+    "paragraphs": [
+      {
+        "index": 19,
+        "text": "Studies of people hospitalized with flu show people who had been vaccinated against flu had less severe illness."
+      },
+      {
+        "index": 20,
+        "text": "A 2024 study of adults hospitalized with acute respiratory illness showed that for people who do get hospitalized with flu despite being vaccinated against flu, flu vaccination reduced severe in-hospital outcomes."
+      },
+      {
+        "index": 21,
+        "text": "Among people who were hospitalized with flu, people who got a flu vaccine were less likely to need ICU admission, invasive mechanical ventilation, vasopressor use, and organ support."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:last_published",
+        "content": "2026-07-15T09:11:48Z"
+      }
+    ],
+    "snapshot": "docs/claims/sources/c355342d0e0e.json",
+    "htmlSha256": "6af091d263dd2f2114c47b8c11f2f681f3656c98c52fb0bd9859b180a00b0291",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+  },
+  "other-viruses": {
+    "url": "https://www.cdc.gov/flu/about/coldflu.html",
+    "originalUrl": "https://www.cdc.gov/flu/about/coldflu.html",
+    "passage": "Influenza (flu) and the common cold are both contagious respiratory illnesses, but they are caused by different viruses.\nColds and flu share many symptoms, so it can be difficult to tell the difference between them based on symptoms alone.",
+    "paragraphs": [
+      {
+        "index": 2,
+        "text": "Influenza (flu) and the common cold are both contagious respiratory illnesses, but they are caused by different viruses."
+      },
+      {
+        "index": 3,
+        "text": "Colds and flu share many symptoms, so it can be difficult to tell the difference between them based on symptoms alone."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:first_published",
+        "content": "October 1, 2024"
+      },
+      {
+        "name": "cdc:last_updated",
+        "content": "August 8, 2024"
+      },
+      {
+        "name": "cdc:last_reviewed",
+        "content": "August 8, 2024"
+      }
+    ],
+    "snapshot": "docs/claims/sources/779015e236c7-r2.json",
+    "htmlSha256": "07c6e937ce254ffc61884d1bcf782dc1bb46158b9c7fe74e7de5461efdd567ee",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Drafted after Kevin's 2026-11-01 review. Pending his second look."
+  },
+  "flu-protects-others": {
+    "url": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
+    "originalUrl": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
+    "passage": "Getting yourself vaccinated may also protect people around you, including people who are more likely to get very sick with flu, like babies and young children, older adults, pregnant women, and people with certain chronic health conditions. However, it is difficult to prove that vaccination protects people around you (sometimes referred to as \"herd protection,\" \"community protection,\" or \"indirect effects\"). While it seems logical to assume that a person who is less likely to get flu will also be less likely to spread flu, study results have varied by study design, setting, population, and vaccine type.",
+    "paragraphs": [
+      {
+        "index": 50,
+        "text": "Getting yourself vaccinated may also protect people around you, including people who are more likely to get very sick with flu, like babies and young children, older adults, pregnant women, and people with certain chronic health conditions. However, it is difficult to prove that vaccination protects people around you (sometimes referred to as \"herd protection,\" \"community protection,\" or \"indirect effects\"). While it seems logical to assume that a person who is less likely to get flu will also be less likely to spread flu, study results have varied by study design, setting, population, and vaccine type."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:last_published",
+        "content": "2026-07-15T09:11:48Z"
+      }
+    ],
+    "snapshot": "docs/claims/sources/c355342d0e0e.json",
+    "htmlSha256": "6af091d263dd2f2114c47b8c11f2f681f3656c98c52fb0bd9859b180a00b0291",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+  },
+  "flu-healthy-people": {
+    "url": "https://www.cdc.gov/flu/about/index.html",
+    "originalUrl": "https://www.cdc.gov/flu/about/index.html",
+    "passage": "Anyone can get flu (including healthy people), and serious problems related to flu can happen to anyone, but some people are at higher risk of developing serious flu-related complications if they get sick. This includes people 65 years and older, people of any age with certain chronic medical conditions (such as asthma, diabetes, or heart disease), people with a body mass index (BMI) of 40 kg/m2 or higher, pregnant women, and children younger than 5 years, especially those younger than 2 years.",
+    "paragraphs": [
+      {
+        "index": 31,
+        "text": "Anyone can get flu (including healthy people), and serious problems related to flu can happen to anyone, but some people are at higher risk of developing serious flu-related complications if they get sick. This includes people 65 years and older, people of any age with certain chronic medical conditions (such as asthma, diabetes, or heart disease), people with a body mass index (BMI) of 40 kg/m2 or higher, pregnant women, and children younger than 5 years, especially those younger than 2 years."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:last_published",
+        "content": "2026-06-11T08:56:36Z"
+      }
+    ],
+    "snapshot": "docs/claims/sources/e880bf3542c7.json",
+    "htmlSha256": "986283678f7789b3889cfb38dbc7c50dedf6bd22c81cd41c6d5c9d88d4011e03",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+  },
+  "baby-two-weeks": {
+    "url": "https://www.cdc.gov/vaccines-pregnancy/about/vaccines-family-caregivers.html",
+    "originalUrl": "https://www.cdc.gov/vaccines-pregnancy/about/vaccines-family-caregivers.html",
+    "passage": "Anyone who needs the whooping cough or flu vaccines should get them at least two weeks before meeting the baby because it takes about two weeks to develop antibodies after vaccination.",
+    "paragraphs": [
+      {
+        "index": 23,
+        "text": "Anyone who needs the whooping cough or flu vaccines should get them at least two weeks before meeting the baby because it takes about two weeks to develop antibodies after vaccination."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:last_published",
+        "content": "2024-11-27T12:17:28Z"
+      }
+    ],
+    "snapshot": "docs/claims/sources/afed3ce72ec9.json",
+    "htmlSha256": "1c30e5d1a5704e0ef91c0bcfc6e8773a395074b0b808529fe3aa250c1a6abcf0",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+  },
+  "tdap-around-baby": {
+    "url": "https://www.cdc.gov/vaccines-pregnancy/about/vaccines-family-caregivers.html",
+    "originalUrl": "https://www.cdc.gov/vaccines-pregnancy/about/vaccines-family-caregivers.html",
+    "passage": "Preteens, teens, and adults who will be around the baby and have not already had a whooping cough booster shot (called Tdap vaccine) should get vaccinated.\nIf a teen or adult will be around the baby and has already had a Tdap vaccine, they do not need to get vaccinated again.",
+    "paragraphs": [
+      {
+        "index": 16,
+        "text": "Preteens, teens, and adults who will be around the baby and have not already had a whooping cough booster shot (called Tdap vaccine) should get vaccinated."
+      },
+      {
+        "index": 17,
+        "text": "If a teen or adult will be around the baby and has already had a Tdap vaccine, they do not need to get vaccinated again."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:last_published",
+        "content": "2024-11-27T12:17:28Z"
+      }
+    ],
+    "snapshot": "docs/claims/sources/afed3ce72ec9.json",
+    "htmlSha256": "1c30e5d1a5704e0ef91c0bcfc6e8773a395074b0b808529fe3aa250c1a6abcf0",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+  },
+  "flu-timing": {
+    "url": "https://www.cdc.gov/flu/vaccines/vaccinations.html",
+    "originalUrl": "https://www.cdc.gov/flu/vaccines/vaccinations.html",
+    "passage": "For most people who need only one dose of influenza vaccine for the season, September and October are generally good times to be vaccinated against influenza. Ideally, everyone should be vaccinated by the end of October. Additional considerations concerning the timing of vaccination for certain groups of people include:",
+    "paragraphs": [
+      {
+        "index": 26,
+        "text": "For most people who need only one dose of influenza vaccine for the season, September and October are generally good times to be vaccinated against influenza. Ideally, everyone should be vaccinated by the end of October. Additional considerations concerning the timing of vaccination for certain groups of people include:"
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:last_published",
+        "content": "2025-11-20T10:23:17Z"
+      }
+    ],
+    "snapshot": "docs/claims/sources/316b735189f4.json",
+    "htmlSha256": "9948a265f24ba9f086dc8a6094713b759ea5cad71fa766072c0a6f34b1fed17b",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+  },
+  "most-same-visit": {
+    "url": "https://www.cdc.gov/flu/vaccines/coadministration.html",
+    "originalUrl": "https://www.cdc.gov/flu/vaccines/coadministration.html",
+    "passage": "Coadministration or simultaneous administration of vaccines refers to giving or getting more than one vaccine during a visit. This is common clinical practice. While there are some exceptions, most vaccines can be given at the same visit.",
+    "paragraphs": [
+      {
+        "index": 4,
+        "text": "Coadministration or simultaneous administration of vaccines refers to giving or getting more than one vaccine during a visit. This is common clinical practice. While there are some exceptions, most vaccines can be given at the same visit."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:last_published",
+        "content": "2026-09-01T18:39:08Z"
+      }
+    ],
+    "snapshot": "docs/claims/sources/f474246fafb6.json",
+    "htmlSha256": "c2df4d1815028464a222de284b4adcba5d6f28db2f38ff8484a43d9aec290536",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+  },
+  "rsv-75-plus": {
+    "url": "https://www.cdc.gov/rsv/adults/index.html",
+    "originalUrl": "https://www.cdc.gov/rsv/adults/index.html",
+    "passage": "CDC recommends everyone ages 75 and older get an RSV vaccine.\nIf you have already gotten an RSV vaccine, you do not need to get another one at this time.",
+    "paragraphs": [
+      {
+        "index": 3,
+        "text": "CDC recommends everyone ages 75 and older get an RSV vaccine."
+      },
+      {
+        "index": 5,
+        "text": "If you have already gotten an RSV vaccine, you do not need to get another one at this time."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:last_published",
+        "content": "2026-02-20T12:45:19Z"
+      }
+    ],
+    "snapshot": "docs/claims/sources/f59dd3e75206.json",
+    "htmlSha256": "fdf65efd19e5db530f0e68a6299a8be438dbcebaf989dfae9a084a3cd44d5448",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+  },
+  "flu-65-preferred": {
+    "url": "https://www.cdc.gov/flu/highrisk/65over.htm",
+    "originalUrl": "https://www.cdc.gov/flu/highrisk/65over.htm",
+    "passage": "CDC and ACIP preferentially recommend the use of higher dose flu vaccines (high-dose inactivated and recombinant) or adjuvanted inactivated flu vaccine over standard-dose unadjuvanted flu vaccines for people 65 years and older. This recommendation is based on a review of available studies which suggests that, in this age group, these vaccines are potentially more effective than standard dose unadjuvanted flu vaccines. If one of these vaccines is not available at the time of administration, people in this age group should get a standard-dose unadjuvanted inactivated flu vaccine instead. There are other flu vaccines approved for use in people 65 years and older. People 65 years and older should not get a nasal spray vaccine.\nThe best way to protect against flu and its potentially serious complications is with an annual flu vaccine. Flu vaccination has many benefits. It has been shown to reduce the risk of getting sick with flu and also to reduce the risk of more serious flu outcomes that can result in hospitalization or even death. Although immune responses to vaccination may be lower in older people, studies have consistently found that flu vaccination has been effective in reducing the risk of medical visits and hospitalizations in older people. Higher dose and adjuvanted flu vaccines are potentially more effective than standard dose unadjuvanted flu vaccines for people in this age group and are therefore recommended preferentially over a regular dose flu vaccine.",
+    "paragraphs": [
+      {
+        "index": 10,
+        "text": "CDC and ACIP preferentially recommend the use of higher dose flu vaccines (high-dose inactivated and recombinant) or adjuvanted inactivated flu vaccine over standard-dose unadjuvanted flu vaccines for people 65 years and older. This recommendation is based on a review of available studies which suggests that, in this age group, these vaccines are potentially more effective than standard dose unadjuvanted flu vaccines. If one of these vaccines is not available at the time of administration, people in this age group should get a standard-dose unadjuvanted inactivated flu vaccine instead. There are other flu vaccines approved for use in people 65 years and older. People 65 years and older should not get a nasal spray vaccine."
+      },
+      {
+        "index": 13,
+        "text": "The best way to protect against flu and its potentially serious complications is with an annual flu vaccine. Flu vaccination has many benefits. It has been shown to reduce the risk of getting sick with flu and also to reduce the risk of more serious flu outcomes that can result in hospitalization or even death. Although immune responses to vaccination may be lower in older people, studies have consistently found that flu vaccination has been effective in reducing the risk of medical visits and hospitalizations in older people. Higher dose and adjuvanted flu vaccines are potentially more effective than standard dose unadjuvanted flu vaccines for people in this age group and are therefore recommended preferentially over a regular dose flu vaccine."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:first_published",
+        "content": "October 1, 2024"
+      },
+      {
+        "name": "cdc:last_updated",
+        "content": "September 4, 2026"
+      },
+      {
+        "name": "cdc:last_reviewed",
+        "content": "September 5, 2024"
+      }
+    ],
+    "snapshot": "docs/claims/sources/0641ad88a135-r2.json",
+    "htmlSha256": "3d34219cd6df1cdbfec704c6d94cbaa6a3bcf6d7cbbf0b155376c30041383434",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Drafted after Kevin's 2026-11-01 review. Pending his second look."
+  },
+  "flu-65-burden": {
+    "url": "https://www.cdc.gov/flu/vaccine-types/adjuvant.html",
+    "originalUrl": "https://www.cdc.gov/flu/vaccine-types/adjuvant.html",
+    "passage": "People 65 years and older are at higher risk for flu-related severe illness and death. CDC research indicates that people 65 years and older account for 70 to 85 percent of flu-related deaths and 50 to 70 percent of flu-related hospitalizations each flu season. Older adults can have lower protective immune responses after flu vaccination compared to healthy young people. Lower immune responses may lead to lower vaccine effectiveness (i.e., a measure of how well the flu vaccine protects). Given the higher risk of severe flu illness and lower protective immune response after vaccination among older adults, substantial research and development have produced new flu vaccines intended to provide better protection for people in this age group.",
+    "paragraphs": [
+      {
+        "index": 31,
+        "text": "People 65 years and older are at higher risk for flu-related severe illness and death. CDC research indicates that people 65 years and older account for 70 to 85 percent of flu-related deaths and 50 to 70 percent of flu-related hospitalizations each flu season. Older adults can have lower protective immune responses after flu vaccination compared to healthy young people. Lower immune responses may lead to lower vaccine effectiveness (i.e., a measure of how well the flu vaccine protects). Given the higher risk of severe flu illness and lower protective immune response after vaccination among older adults, substantial research and development have produced new flu vaccines intended to provide better protection for people in this age group."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:last_published",
+        "content": "2026-09-01T18:38:53Z"
+      }
+    ],
+    "snapshot": "docs/claims/sources/fc430dad24f0.json",
+    "htmlSha256": "b8ad07865804ed96ea21a6761b88b9f99de85f6def6b96a7c17b33ab27d3c985",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+  },
+  "shingles-50-plus": {
+    "url": "https://www.cdc.gov/shingles/vaccines/index.html",
+    "originalUrl": "https://www.cdc.gov/shingles/vaccines/index.html",
+    "passage": "Adults 50 years and older\n2 doses\n(separated by 2 to 6 months)\nAdults 50 years and older should get vaccinated. There is no maximum age for getting Shingrix. You should also get Shingrix even if you have previously:\nHad shingles\nIf you had shingles in the past, Shingrix can help prevent future occurrences of the disease. There is no specific length of time that you need to wait after having shingles before you can receive Shingrix. Generally, make sure the shingles rash has gone away before getting vaccinated.",
+    "paragraphs": [
+      {
+        "index": 11,
+        "text": "Adults 50 years and older"
+      },
+      {
+        "index": 12,
+        "text": "2 doses"
+      },
+      {
+        "index": 13,
+        "text": "(separated by 2 to 6 months)"
+      },
+      {
+        "index": 22,
+        "text": "Adults 50 years and older should get vaccinated. There is no maximum age for getting Shingrix. You should also get Shingrix even if you have previously:"
+      },
+      {
+        "index": 23,
+        "text": "Had shingles"
+      },
+      {
+        "index": 26,
+        "text": "If you had shingles in the past, Shingrix can help prevent future occurrences of the disease. There is no specific length of time that you need to wait after having shingles before you can receive Shingrix. Generally, make sure the shingles rash has gone away before getting vaccinated."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:last_published",
+        "content": "2025-08-21T11:03:22Z"
+      }
+    ],
+    "snapshot": "docs/claims/sources/963499648633.json",
+    "htmlSha256": "f1711a2134c9c31d07dd36156226d9f0ff7f934fad62e752e8bec2a305d4d815",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+  },
+  "shingles-one-in-three": {
+    "url": "https://www.cdc.gov/shingles/about/index.html",
+    "originalUrl": "https://www.cdc.gov/shingles/about/index.html",
+    "passage": "About 1 in every 3 people in the United States will have shingles (or herpes zoster) in their lifetime.",
+    "paragraphs": [
+      {
+        "index": 2,
+        "text": "About 1 in every 3 people in the United States will have shingles (or herpes zoster) in their lifetime."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:last_published",
+        "content": "2026-09-10T13:19:24Z"
+      }
+    ],
+    "snapshot": "docs/claims/sources/10ae0e45fa48.json",
+    "htmlSha256": "4213027d826129e9c69fe56b842f2a938b8754b5d2e97e61f17471226883bb31",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Draft support mapping. Kevin must assess full scope and qualifications."
+  },
+  "shingles-same-visit": {
+    "url": "https://www.cdc.gov/shingles/vaccines/index.html",
+    "originalUrl": "https://www.cdc.gov/shingles/vaccines/index.html",
+    "passage": "Recombinant zoster (shingles) vaccine, called Shingrix, can prevent shingles. Shingles vaccine may be given at the same time as other vaccines. If you have questions about Shingrix, talk with your healthcare provider.",
+    "paragraphs": [
+      {
+        "index": 8,
+        "text": "Recombinant zoster (shingles) vaccine, called Shingrix, can prevent shingles. Shingles vaccine may be given at the same time as other vaccines. If you have questions about Shingrix, talk with your healthcare provider."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:first_published",
+        "content": "July 21, 2024"
+      },
+      {
+        "name": "cdc:last_updated",
+        "content": "July 19, 2024"
+      },
+      {
+        "name": "cdc:last_reviewed",
+        "content": "August 19, 2025"
+      }
+    ],
+    "snapshot": "docs/claims/sources/963499648633-r2.json",
+    "htmlSha256": "f1711a2134c9c31d07dd36156226d9f0ff7f934fad62e752e8bec2a305d4d815",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Drafted after Kevin's 2026-11-01 review. Pending his second look."
+  },
+  "same-arm-ok": {
+    "url": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/vaccine-administration.html",
+    "originalUrl": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/vaccine-administration.html",
+    "passage": "If multiple vaccines are administered at a single visit, administer each preparation at a different anatomic site28. The location of all injection sites with the corresponding vaccine injected should be documented in each patient\u2019s medical record. Health-care practices should consider using a vaccination site map so that all persons administering vaccines routinely use a particular anatomic site for each particular vaccine.\nFor infants and younger children, if more than 2 vaccines are injected in a single limb, the thigh is the preferred site because of the greater muscle mass; the injections should be sufficiently separated (separate anatomic sites [i.e. \u22651 inch] if possible) so that any local reactions can be differentiated1329. For older children and adults, the deltoid muscle can be used for more than one intramuscular injection.",
+    "paragraphs": [
+      {
+        "index": 44,
+        "text": "If multiple vaccines are administered at a single visit, administer each preparation at a different anatomic site28. The location of all injection sites with the corresponding vaccine injected should be documented in each patient\u2019s medical record. Health-care practices should consider using a vaccination site map so that all persons administering vaccines routinely use a particular anatomic site for each particular vaccine."
+      },
+      {
+        "index": 45,
+        "text": "For infants and younger children, if more than 2 vaccines are injected in a single limb, the thigh is the preferred site because of the greater muscle mass; the injections should be sufficiently separated (separate anatomic sites [i.e. \u22651 inch] if possible) so that any local reactions can be differentiated1329. For older children and adults, the deltoid muscle can be used for more than one intramuscular injection."
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:first_published",
+        "content": ""
+      },
+      {
+        "name": "cdc:last_updated",
+        "content": "June 18, 2024"
+      },
+      {
+        "name": "cdc:last_reviewed",
+        "content": "June 20, 2023"
+      }
+    ],
+    "snapshot": "docs/claims/sources/0e87e1e82062-r2.json",
+    "htmlSha256": "dcbd34d4796e601eb8a89b0f4b6cd2fdaf1b6892b43f94e80501626109fcaa26",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Drafted after Kevin's 2026-11-01 review. Pending his second look."
+  },
+  "pneumo-50-plus": {
+    "url": "https://www.cdc.gov/pneumococcal/vaccines/index.html",
+    "originalUrl": "https://www.cdc.gov/pneumococcal/vaccines/index.html",
+    "passage": "Pneumococcal disease is common in young children, but older adults are at greatest risk of serious illness and death.\nCDC recommends pneumococcal vaccination for\nAll adults 50 years or older",
+    "paragraphs": [
+      {
+        "index": 12,
+        "text": "Pneumococcal disease is common in young children, but older adults are at greatest risk of serious illness and death."
+      },
+      {
+        "index": 15,
+        "text": "CDC recommends pneumococcal vaccination for"
+      },
+      {
+        "index": 20,
+        "text": "All adults 50 years or older"
+      }
+    ],
+    "verified": true,
+    "retrievedOn": "2026-11-01",
+    "sourceDates": [
+      {
+        "name": "cdc:first_published",
+        "content": "July 10, 2024"
+      },
+      {
+        "name": "cdc:last_updated",
+        "content": "February 25, 2026"
+      },
+      {
+        "name": "cdc:last_reviewed",
+        "content": "February 25, 2026"
+      }
+    ],
+    "snapshot": "docs/claims/sources/3efa95bd22bf-r2.json",
+    "htmlSha256": "6004ae98615170d9b3a3c052927b09699829fcd13e6ebc8e59314246c70873d6",
+    "rights": "CDC federal text, public domain in the US. Excerpt-level rights review pending.",
+    "rightsUrl": "https://www.cdc.gov/other/agencymaterials.html",
+    "rightsDecision": "draft, pending excerpt and third-party notice review",
+    "correctionNote": "Drafted after Kevin's 2026-11-01 review. Pending his second look."
+  }
+}
