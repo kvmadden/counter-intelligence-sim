@@ -1,5 +1,5 @@
 
- RUN  v4.1.11 /Volumes/HubData/work/worktrees/counter-intelligence-sim-showcase-standard
+ RUN  v4.1.11 <repo>
 
  ❯ tests/unit/counter-claim-build.test.js (1 test | 1 failed) 4875ms
    × stops the production build before Vite for an unsourced or unreviewed claim 4874ms
@@ -7,20 +7,20 @@
 ⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
 
  FAIL  tests/unit/counter-claim-build.test.js > stops the production build before Vite for an unsourced or unreviewed claim
-AssertionError: expected 'file:///Users/kevin/dev/oe-runs/tmp/c…' to contain 'unsourced claim'
+AssertionError: expected 'file://<tmp>/c…' to contain 'unsourced claim'
 
 - Expected
 + Received
 
 - unsourced claim
-+ file:///Users/kevin/dev/oe-runs/tmp/counter-claim-build-Cmco0v/scripts/claim-proof.mjs:13
++ file://<tmp>/counter-claim-build-Cmco0v/scripts/claim-proof.mjs:13
 +   if (!evidence.verified || evidence.url !== claim.source.url) return 'unverified passage'
 +                                                           ^
 +
 + TypeError: Cannot read properties of undefined (reading 'url')
-+     at supportStatus (file:///Users/kevin/dev/oe-runs/tmp/counter-claim-build-Cmco0v/scripts/claim-proof.mjs:13:59)
-+     at checkLedger (file:///Users/kevin/dev/oe-runs/tmp/counter-claim-build-Cmco0v/scripts/check-claims.mjs:61:27)
-+     at file:///Users/kevin/dev/oe-runs/tmp/counter-claim-build-Cmco0v/scripts/check-claims.mjs:138:20
++     at supportStatus (file://<tmp>/counter-claim-build-Cmco0v/scripts/claim-proof.mjs:13:59)
++     at checkLedger (file://<tmp>/counter-claim-build-Cmco0v/scripts/check-claims.mjs:61:27)
++     at file://<tmp>/counter-claim-build-Cmco0v/scripts/check-claims.mjs:138:20
 +     at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
 +     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
 +     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)

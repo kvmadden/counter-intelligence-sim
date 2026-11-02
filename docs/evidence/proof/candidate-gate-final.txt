@@ -16,7 +16,7 @@ claims self-test: RED as expected (6 planted problems caught, and the stamped ba
 [gate] claims RED proof: PASS in 0.1s
 
 
- RUN  v4.1.11 /Volumes/HubData/work/worktrees/counter-intelligence-sim-showcase-standard
+ RUN  v4.1.11 <repo>
 
 
  Test Files  22 passed (22)
@@ -58,7 +58,7 @@ scan: GREEN, source literals allowed, no automatic network call, remote resource
 [gate] scanner: PASS in 0.1s
 
 
- RUN  v4.1.11 /Volumes/HubData/work/worktrees/counter-intelligence-sim-showcase-standard
+ RUN  v4.1.11 <repo>
 
 
  Test Files  4 passed (4)

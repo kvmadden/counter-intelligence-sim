@@ -1,5 +1,5 @@
 
- RUN  v4.1.11 /Volumes/HubData/work/worktrees/counter-intelligence-sim-showcase-standard
+ RUN  v4.1.11 <repo>
 
  ❯ tests/unit/counter-proof.test.js (9 tests | 1 failed | 8 skipped) 32ms
    × rejects a historical stamp after claim or cited dialogue content changes 31ms

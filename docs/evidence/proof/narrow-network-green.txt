@@ -1,5 +1,5 @@
 
- RUN  v4.1.11 /Volumes/HubData/work/worktrees/counter-intelligence-sim-showcase-standard
+ RUN  v4.1.11 <repo>
 
 
  Test Files  2 passed (2)
