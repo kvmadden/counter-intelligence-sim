@@ -16,7 +16,7 @@ claims self-test: RED as expected (6 planted problems caught, and the stamped ba
 [gate] claims RED proof: PASS in 0.1s
 
 
- RUN  v4.1.11 /Volumes/HubData/work/worktrees/counter-intelligence-sim-showcase-standard
+ RUN  v4.1.11 <repo>
 
 
  Test Files  22 passed (22)
@@ -58,7 +58,7 @@ scan: GREEN, source literals allowed, no automatic network call, remote resource
 [gate] scanner: PASS in 0.1s
 
 
- RUN  v4.1.11 /Volumes/HubData/work/worktrees/counter-intelligence-sim-showcase-standard
+ RUN  v4.1.11 <repo>
 
 
  Test Files  4 passed (4)
@@ -132,7 +132,7 @@ Running 33 tests using 1 worker
       556 |   const spot = await page.evaluate(() => {
       557 |     const kase = document.querySelector(".enc-handheld-case").getBoundingClientRect();
       558 |     const sleeve = document.querySelector(".enc-forearm").getBoundingClientRect();
-        at /Volumes/HubData/work/worktrees/counter-intelligence-sim-showcase-standard/tests/browser/counter-intelligence.spec.js:555:135
+        at <repo>/tests/browser/counter-intelligence.spec.js:555:135
 
     Error Context: test-results/counter-intelligence-taps--a3422-nd-returns-to-the-encounter-phone-portrait-430x932/error-context.md
 

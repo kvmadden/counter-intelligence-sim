@@ -1,5 +1,5 @@
 
- RUN  v4.1.11 /Volumes/HubData/work/worktrees/counter-intelligence-sim-showcase-standard
+ RUN  v4.1.11 <repo>
 
  ❯ tests/unit/counter-proof.test.js (10 tests | 1 failed | 9 skipped) 28ms
    × fails the build ledger check when a supporting passage is missing 27ms

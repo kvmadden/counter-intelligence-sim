@@ -1,5 +1,5 @@
 
- RUN  v4.1.11 /Volumes/HubData/work/worktrees/counter-intelligence-sim-showcase-standard
+ RUN  v4.1.11 <repo>
 
  ❯ tests/unit/counter-proof.test.js (2 tests | 2 failed) 35ms
    × carries explicit claim source destinations into the debrief 33ms

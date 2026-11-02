@@ -16,7 +16,7 @@ claims self-test: RED as expected (6 planted problems caught, and the stamped ba
 [gate] claims RED proof: PASS in 0.0s
 
 
- RUN  v4.1.11 /Volumes/HubData/work/worktrees/counter-intelligence-sim-showcase-standard
+ RUN  v4.1.11 <repo>
 
  ❯ tests/unit/counter-proof.test.js (9 tests | 1 failed) 2856ms
    × rejects a historical stamp after claim or cited dialogue content changes 6ms

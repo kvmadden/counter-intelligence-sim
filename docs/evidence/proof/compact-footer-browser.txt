@@ -26,9 +26,9 @@ Running 1 test using 1 worker
       404 |     expect(m.continueInView, `${where}: Continue fully in view`).toBe(true);
       405 |     expect(m.stampOverlap, `${where}: the stamp never covers a control or the dossier's name, level or endings`).toBe(false);
       406 |     expect(m.stampOutOfBounds, `${where}: the stamp never hangs past the sheet`).toBe(false);
-        at checkFit (/Volumes/HubData/work/worktrees/counter-intelligence-sim-showcase-standard/tests/browser/counter-intelligence.spec.js:403:50)
-        at pageThrough (/Volumes/HubData/work/worktrees/counter-intelligence-sim-showcase-standard/tests/browser/counter-intelligence.spec.js:422:7)
-        at /Volumes/HubData/work/worktrees/counter-intelligence-sim-showcase-standard/tests/browser/counter-intelligence.spec.js:461:9
+        at checkFit (<repo>/tests/browser/counter-intelligence.spec.js:403:50)
+        at pageThrough (<repo>/tests/browser/counter-intelligence.spec.js:422:7)
+        at <repo>/tests/browser/counter-intelligence.spec.js:461:9
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     test-results/counter-intelligence-fits--4048e-ngs-line-no-text-under-13px-phone-portrait-375x667/test-failed-1.png
