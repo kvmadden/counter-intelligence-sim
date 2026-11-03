@@ -1,6 +1,6 @@
 # Verification
 
-Public base: `ef6e5efaf71f0b50338cc52dfdec7226e96867df`. Work began from a clean isolated worktree attached to the public repository clone. The supplied other clone and both origins were preserved. Both repositories' open PRs were checked before implementation. Existing showcase work was compared and relevant token-based appearance and build-regression implementation reused without importing other repository history or its validation result.
+Public base: `ef6e5efaf71f0b50338cc52dfdec7226e96867df`. Work began from a clean isolated worktree of this repository. Open PRs were checked before implementation. Existing showcase work was compared and relevant token-based appearance and build-regression implementation reused without importing other repository history or its validation result.
 
 The toolchain is Node v24.14.1 and npm 11.11.0. All resolved package records match origin/main. The candidate only declares the already locked Babel parser as a direct development dependency. No package version changed. Dependencies were installed from the lockfile. Fixtures contain fictional authored game content only and clean up their temporary copies.
 
@@ -16,7 +16,7 @@ The support tests reject absent passages, unrelated CDC destinations even with a
 
 ## Full gate comparison
 
-An untouched origin/main control was cloned outside the estate at `/tmp/ci-proof-control`, checked out at the base SHA and installed with `npm ci`. `CI_PORT=4197 npm run gate` exited 0. It passed 231 unit tests and 178 browser checks, retaining 14 existing skips. The [complete control log](evidence/proof/control-gate.txt) records all configured stages. The scratch clone was removed after preserving the evidence.
+An untouched origin/main control was cloned to a temporary folder, `<tmp>/ci-proof-control`, checked out at the base SHA and installed with `npm ci`. `CI_PORT=4197 npm run gate` exited 0. It passed 231 unit tests and 178 browser checks, retaining 14 existing skips. The [complete control log](evidence/proof/control-gate.txt) records all configured stages. The scratch clone was removed after preserving the evidence.
 
 The final candidate command `CI_PORT=4198 npm run gate` exited 0. It passed 243 unit tests and 184 browser checks, retaining the same 14 existing skips. All six browser configurations passed. See the [complete final candidate log](evidence/proof/candidate-gate-final.txt) and [toolchain and parity receipt](evidence/proof/parity.json). Final candidate-only failures: none. Earlier red full-gate attempts remain visible below.
 
@@ -24,7 +24,7 @@ Earlier candidate attempts are retained. Attempt 1 failed stale contract asserti
 
 ## Browser and media evidence
 
-`SHOWCASE_EVIDENCE=<evidence directory> SHOWCASE_URL=http://127.0.0.1:4199 node scripts/capture-proof.mjs` exited 0. The visible capture browser exercised 54 states in light and dark at 1440×900, 430×932 and 390×844, using keyboard activation and reduced motion. It recorded no horizontal overflow, no visible enabled control below 44 pixels and zero automatic remote requests. [Geometry](evidence/proof/browser/geometry.json) and accessible source-tab snapshots accompany the [public-candidate media](media/README.md). The runtime content hash matches the current proof report. Every published image and GIF hash matches the media manifest.
+`SHOWCASE_EVIDENCE=<evidence directory> SHOWCASE_URL=<preview address> node scripts/capture-proof.mjs` exited 0, against a production preview on the same computer. The visible capture browser exercised 54 states in light and dark at 1440×900, 430×932 and 390×844, using keyboard activation and reduced motion. It recorded no horizontal overflow, no visible enabled control below 44 pixels and zero automatic remote requests. [Geometry](evidence/proof/browser/geometry.json) and accessible source-tab snapshots accompany the [public-candidate media](media/README.md). The runtime content hash matches the current proof report. Every published image and GIF hash matches the media manifest.
 
 The 9-frame GIF is 16.2 seconds and was assembled from actual browser captures with Pillow in an isolated environment. That environment was removed. Dossier, conversation and source captures were visually inspected across the required viewports and both themes. Source links have visible focus. The main flow is silent with all dialogue and outcome information in text. Existing browser checks cover reduced motion and keyboard debrief navigation.
 

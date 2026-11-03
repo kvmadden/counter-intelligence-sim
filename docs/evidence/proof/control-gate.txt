@@ -16,7 +16,7 @@ claims self-test: RED as expected (6 planted problems caught, and the stamped ba
 [gate] claims RED proof: PASS in 0.0s
 
 
- RUN  v4.1.11 /private/tmp/ci-proof-control
+ RUN  v4.1.11 <tmp>/ci-proof-control
 
 
  Test Files  20 passed (20)
@@ -58,7 +58,7 @@ scan: GREEN, no network reference, no banned name
 [gate] scanner: PASS in 0.1s
 
 
- RUN  v4.1.11 /private/tmp/ci-proof-control
+ RUN  v4.1.11 <tmp>/ci-proof-control
 
 
  Test Files  4 passed (4)
