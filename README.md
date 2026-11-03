@@ -75,7 +75,7 @@ flowchart LR
 
 ## Evidence
 
-- **231 unit tests** (Vitest, run 2026-10-30; see Run locally) over the engine, trees, tiers, objectives, claims gate and scanner.
+- **233 unit tests** (Vitest, run 2026-11-03; see Run locally) over the engine, trees, tiers, objectives, claims gate and scanner.
 - **Whole-tree property tests.** Two ranking rules are checked over every path of every tree: a pushed yes never outranks a respectful not-today, and pushing after a no caps the run at the bottom rung.
 - **Gate self-tests.** The claim gate and the scanner each plant violations and must go red before a green result counts.
 - **Browser tests.** Playwright specs cover six phone and desktop viewports. They are part of `npm run gate` and need browsers installed; they were not part of the 231 count.
