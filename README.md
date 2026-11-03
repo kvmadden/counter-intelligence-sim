@@ -2,7 +2,7 @@
 
 An offline, authored branching-dialogue game where pharmacy staff practice vaccine conversations with five fictional patients, with every clinical fact tied to a cited CDC claim that the build refuses to ship unreviewed.
 
-**Play it:** https://counter-intelligence.vercel.app (phone in portrait works best)
+**Case page:** https://kvmadden.com/projects/counter-intelligence-sim/
 
 ## Clinical claim gate
 
