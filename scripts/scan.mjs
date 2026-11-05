@@ -8,6 +8,15 @@ import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(root, "dist");
+const INERT_BASE64_DATA_MIMES = new Set([
+  "image/png",
+  "image/jpeg",
+  "font/woff",
+  "font/woff2",
+]);
+const REQUIRED_ENTRYPOINTS = ["index.html", "counter-intelligence.html"];
+const PROJECT_SVG_TEMPLATE = /url\(["']data:image\/svg\+xml,\$\{encodeURIComponent\([A-Za-z_$][\w$]*\)\}["']\)/g;
+const DATA_URI = /\bdata:\s*(?:[a-z\d.+-]+\/[a-z\d.+-]+[^"'<>)]*|[;,][^"'<>)]*)/gi;
 
 export const PATTERNS = [
   // Allowed strings that are never fetched: the SVG namespace, and the link
@@ -60,12 +69,62 @@ const SELF_TEST_WORD_B64 = "ZXhhbXBsZW5hbWU=";
 
 export const BANNED_WORD_HASHES = new Set(["a311cc6752e5556df96251e5a1270532a255645d9c8e5ba6124578c1aad9f3a5"]);
 
+function expandDataUris(text, label, dataUriHits, depth = 0) {
+  return text.replace(DATA_URI, (uri) => {
+    const comma = uri.indexOf(",");
+    if (comma < 0) {
+      dataUriHits.push({ file: label, rule: "unreadable data URI", snippet: "data: without payload separator" });
+      return "[unreadable data URI]";
+    }
+
+    const header = uri.slice(5, comma);
+    const [rawMime, ...rawParams] = header.split(";");
+    const mime = rawMime.trim().toLowerCase();
+    const params = rawParams.map((param) => param.trim().toLowerCase());
+    const isBase64 = params.includes("base64");
+    const payload = uri.slice(comma + 1);
+    const validBase64 = /^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/.test(payload);
+
+    if (INERT_BASE64_DATA_MIMES.has(mime) && isBase64 && validBase64) {
+      return "[inert raster/font payload]";
+    }
+
+    const activeTextType = mime.startsWith("text/") || mime.endsWith("+xml");
+    if (!activeTextType) {
+      dataUriHits.push({ file: label, rule: "unvetted data URI", snippet: "data:" + (mime || "(missing MIME)") });
+      return "[rejected data URI]";
+    }
+
+    const rule = mime.endsWith("+xml") ? "active data URI" : "executable data URI";
+    dataUriHits.push({ file: label, rule, snippet: "data:" + (mime || "(missing MIME)") });
+    try {
+      if (isBase64 && !validBase64) throw new Error("invalid base64 data URI");
+      const decoded = isBase64
+        ? Buffer.from(payload, "base64").toString("utf8")
+        : decodeURIComponent(payload);
+      if (depth >= 8 && /\bdata:[^"'<>)]*,/i.test(decoded)) {
+        dataUriHits.push({ file: label, rule: "nested data URI depth", snippet: "data:" + mime });
+        return "[nested payload rejected]";
+      }
+      return expandDataUris(decoded, label, dataUriHits, depth + 1);
+    } catch {
+      dataUriHits.push({ file: label, rule: "unreadable data URI", snippet: "data:" + (mime || "(missing MIME)") });
+      return "[unreadable data URI]";
+    }
+  });
+}
+
 export function scanText(text, label = "text") {
-  // Embedded base64 payloads (images, fonts) are opaque bytes, not executable or
-  // copy content, and can contain a banned word's letters by chance. Keep each
-  // URI's type and scan all the surrounding text, but not the payload itself.
-  const inspected = text.replace(/data:[\w.+/-]+;base64,[A-Za-z0-9+/=]+/gi, (uri) => `${uri.slice(0, uri.indexOf(",") + 1)}[payload]`);
-  const hits = [];
+  // Only the built raster images and WOFF fonts are treated as inert opaque bytes.
+  // Decode executable and other textual data URIs before applying the normal rules.
+  // Reject unknown binary MIME types rather than trusting them as inert.
+  // The app's fixed SVG noise filter is built from a local template scanned below.
+  // Replace only the exact generated URL wrapper. The SVG source expression
+  // remains in the inspected text and still passes through the ordinary rules.
+  const source = text.replace(PROJECT_SVG_TEMPLATE, "[local SVG template data URL]");
+  const dataUriHits = [];
+  const inspected = expandDataUris(source, label, dataUriHits);
+  const hits = [...dataUriHits];
   for (const [name, re] of PATTERNS) {
     const m = inspected.match(re);
     if (m) hits.push({ file: label, rule: name, snippet: inspected.slice(Math.max(0, m.index - 40), m.index + 60).replace(/\s+/g, " ") });
@@ -77,7 +136,7 @@ export function scanText(text, label = "text") {
   return hits;
 }
 
-export function scanDist(dist = DIST) {
+export function scanDist(dist = DIST, { requireEntrypoints = false } = {}) {
   const files = [];
   const walk = (dir) => {
     if (!fs.existsSync(dir)) return;
@@ -91,6 +150,15 @@ export function scanDist(dist = DIST) {
   walk(dist);
 
   const hits = [];
+  if (requireEntrypoints) {
+    if (files.length === 0) hits.push({ file: path.relative(root, dist), rule: "scanner coverage", snippet: "zero files inspected" });
+    for (const entry of REQUIRED_ENTRYPOINTS) {
+      const entryPath = path.join(dist, entry);
+      if (!fs.existsSync(entryPath) || !fs.statSync(entryPath).isFile()) hits.push({ file: path.relative(root, dist), rule: "scanner coverage", snippet: `missing ${entry}` });
+    }
+    if (!files.some((file) => /\.js$/.test(file))) hits.push({ file: path.relative(root, dist), rule: "scanner coverage", snippet: "missing JavaScript bundle" });
+    if (!files.some((file) => /\.css$/.test(file))) hits.push({ file: path.relative(root, dist), rule: "scanner coverage", snippet: "missing stylesheet bundle" });
+  }
   for (const f of files) hits.push(...scanText(fs.readFileSync(f, "utf8"), path.relative(root, f)));
   return { files, hits };
 }
@@ -116,10 +184,53 @@ if (invokedDirectly) {
     for (const plant of devicePlants) {
       if (!scanText(`<p>${plant}</p>`, "self-test").some((h) => h.rule === "device brand")) { console.error(`scan self-test: planted "${plant}" was NOT caught by device brand.`); process.exit(1); }
     }
-    console.log(`scan self-test: RED as expected (${red.length + hashedRed.length} planted hits caught, plus ${brandPlants.length} vaccine brands and makers, ${Object.keys(homagePlants).length} homage names and house-style marks, and ${devicePlants.length} device brand names)`);
+    const fetchSentinel = 'fetch("/CIS_SCANNER_SENTINEL")';
+    for (const [mime, payload] of [
+      ["text/javascript", fetchSentinel],
+      ["image/svg+xml", `<svg><script>${fetchSentinel}</script></svg>`],
+      ["text/html", `<script>${fetchSentinel}</script>`],
+    ]) {
+      const data = Buffer.from(payload).toString("base64");
+      if (!scanText(`data:${mime};base64,${data}`, "self-test").some((h) => h.rule === "fetch call")) {
+        console.error(`scan self-test: executable ${mime} payload was not decoded and scanned.`);
+        process.exit(1);
+      }
+    }
+    for (const mime of ["image/png", "image/jpeg", "font/woff", "font/woff2"]) {
+      if (scanText(`data:${mime};base64,AAAA`, "self-test").length) {
+        console.error(`scan self-test: vetted inert ${mime} payload was rejected.`);
+        process.exit(1);
+      }
+    }
+    const defaultMime = Buffer.from(fetchSentinel).toString("base64");
+    for (const uri of [`data:;base64,${defaultMime}`, `data:;charset=utf-8;base64,${defaultMime}`]) {
+      if (!scanText(uri, "self-test").some((h) => h.rule === "unvetted data URI")) {
+        console.error("scan self-test: default-text data URI was not rejected.");
+        process.exit(1);
+      }
+    }
+    fs.mkdirSync(path.join(root, "work"), { recursive: true });
+    const fixtureRoot = fs.mkdtempSync(path.join(root, "work", "scanner-self-test-"));
+    const empty = path.join(fixtureRoot, "empty-dist");
+    const partial = path.join(fixtureRoot, "partial-dist");
+    fs.mkdirSync(empty);
+    fs.mkdirSync(partial);
+    fs.writeFileSync(path.join(partial, "only.js"), "const safe = true;");
+    const emptyRed = scanDist(empty, { requireEntrypoints: true });
+    const partialRed = scanDist(partial, { requireEntrypoints: true });
+    fs.rmSync(fixtureRoot, { recursive: true, force: true });
+    if (!emptyRed.hits.some((h) => h.rule === "scanner coverage" && h.snippet === "zero files inspected")) {
+      console.error("scan self-test: empty dist was not rejected.");
+      process.exit(1);
+    }
+    if (!partialRed.hits.some((h) => h.rule === "scanner coverage" && h.snippet === "missing index.html")) {
+      console.error("scan self-test: missing expected entrypoints were not rejected.");
+      process.exit(1);
+    }
+    console.log(`scan self-test: RED as expected (${red.length + hashedRed.length} planted hits caught, plus ${brandPlants.length} vaccine brands and makers, ${Object.keys(homagePlants).length} homage names and house-style marks, ${devicePlants.length} device brand names, three decoded executable MIME types, two rejected default-text data URI forms, and empty/missing-entrypoint coverage controls; four inert image/font MIME types stayed GREEN)`);
     process.exit(0);
   }
-  const { files, hits } = scanDist();
+  const { files, hits } = scanDist(DIST, { requireEntrypoints: true });
   console.log(`scan: ${files.length} files inspected`);
   if (hits.length) { for (const h of hits) console.error(`  RED ${h.file} :: ${h.rule} :: ${h.snippet}`); process.exit(1); }
   console.log("scan: GREEN, no network reference, no banned name");

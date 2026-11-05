@@ -1,12 +1,15 @@
 import fs from "node:fs";
-import os from "node:os";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { describe, it, expect } from "vitest";
 import { scanDist, scanText } from "../../scripts/scan.mjs";
 
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
+
 describe("bundle scanner", () => {
   it("scans source maps too, so turning them on can never ship unscanned source", () => {
-    const dist = fs.mkdtempSync(path.join(os.tmpdir(), "ci-scan-"));
+    fs.mkdirSync(path.join(root, "work"), { recursive: true });
+    const dist = fs.mkdtempSync(path.join(root, "work", "ci-scan-"));
     try {
       fs.writeFileSync(path.join(dist, "index.js.map"), '{"sourcesContent":["fetch(\\"https://example.invalid/ping\\")"]}');
       const { files, hits } = scanDist(dist);
@@ -50,6 +53,85 @@ describe("bundle scanner", () => {
     expect(scanText(raster)).toEqual([]);
     expect(scanText(`${raster} fetch("https://example.invalid/ping")`).map((hit) => hit.rule)).toEqual(["network url", "fetch call"]);
     expect(scanText('data:image/svg+xml,<svg><script>fetch("/ping")</script></svg>').map((hit) => hit.rule)).toContain("fetch call");
+  });
+  it("decodes executable JavaScript, SVG, and HTML data payloads without executing them", () => {
+    const sentinel = 'fetch("/CIS_SCANNER_SENTINEL")';
+    const rules = (mime, payload) => {
+      const encoded = Buffer.from(payload).toString("base64");
+      return scanText(`data:${mime};base64,${encoded}`).map((hit) => hit.rule);
+    };
+    expect(rules("text/javascript", sentinel)).toContain("fetch call");
+    expect(rules("image/svg+xml", `<svg><script>${sentinel}</script></svg>`)).toContain("fetch call");
+    expect(rules("text/html", `<script>${sentinel}</script>`)).toContain("fetch call");
+    const nested = Buffer.from(`data:text/javascript;base64,${Buffer.from(sentinel).toString("base64")}`).toString("base64");
+    expect(scanText(`data:text/html;base64,${nested}`).map((hit) => hit.rule)).toContain("fetch call");
+    expect(scanText(`data:text/javascript,${encodeURIComponent(sentinel)}`).map((hit) => hit.rule)).toContain("fetch call");
+  });
+  it("fails closed on browser-executable JavaScript URI metadata and base64 whitespace variants", () => {
+    const payload = Buffer.from('globalThis.__uriSentinel = "executed"; if (false) fetch("/CIS_SCANNER_SENTINEL")').toString("base64");
+    const variants = [
+      `data:text/javascript;base64,${payload}`,
+      `data:text/javascript;charset=utf-8;base64,${payload}`,
+      `data:text/javascript;charset="utf-8";base64,${payload}`,
+      `data:text/javascript;charset=%22utf-8%22;base64,${payload}`,
+      `data:text/javascript; charset=utf-8;base64,${payload}`,
+      `data:text/javascript;base64,${payload.slice(0, 16)}\n${payload.slice(16)}`,
+      `data:text/javascript;base64,${payload.slice(0, 16)}\t${payload.slice(16)}`,
+      `data:text/javascript;base64,${payload.slice(0, 16)} ${payload.slice(16)}`,
+    ];
+    for (const uri of variants) {
+      const hits = scanText(`<script src='${uri}'></script>`);
+      expect(hits.some((hit) => ["executable data URI", "unreadable data URI", "unvetted data URI"].includes(hit.rule)), uri.slice(0, 48)).toBe(true);
+    }
+  });
+  it("fails closed on browser JavaScript MIME aliases without enumerating them", () => {
+    const payload = Buffer.from('globalThis.__uriSentinel = "executed"; if (false) fetch("/CIS_SCANNER_SENTINEL")').toString("base64");
+    for (const mime of ["text/jscript", "text/livescript", "text/x-javascript", "text/x-ecmascript", "text/javascript1.5"]) {
+      const uri = `data:${mime};base64,${payload.slice(0, 16)} ${payload.slice(16)}`;
+      expect(scanText(`<script src='${uri}'></script>`).map((hit) => hit.rule), mime).toContain("executable data URI");
+    }
+  });
+  it("rejects default-text data URIs and leaves ordinary data fields alone", () => {
+    const payload = Buffer.from('fetch("/CIS_SCANNER_SENTINEL")').toString("base64");
+    const variants = [
+      `data:;base64,${payload}`,
+      `data:;charset=utf-8;base64,${payload}`,
+    ];
+    for (const uri of variants) {
+      expect(scanText(`<script src='${uri}'></script>`).map((hit) => hit.rule)).toContain("unvetted data URI");
+    }
+    expect(scanText('const record = { data: "local value", dataType: "plain" };')).toEqual([]);
+  });
+  it("keeps only vetted raster and font base64 payloads opaque", () => {
+    for (const mime of ["image/png", "image/jpeg", "font/woff", "font/woff2"]) {
+      expect(scanText(`data:${mime};base64,AAAA`), mime).toEqual([]);
+    }
+    expect(scanText("data:application/octet-stream;base64,AAAA").map((hit) => hit.rule)).toContain("unvetted data URI");
+    expect(scanText('url("data:image/svg+xml,<svg></svg>")').map((hit) => hit.rule)).toContain("active data URI");
+    expect(scanText('url("data:image/svg+xml,${encodeURIComponent(e)}")').map((hit) => hit.rule)).not.toContain("active data URI");
+    const localTemplate = `const svg = '<svg><script>fetch("/CIS_SCANNER_SENTINEL")</script></svg>'; return url("data:image/svg+xml,${"${encodeURIComponent(svg)}"}")`;
+    expect(scanText(localTemplate).map((hit) => hit.rule)).toContain("fetch call");
+  });
+  it("rejects empty dist and missing built entrypoints when artifact coverage is required", () => {
+    fs.mkdirSync(path.join(root, "work"), { recursive: true });
+    const fixtureRoot = fs.mkdtempSync(path.join(root, "work", "scan-test-"));
+    try {
+      const empty = path.join(fixtureRoot, "empty");
+      const partial = path.join(fixtureRoot, "partial");
+      fs.mkdirSync(empty);
+      fs.mkdirSync(partial);
+      fs.writeFileSync(path.join(partial, "only.js"), "const safe = true;");
+
+      const emptyResult = scanDist(empty, { requireEntrypoints: true });
+      expect(emptyResult.files).toHaveLength(0);
+      expect(emptyResult.hits.some((hit) => hit.rule === "scanner coverage" && hit.snippet === "zero files inspected")).toBe(true);
+
+      const partialResult = scanDist(partial, { requireEntrypoints: true });
+      expect(partialResult.hits.some((hit) => hit.rule === "scanner coverage" && hit.snippet === "missing index.html")).toBe(true);
+      expect(partialResult.hits.some((hit) => hit.rule === "scanner coverage" && hit.snippet === "missing stylesheet bundle")).toBe(true);
+    } finally {
+      fs.rmSync(fixtureRoot, { recursive: true, force: true });
+    }
   });
   it("lets generic vaccine talk and cited agencies through, since vaccines are the point (Kevin, 2026-09-15)", () => {
     for (const ok of ["Want a flu shot while you're here?", "the updated COVID-19 vaccine", "Source: CDC, Key Facts About Seasonal Flu Vaccine", "a Td or Tdap booster", "immunization record", "a sore arm is a common side effect", "influenza", "RSV", "shingles"]) {
