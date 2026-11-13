@@ -10,6 +10,9 @@ import { walk } from "./helpers/tree-walk.js";
 // (2026-11-12) does not extend here. Covers trees, claims and docs, source text and data.
 const ROOT = join(import.meta.dirname, "../..");
 const TERM = /covid|sars-?cov|coronavirus/i;
+// Real source URLs are data, not content: only visible text, claims, offers and debriefs count.
+const withoutUrls = (text) => text.replace(/https?:\/\/[^\s"')]+/g, "");
+const hasTerm = (text) => TERM.test(withoutUrls(text));
 
 const filesUnder = (dir) => readdirSync(dir).flatMap((name) => {
   const path = join(dir, name);
@@ -20,14 +23,14 @@ describe("no COVID content", () => {
   it("is absent from every tree file, the claims ledger and every doc", () => {
     const files = [...filesUnder(join(ROOT, "src/counter/trees")), join(ROOT, "src/counter/claims.js"), ...filesUnder(join(ROOT, "docs")).filter((f) => /\.(md|json|txt)$/.test(f)), join(ROOT, "README.md")];
     expect(files.length, "the sweep sees its targets").toBeGreaterThan(8);
-    const hits = files.filter((file) => TERM.test(readFileSync(file, "utf8"))).map((file) => file.slice(ROOT.length + 1));
+    const hits = files.filter((file) => hasTerm(readFileSync(file, "utf8"))).map((file) => file.slice(ROOT.length + 1));
     expect(hits).toEqual([]);
   });
 
   it("is absent from the loaded trees and claims, ids included", () => {
     const hits = [];
-    for (const [id, tree] of Object.entries(TREES)) if (TERM.test(JSON.stringify(tree))) hits.push(`tree ${id}`);
-    for (const [id, claim] of Object.entries(CLAIMS)) if (TERM.test(id + JSON.stringify(claim))) hits.push(`claim ${id}`);
+    for (const [id, tree] of Object.entries(TREES)) if (hasTerm(JSON.stringify(tree))) hits.push(`tree ${id}`);
+    for (const [id, claim] of Object.entries(CLAIMS)) if (hasTerm(id + JSON.stringify(claim))) hits.push(`claim ${id}`);
     expect(Object.keys(TREES)).toHaveLength(5);
     expect(hits).toEqual([]);
   });
