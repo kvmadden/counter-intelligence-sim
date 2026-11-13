@@ -270,11 +270,6 @@ export const jordan = {
       line: "My manager owes me one anyway. Let's do it.",
       choices: [
         {
-          id: "today.offer-covid", family: "offer", label: "Want a COVID-19 vaccine too? It's your call, and both fit in one visit.",
-          claims: ["covid-personal-call", "same-visit"], note: "Offering both in one visit saved her a second trip.",
-          reply: "One visit, two arms, zero extra bus trips. Sure.", end: "two-for-one",
-        },
-        {
           id: "today.offer-tdap", family: "offer", label: "Your record says your last tetanus shot was 2014. You're due.",
           claims: ["tdap-ten-years"], note: "Checking her record turned one shot into the one she didn't know she needed.",
           reply: "2014. The rake. I stepped on a rake like a cartoon. Yes, do that one too.", end: "rake-insurance",
@@ -365,11 +360,6 @@ export const jordan = {
   },
 
   endings: {
-    "two-for-one": {
-      name: "Two for one", rung: "today", best: true,
-      debrief: "Jordan caught the next 14 with a flu shot and a COVID-19 vaccine. One visit, two arms, no extra bus trips.",
-      huddle: "What made the second vaccine feel like a convenience instead of an ask?",
-    },
     "rake-insurance": {
       name: "Rake insurance", rung: "today", best: true,
       debrief: "Jordan got her flu shot and a tetanus booster, twelve years after the rake.",

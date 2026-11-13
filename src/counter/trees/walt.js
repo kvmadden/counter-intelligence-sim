@@ -255,11 +255,6 @@ export const walt = {
           reply: "Ed. Ed had shingles in the spring and told the whole counter. Twice.", next: "ed",
         },
         {
-          id: "today.offer-covid", family: "offer", label: "Want a COVID-19 vaccine too? It's your call, and both fit one visit.",
-          claims: ["covid-personal-call", "same-visit"], note: "Offering both in one visit saved him a second Tuesday.",
-          reply: "Both. One trip. The system approves.", end: "double-tuesday",
-        },
-        {
           id: "today.close-seat", family: "close", label: "Grab the chair by the window. Back in a minute.",
           reply: "The squeaky one. We go way back.", end: "left-arm",
         },
@@ -338,11 +333,6 @@ export const walt = {
       name: "Pie diplomacy", rung: "scheduled", best: true,
       debrief: "Walt is coming back next Tuesday with Ed and the whole booth, on a promise of pie.",
       huddle: "When a patient becomes the one who recruits, what did you do to get there?",
-    },
-    "double-tuesday": {
-      name: "Double Tuesday", rung: "today",
-      debrief: "Walt got the high-dose flu shot and a COVID-19 vaccine in one trip. The system approves.",
-      huddle: "What made the second vaccine feel like it fit the routine?",
     },
     "left-arm": {
       name: "Left arm", rung: "today",

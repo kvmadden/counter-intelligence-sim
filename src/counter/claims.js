@@ -46,19 +46,6 @@ export const CLAIMS = Object.freeze({
     reviewedBy: "Kevin Madden, PharmD",
     reviewedOn: "2026-09-15",
   }),
-  "same-visit": Object.freeze({
-    text: "People can get a flu vaccine and a COVID-19 vaccine at the same visit if they are eligible.",
-    source: Object.freeze({ org: "CDC", title: "Getting a Flu Vaccine and Other Recommended Vaccines at the Same Time", url: "https://www.cdc.gov/flu/vaccines/coadministration.html", accessed: "2026-09-15" }),
-    reviewedBy: "Kevin Madden, PharmD",
-    reviewedOn: "2026-09-15",
-  }),
-  "covid-personal-call": Object.freeze({
-    text: "CDC recommends the current COVID-19 vaccine for people 6 months and older based on individual-based decision-making: a personal decision, made with a health care provider.",
-    source: Object.freeze({ org: "CDC", title: "Staying Up to Date with COVID-19 Vaccines", url: "https://www.cdc.gov/covid/vaccines/stay-up-to-date.html", accessed: "2026-09-15" }),
-    volatile: true,
-    reviewedBy: "Kevin Madden, PharmD",
-    reviewedOn: "2026-09-15",
-  }),
   // Jordan's second pass (research: docs/claims/research-2026-09-15-objections.json).
   "tdap-ten-years": Object.freeze({
     text: "Adults need a Td or Tdap booster every 10 years to stay protected against tetanus and diphtheria.",
@@ -89,7 +76,7 @@ export const CLAIMS = Object.freeze({
     reviewedOn: "2026-09-15",
   }),
   "other-viruses": Object.freeze({
-    text: "Getting sick soon after a flu shot can mean exposure before protection had its two weeks to build, or another respiratory virus, such as a cold virus or SARS-CoV-2.",
+    text: "Getting sick soon after a flu shot can mean exposure before protection had its two weeks to build, or another respiratory virus, such as a cold virus.",
     source: Object.freeze({ org: "CDC", title: "Misconceptions About Seasonal Flu and Flu Vaccines", url: "https://www.cdc.gov/flu/prevention/misconceptions.html", accessed: "2026-09-15" }),
     reviewedBy: "Kevin Madden, PharmD",
     reviewedOn: "2026-09-15",

@@ -44,7 +44,7 @@ claims: 26 claims, 5 trees, 193 staff lines checked
   RED claim temp-unsourced :: untrusted source :: the source must be an https page on a public-health host, got https://example.com/flu-facts
 ```
 
-`npm run build` stopped at the same step with exit code 1, so no bundle was produced. The temporary claims were then removed. With the real ledger the gate reports `claims: 24 claims, 5 trees, 193 staff lines checked` and `GREEN`.
+`npm run build` stopped at the same step with exit code 1, so no bundle was produced. The temporary claims were then removed. With the real ledger the gate reports `claims: 22 claims, 5 trees, 189 staff lines checked` and `GREEN`.
 
 The gate checks that a claim is sourced, from a permitted host and stamped. It does not check that the claim text matches the page. That comparison is the human review.
 
@@ -75,7 +75,7 @@ flowchart LR
 
 ## Evidence
 
-- **233 unit tests** (Vitest, run 2026-11-03; see Run locally) over the engine, trees, tiers, objectives, claims gate and scanner.
+- **248 unit tests** (Vitest, run 2026-11-13; see Run locally) over the engine, trees, tiers, objectives, claims gate and scanner.
 - **Whole-tree property tests.** Two ranking rules are checked over every path of every tree: a pushed yes never outranks a respectful not-today, and pushing after a no caps the run at the bottom rung.
 - **Gate self-tests.** The claim gate and the scanner each plant violations and must go red before a green result counts.
 - **Browser tests.** Playwright specs cover six phone and desktop viewports. They are part of `npm run gate` and need browsers installed; they are separate from the unit-test count above.

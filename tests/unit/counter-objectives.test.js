@@ -17,7 +17,7 @@ const resultOf = (run, tier, id, scenario) => evaluateObjectives(run, tier, scen
 
 // Jordan's paths, walked straight off her tree.
 // Two for one: she asks first, then hears safety facts, and never a fact about protection.
-const TWO_FOR_ONE = ["counter.offer-shot", "hesitant.ask-pause", "concern.ask-permission", "concern.offer-facts", "open.next-bus", "today.offer-covid"];
+const TWO_FOR_ONE = ["counter.offer-shot", "hesitant.ask-pause", "concern.ask-permission", "concern.offer-facts", "open.next-bus", "today.close-seat"];
 // Eight exchanges with no ending, so Jordan's bus arrives (her cap is 8). The sit-after
 // fact comes before any ask, and the timing facts about protection come last.
 const TIMEOUT = ["counter.ask-time", "rush.offer-shot", "hesitant.offer-next-bus", "hesitant.ask-pause", "concern.sit", "concern.ask-permission", "concern.offer-facts", "open.why-now"];
