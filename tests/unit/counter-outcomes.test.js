@@ -5,13 +5,13 @@ import { TIER_LADDER } from "../../src/counter/tiers.js";
 import { play } from "./helpers/tree-walk.js";
 
 const [jordan] = PATIENTS;
-const TWO_FOR_ONE = ["counter.offer-shot", "hesitant.ask-pause", "concern.ask-permission", "concern.offer-facts", "open.next-bus", "today.offer-covid"];
+const TWO_FOR_ONE = ["counter.offer-shot", "hesitant.ask-pause", "concern.ask-permission", "concern.offer-facts", "open.next-bus", "today.offer-tdap"];
 
 // What mission status and the debrief show, straight from the branching engine.
 describe("the run outcome", () => {
   it("carries the engine's named ending and its tier", () => {
     const outcome = outcomeFor(play("jordan", ...TWO_FOR_ONE), jordan);
-    expect(outcome.ending).toEqual({ id: "two-for-one", name: "Two for one", best: true, rung: "today" });
+    expect(outcome.ending).toEqual({ id: "rake-insurance", name: "Rake insurance", best: true, rung: "today" });
     expect(outcome.tier).toMatchObject({ id: "telling-everyone", label: "I'm telling everyone about this pharmacist.", rank: 6, of: 6, capped: null });
   });
 

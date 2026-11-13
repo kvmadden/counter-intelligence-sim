@@ -48,8 +48,6 @@ export function objectivePages(objectives) {
   return pages;
 }
 
-// Keeps a hyphenated name on one line, so a big headline never breaks "COVID-19".
-const keepTogether = (text) => text.split(/(COVID-19)/).map((part, index) => part === "COVID-19" ? <span key={index} className="ci-nowrap">{part}</span> : part);
 
 // Each screen opens with focus on its heading, so keyboard and screen-reader
 // users start at the top of the one idea it carries.
@@ -410,7 +408,7 @@ export function Debrief({ patient, run, outcome, onContinue }) {
         </>}
         {tabs.page === "happened" && <>
           <h2 className="ci-kicker">What happened</h2>
-          <p className="ci-brief-lead">{keepTogether(debrief.happened)}</p>
+          <p className="ci-brief-lead">{debrief.happened}</p>
           {debrief.method && <p className="ci-brief-note">{debrief.method}</p>}
         </>}
         {tabs.page === "moved" && <>

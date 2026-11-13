@@ -82,7 +82,7 @@
       "title": "Misconceptions About Seasonal Flu and Flu Vaccines",
       "url": "https://www.cdc.gov/flu/prevention/misconceptions.html",
       "pageUpdated": "2024-09-06",
-      "quote": "Someone can get sick with another respiratory virus besides influenza virus, such as rhinoviruses or SARS-CoV-2",
+      "quote": "Someone can get sick with another respiratory virus besides influenza virus, such as rhinoviruses",
       "volatile": false
     },
     {
@@ -128,7 +128,7 @@
       "text": "For needle anxiety: numbing cream/spray, distraction (video, music), slow deep breathing, and lying down if you've fainted before all help -- and telling the vaccinator about your fear beforehand.",
       "org": "CDC",
       "title": "Healthcare Providers: Understanding Needle Fears and Phobia",
-      "url": "https://www.cdc.gov/disability-and-health/covid-19-resources/healthcare-providers-needle-phobia.html",
+      "url": null,
       "pageUpdated": "2025-04-04",
       "quote": "Numbing creams and sprays help prevent the patient from feeling the procedure",
       "volatile": false
@@ -350,30 +350,6 @@
       "volatile": false
     },
     {
-      "id": "covid-65-plus-wording",
-      "topic": "covid-19",
-      "status": "SUPPORTED",
-      "text": "For adults 65+, COVID-19 vaccination is recommended based on 'individual-based decision-making' (also called shared clinical decision-making) -- there is no blanket 'everyone should get it' wording.",
-      "org": "CDC",
-      "title": "2025-2026 COVID-19 Vaccination Guidance",
-      "url": "https://www.cdc.gov/covid/hcp/vaccine-considerations/routine-guidance.html",
-      "pageUpdated": "2025-11-04",
-      "quote": "COVID-19 vaccination is recommended for all adults ages 65 years and older based on individual-based decision-making (also known as shared clinical decision-making)",
-      "volatile": true
-    },
-    {
-      "id": "covid-18-64-wording",
-      "topic": "covid-19",
-      "status": "SUPPORTED",
-      "text": "For adults 18-64, COVID-19 vaccination is likewise framed as an individual decision, with the risk-benefit most favorable for those at increased risk of severe COVID.",
-      "org": "CDC",
-      "title": "2025-2026 COVID-19 Vaccination Guidance",
-      "url": "https://www.cdc.gov/covid/hcp/vaccine-considerations/routine-guidance.html",
-      "pageUpdated": "2025-11-04",
-      "quote": "vaccination is recommended based on individual-based decision-making",
-      "volatile": true
-    },
-    {
       "id": "flu-65-plus-preferential-vaccines",
       "topic": "flu-65-plus",
       "status": "SUPPORTED",
@@ -399,7 +375,6 @@
     }
   ],
   "warnings": [
-    "COVID-19 guidance ('individual-based decision-making' for both 65+ and 18-64) is the single most volatile fact in this ledger -- it has changed wording multiple times across 2025-2026 and should be re-verified close to the game's launch and at the start of each new respiratory season.",
     "Flu vaccine effectiveness is NOT a fixed number: the commonly-quoted 40-60% figure applies to well-matched seasons. The just-completed 2025-26 season was a lower-effectiveness, mismatched season (~22% vs outpatient illness, ~30% vs hospitalization in adults, per CDC's preliminary VE page dated 2026-03-16). The game should frame VE as a range that varies by season, not a constant, or it will read as wrong within a year.",
     "Flu burden numbers (illnesses/hospitalizations/deaths) are season-specific and CDC republishes them annually. The most recent finalized full-season CDC estimate available today is for 2024-25 (51M illnesses / 710K hospitalizations / 45K deaths); CDC had stopped posting in-season 2025-26 estimates for the summer as of the pages checked and had not yet posted a finalized 2025-26 season summary comparable to the 2024-25 one. Plan to refresh this claim once the 2025-26 final summary posts and again for 2026-27.",
     "Could not verify a specific 'X% of adults fear/avoid needles' statistic on any live cdc.gov page (only found on aggregator/blog sites attributing it loosely to CDC or ACIP) -- omitted rather than inventing a number. The needle-anxiety coping tips themselves ARE from a current CDC page.",

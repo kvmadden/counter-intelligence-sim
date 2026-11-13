@@ -11,13 +11,13 @@ import { play } from "./helpers/tree-walk.js";
 afterEach(cleanup);
 
 const [jordan] = PATIENTS;
-const TWO_FOR_ONE = ["counter.offer-shot", "hesitant.ask-pause", "concern.ask-permission", "concern.offer-facts", "open.next-bus", "today.offer-covid"];
+const TWO_FOR_ONE = ["counter.offer-shot", "hesitant.ask-pause", "concern.ask-permission", "concern.offer-facts", "open.next-bus", "today.offer-tdap"];
 const noop = () => {};
 
 describe("mission status renders the run's outcome as data", () => {
   it("prints the tier and what it means, the ending, the endings found and each objective's status", () => {
     const outcome = outcomeFor(play("jordan", ...TWO_FOR_ONE), jordan);
-    const { container } = render(<MissionStatus patient={jordan} outcome={outcome} fresh found={["two-for-one"]} onContinue={noop} />);
+    const { container } = render(<MissionStatus patient={jordan} outcome={outcome} fresh found={["rake-insurance"]} onContinue={noop} />);
     expect(container.querySelector(".ci-tier-name").textContent).toBe(outcome.tier.label);
     expect(container.querySelector(".ci-tier-means").textContent).toBe(outcome.tier.means);
     expect(container.querySelector(".ci-ending-name").textContent).toBe(outcome.ending.name);
@@ -58,7 +58,7 @@ describe("the debrief, one idea to a page", () => {
     expect(container.querySelector(".ci-sources")).toBeNull();
 
     fireEvent.click(getByRole("tab", { name: "What happened" }));
-    expect(container.querySelector(".ci-brief-lead").textContent).toMatch(/flu shot and a COVID-19 vaccine/);
+    expect(container.querySelector(".ci-brief-lead").textContent).toMatch(/flu shot and a tetanus booster/);
     expect(container.querySelector(".ci-transcript")).toBeNull();
 
     fireEvent.click(getByRole("tab", { name: "What moved it" }));

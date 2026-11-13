@@ -70,23 +70,6 @@
       "quote": "It takes about two weeks after vaccination for antibodies to develop in the body and provide protection against influenza virus infection."
     },
     {
-      "n": 7,
-      "status": "SUPPORTED",
-      "text": "A flu vaccine can be given at the same visit as other recommended vaccines, including a COVID-19 vaccine, if the timing for each is right.",
-      "org": "CDC",
-      "title": "Getting a Flu Vaccine and other Recommended Vaccines at the Same Time | Influenza (Flu) | CDC",
-      "url": "https://www.cdc.gov/flu/vaccines/coadministration.html",
-      "pageUpdated": "Last reviewed September 17, 2024",
-      "quote": "People can get a flu vaccine and COVID-19 vaccine at the same visit if they are eligible",
-      "secondarySource": {
-        "org": "CDC",
-        "title": "Clinical Overview of Respiratory Illnesses | Respiratory Illnesses | CDC",
-        "url": "https://www.cdc.gov/respiratory-viruses/hcp/clinical-overview/index.html",
-        "pageUpdated": "August 18, 2025",
-        "quote": "Flu, COVID-19, and RSV vaccines may be co-administered (given at the same visit)."
-      }
-    },
-    {
       "n": 8,
       "status": "SUPPORTED",
       "text": "People with an egg allergy can get any flu vaccine that is otherwise right for their age and health — no extra precautions are needed beyond what's recommended for any vaccine, regardless of how severe a past egg reaction was.",
@@ -137,23 +120,6 @@
       "quote": "All Health Insurance Marketplace plans and most other private insurance plans must cover certain vaccines without charging a copayment or coinsurance"
     },
     {
-      "n": 13,
-      "status": "CHANGED",
-      "text": "As of today (2026-09-15), CDC does NOT give a blanket 'everyone should get it' recommendation for COVID-19 vaccine in healthy adults 18-64. Current guidance is 'individual-based decision-making' (also called 'shared clinical decision-making'), with CDC noting the risk-benefit is most favorable for people at increased risk of severe COVID-19. The current formulation referenced is the 2025-2026 vaccine (Omicron JN.1-lineage; mRNA options from Moderna and Pfizer-BioNTech, plus a Novavax protein-subunit option). CDC's general respiratory-virus clinical guidance states flu, COVID-19, and RSV vaccines may be co-administered at the same visit, though the main COVID adult-recommendation page itself doesn't repeat that co-administration line. FLAG: this is a high-volatility area (ACIP membership and HHS policy changes through 2025-2026) — re-verify before shipping and before each new season rather than hard-coding this wording long-term.",
-      "org": "CDC",
-      "title": "Overview of COVID-19 Vaccines and Vaccination | Covid | CDC",
-      "url": "https://www.cdc.gov/covid/hcp/vaccine-considerations/overview.html",
-      "pageUpdated": "November 4, 2025",
-      "quote": "Vaccination based on individual-based decision-making (also known as shared clinical decision-making)",
-      "secondarySource": {
-        "org": "CDC",
-        "title": "Staying Up to Date with COVID-19 Vaccines | Covid | CDC",
-        "url": "https://www.cdc.gov/covid/vaccines/stay-up-to-date.html",
-        "pageUpdated": "November 19, 2025",
-        "quote": "CDC recommends a 2025-2026 COVID-19 vaccine for people ages 6 months and older based on individual-based decision-making."
-      }
-    },
-    {
       "n": 14,
       "status": "SUPPORTED",
       "text": "Adults should get a Td or Tdap booster every 10 years to maintain protection against tetanus and diphtheria (Tdap also covers pertussis/whooping cough).",
@@ -174,7 +140,6 @@
       "quote": "Find a pharmacy near you"
     }
   ],
-  "covidStatusSummary": "As of 2026-09-15, CDC's current recommendation for a healthy adult aged 18-64 is 'individual-based decision-making' (a.k.a. 'shared clinical decision-making') for the 2025-2026 COVID-19 vaccine, not a universal 'everyone should get it' recommendation — CDC frames the risk-benefit as most favorable for people at increased risk of severe COVID-19. Source: https://www.cdc.gov/covid/hcp/vaccine-considerations/overview.html (last updated Nov 4, 2025), corroborated by https://www.cdc.gov/covid/vaccines/stay-up-to-date.html (last updated Nov 19, 2025). Same-visit co-administration with flu vaccine is stated on CDC's general respiratory-virus page (https://www.cdc.gov/respiratory-viruses/hcp/clinical-overview/index.html, Aug 18, 2025: 'Flu, COVID-19, and RSV vaccines may be co-administered') but not repeated verbatim on the COVID-specific adult overview page. This is a volatile, fast-moving area given 2025-2026 ACIP membership and HHS policy changes — re-check immediately before the game ships and again before each new flu/COVID season rather than treating this wording as permanent.",
   "extras": [
     {
       "n": "E1",
@@ -210,7 +175,6 @@
   "warnings": [
     "Direct curl fetches of every cdc.gov URL used here returned HTTP 403 (bot protection) — I did not attempt to bypass this. All quotes were obtained via the WebFetch tool (which converts HTML to markdown and summarizes through a small model) and, where possible, cross-checked against an independent WebSearch snippet pulling from the same page. Treat quotes as high-confidence but not guaranteed byte-exact; if the game needs legally/editorially exact CDC text, have a human copy-paste directly from the live page before shipping.",
     "Several CDC flu pages (vaccinations.html, keyfacts.html, coadministration.html, prevention/index.html, seasonal-influenza-vaccines.html) all displayed an identical 'Updated: September 1, 2026' stamp — this looks like a site-wide republish/re-stamp tied to the new flu season rather than a per-page substantive edit. Where a page also showed a distinct 'Last Reviewed' date, I used that instead as the more meaningful currency signal.",
-    "Claim 13 (COVID-19 status) is explicitly the most volatile item in this ledger. 'Individual-based decision-making' / 'shared clinical decision-making' language, ACIP membership, and HHS policy around COVID-19 vaccines have changed repeatedly through 2025-2026. Re-verify this specific claim close to ship date and again at the start of each future flu/COVID season — do not treat the wording captured today as permanent.",
     "Claim 9 (fainting/15-minute wait): the CDC best-practices page I used frames the 15-minute seated/lying-down observation recommendation with adolescents as the headline example (they faint most often), not as a universal 'every patient must wait 15 minutes' rule. I reworded the claim to reflect that nuance rather than overstate it as a blanket rule for all adult patients.",
     "Claim 14 (Td/Tdap every 10 years) is sourced from a CDC page last updated September 6, 2022 — the oldest source in this ledger. The underlying 10-year interval is a long-standing, stable ACIP recommendation and I found no CDC page contradicting it, but flagging the page's age per epistemic-recency practice.",
     "Claim 15's candidate wording ('takes only a few minutes') was NOT FOUND on any CDC page I checked (searched keyfacts.html, vaccinations.html, and general search) — I did not invent a quote for it and instead substituted a supported, adjacent fact (vaccines.gov pharmacy finder).",
