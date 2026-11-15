@@ -30,7 +30,7 @@ const removed = Object.entries(reviews).filter(([id, review]) => review.decision
 const out = [
   '# Claim support sheet',
   '',
-  `Kevin Madden, PharmD reviewed all ${Object.keys(reviews).length} claims on the previous sheet on 2026-11-01. His decisions, notes and the exact content each one covers are recorded in [support-reviews.json](support-reviews.json). ${approved.length} claims are approved and unchanged. ${pending.length} wait for his second look below. ${removed.length} were removed at his request.`,
+  `Kevin Madden, PharmD reviewed every claim on the previous sheet on 2026-11-01. His decisions on the ${Object.keys(reviews).length} that remain, his notes and the exact content each one covers are recorded in [support-reviews.json](support-reviews.json). ${approved.length} claims are approved and unchanged. ${pending.length} wait for his second look below. Claims he removed are out of the ledger, and their decision records left with them.`,
   '',
   'Each pending block shows what Kevin asked for, what changed, the claim, the pharmacist lines that rely on it, the exact CDC passage retrieved on the date shown, and the link the player can open from the debrief. Check one box per claim. Record the decision in `support-reviews.json` (see [REVIEW.md](REVIEW.md)), then regenerate.',
   '',
@@ -55,8 +55,10 @@ for (const row of pending) {
 }
 out.push(`## Approved by Kevin (${approved.length})`, '', 'Each approval is bound to the claim, its CDC quote and every dialogue use. Any later change to those reads `changed` and returns the claim to this sheet.', '', '| Claim | Decision | Reviewed | CDC page |', '| --- | --- | --- | --- |')
 for (const row of approved) out.push(`| ${row.id} | approved | ${row.review.reviewedOn} | <${row.claim.source.url}> |`)
-out.push('', `## Removed (${removed.length})`, '', 'Removed on 2026-11-01 at Kevin\'s request, with every line, branch, source and test that relied on them. The decision records stay in `support-reviews.json`.', '')
-for (const [id, review] of removed) out.push(`- ${id}: ${review.notes}`)
+if (removed.length) {
+  out.push('', `## Removed (${removed.length})`, '', 'Removed at Kevin\'s request, with every line, branch, source and test that relied on them. The decision records stay in `support-reviews.json`.', '')
+  for (const [id, review] of removed) out.push(`- ${id}: ${review.notes}`)
+}
 out.push('')
 
 if (process.argv[1] && path.resolve(process.argv[1]) === path.resolve(new URL(import.meta.url).pathname)) {

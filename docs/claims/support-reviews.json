@@ -39,22 +39,6 @@
     "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
     "binding": "615672325d16d360706393b161cae5ea42037e8cf85e6f0427da8d0ff606a95e"
   },
-  "same-visit": {
-    "decision": "removed",
-    "reviewedBy": "Kevin Madden, PharmD",
-    "reviewedOn": "2026-11-01",
-    "notes": "No COVID-19 content in the games, it is too politicized. Remove the claim and every line, branch, source and test that mentions COVID-19 or SARS.",
-    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
-    "binding": "aa72fb74223f9840c84ab3d8c1d8cc29897078ec4c55b345458a4205e71a1357"
-  },
-  "covid-personal-call": {
-    "decision": "removed",
-    "reviewedBy": "Kevin Madden, PharmD",
-    "reviewedOn": "2026-11-01",
-    "notes": "No COVID-19 content in the games, it is too politicized. Remove the claim and every line, branch, source and test that mentions COVID-19 or SARS.",
-    "reviewedSheet": "docs/claims/CLAIM-SUPPORT-SHEET.md at 543115ab2c0045dde2094ed160d9f533a8bd137d",
-    "binding": "7fe10c05f43c246c041ae80ace17f21cdbcb524ac4478a7860af82da582d1ef0"
-  },
   "tdap-ten-years": {
     "decision": "flagged",
     "reviewedBy": "Kevin Madden, PharmD",

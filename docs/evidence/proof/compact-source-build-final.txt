@@ -3,7 +3,7 @@
 > node scripts/check-claims.mjs && vite build && node scripts/singlefile.mjs && node scripts/scan.mjs
 
 claims: 24 claims, 5 trees, 193 staff lines checked
-  NOTE covid-personal-call is marked volatile. Re-check its source before each season.
+  NOTE [removed claim] is marked volatile. Re-check its source before each season.
   NOTE ve-good-match is marked volatile. Re-check its source before each season.
   NOTE rsv-75-plus is marked volatile. Re-check its source before each season.
   NOTE flu-65-burden is marked volatile. Re-check its source before each season.

@@ -1,6 +1,6 @@
 # Claim support sheet
 
-Kevin Madden, PharmD reviewed all 24 claims on the previous sheet on 2026-11-01. His decisions, notes and the exact content each one covers are recorded in [support-reviews.json](support-reviews.json). 15 claims are approved and unchanged. 9 wait for his second look below. 2 were removed at his request.
+Kevin Madden, PharmD reviewed every claim on the previous sheet on 2026-11-01. His decisions on the 22 that remain, his notes and the exact content each one covers are recorded in [support-reviews.json](support-reviews.json). 15 claims are approved and unchanged. 9 wait for his second look below. Claims he removed are out of the ledger, and their decision records left with them.
 
 Each pending block shows what Kevin asked for, what changed, the claim, the pharmacist lines that rely on it, the exact CDC passage retrieved on the date shown, and the link the player can open from the debrief. Check one box per claim. Record the decision in `support-reviews.json` (see [REVIEW.md](REVIEW.md)), then regenerate.
 
@@ -301,10 +301,3 @@ Each approval is bound to the claim, its CDC quote and every dialogue use. Any l
 | flu-65-burden | approved | 2026-11-01 | <https://www.cdc.gov/flu/vaccine-types/adjuvant.html> |
 | shingles-50-plus | approved | 2026-11-01 | <https://www.cdc.gov/shingles/vaccines/index.html> |
 | shingles-one-in-three | approved | 2026-11-01 | <https://www.cdc.gov/shingles/about/index.html> |
-
-## Removed (2)
-
-Removed on 2026-11-01 at Kevin's request, with every line, branch, source and test that relied on them. The decision records stay in `support-reviews.json`.
-
-- same-visit: No COVID-19 content in the games, it is too politicized. Remove the claim and every line, branch, source and test that mentions COVID-19 or SARS.
-- covid-personal-call: No COVID-19 content in the games, it is too politicized. Remove the claim and every line, branch, source and test that mentions COVID-19 or SARS.

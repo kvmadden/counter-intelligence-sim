@@ -151,8 +151,10 @@ describe('the 2026-11-01 pharmacist review', () => {
   const reviews = read('support-reviews.json')
   const drafts = read('pending-drafts.json')
 
-  it('records all 24 decisions with reviewer, date and notes', () => {
-    expect(Object.keys(reviews)).toHaveLength(24)
+  // 24 decisions were recorded. The two removed claims and their records left the repo
+  // on 2026-11-14 under the no-COVID ruling, so 22 remain, one per remaining reviewed claim.
+  it('records the 22 remaining decisions with reviewer, date and notes', () => {
+    expect(Object.keys(reviews)).toHaveLength(22)
     for (const [id, review] of Object.entries(reviews)) {
       expect(review, id).toMatchObject({ reviewedBy: 'Kevin Madden, PharmD', reviewedOn: '2026-11-01' })
       expect(['approved', 'approved with edit', 'flagged', 'removed'], id).toContain(review.decision)
@@ -163,7 +165,8 @@ describe('the 2026-11-01 pharmacist review', () => {
     expect(by('approved')).toHaveLength(16)
     expect(by('approved with edit')).toEqual(['other-viruses'])
     expect(by('flagged')).toEqual(['flu-65-preferred', 'flu-two-weeks', 'recommendation-predicts', 'shingles-same-visit', 'tdap-ten-years'])
-    for (const id of by('removed')) expect(CLAIMS[id], id).toBeUndefined()
+    expect(by('removed')).toEqual([])
+    for (const id of Object.keys(reviews)) expect(CLAIMS[id], `${id} has a record but no claim`).toBeDefined()
   })
 
   it('keeps every flagged, edited or new claim pending, bound, freshly sourced and unstamped', async () => {

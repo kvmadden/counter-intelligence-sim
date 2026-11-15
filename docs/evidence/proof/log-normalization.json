@@ -1,10 +1,10 @@
 {
-  "method": "Trailing whitespace and blank final lines removed in portable text copies, and local checkout and temporary folder paths shown as <repo> and <tmp>. Raw bytes are kept in a local evidence directory outside the repository.",
+  "method": "Trailing whitespace and blank final lines removed in portable text copies, and local checkout and temporary folder paths shown as <repo> and <tmp>. Raw bytes are kept in a local evidence directory outside the repository. On 2026-11-14 the removed claim id was replaced with [removed claim] in the logs that printed it, under Kevin's ruling that the game carries none of that content, and those portable hashes were updated. Raw hashes are unchanged.",
   "files": [
     {
       "file": "build-attempt-1.txt",
       "rawSha256": "34f3c6baa665c0d7d9772209bf46e1b3461cc5e6f5e5e1fcf8ac9e73c01acfe3",
-      "portableSha256": "34f3c6baa665c0d7d9772209bf46e1b3461cc5e6f5e5e1fcf8ac9e73c01acfe3"
+      "portableSha256": "47f4e5414cf5732f59a4e435ec436d1946b93420cad92690cb8273cd666db4d3"
     },
     {
       "file": "build-bindings-green.txt",
@@ -14,32 +14,32 @@
     {
       "file": "candidate-gate-animation-failure.txt",
       "rawSha256": "e6593c170146672e694713a53a949a5cd35f20926f996752bb2e36644b70ba53",
-      "portableSha256": "828dc2bc5c5992728c012bc1ab8d2d8d7eeab0c9d2a5edd7561d07f21c5649a7"
+      "portableSha256": "bbf31c0574e6dcff2f8044cd74b17a72828aad987e5b0ec69abb426e370cd1b2"
     },
     {
       "file": "candidate-gate-attempt-1.txt",
       "rawSha256": "0fdf9e9715a8ac21bba1e6001c90d47831bc291c857fb5597bba250baf176de3",
-      "portableSha256": "d0b3c648414116138159b104f497b3fb7710d5988cfb156eba786ae338f80cfb"
+      "portableSha256": "44d3057b29bebd08c47324a9034c83fac5c13e31a0b1507603c60c65ccc88a07"
     },
     {
       "file": "candidate-gate-attempt-2.txt",
       "rawSha256": "98af17f2bfa932244e029f74853a15f18e4bdad7df32ada96772ed5758aa72cc",
-      "portableSha256": "61155759da61d798b59ed999d53a9e91c33e52afa876f12c89aaf6dbe6ebf542"
+      "portableSha256": "34032d64b8ee27730cf35879b151dffc4eebfb3d2463c6cebfe0e34e850479f9"
     },
     {
       "file": "candidate-gate-before-binding.txt",
       "rawSha256": "6f26a7a534654f3d56d2c5f667c94a7bd4d57b9a7402d4e13cad4fd5bca4ac6e",
-      "portableSha256": "b0d9b0b87ea2d5f60bdf78f5bcea11cedba41199ed22b9378cbf0e2b81626d2f"
+      "portableSha256": "8c64b48f4467e6df95b7d14e7bd6a62f67cd406ad3d9182d4a90a60b46cfd15b"
     },
     {
       "file": "candidate-gate-final.txt",
       "rawSha256": "3d9a04bed72b32d0aff204d8ef8f52f85049e916c8a5336c5b6bff311eb33c75",
-      "portableSha256": "decda21da30e91f3e89dd513018a206192278bae36c660acb1255b65d70c319f"
+      "portableSha256": "314eab2bec30024ee9c3ef3b51fd9d4aee62d560d2e4f1440a76e673ea61cd04"
     },
     {
       "file": "candidate-gate-overflow-red.txt",
       "rawSha256": "0fff4ed83defcb2425c3f715c4c10fcb5340fa2c0713e2421e9a79e9a6b238d4",
-      "portableSha256": "29aab0a37836baf2cdbf49b931a0d5efafa2a71b2ca76a25b22f01e19bf1f500"
+      "portableSha256": "79d4de4bc65a62831d7bb361da991a16cd03d5a37c7fb26dcc05ef1a4b2fed12"
     },
     {
       "file": "compact-footer-browser.txt",
@@ -49,7 +49,7 @@
     {
       "file": "compact-footer-build.txt",
       "rawSha256": "2d0156f6b81f3a5cb02685464ca22962627c0c035ebd437ae9055ae46e029cd9",
-      "portableSha256": "2d0156f6b81f3a5cb02685464ca22962627c0c035ebd437ae9055ae46e029cd9"
+      "portableSha256": "56b5813ffed09de6f58dbb101c2d42e9753c77709f9bc085303bb2c710876c52"
     },
     {
       "file": "compact-source-browser.txt",
@@ -59,17 +59,17 @@
     {
       "file": "compact-source-build-final.txt",
       "rawSha256": "ece6df5dd9e8749e4fd666afd6e601afca5254842f9e04653e103ccdc0651791",
-      "portableSha256": "ece6df5dd9e8749e4fd666afd6e601afca5254842f9e04653e103ccdc0651791"
+      "portableSha256": "f8d2611b202120cea9bb08e66b92d3aa06e2574442da3864901366dc3f75dd19"
     },
     {
       "file": "compact-source-build.txt",
       "rawSha256": "ad98fddb9430dea02197e7838b7fda12d7d7c27d79c3fc389c9c9e4c59b05d86",
-      "portableSha256": "ad98fddb9430dea02197e7838b7fda12d7d7c27d79c3fc389c9c9e4c59b05d86"
+      "portableSha256": "708215ff041d7b643f39e866a1f14647503483eb2b2c881445b2484c19bb2e20"
     },
     {
       "file": "control-gate.txt",
       "rawSha256": "0f44897a2ca379667fe0a482bcc311327f50cd0936a812c273f936c348a4c9b1",
-      "portableSha256": "f135ebe1dc67e04a2f0ca17e5f76be8cc3d6c24296ea758ba3d6683e908a04cf"
+      "portableSha256": "1ef7a00c0ecbd9b4f977b2ba2733a4706754ecb5a9189913fd19cfd846cfd282"
     },
     {
       "file": "final-contracts-green.txt",
@@ -79,7 +79,7 @@
     {
       "file": "final-source-build.txt",
       "rawSha256": "7f36f9b11963370f3084ebd21bbccbb8ec78cd21db5760a626dc9765e7ff4bc3",
-      "portableSha256": "7f36f9b11963370f3084ebd21bbccbb8ec78cd21db5760a626dc9765e7ff4bc3"
+      "portableSha256": "c6c718e3a1e1662a7189ae46f7d972e94342b2c962f719e09577cadc7c0d67fd"
     },
     {
       "file": "final-ui-unit.txt",
@@ -169,7 +169,7 @@
     {
       "file": "source-spacing-build.txt",
       "rawSha256": "aaf9d4603c36e9710386ec1437c8660bde8cc83ecd5e13f3a5cdc17566d1f93f",
-      "portableSha256": "aaf9d4603c36e9710386ec1437c8660bde8cc83ecd5e13f3a5cdc17566d1f93f"
+      "portableSha256": "de175799c344828fb23e4e99805dc134ec6a3872a0ceb096e577f0cfcefdac0a"
     }
   ]
 }

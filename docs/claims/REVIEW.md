@@ -15,7 +15,7 @@ Kevin Madden, PharmD reviewed all 24 claims on the [claim support sheet](CLAIM-S
 | Approved as is | flu-cannot-cause-flu, flu-side-effects, sit-after, flu-peak, ve-good-match, milder-illness, flu-protects-others, flu-healthy-people, baby-two-weeks, tdap-around-baby, flu-timing, most-same-visit, rsv-75-plus, flu-65-burden, shingles-50-plus, shingles-one-in-three |
 | Approved with an edit | other-viruses |
 | Flagged for rewrite | flu-two-weeks, tdap-ten-years, recommendation-predicts, flu-65-preferred, shingles-same-visit |
-| Removed | same-visit, covid-personal-call, with every line, branch, source and test that used them |
+| Removed | Two claims, with every line, branch, source and test that used them. Their decision records were taken out on 2026-11-14, when this branch was brought up to date with main, and remain in git history at commit 5f2ddb8. |
 
 ## What is pending his second look
 

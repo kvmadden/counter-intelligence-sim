@@ -3,7 +3,7 @@
 > node scripts/gate.mjs
 
 claims: 24 claims, 5 trees, 193 staff lines checked
-  NOTE covid-personal-call is marked volatile. Re-check its source before each season.
+  NOTE [removed claim] is marked volatile. Re-check its source before each season.
   NOTE ve-good-match is marked volatile. Re-check its source before each season.
   NOTE rsv-75-plus is marked volatile. Re-check its source before each season.
   NOTE flu-65-burden is marked volatile. Re-check its source before each season.
@@ -47,7 +47,7 @@ dist/assets/index-BuiiHkvp.js   3,644.96 kB │ gzip: 2,277.03 kB
 ✓ built in 9.19s
 singlefile: dist/counter-intelligence.html 3720 KB (1 script, 1 stylesheet inlined)
 scan: 4 files inspected
-  NOTE covid-personal-call is marked volatile. Re-check its source before each season.
+  NOTE [removed claim] is marked volatile. Re-check its source before each season.
   NOTE ve-good-match is marked volatile. Re-check its source before each season.
   NOTE rsv-75-plus is marked volatile. Re-check its source before each season.
   NOTE flu-65-burden is marked volatile. Re-check its source before each season.
