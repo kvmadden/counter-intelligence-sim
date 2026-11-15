@@ -1,0 +1,20 @@
+{
+  "url": "https://www.cdc.gov/flu/about/season.html",
+  "resolvedUrl": "https://www.cdc.gov/flu/about/season.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "6d0771d77f4578b74d0a18df4a7b117eb07e0b7eb8edae4eb439fa7e6a9b2bb9",
+  "paragraphs": [
+    {
+      "index": 4,
+      "text": "In the United States, flu season usually occurs in the fall and winter. While influenza viruses spread year-round, most of the time flu activity peaks between December and February. The overall health impact (e.g., infections, hospitalizations, and deaths) of flu varies from season to season. CDC collects, compiles, and analyzes information on influenza activity year-round in the United States and produces FluView, a weekly surveillance report, and FluView Interactive, which allows for more in-depth exploration of influenza surveillance data. The Weekly U.S. Influenza Summary Update is updated weekly year-round."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:last_published",
+      "content": "2025-09-26T11:24:44Z"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

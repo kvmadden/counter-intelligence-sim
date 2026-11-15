@@ -1,0 +1,33 @@
+{
+  "url": "https://www.cdc.gov/vaccines-adults/hcp/imz-standards/index.html",
+  "resolvedUrl": "https://www.cdc.gov/vaccines-adults/hcp/imz-standards/index.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "e6c2cc218ee8fa3cae772785978365cc32ff82893195bc02a63d953a9e3aea45",
+  "extractor": "jsdom: main h1, main h2, main h3, main h4, main p, main li, text with whitespace collapsed, indexed in document order",
+  "paragraphs": [
+    {
+      "index": 4,
+      "text": "The National Vaccine Advisory Committee developed the Standards for Adult Immunization Practice to reflect the critical need for all health care professionals – whether they provide immunization services or not – to take steps to ensure that adult patients get the vaccines they need. These standards are important because:"
+    },
+    {
+      "index": 7,
+      "text": "A health care professional's recommendation is the strongest predictor of whether a patient gets vaccinated."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:first_published",
+      "content": "August 13, 2024"
+    },
+    {
+      "name": "cdc:last_updated",
+      "content": "August 9, 2024"
+    },
+    {
+      "name": "cdc:last_reviewed",
+      "content": "August 9, 2024"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

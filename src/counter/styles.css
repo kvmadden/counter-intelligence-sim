@@ -174,3 +174,32 @@ h1[tabindex="-1"]:focus { outline: none; }
 @keyframes enc-dim { from { background-color: transparent; } }
 @keyframes enc-raise { from { transform: translateY(58%) rotate(-6deg) scale(0.9); } }
 @media (prefers-reduced-motion: reduce) { .enc-handheld, .enc-handheld-scrim { animation: none; } }
+
+/* Paper surfaces follow the browser appearance, using the existing dossier inks.
+   The physical handheld keeps its green LCD in either appearance. */
+@media (prefers-color-scheme: light) {
+  .enc-encounter {
+    --enc-page: var(--ci-card);
+    --enc-panel: var(--ci-paper-light);
+    --enc-panel-low: var(--ci-card);
+    --enc-text: var(--ci-ink);
+    --enc-muted: var(--ci-ink-soft);
+    --enc-border: var(--ci-paper-edge);
+    --enc-focus: var(--ci-cursor);
+  }
+  .enc-speaker { color: var(--ci-ink-soft); }
+  .enc-speaker::before { background: var(--ci-stamp); box-shadow: none; }
+  .enc-key, .enc-choice {
+    background: var(--ci-paper-light);
+    border-color: var(--ci-paper-edge);
+    color: var(--ci-ink);
+    box-shadow: none;
+    text-shadow: none;
+  }
+  .enc-key:hover:not(:disabled), .enc-choice:hover { border-color: var(--ci-ink); }
+  .enc-key:active:not(:disabled), .enc-choice:active { background: var(--ci-paper); }
+  .enc-key-glyph, .enc-key:disabled .enc-key-glyph { border-color: var(--ci-ink-soft); background: var(--ci-card); }
+  .enc-choices-title, .enc-back { color: var(--ci-ink-soft); }
+  .enc-back { border-color: var(--ci-paper-edge); background: var(--ci-paper-light); }
+  .enc-key:disabled { color: var(--ci-ink-soft); border-color: var(--ci-paper-edge); opacity: 0.65; }
+}

@@ -1,0 +1,12 @@
+[WebServer] (node:29653) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:30885) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:32147) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [phone-portrait-375x667] › tests/browser/counter-intelligence.spec.js:361:1 › fits the worst page of every tree: no page scroll on mission status or any debrief page, Continue always in view, no stamp over a control or over the dossier's name, level or endings line, no text under 13px (2.2m)
+
+  1 passed (2.8m)

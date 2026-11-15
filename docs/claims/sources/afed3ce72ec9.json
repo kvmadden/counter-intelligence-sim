@@ -1,0 +1,28 @@
+{
+  "url": "https://www.cdc.gov/vaccines-pregnancy/about/vaccines-family-caregivers.html",
+  "resolvedUrl": "https://www.cdc.gov/vaccines-pregnancy/about/vaccines-family-caregivers.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "1c30e5d1a5704e0ef91c0bcfc6e8773a395074b0b808529fe3aa250c1a6abcf0",
+  "paragraphs": [
+    {
+      "index": 16,
+      "text": "Preteens, teens, and adults who will be around the baby and have not already had a whooping cough booster shot (called Tdap vaccine) should get vaccinated."
+    },
+    {
+      "index": 17,
+      "text": "If a teen or adult will be around the baby and has already had a Tdap vaccine, they do not need to get vaccinated again."
+    },
+    {
+      "index": 23,
+      "text": "Anyone who needs the whooping cough or flu vaccines should get them at least two weeks before meeting the baby because it takes about two weeks to develop antibodies after vaccination."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:last_published",
+      "content": "2024-11-27T12:17:28Z"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

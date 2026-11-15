@@ -1,0 +1,36 @@
+{
+  "url": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
+  "resolvedUrl": "https://www.cdc.gov/flu-vaccines-work/benefits/index.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "6af091d263dd2f2114c47b8c11f2f681f3656c98c52fb0bd9859b180a00b0291",
+  "paragraphs": [
+    {
+      "index": 9,
+      "text": "Flu vaccines vary in how well they work each season. During seasons when the influenza viruses used in flu vaccine production are similar to those that are spreading, studies show flu vaccination reduced the risk of a flu-related doctor's visit by 40-60%."
+    },
+    {
+      "index": 19,
+      "text": "Studies of people hospitalized with flu show people who had been vaccinated against flu had less severe illness."
+    },
+    {
+      "index": 20,
+      "text": "A 2024 study of adults hospitalized with acute respiratory illness showed that for people who do get hospitalized with flu despite being vaccinated against flu, flu vaccination reduced severe in-hospital outcomes."
+    },
+    {
+      "index": 21,
+      "text": "Among people who were hospitalized with flu, people who got a flu vaccine were less likely to need ICU admission, invasive mechanical ventilation, vasopressor use, and organ support."
+    },
+    {
+      "index": 50,
+      "text": "Getting yourself vaccinated may also protect people around you, including people who are more likely to get very sick with flu, like babies and young children, older adults, pregnant women, and people with certain chronic health conditions. However, it is difficult to prove that vaccination protects people around you (sometimes referred to as \"herd protection,\" \"community protection,\" or \"indirect effects\"). While it seems logical to assume that a person who is less likely to get flu will also be less likely to spread flu, study results have varied by study design, setting, population, and vaccine type."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:last_published",
+      "content": "2026-07-15T09:11:48Z"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

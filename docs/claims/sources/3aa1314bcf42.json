@@ -1,0 +1,20 @@
+{
+  "url": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/preventing-managing-adverse-reactions.html",
+  "resolvedUrl": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/preventing-managing-adverse-reactions.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "2a9fe3a842c09febcaae2ff6c4894045aab3bd3decd8439c4b85d1a3ada2b216",
+  "paragraphs": [
+    {
+      "index": 18,
+      "text": "Some of the systemic reactions may be complicated by the onset of syncope. Syncope (vasovagal or vasodepressor reaction) can occur after vaccination and is most common among adolescents and young adults. In 2005, the Vaccine Adverse Event Reporting System (VAERS) began detecting a trend of increasing syncope reports that coincided with the licensure of 3 vaccines for adolescents: human papillomavirus (HPV), MenACWY, and Tdap4. Of particular concern among adolescents has been the risk for serious secondary injuries, including skull fracture and cerebral hemorrhage. Of 463 VAERS reports of syncope during January 1, 2005, to July 31, 2007, a total of 41 listed syncope with secondary injury with information on the timing after vaccination, and the majority of these syncope reports (76%) occurred among adolescents. Among all age groups, 80% of reported syncope episodes occur within 15 minutes of vaccine administration (additional information). Providers should take appropriate measures to prevent injuries if a patient becomes weak or dizzy or loses consciousness. Adolescents and adults should be seated or lying down during vaccination. Vaccine providers, particularly when vaccinating adolescents, should consider observing patients (with patients seated or lying down) for 15 minutes after vaccination to decrease the risk for injury should they faint4. If syncope develops, patients should be observed until the symptoms resolve."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:last_published",
+      "content": "2026-07-23T17:22:36Z"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

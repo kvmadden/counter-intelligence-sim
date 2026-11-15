@@ -1,0 +1,52 @@
+
+ RUN  v4.1.11 <repo>
+
+ ❯ tests/unit/counter-proof.test.js (2 tests | 2 failed) 35ms
+   × carries explicit claim source destinations into the debrief 33ms
+   × provides content-bound support review and separate evaluation contracts 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/counter-proof.test.js > carries explicit claim source destinations into the debrief
+AssertionError: expected undefined to be 'https://www.cdc.gov/flu/prevention/mi…' // Object.is equality
+
+- Expected:
+"https://www.cdc.gov/flu/prevention/misconceptions.html"
+
++ Received:
+undefined
+
+ ❯ tests/unit/counter-proof.test.js:10:22
+      8|   const run = walk('jordan').finished.find(run => run.claims.length)
+      9|   const source = debriefFor(run).sources[0]
+     10|   expect(source.url).toBe(CLAIMS[source.id].source.url)
+       |                      ^
+     11|   expect(source.reviewed).toBe(false)
+     12| })
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/unit/counter-proof.test.js > provides content-bound support review and separate evaluation contracts
+AssertionError: support review implementation: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/unit/counter-proof.test.js:15:85
+     13|
+     14| it('provides content-bound support review and separate evaluation cont…
+     15|   expect(fs.existsSync('scripts/claim-proof.mjs'), 'support review imp…
+       |                                                                                     ^
+     16|   const { supportStatus, claimBinding, inventory } = await import('../…
+     17|   const id = Object.keys(CLAIMS)[0]
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed (2)
+   Start at  04:45:51
+   Duration  195ms (transform 48ms, setup 0ms, import 67ms, tests 35ms, environment 0ms)

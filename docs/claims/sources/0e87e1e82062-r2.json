@@ -1,0 +1,33 @@
+{
+  "url": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/vaccine-administration.html",
+  "resolvedUrl": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/vaccine-administration.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "dcbd34d4796e601eb8a89b0f4b6cd2fdaf1b6892b43f94e80501626109fcaa26",
+  "extractor": "jsdom: main h1, main h2, main h3, main h4, main p, main li, text with whitespace collapsed, indexed in document order",
+  "paragraphs": [
+    {
+      "index": 44,
+      "text": "If multiple vaccines are administered at a single visit, administer each preparation at a different anatomic site28. The location of all injection sites with the corresponding vaccine injected should be documented in each patient’s medical record. Health-care practices should consider using a vaccination site map so that all persons administering vaccines routinely use a particular anatomic site for each particular vaccine."
+    },
+    {
+      "index": 45,
+      "text": "For infants and younger children, if more than 2 vaccines are injected in a single limb, the thigh is the preferred site because of the greater muscle mass; the injections should be sufficiently separated (separate anatomic sites [i.e. ≥1 inch] if possible) so that any local reactions can be differentiated1329. For older children and adults, the deltoid muscle can be used for more than one intramuscular injection."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:first_published",
+      "content": ""
+    },
+    {
+      "name": "cdc:last_updated",
+      "content": "June 18, 2024"
+    },
+    {
+      "name": "cdc:last_reviewed",
+      "content": "June 20, 2023"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

@@ -86,7 +86,7 @@ export const jordan = {
           next: "hesitant",
         },
         {
-          id: "permission.offer-recommend", family: "offer", label: "I'd recommend it today. It takes two weeks to kick in.",
+          id: "permission.offer-recommend", family: "offer", label: "I'd recommend it today. Protection takes about two weeks to build.",
           claims: ["flu-two-weeks", "recommendation-predicts"], set: ["raised", "bus"],
           note: "A clear recommendation is the strongest predictor of a yes, and you made one.",
           reply: [
@@ -216,7 +216,7 @@ export const jordan = {
           reply: "Saturday morning. The neighbor's dog gets me up at six anyway.", next: "booking",
         },
         {
-          id: "open.why-now", family: "offer", label: "It takes about two weeks to kick in, and flu usually peaks in winter.",
+          id: "open.why-now", family: "offer", label: "Protection takes two weeks to build, and flu usually peaks in winter.",
           claims: ["flu-two-weeks", "flu-peak"], set: ["why-now"], note: "Explaining the timing answered why now.",
           reply: "So the shot needs a head start. Relatable.", next: "open",
         },
@@ -243,7 +243,7 @@ export const jordan = {
           reply: "Actually, he got sick like three days after. And he calls every cold \"the plague.\"", next: "doubt",
         },
         {
-          id: "doubt.offer-window", family: "offer", label: "Two weeks to kick in, so he may have caught it first. Or it was a cold.",
+          id: "doubt.offer-window", family: "offer", label: "Protection builds for two weeks. Maybe he caught it first, or a cold.",
           requires: ["cousin-when"], claims: ["flu-two-weeks", "other-viruses"], set: ["convinced"],
           note: "Matching the facts to her cousin's story answered the doubt head on.",
           reply: "So the plague was a cold. That tracks, honestly.", next: "open",

@@ -421,15 +421,16 @@ export function Debrief({ patient, run, outcome, onContinue }) {
           <h2 ref={kickerRef} tabIndex={-1} className="ci-kicker" aria-live="polite">{kickerFor("Sources", sourcesPaging.page, sourcesPaging.pages)}</h2>
           {debrief.sources.length
             ? <>
+              <p className="ci-source-license">Source: <strong className="ci-source-org">CDC</strong> · US public domain</p>
               <ol className="ci-sources" start={sourcesPaging.start + 1}>
                 {shownSources.map((source) => <li key={source.id}>
-                  <strong className="ci-source-org">{source.org}</strong> <span className="ci-source-title">{source.title}</span>
-                  <span className="ci-source-date">Checked {source.accessed}</span>
+                  <a className="ci-source-title" aria-label={`${source.title} (CDC source, opens in a new tab)`} data-claim-id={source.id} href={source.url} target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer">{source.title} (opens CDC)</a>
+                  <span className="ci-source-date" data-review-status={source.review.status}>{source.review.label}{source.review.reviewedOn ? ` ${source.review.reviewedOn}` : ""}</span>
                 </li>)}
               </ol>
               {onLastSourcesPage && <p className="ci-brief-note">{reviewed
-                ? "Facts here stay at conversation level. Each one was checked against its public-health source and reviewed by a pharmacist. None of it is medical advice."
-                : "Draft. These facts are still awaiting pharmacist review, and none of this is medical advice."}</p>}
+                ? "Facts here stay at conversation level. Each one was checked against its CDC source and approved by Kevin Madden, PharmD. Rights review pending. No CDC endorsement. Not medical advice."
+                : "Some facts here are drafts, pending clinical review by Kevin Madden, PharmD. Rights review pending. No CDC endorsement. Not medical advice."}</p>}
             </>
             : <p className="ci-brief-text">No health facts came up in this conversation, so there is nothing to cite.</p>}
         </>}

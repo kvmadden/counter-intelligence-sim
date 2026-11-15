@@ -1,0 +1,48 @@
+{
+  "url": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
+  "resolvedUrl": "https://www.cdc.gov/flu/vaccines/keyfacts.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "47da5f32e6400111a13cccfdd61314fdf3e5779023ef51ea0d8c9e85f28af923",
+  "paragraphs": [
+    {
+      "index": 64,
+      "text": "While a flu vaccine cannot give you flu illness, there are different side effects that may be associated with getting a flu shot or a nasal spray flu vaccine. These side effects are usually mild and short-lasting, especially when compared to symptoms of flu."
+    },
+    {
+      "index": 65,
+      "text": "A flu shot: The viruses in a flu shot are killed (inactivated), so you cannot get flu from a flu shot. Some minor side effects that may occur are:"
+    },
+    {
+      "index": 66,
+      "text": "Soreness, redness, and/or swelling where the shot was given"
+    },
+    {
+      "index": 67,
+      "text": "Headache"
+    },
+    {
+      "index": 68,
+      "text": "Fever"
+    },
+    {
+      "index": 69,
+      "text": "Muscle aches"
+    },
+    {
+      "index": 70,
+      "text": "Nausea"
+    },
+    {
+      "index": 71,
+      "text": "Fatigue"
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:last_published",
+      "content": "2026-09-01T18:37:51Z"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

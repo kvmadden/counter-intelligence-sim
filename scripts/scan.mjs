@@ -1,10 +1,12 @@
-// Bundle scanner: proves the built editions carry no network reference and no
-// name that must never ship. Fails closed. Run with --self-test to prove it is
+// Bundle scanner: permits exact source literals and rejects automatic networking,
+// remote resources and names that must never ship. Fails closed. Run with --self-test to prove it is
 // RED on a planted string before trusting a GREEN.
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
+import { CLAIMS } from "../src/counter/claims.js"
+const SOURCE_URLS = new Set(Object.values(CLAIMS).map(claim => claim.source.url))
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(root, "dist");
@@ -29,6 +31,7 @@ export const PATTERNS = [
   ["websocket api", /\bWebSocket\b/],
   ["event source", /\bEventSource\b/],
   ["service worker", /serviceWorker/],
+  ["automatic navigation", /(?:\blocation\s*(?:\.href)?\s*=(?!=|\s*\d)|\blocation\.(?:assign|replace)\s*\(|window\.open\s*\(|importScripts\s*\()/],
   ["storage", /\b(localStorage|sessionStorage|indexedDB)\b/],
   // The pharmacy reads like a big chain's, but it is nobody's (no real chain is named).
   // Any case, since CSS can uppercase copy; embedded payloads are stripped before matching.
@@ -123,8 +126,13 @@ export function scanText(text, label = "text") {
   // remains in the inspected text and still passes through the ordinary rules.
   const source = text.replace(PROJECT_SVG_TEMPLATE, "[local SVG template data URL]");
   const dataUriHits = [];
-  const inspected = expandDataUris(source, label, dataUriHits);
-  const hits = [...dataUriHits];
+  const raw = expandDataUris(source, label, dataUriHits);
+  // Only exact quoted manifest literals are allowed. Resource checks run on raw
+  // text first, so an approved citation URL cannot become a remote image or ping.
+  const inspected = raw.replace(/(?:\burl|["']url["'])\s*:\s*(["'])(https:\/\/[^"'\s<>]+)\1/g, (literal, quote, url) => SOURCE_URLS.has(url) ? `url:${quote}[explicit source]${quote}` : literal)
+  const hits = [...dataUriHits]
+  const resources = /<(?:img|iframe|audio|video|source|embed|object|script|link)\b[^>]*(?:src|href|data)=["']?(?:https?:)?\/\/|\bping\s*=|url\(\s*["']?(?:https?:)?\/\//i
+  if (resources.test(raw)) hits.push({ file: label, rule: 'remote resource', snippet: 'Remote resource or link ping is forbidden' })
   for (const [name, re] of PATTERNS) {
     const m = inspected.match(re);
     if (m) hits.push({ file: label, rule: name, snippet: inspected.slice(Math.max(0, m.index - 40), m.index + 60).replace(/\s+/g, " ") });
@@ -233,5 +241,5 @@ if (invokedDirectly) {
   const { files, hits } = scanDist(DIST, { requireEntrypoints: true });
   console.log(`scan: ${files.length} files inspected`);
   if (hits.length) { for (const h of hits) console.error(`  RED ${h.file} :: ${h.rule} :: ${h.snippet}`); process.exit(1); }
-  console.log("scan: GREEN, no network reference, no banned name");
+  console.log("scan: GREEN, source literals allowed, no automatic network call, remote resource or banned name");
 }

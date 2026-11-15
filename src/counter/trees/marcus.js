@@ -225,6 +225,11 @@ export const marcus = {
           reply: "Ms. Dana keeps saying she'll go. I'll bring her at five-thirty.", end: "toddler-room",
         },
         {
+          id: "today.offer-tdap", family: "offer", label: "Your record shows no Tdap. That covers whooping cough. Want it too?",
+          claims: ["tdap-ten-years"], note: "Checking his record added the whooping cough shot, and it still fit one lunch break.",
+          reply: "Whooping cough in the toddler room? Hard pass. Two arms, one sandwich.", end: "lunch-special",
+        },
+        {
           id: "today.close-seat", family: "close", label: "Grab the chair by the blood pressure machine. Back in a minute.",
           reply: "The squeaky one? It squeaked at me when I walked past. Rude.", end: "shot-and-sandwich",
         },
@@ -293,6 +298,11 @@ export const marcus = {
       name: "The whole toddler room", rung: "today", best: true,
       debrief: "Marcus got his flu shot on his lunch break and is bringing Ms. Dana back after work.",
       huddle: "What made a healthy twenty-eight-year-old think about the kids?",
+    },
+    "lunch-special": {
+      name: "Lunch special", rung: "today", best: true,
+      debrief: "Marcus got a flu shot and his Tdap in one lunch break, with time left for a sandwich.",
+      huddle: "How do you offer a second vaccine to someone in a hurry without slowing them down?",
     },
     "shot-and-sandwich": {
       name: "Shot, sit, sandwich", rung: "today",

@@ -1,0 +1,434 @@
+[
+  {
+    "name": "select",
+    "theme": "light",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "dossier",
+    "theme": "light",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "briefing",
+    "theme": "light",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "conversation",
+    "theme": "light",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "hesitant",
+    "theme": "light",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "fact",
+    "theme": "light",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "status",
+    "theme": "light",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "debrief",
+    "theme": "light",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "sources",
+    "theme": "light",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "select",
+    "theme": "light",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "dossier",
+    "theme": "light",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "briefing",
+    "theme": "light",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "conversation",
+    "theme": "light",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "hesitant",
+    "theme": "light",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "fact",
+    "theme": "light",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "status",
+    "theme": "light",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "debrief",
+    "theme": "light",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "sources",
+    "theme": "light",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "select",
+    "theme": "light",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "dossier",
+    "theme": "light",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "briefing",
+    "theme": "light",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "conversation",
+    "theme": "light",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "hesitant",
+    "theme": "light",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "fact",
+    "theme": "light",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "status",
+    "theme": "light",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "debrief",
+    "theme": "light",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "sources",
+    "theme": "light",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "select",
+    "theme": "dark",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "dossier",
+    "theme": "dark",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "briefing",
+    "theme": "dark",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "conversation",
+    "theme": "dark",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "hesitant",
+    "theme": "dark",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "fact",
+    "theme": "dark",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "status",
+    "theme": "dark",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "debrief",
+    "theme": "dark",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "sources",
+    "theme": "dark",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "select",
+    "theme": "dark",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "dossier",
+    "theme": "dark",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "briefing",
+    "theme": "dark",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "conversation",
+    "theme": "dark",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "hesitant",
+    "theme": "dark",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "fact",
+    "theme": "dark",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "status",
+    "theme": "dark",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "debrief",
+    "theme": "dark",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "sources",
+    "theme": "dark",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "select",
+    "theme": "dark",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "dossier",
+    "theme": "dark",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "briefing",
+    "theme": "dark",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "conversation",
+    "theme": "dark",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "hesitant",
+    "theme": "dark",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "fact",
+    "theme": "dark",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "status",
+    "theme": "dark",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "debrief",
+    "theme": "dark",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "controls": []
+  },
+  {
+    "name": "sources",
+    "theme": "dark",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "controls": []
+  }
+]

@@ -1,0 +1,25 @@
+- main:
+  - article "Debrief":
+    - heading "Debrief" [level=1]
+    - paragraph: File · Jordan · counter 04
+    - tablist "Debrief pages":
+      - tab "Transcript"
+      - tab "What happened"
+      - tab "What moved it"
+      - tab "Sources" [selected]
+    - tabpanel "Sources":
+      - heading "Sources" [level=2]
+      - paragraph:
+        - text: "Source:"
+        - strong: CDC
+        - text: · US public domain
+      - list:
+        - listitem:
+          - link "Preventing and Managing Adverse Reactions (General Best Practice Guidelines for Immunization) (CDC source, opens in a new tab)":
+            - /url: https://www.cdc.gov/vaccines/hcp/imz-best-practices/preventing-managing-adverse-reactions.html
+            - text: Preventing and Managing Adverse Reactions (General Best Practice Guidelines for Immunization) (opens CDC)
+          - text: Author check 2026-09-15
+      - paragraph: Draft, pending pharmacist passage review. Historical checks only. Rights review pending. Free on CDC's website. No CDC endorsement. Not medical advice.
+    - list "Debrief":
+      - listitem:
+        - button "Continue"

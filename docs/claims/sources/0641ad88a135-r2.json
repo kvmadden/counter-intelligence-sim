@@ -1,0 +1,33 @@
+{
+  "url": "https://www.cdc.gov/flu/highrisk/65over.htm",
+  "resolvedUrl": "https://www.cdc.gov/flu/highrisk/65over.htm",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "3d34219cd6df1cdbfec704c6d94cbaa6a3bcf6d7cbbf0b155376c30041383434",
+  "extractor": "jsdom: main h1, main h2, main h3, main h4, main p, main li, text with whitespace collapsed, indexed in document order",
+  "paragraphs": [
+    {
+      "index": 10,
+      "text": "CDC and ACIP preferentially recommend the use of higher dose flu vaccines (high-dose inactivated and recombinant) or adjuvanted inactivated flu vaccine over standard-dose unadjuvanted flu vaccines for people 65 years and older. This recommendation is based on a review of available studies which suggests that, in this age group, these vaccines are potentially more effective than standard dose unadjuvanted flu vaccines. If one of these vaccines is not available at the time of administration, people in this age group should get a standard-dose unadjuvanted inactivated flu vaccine instead. There are other flu vaccines approved for use in people 65 years and older. People 65 years and older should not get a nasal spray vaccine."
+    },
+    {
+      "index": 13,
+      "text": "The best way to protect against flu and its potentially serious complications is with an annual flu vaccine. Flu vaccination has many benefits. It has been shown to reduce the risk of getting sick with flu and also to reduce the risk of more serious flu outcomes that can result in hospitalization or even death. Although immune responses to vaccination may be lower in older people, studies have consistently found that flu vaccination has been effective in reducing the risk of medical visits and hospitalizations in older people. Higher dose and adjuvanted flu vaccines are potentially more effective than standard dose unadjuvanted flu vaccines for people in this age group and are therefore recommended preferentially over a regular dose flu vaccine."
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:first_published",
+      "content": "October 1, 2024"
+    },
+    {
+      "name": "cdc:last_updated",
+      "content": "September 4, 2026"
+    },
+    {
+      "name": "cdc:last_reviewed",
+      "content": "September 5, 2024"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

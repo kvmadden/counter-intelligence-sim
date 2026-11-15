@@ -85,7 +85,7 @@ async function playToTimeout(page) {
   await move(page, "Sit with it", "(Nod, and let her finish.)");
   await move(page, "Ask", "Can I tell you what usually causes that?");
   await move(page, "Offer", "The shot can't give you flu. Feeling achy after is common, and minor.");
-  await move(page, "Offer", "It takes about two weeks to kick in, and flu usually peaks in winter.");
+  await move(page, "Offer", "Protection takes two weeks to build, and flu usually peaks in winter.");
 }
 
 test("keeps controls operable without horizontal overflow", async ({ page }) => {
@@ -173,8 +173,8 @@ test("reads the briefing as tabbed pages, by pointer and by keyboard", async ({ 
   await expect(page.getByTestId("dossier-screen")).toBeVisible();
 });
 
-// The best case Kevin named in the brief: heard first, asked permission first, and
-// both vaccines fit in one visit. Six exchanges, so it also proves the top tier only
+// A best case: heard first, asked permission first, and the Tdap booster her record
+// showed she was due for. Six exchanges, so it also proves the top tier only
 // comes from the outcome AND how it was reached (tiers.js).
 test("reaches mission status through the best case, marked Best case and New at rank 6 of 6, then the debrief and the huddle", async ({ page }) => {
   await begin(page);
@@ -297,14 +297,21 @@ test("reads the debrief as tabbed pages, by pointer and by keyboard, and lists i
   await expect(debrief.locator(".ci-kicker")).toHaveText("Sources · 1 of 2");
   await expect(debrief.locator(".ci-sources li")).toHaveCount(3);
   await expect(debrief.locator(".ci-source-org").first()).toHaveText("CDC");
-  // The note follows the claims this path cited: a draft until Kevin stamps them, reviewed after.
-  const cited = ["flu-cannot-cause-flu", "flu-side-effects", "sit-after", "tdap-ten-years"];
-  const stamped = cited.every((id) => CLAIMS[id].reviewedBy);
-  const reviewText = stamped ? "reviewed by a pharmacist" : "Draft. These facts are still awaiting pharmacist review";
+  for (const anchor of await debrief.locator('a[data-claim-id]').all()) {
+    const id = await anchor.getAttribute('data-claim-id')
+    await expect(anchor).toHaveAttribute('href', CLAIMS[id].source.url)
+    await expect(anchor).toHaveAttribute('rel', 'noopener noreferrer')
+    await anchor.focus()
+    await expect(anchor).toBeFocused()
+  }
+  // Kevin approved the first three on 2026-11-01. The Tdap rewrite waits for him.
+  await expect(debrief.locator("[data-review-status]")).toHaveText(["Pharmacist approved 2026-11-01", "Pharmacist approved 2026-11-01", "Pharmacist approved 2026-11-01"]);
+  const reviewText = "pending clinical review by Kevin Madden, PharmD";
   await expect(debrief.getByText(reviewText, { exact: false })).toHaveCount(0); // only the last page carries it
   await debrief.getByRole("button", { name: "Next page" }).click();
   await expect(debrief.locator(".ci-kicker")).toHaveText("Sources · 2 of 2");
   await expect(debrief.locator(".ci-sources li")).toHaveCount(1);
+  await expect(debrief.locator("[data-review-status]")).toHaveText(["Pharmacist review pending"]);
   await expect(debrief.getByText(reviewText, { exact: false })).toBeVisible();
 
   await tabs.last().focus();
@@ -823,6 +830,7 @@ test("skips the opening pan under reduced motion", async ({ page }) => {
 });
 
 test("lists the four moves one per row in the Rx handheld's LCD language: big names, no hint lines", async ({ page }) => {
+  await page.emulateMedia({ colorScheme: "dark" })
   await begin(page);
   // Sit with it wakes up once she hesitates. Check the LCD styling once all four are live,
   // so a deliberately dimmed disabled key is never mistaken for an inconsistent enabled one.
@@ -956,3 +964,26 @@ test("keeps every file's name, level and endings readable on SELECT FILE", async
   expect(clashes.count, "files checked").toBe(5);
   expect(clashes.found).toEqual([]);
 });
+
+test("uses readable paper surfaces when the browser requests a light theme", async ({ page }) => {
+  await page.emulateMedia({ colorScheme: "light" })
+  await begin(page)
+  const surfaces = await page.evaluate(() => {
+    const color = (selector, property) => getComputedStyle(document.querySelector(selector))[property]
+    return {
+      deck: color(".enc-deck", "backgroundColor"),
+      control: color(".enc-key", "color"),
+      ink: getComputedStyle(document.documentElement).getPropertyValue("--ci-ink").trim(),
+    }
+  })
+  const channels = surfaces.deck.match(/[\d.]+/g).slice(0, 3).map(Number)
+  expect(Math.min(...channels), "light deck rather than a dark surround").toBeGreaterThan(180)
+  expect(surfaces.control).toBe(await page.evaluate((ink) => {
+    const probe = document.createElement("span")
+    probe.style.color = ink
+    document.body.append(probe)
+    const value = getComputedStyle(probe).color
+    probe.remove()
+    return value
+  }, surfaces.ink))
+})

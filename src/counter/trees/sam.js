@@ -92,7 +92,7 @@ export const sam = {
           reply: "RSV? No idea. She tells her hairdresser more than she tells me.", next: "rsv",
         },
         {
-          id: "permission.offer-recommend", family: "offer", label: "I'd recommend your flu shot today. It takes two weeks to kick in.",
+          id: "permission.offer-recommend", family: "offer", label: "I'd recommend your flu shot today. Protection takes two weeks to build.",
           claims: ["recommendation-predicts", "flu-two-weeks"], set: ["raised", "recommended"],
           note: "A clear recommendation is the strongest predictor of a yes, and you made one.",
           reply: "Two weeks. That's a lot of rides. I don't really get sick, though.", next: "hesitant",
@@ -119,7 +119,7 @@ export const sam = {
           reply: "...Honestly? I haven't had a flu shot since she stopped driving. There's no slot in the week for me.", next: "concern",
         },
         {
-          id: "hesitant.offer-recommend", family: "offer", label: "I'd still recommend it. It takes two weeks to kick in.",
+          id: "hesitant.offer-recommend", family: "offer", label: "I'd still recommend it. Protection takes about two weeks to build.",
           requires: ["!recommended"], claims: ["recommendation-predicts", "flu-two-weeks"], set: ["recommended"],
           note: "A clear recommendation is the strongest predictor of a yes, and you made one.",
           reply: "Two weeks. Fourteen days of rides. You're making a case.", next: "hesitant",
@@ -249,6 +249,11 @@ export const sam = {
           reply: "No idea. She tells her hairdresser more than she tells me.", next: "rsv",
         },
         {
+          id: "today.offer-tdap", family: "offer", label: "Your record says your last tetanus shot was 2013. Want a booster too?",
+          claims: ["tdap-ten-years"], note: "Checking his record added the booster he was due, and saved him a second trip he'd never make.",
+          reply: "One visit. I'll take it. There is no second trip in my calendar.", end: "full-service",
+        },
+        {
           id: "today.close-seat", family: "close", label: "Grab the chair by the window. She can see you from the car.",
           reply: "She's going to wave. The whole time. Like it's a parade.", end: "window-seat",
         },
@@ -343,6 +348,11 @@ export const sam = {
       name: "Two birds, one hair appointment", rung: "scheduled", best: true,
       debrief: "Sam booked Thursday morning for himself and his mom, right next to her hair appointment.",
       huddle: "How do you help a caregiver fit their own care into someone else's schedule?",
+    },
+    "full-service": {
+      name: "Full service", rung: "today",
+      debrief: "Sam got a flu shot and a tetanus booster in one visit, so there's no second trip to fit in.",
+      huddle: "What made the second vaccine feel like a time saver?",
     },
     "window-seat": {
       name: "The parade", rung: "today",

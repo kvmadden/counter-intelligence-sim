@@ -1,0 +1,20 @@
+{
+  "url": "https://www.cdc.gov/flu/vaccines/vaccinations.html",
+  "resolvedUrl": "https://www.cdc.gov/flu/vaccines/vaccinations.html",
+  "retrievedOn": "2026-11-01",
+  "httpStatus": 200,
+  "htmlSha256": "9948a265f24ba9f086dc8a6094713b759ea5cad71fa766072c0a6f34b1fed17b",
+  "paragraphs": [
+    {
+      "index": 26,
+      "text": "For most people who need only one dose of influenza vaccine for the season, September and October are generally good times to be vaccinated against influenza. Ideally, everyone should be vaccinated by the end of October. Additional considerations concerning the timing of vaccination for certain groups of people include:"
+    }
+  ],
+  "dates": [
+    {
+      "name": "cdc:last_published",
+      "content": "2025-11-20T10:23:17Z"
+    }
+  ],
+  "notices": "No third-party attribution found in selected narrative text. Human rights check pending."
+}

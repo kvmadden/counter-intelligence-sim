@@ -1,0 +1,40 @@
+[WebServer] (node:69642) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:70396) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:71153) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [phone-portrait-375x667] › tests/browser/counter-intelligence.spec.js:361:1 › fits the worst page of every tree: no page scroll on mission status or any debrief page, Continue always in view, no stamp over a control or over the dossier's name, level or endings line, no text under 13px (16.9s)
+
+
+  1) [phone-portrait-375x667] › tests/browser/counter-intelligence.spec.js:361:1 › fits the worst page of every tree: no page scroll on mission status or any debrief page, Continue always in view, no stamp over a control or over the dossier's name, level or endings line, no text under 13px
+
+    Error: jordan (fullLastSourcesPage): debrief: Sources (next page): no page scroll
+
+    expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 0
+    Received:    4
+
+      401 |     const m = await readMetrics();
+      402 |     expect(m.overflow, `${where}: nothing wider than the screen`).toBe(false);
+    > 403 |     expect(m.scroll, `${where}: no page scroll`).toBeLessThanOrEqual(0);
+          |                                                  ^
+      404 |     expect(m.continueInView, `${where}: Continue fully in view`).toBe(true);
+      405 |     expect(m.stampOverlap, `${where}: the stamp never covers a control or the dossier's name, level or endings`).toBe(false);
+      406 |     expect(m.stampOutOfBounds, `${where}: the stamp never hangs past the sheet`).toBe(false);
+        at checkFit (<repo>/tests/browser/counter-intelligence.spec.js:403:50)
+        at pageThrough (<repo>/tests/browser/counter-intelligence.spec.js:422:7)
+        at <repo>/tests/browser/counter-intelligence.spec.js:461:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/counter-intelligence-fits--4048e-ngs-line-no-text-under-13px-phone-portrait-375x667/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/counter-intelligence-fits--4048e-ngs-line-no-text-under-13px-phone-portrait-375x667/error-context.md
+
+  1 failed
+    [phone-portrait-375x667] › tests/browser/counter-intelligence.spec.js:361:1 › fits the worst page of every tree: no page scroll on mission status or any debrief page, Continue always in view, no stamp over a control or over the dossier's name, level or endings line, no text under 13px
