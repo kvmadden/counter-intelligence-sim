@@ -90,6 +90,9 @@ async function playToTimeout(page) {
 
 test("keeps controls operable without horizontal overflow", async ({ page }) => {
   await begin(page);
+  // The Accept button unmounts; focus must follow the player into the encounter.
+  await expect(page.getByTestId("encounter-screen")).toBeFocused();
+  await expect(page.getByRole("main", { name: "Conversation with Jordan" })).toBeVisible();
   const geometry = await page.evaluate(() => ({
     overflow: document.documentElement.scrollWidth > window.innerWidth,
     tooSmall: [...document.querySelectorAll("button")].some((button) => {
