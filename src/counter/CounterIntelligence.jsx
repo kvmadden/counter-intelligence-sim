@@ -23,6 +23,7 @@ function Encounter({ run, levelId, onTurn }) {
   const [family, setFamily] = useState(null);
   const [handheldOpen, setHandheldOpen] = useState(false);
   const panelRef = useRef(null);
+  const encounterRef = useRef(null);
   const familyButtonRefs = useRef({});
   const restoreFocusToRef = useRef(null);
   const handheldButtonRef = useRef(null);
@@ -35,6 +36,12 @@ function Encounter({ run, levelId, onTurn }) {
   const level = levelById(levelId);
   const segments = exchangeSegments(run);
   const familyLabel = families.find((item) => item.id === family)?.label;
+
+  // Accepting a mission removes the focused button. Move focus to the new
+  // conversation so keyboard and screen-reader players don't land on <body>.
+  useEffect(() => {
+    encounterRef.current?.focus({ preventScroll: true });
+  }, []);
 
   useEffect(() => {
     if (family && choices.length) {
@@ -69,7 +76,7 @@ function Encounter({ run, levelId, onTurn }) {
 
   // The encounter carries only the scene, the speaker and their line, and the four
   // moves. Objectives and what has been shared out loud live on the Rx handheld.
-  return <main className="enc-encounter" data-testid="encounter-screen">
+  return <main ref={encounterRef} tabIndex={-1} aria-label={`Conversation with ${conversation.patient}`} className="enc-encounter" data-testid="encounter-screen">
     <div className="enc-column" inert={handheldOpen ? "" : undefined}>
       <section className="enc-viewport" aria-label="The counter">
         <N64Scene key={run.patientId} patientId={run.patientId} beat={run.turns} label={`First-person view across a pharmacy counter. ${conversation.patient} waits on the other side, and your hand holds a pen.`} />
