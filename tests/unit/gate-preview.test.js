@@ -4,7 +4,7 @@ import fs from "node:fs/promises";
 import { once } from "node:events";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { startPreview } from "../../scripts/gate.mjs";
+import { isPreviewReadyOutput, startPreview } from "../../scripts/gate.mjs";
 
 const servers = [];
 const testRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
@@ -37,6 +37,14 @@ async function freePort() {
 }
 
 describe("gate preview ownership", () => {
+  it("recognizes Vite's colorized Local URL without mistaking incomplete output for readiness", () => {
+    const colored = "\x1b[1m\x1b[36mLocal\x1b[39m\x1b[22m: \x1b[36mhttp://127.0.0.1:4186/\x1b[39m";
+    expect(isPreviewReadyOutput(colored)).toBe(true);
+    expect(isPreviewReadyOutput("  ➜  Local:   http://127.0.0.1:4186/")).toBe(true);
+    expect(isPreviewReadyOutput("\x1b[36mLocal\x1b[39m:")).toBe(false);
+    expect(isPreviewReadyOutput("ready in 100 ms")).toBe(false);
+  });
+
   it("waits for the launched Vite preview and returns its child", async () => {
     const port = await freePort();
     const cwd = await createPreviewFixture();
