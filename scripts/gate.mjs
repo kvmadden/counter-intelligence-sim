@@ -68,7 +68,9 @@ export async function startPreview({ port = PORT, cwd = root, viteBin = path.joi
       }
     };
     child.stdout.on("data", onOutput);
-    child.stderr.on("data", (chunk) => { output += chunk; });
+    // Some Vite versions and wrappers write their Local URL to stderr.
+    // Both pipes belong to this spawned child, so either is a valid readiness signal.
+    child.stderr.on("data", onOutput);
     timer = setTimeout(() => reject(new Error(`vite preview on ${port} did not become ready in ${timeoutMs}ms${output ? `: ${output.trim()}` : ""}`)), timeoutMs);
   });
   try {
