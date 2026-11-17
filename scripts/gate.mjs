@@ -2,6 +2,7 @@
 // the verdict is the last line and the process exit code.
 import { spawn, spawnSync } from "node:child_process";
 import path from "node:path";
+import { stripVTControlCharacters } from "node:util";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -36,6 +37,13 @@ const steps = [
   ]),
 ];
 
+// Vite may colorize "Local" separately from its colon when CI=1. Strip terminal
+// control sequences before checking the URL, so a healthy owned preview cannot
+// time out merely because the terminal supports color.
+export function isPreviewReadyOutput(output) {
+  return /\bLocal:\s*https?:\/\//.test(stripVTControlCharacters(output));
+}
+
 export async function startPreview({ port = PORT, cwd = root, viteBin = path.join(cwd, "node_modules", "vite", "bin", "vite.js"), timeoutMs = 30_000 } = {}) {
   const child = spawn(
     process.execPath,
@@ -54,7 +62,7 @@ export async function startPreview({ port = PORT, cwd = root, viteBin = path.joi
     child.stderr.setEncoding("utf8");
     const onOutput = (chunk) => {
       output += chunk;
-      if (output.includes("Local:") && !settled) {
+      if (isPreviewReadyOutput(output) && !settled) {
         settled = true;
         resolve(child);
       }
