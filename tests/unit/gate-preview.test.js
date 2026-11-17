@@ -59,6 +59,28 @@ describe("gate preview ownership", () => {
     }
   }, 15_000);
 
+  it("recognizes an owned preview's readiness message on stderr", async () => {
+    const port = await freePort();
+    const cwd = await createPreviewFixture();
+    const script = path.join(cwd, "stderr-preview.cjs");
+    await fs.writeFile(script, [
+      'const http = require("node:http");',
+      'const port = Number(process.argv[process.argv.indexOf("--port") + 1]);',
+      'http.createServer((_req, res) => res.end("owned stderr preview")).listen(port, "127.0.0.1", () => {',
+      '  console.error("  ➜  Local: http://127.0.0.1:" + port + "/");',
+      '});',
+    ].join("\n"));
+    const child = await startPreview({ port, cwd, viteBin: script, timeoutMs: 5_000 });
+    try {
+      const response = await fetch(`http://127.0.0.1:${port}/`);
+      expect(response.status).toBe(200);
+      expect(await response.text()).toBe("owned stderr preview");
+    } finally {
+      child.kill("SIGTERM");
+      await once(child, "exit");
+    }
+  }, 12_000);
+
   it("rejects an occupied port even when its owner returns HTTP 200", async () => {
     const port = await freePort();
     const cwd = await createPreviewFixture();
