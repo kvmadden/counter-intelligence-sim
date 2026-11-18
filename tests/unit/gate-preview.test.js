@@ -51,6 +51,22 @@ describe("gate preview ownership", () => {
     }
   }, 15_000);
 
+  it("recognizes ANSI-colored Vite readiness instead of timing out", async () => {
+    const port = await freePort();
+    const cwd = await createPreviewFixture();
+    const fakeViteBin = path.join(cwd, "colored-preview.mjs");
+    await fs.writeFile(
+      fakeViteBin,
+      String.raw`process.stdout.write("\u001b[1mLocal\u001b[22m: http://127.0.0.1/\n"); setInterval(() => {}, 1000);`,
+    );
+    const child = await startPreview({ port, cwd, viteBin: fakeViteBin, timeoutMs: 3_000 });
+    try {
+      expect(child.exitCode).toBeNull();
+    } finally {
+      child.kill("SIGTERM");
+      await once(child, "exit");
+    }
+  }, 8_000);
   it("rejects an occupied port even when its owner returns HTTP 200", async () => {
     const port = await freePort();
     const cwd = await createPreviewFixture();
