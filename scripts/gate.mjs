@@ -54,7 +54,8 @@ export async function startPreview({ port = PORT, cwd = root, viteBin = path.joi
     child.stderr.setEncoding("utf8");
     const onOutput = (chunk) => {
       output += chunk;
-      if (output.includes("Local:") && !settled) {
+      // Vite may color the Local label in CI, splitting the literal text with ANSI codes.
+      if (output.replace(/\x1b\[[0-?]*[ -/]*[@-~]/g, "").includes("Local:") && !settled) {
         settled = true;
         resolve(child);
       }
