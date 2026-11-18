@@ -1,12 +1,16 @@
 # Counter Intelligence
 
+Counter Intelligence is a short, offline branching game for pharmacy staff practicing vaccine conversations at the counter.
+
+[Try the interactive case study](https://kvmadden.com/projects/counter-intelligence-sim/#try).
+
+**Run locally.** Run `npm ci` and `npm run dev`, then open the address Vite prints.
+
 **Hard question: does every factual claim in the dialogue have public evidence behind it, and does every branch reward a respectful conversation over pressure?**
 
 **Short answer:** the respect half holds. All 37,452 possible playthroughs rank pressure below a respectful "not today". The evidence half is partly proven. Kevin Madden, PharmD reviewed every claim on 2026-11-01. 15 of the 24 health claims are approved on their exact CDC passage and every line that uses them. The other 9 are rewrites, two new claims and one reworded line, each quoting a CDC page fetched that day, and they stay marked pending until he reviews them.
 
-**Case page:** https://kvmadden.com/projects/counter-intelligence-sim/
-
-Counter Intelligence is a short, offline game for practicing vaccine conversations at a pharmacy counter. You play the pharmacist with five fictional patients. Each turn you pick Ask, Offer, Sit with it or Close. At the end, a debrief explains what happened, how pressure affected your result, and links to the CDC page behind every fact you used. There is no free text and no generated dialogue. Every line was written in advance.
+You play the pharmacist with five fictional patients. Each turn you pick Ask, Offer, Sit with it or Close. At the end, a debrief explains what happened, how pressure affected your result, and links to the CDC page behind every fact you used. There is no free text and no generated dialogue. Every line was written in advance.
 
 ![Debrief source page on a phone](docs/media/sources-light-390x844.png)
 
