@@ -1,10 +1,35 @@
 # Counter Intelligence
 
-Counter Intelligence is a short, offline branching game for pharmacy staff practicing vaccine conversations at the counter.
+Counter Intelligence is an offline branching game for pharmacy staff practicing respectful vaccine conversations at the counter.
 
-[Try the interactive case study](https://kvmadden.com/projects/counter-intelligence-sim/#try).
+Choose how to respond to fictional patients, then read a debrief explaining the conversation and linking its factual claims to public sources. Dialogue is written in advance. There is no free text or generated advice.
 
-**Run locally.** Run `npm ci` and `npm run dev`, then open the address Vite prints.
+## Try it
+
+[Try the interactive case study](https://kvmadden.com/projects/counter-intelligence-sim/#try) without an account. To run locally:
+
+```sh
+npm ci
+npm run dev
+```
+
+Open the address Vite prints. No API keys or paid services are needed. The production build also creates an offline HTML version.
+
+## How it was tested
+
+Automated tests walk every authored conversation path to check that pressure ranks below a respectful refusal. The build checks that recorded claims have source links and captured passages. Pharmacist approval is tied to the exact wording and remains pending where it has changed. Browser tests cover interaction and layout.
+
+These checks do not establish better counseling, usability or patient outcomes. The factual-line detector has known misses, and the content needs continuing review as guidance changes. This fictional prototype is not medical advice.
+
+```sh
+npm test
+npm run build
+```
+
+See the [proof reports](docs/proof/README.md) and [claim support sheet](docs/claims/CLAIM-SUPPORT-SHEET.md) for the evidence and pending reviews.
+
+<details>
+<summary>Historical results, content review and technical guide</summary>
 
 **Hard question: does every factual claim in the dialogue have public evidence behind it, and does every branch reward a respectful conversation over pressure?**
 
@@ -67,3 +92,5 @@ Command logs and earlier failed runs are in [VERIFICATION.md](docs/VERIFICATION.
 ## Authorship
 
 Kevin Madden designed the game, wrote the conversations and ranking rules, and is the clinical reviewer. AI coding tools helped build the code, the tests and the proof package, and proposed the draft passage mappings and test labels. See [HOW-BUILT](docs/HOW-BUILT.md). Code is MIT licensed. No employer content and no real patient information.
+
+</details>
