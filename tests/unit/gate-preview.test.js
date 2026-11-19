@@ -4,7 +4,7 @@ import fs from "node:fs/promises";
 import { once } from "node:events";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { startPreview } from "../../scripts/gate.mjs";
+import { isPreviewReadyOutput, startPreview } from "../../scripts/gate.mjs";
 
 const servers = [];
 const testRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
@@ -37,6 +37,14 @@ async function freePort() {
 }
 
 describe("gate preview ownership", () => {
+  it("recognizes Vite's colorized Local URL without mistaking incomplete output for readiness", () => {
+    const colored = "\x1b[1m\x1b[36mLocal\x1b[39m\x1b[22m: \x1b[36mhttp://127.0.0.1:4186/\x1b[39m";
+    expect(isPreviewReadyOutput(colored)).toBe(true);
+    expect(isPreviewReadyOutput("  ➜  Local:   http://127.0.0.1:4186/")).toBe(true);
+    expect(isPreviewReadyOutput("\x1b[36mLocal\x1b[39m:")).toBe(false);
+    expect(isPreviewReadyOutput("ready in 100 ms")).toBe(false);
+  });
+
   it("waits for the launched Vite preview and returns its child", async () => {
     const port = await freePort();
     const cwd = await createPreviewFixture();
@@ -67,6 +75,28 @@ describe("gate preview ownership", () => {
       await once(child, "exit");
     }
   }, 8_000);
+  it("recognizes an owned preview's readiness message on stderr", async () => {
+    const port = await freePort();
+    const cwd = await createPreviewFixture();
+    const script = path.join(cwd, "stderr-preview.cjs");
+    await fs.writeFile(script, [
+      'const http = require("node:http");',
+      'const port = Number(process.argv[process.argv.indexOf("--port") + 1]);',
+      'http.createServer((_req, res) => res.end("owned stderr preview")).listen(port, "127.0.0.1", () => {',
+      '  console.error("  ➜  Local: http://127.0.0.1:" + port + "/");',
+      '});',
+    ].join("\n"));
+    const child = await startPreview({ port, cwd, viteBin: script, timeoutMs: 5_000 });
+    try {
+      const response = await fetch(`http://127.0.0.1:${port}/`);
+      expect(response.status).toBe(200);
+      expect(await response.text()).toBe("owned stderr preview");
+    } finally {
+      child.kill("SIGTERM");
+      await once(child, "exit");
+    }
+  }, 12_000);
+
   it("rejects an occupied port even when its owner returns HTTP 200", async () => {
     const port = await freePort();
     const cwd = await createPreviewFixture();
