@@ -2,6 +2,7 @@
 // the verdict is the last line and the process exit code.
 import { spawn, spawnSync } from "node:child_process";
 import path from "node:path";
+import { stripVTControlCharacters } from "node:util";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -36,6 +37,12 @@ const steps = [
   ]),
 ];
 
+// Only a complete local URL from the owned Vite child means the preview is ready.
+// Vite can color its label and send that message to either output stream.
+export function isPreviewReadyOutput(output) {
+  return /\bLocal:\s*https?:\/\/\S+/.test(stripVTControlCharacters(output));
+}
+
 export async function startPreview({ port = PORT, cwd = root, viteBin = path.join(cwd, "node_modules", "vite", "bin", "vite.js"), timeoutMs = 30_000 } = {}) {
   const child = spawn(
     process.execPath,
@@ -55,13 +62,13 @@ export async function startPreview({ port = PORT, cwd = root, viteBin = path.joi
     const onOutput = (chunk) => {
       output += chunk;
       // Vite may color the Local label in CI, splitting the literal text with ANSI codes.
-      if (output.replace(/\x1b\[[0-?]*[ -/]*[@-~]/g, "").includes("Local:") && !settled) {
+      if (isPreviewReadyOutput(output) && !settled) {
         settled = true;
         resolve(child);
       }
     };
     child.stdout.on("data", onOutput);
-    child.stderr.on("data", (chunk) => { output += chunk; });
+    child.stderr.on("data", onOutput);
     timer = setTimeout(() => reject(new Error(`vite preview on ${port} did not become ready in ${timeoutMs}ms${output ? `: ${output.trim()}` : ""}`)), timeoutMs);
   });
   try {
