@@ -37,10 +37,21 @@ const steps = [
   ]),
 ];
 
-// Only a complete local URL from the owned Vite child means the preview is ready.
-// Vite can color its label and send that message to either output stream.
-export function isPreviewReadyOutput(output) {
-  return /\bLocal:\s*https?:\/\/\S+/.test(stripVTControlCharacters(output));
+// Vite may colorize the banner or write it to stderr. A partial URL can
+// arrive in another chunk, so only accept an entire, newline-ended Local line
+// for the requested loopback port, never an unrelated process or host.
+export function isPreviewReadyOutput(output, port = PORT) {
+  const lines = stripVTControlCharacters(output).split(/\r?\n/).slice(0, -1);
+  return lines.some((line) => {
+    const match = line.match(/^\s*(?:➜\s*)?Local:\s*(http:\/\/\S+)\s*$/);
+    if (!match) return false;
+    try {
+      const url = new URL(match[1]);
+      return url.hostname === "127.0.0.1" && url.port === String(port);
+    } catch {
+      return false;
+    }
+  });
 }
 
 export async function startPreview({ port = PORT, cwd = root, viteBin = path.join(cwd, "node_modules", "vite", "bin", "vite.js"), timeoutMs = 30_000 } = {}) {
@@ -62,7 +73,7 @@ export async function startPreview({ port = PORT, cwd = root, viteBin = path.joi
     const onOutput = (chunk) => {
       output += chunk;
       // Vite may color the Local label in CI, splitting the literal text with ANSI codes.
-      if (isPreviewReadyOutput(output) && !settled) {
+      if (isPreviewReadyOutput(output, port) && !settled) {
         settled = true;
         resolve(child);
       }
