@@ -2,6 +2,7 @@
 // the verdict is the last line and the process exit code.
 import { spawn, spawnSync } from "node:child_process";
 import path from "node:path";
+import { stripVTControlCharacters } from "node:util";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -36,6 +37,23 @@ const steps = [
   ]),
 ];
 
+// Vite may colorize the banner or write it to stderr. A partial URL can
+// arrive in another chunk, so only accept an entire, newline-ended Local line
+// for the requested loopback port, never an unrelated process or host.
+export function isPreviewReadyOutput(output, port = PORT) {
+  const lines = stripVTControlCharacters(output).split(/\r?\n/).slice(0, -1);
+  return lines.some((line) => {
+    const match = line.match(/^\s*(?:➜\s*)?Local:\s*(http:\/\/\S+)\s*$/);
+    if (!match) return false;
+    try {
+      const url = new URL(match[1]);
+      return url.hostname === "127.0.0.1" && url.port === String(port);
+    } catch {
+      return false;
+    }
+  });
+}
+
 export async function startPreview({ port = PORT, cwd = root, viteBin = path.join(cwd, "node_modules", "vite", "bin", "vite.js"), timeoutMs = 30_000 } = {}) {
   const child = spawn(
     process.execPath,
@@ -54,13 +72,14 @@ export async function startPreview({ port = PORT, cwd = root, viteBin = path.joi
     child.stderr.setEncoding("utf8");
     const onOutput = (chunk) => {
       output += chunk;
-      if (output.includes("Local:") && !settled) {
+      // Vite may color the Local label in CI, splitting the literal text with ANSI codes.
+      if (isPreviewReadyOutput(output, port) && !settled) {
         settled = true;
         resolve(child);
       }
     };
     child.stdout.on("data", onOutput);
-    child.stderr.on("data", (chunk) => { output += chunk; });
+    child.stderr.on("data", onOutput);
     timer = setTimeout(() => reject(new Error(`vite preview on ${port} did not become ready in ${timeoutMs}ms${output ? `: ${output.trim()}` : ""}`)), timeoutMs);
   });
   try {
